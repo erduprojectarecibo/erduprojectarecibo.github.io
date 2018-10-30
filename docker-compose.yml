@@ -1,0 +1,27 @@
+version: "2"
+
+services: 
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks: 
+      - proxy
+    depends_on: 
+      - site
+    volumes_from:
+      - site
+    restart: always
+
+  site:
+    build: .
+    container_name: erdu-website
+    networks: 
+      - proxy
+    volumes:
+      - "/www"
+    restart: always
+
+networks:
+  proxy:
