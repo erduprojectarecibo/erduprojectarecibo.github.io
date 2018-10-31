@@ -16,6 +16,12 @@ Highcharts.setOptions({
         }
     },
 
+    title: {
+        color: '#FFF',
+        fill: '#FFF',
+        fontWeight: 'bold'
+    }
+
 });
 
 var categories = ['0-4', '5-9', '10-14', '15-19',
