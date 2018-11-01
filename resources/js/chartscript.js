@@ -45,12 +45,12 @@ $(document).ready(function () {
             type: 'bar',
         },
         title: {
-            text: 'Pirámide Poblacional de Puerto Rico 1950 - 2016',
+            text: 'Pirámide Poblacional de Puerto Rico 1899 - 2016',
 
         },
         subtitle: {
             text: 'Data Source: census.gov',
-            
+
         },
         xAxis: [{
             categories: categories,
@@ -216,7 +216,7 @@ $(document).ready(function () {
         },
         title: {
             text: 'Comparación entre los Delitos Tipo 1 y la Población de Puerto Rico',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
@@ -312,7 +312,7 @@ $(document).ready(function () {
         },
         title: {
             text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
@@ -385,11 +385,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'Promedio Prueba de Aptitud Matemático Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
-            
+
         },
         xAxis: [{
             categories: [1983, 1984, 1985, 1986, 1987, 1988, 1989,
@@ -492,11 +492,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'Matrícula total en Agosto del Departamento de Educación de Puerto Rico (1965-2017)',
-            
+
         },
         subtitle: {
             text: 'SOURCE: U.S. Department of Education',
-            
+
         },
         xAxis: [{
             categories: [1965,
@@ -569,7 +569,7 @@ $(document).ready(function () {
         },
         title: {
             text: 'Promedio Prueba de Aptitud Verbal Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
@@ -676,11 +676,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'Total Estudiantes Matriculados en Primer Grado y el Grado Doce Ecuela Pública Puerto Rico de 1986-87 a 2015-16',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
-            
+
         },
         xAxis: [{
             categories: [1886, 1887, 1988, 1989, 1990, 1991, 1992, 1993, 1994,
@@ -752,11 +752,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'Promedio Prueba de Aprovechamiento en Inglés Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
-            
+
         },
         subtitle: {
             text: 'ERDU Project',
-            
+
         },
         xAxis: [{
             categories: [1983, 1984, 1985, 1986, 1987, 1988, 1989,
@@ -854,11 +854,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'Producto Interno Bruto per Capita',
-            
+
         },
         subtitle: {
             text: 'Source: World Bank, ERDU Project',
-            
+
         },
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
@@ -933,11 +933,11 @@ $(document).ready(function () {
         },
         title: {
             text: 'PIB',
-            
+
         },
         subtitle: {
             text: 'Source: World Bank, ERDU Project',
-            
+
         },
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
