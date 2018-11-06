@@ -219,7 +219,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
         },
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
@@ -315,7 +315,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
         },
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
@@ -388,7 +388,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
 
         },
         xAxis: [{
@@ -572,7 +572,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
         },
         xAxis: [{
             categories: [1983, 1984, 1985, 1986, 1987, 1988, 1989,
@@ -679,7 +679,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
 
         },
         xAxis: [{
@@ -755,7 +755,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'ERDU Project',
+            text: ' ',
 
         },
         xAxis: [{
@@ -857,7 +857,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'Source: World Bank, ERDU Project',
+            text: 'Source: World Bank,  ',
 
         },
         xAxis: [{
@@ -936,7 +936,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'Source: World Bank, ERDU Project',
+            text: 'Source: World Bank  ',
 
         },
         xAxis: [{
