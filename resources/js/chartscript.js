@@ -384,7 +384,7 @@ $(document).ready(function () {
             backgroundColor: '#000',
         },
         title: {
-            text: 'Promedio Prueba de Aptitud Matemático Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
+            text: 'Puntuación Promedio Prueba de Razonamiento Matemático Escuela Privada y Pública',
 
         },
         subtitle: {
