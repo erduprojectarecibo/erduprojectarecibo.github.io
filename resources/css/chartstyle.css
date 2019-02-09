@@ -152,12 +152,6 @@ body {
 
 }
 
-.highcharts-title,
-.highcharts-subtitle {
-    fill: white;
-    color: white;
-}
-
 #population-number {
     text-align: center;
 }

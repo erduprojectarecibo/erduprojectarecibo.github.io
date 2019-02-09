@@ -2,9 +2,13 @@ Highcharts.setOptions({
     lang: {
         thousandsSep: ','
     },
+    chart: {
+        backgroundColor: '#FFF'
+    },
+
     legend: {
         itemStyle: {
-            color: '#FFF'
+            color: '#000'
         },
         itemHiddenStyle: {
             color: '#777'
@@ -16,19 +20,20 @@ Highcharts.setOptions({
 
     title: {
         style: {
-            color: '#FFF',
-            fill: '#FFF',
+            color: '#22292F',
+            fill: '#22292F',
             fontWeight: 'bold'
         }
     },
 
     subtitle: {
         style: {
-            color: '#FFF',
-            fill: '#FFF',
+            color: '#8795A1',
+            fill: '#8795A1',
             fontWeight: 'bold'
         }
     },
+
 });
 
 var categories = ['0-4', '5-9', '10-14', '15-19',
@@ -41,7 +46,6 @@ var categories = ['0-4', '5-9', '10-14', '15-19',
 $(document).ready(function () {
     Highcharts.chart('chart1', {
         chart: {
-            backgroundColor: '#000',
             type: 'bar',
         },
         title: {
@@ -57,7 +61,7 @@ $(document).ready(function () {
             reversed: false,
             labels: {
                 style: {
-                    color: '#fff',
+                    color: '#606F7B',
                     step: 1
                 }
             }
@@ -68,7 +72,7 @@ $(document).ready(function () {
             linkedTo: 0,
             labels: {
                 style: {
-                    color: '#fff',
+                    color: '#606F7B',
                     step: 1
                 }
             }
@@ -81,7 +85,7 @@ $(document).ready(function () {
             },
             labels: {
                 style: {
-                    color: '#fff'
+                    color: '#606F7B'
                 },
                 formatter: function () {
                     return Math.abs(this.value / 10000) + '%';
@@ -211,9 +215,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart2', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'Comparación entre los Delitos Tipo 1 y la Población de Puerto Rico',
 
@@ -236,25 +238,25 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B',
                 }
             },
             title: {
                 text: 'Total Población',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Total Delitos Tipo 1',
                 style: {
-                    color: '#FFF',
+                    color: '#B8C2CC',
                 }
             },
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B',
                 }
             },
             opposite: true
@@ -308,7 +310,6 @@ $(document).ready(function () {
     Highcharts.chart('chart3', {
         chart: {
             zoomType: 'x',
-            backgroundColor: '#000',
         },
         title: {
             text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
@@ -332,11 +333,14 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#B8C2CC'
+                }
             }
         }],
         tooltip: {
@@ -380,9 +384,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart4', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'Puntuación Promedio Prueba de Razonamiento Matemático Escuela Privada y Pública',
 
@@ -403,25 +405,25 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Puntuación Promedio',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
                 style: {
-                    color: '#FFF',
+                    color: '#B8C2CC',
                 }
             },
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             opposite: true
@@ -488,7 +490,6 @@ $(document).ready(function () {
     Highcharts.chart('chart5', {
         chart: {
             zoomType: 'x',
-            backgroundColor: '#000',
         },
         title: {
             text: 'Matrícula total en Agosto del Departamento de Educación de Puerto Rico (1965-2017)',
@@ -516,13 +517,13 @@ $(document).ready(function () {
             max: '750000',
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Total de Estudiantes Matriculados',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }],
@@ -564,9 +565,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart6', {
-        chart: {
-            backgroundColor: '#000',
-        },
+
         title: {
             text: 'Promedio Prueba de Aptitud Verbal Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
 
@@ -587,25 +586,25 @@ $(document).ready(function () {
             labels: {
 
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Puntuación Promedio',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
                 style: {
-                    color: '#FFF',
+                    color: '#B8C2CC',
                 }
             },
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             opposite: true
@@ -671,9 +670,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart7', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'Total Estudiantes Matriculados en Primer Grado y el Grado Doce Ecuela Pública Puerto Rico de 1986-87 a 2015-16',
 
@@ -693,13 +690,13 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Total de Estdiantes',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }],
@@ -747,9 +744,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart8', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'Promedio Prueba de Aprovechamiento en Inglés Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
 
@@ -771,25 +766,25 @@ $(document).ready(function () {
             labels: {
 
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             title: {
                 text: 'Puntuación Promedio',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
                 style: {
-                    color: '#FFF',
+                    color: '#B8C2CC',
                 }
             },
             labels: {
                 style: {
-                    color: '#FFF'
+                    color: '#606F7B'
                 }
             },
             opposite: true
@@ -849,9 +844,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart9', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'Producto Interno Bruto per Capita',
 
@@ -876,13 +869,13 @@ $(document).ready(function () {
             labels: {
                 format: '$ {value}',
                 style: {
-                    color: '#FFF',
+                    color: '#606F7B',
                 }
             },
             title: {
                 text: 'PIB per Capita (US Current)',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }],
@@ -928,9 +921,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart10', {
-        chart: {
-            backgroundColor: '#000',
-        },
+        
         title: {
             text: 'PIB',
 
@@ -955,19 +946,19 @@ $(document).ready(function () {
             labels: {
                 format: '$ {value}',
                 style: {
-                    color: '#FFF',
+                    color: '#606F7B',
                 }
             },
             title: {
                 text: 'PIB (US Current)',
                 style: {
-                    color: '#FFF'
+                    color: '#B8C2CC'
                 }
             }
         }],
         tooltip: {
             shared: true,
-            backgroundColor: "#FFF",
+            backgroundColor: "#777",
             valuePrefix: '$',
             valueSuffix: ' USD'
         },
