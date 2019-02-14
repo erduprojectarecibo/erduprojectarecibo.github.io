@@ -5,7 +5,7 @@ Highcharts.setOptions({
     chart: {
         backgroundColor: '#FFF',
         events: {
-            render: function () {
+            load: function () {
                 this.reflow();
             }
         },
