@@ -4,7 +4,7 @@ Highcharts.setOptions({
     },
     chart: {
         backgroundColor: '#FFF',
-        width: 784
+        maxWidth: 782
     },
 
     legend: {
