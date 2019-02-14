@@ -4,7 +4,11 @@ Highcharts.setOptions({
     },
     chart: {
         backgroundColor: '#FFF',
-        maxWidth: 782
+        events: {
+            render: function () {
+                this.reflow();
+            }
+        },
     },
 
     legend: {
