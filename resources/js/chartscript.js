@@ -3,7 +3,7 @@ Highcharts.setOptions({
         thousandsSep: ','
     },
     chart: {
-        backgroundColor: '#FFF'
+        backgroundColor: '#FFF',
     },
 
     legend: {
@@ -994,3 +994,5 @@ $(document).ready(function () {
         }]
     })
 });
+
+chart.reflow();
