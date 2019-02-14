@@ -4,6 +4,7 @@ Highcharts.setOptions({
     },
     chart: {
         backgroundColor: '#FFF',
+        width: 800
     },
 
     legend: {
@@ -994,5 +995,3 @@ $(document).ready(function () {
         }]
     })
 });
-
-chart.reflow();
