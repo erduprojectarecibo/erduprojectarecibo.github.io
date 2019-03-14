@@ -34,6 +34,10 @@ Highcharts.setOptions({
         }
     },
 
+    credits: {
+        enabled: false
+    }
+
 });
 
 var categories = ['0-4', '5-9', '10-14', '15-19',
@@ -215,7 +219,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart2', {
-        
+
         title: {
             text: 'Comparación entre los Delitos Tipo 1 y la Población de Puerto Rico',
 
@@ -384,7 +388,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart4', {
-        
+
         title: {
             text: 'Puntuación Promedio Prueba de Razonamiento Matemático Escuela Privada y Pública',
 
@@ -670,7 +674,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart7', {
-        
+
         title: {
             text: 'Total Estudiantes Matriculados en Primer Grado y el Grado Doce Ecuela Pública Puerto Rico de 1986-87 a 2015-16',
 
@@ -744,7 +748,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart8', {
-        
+
         title: {
             text: 'Promedio Prueba de Aprovechamiento en Inglés Escuela Privada y Pública y Ventaja en Puntos de la Escuela Privada',
 
@@ -844,7 +848,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart9', {
-        
+
         title: {
             text: 'Producto Interno Bruto per Capita',
 
@@ -921,7 +925,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart10', {
-        
+
         title: {
             text: 'PIB',
 
@@ -993,4 +997,96 @@ $(document).ready(function () {
             ],
         }]
     })
+});
+var categories1539 = ['15-19',
+    '20-24', '25-29', '30-34', '35-39'
+];
+
+$(document).ready(function () {
+    Highcharts.chart('chart11', {
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: 'Población total de Puerto Rico 1899 - 2016 edades 15-39',
+
+        },
+        subtitle: {
+            text: 'Fuente: census.gov',
+
+        },
+        xAxis: [{
+            categories: categories1539,
+            reversed: false,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
+            }
+        }, { // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categories1539,
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+            title: {
+                text: null
+            },
+            labels: {
+                style: {
+                    color: '#606F7B'
+                },
+                formatter: function () {
+                    return Math.abs(this.value / 10000) + '%';
+                }
+            }
+        },
+
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
+
+            }
+        },
+
+        tooltip: {
+            backgroundColor: '#FFF',
+            // This controls the hovering box when mouse is over data
+            formatter: () => `<b>${this.series.name}, Age ${this.point.category}</b><br/>Population: ${Highcharts.numberFormat(Math.abs(this.point.y), 0)}`
+        },
+
+        motion: {
+            // Enables the motion aspect of the graph
+            enabled: true,
+            labels: [1899, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+            series: [0, 1],
+            updateInterval: 30,
+            loop: true,
+        },
+
+        series: [{
+            name: 'Total',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: [{
+                sequence: [93148, 113789, 126248, 186150, 206149, 220231, 291326, 291326, 337134, 326717, 313436, 284259, 274958, 267879, 260120, 249966, 242568, 234298]
+            }, {
+                sequence: [88475, 108508, 128531, 149336, 206326, 192930, 234876, 233876, 272430, 287227, 301191, 260850, 264094, 263539, 262420, 257500, 248792, 240621]
+            }, {
+                sequence: [84265, 94213, 96053, 99780, 148008, 157992, 182638, 182638, 236136, 270562, 271507, 244159, 233990, 227123, 224022, 222722, 224671, 225720]
+            }, {
+                sequence: [64317, 70422, 78005, 94709, 102596, 131737, 156652, 156652, 229762, 254287, 262825, 248173, 243564, 237053, 229793, 220629, 208957, 198834]
+            }, ]
+
+        }],
+    });
 });
