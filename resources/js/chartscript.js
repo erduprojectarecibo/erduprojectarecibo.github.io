@@ -402,7 +402,7 @@ $(document).ready(function () {
                 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
                 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
                 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
-                2014, 2015, 2016, 2017
+                2014, 2015, 2016, 2017, 2018
             ],
             crosshair: true
         }],
@@ -1037,6 +1037,7 @@ $(document).ready(function () {
             }
         }],
         yAxis: {
+            max: 320000, // This prevents the data to shift right while in motion
             title: {
                 text: null
             },
@@ -1054,14 +1055,10 @@ $(document).ready(function () {
             // Spacing between data bars
             series: {
                 stacking: 'normal',
-
+                pointPadding: 0,
+                groupPadding: 0.1
             }
-        },
 
-        tooltip: {
-            backgroundColor: '#FFF',
-            // This controls the hovering box when mouse is over data
-            formatter: () => `<b>${this.series.name}, Age ${this.point.category}</b><br/>Population: ${Highcharts.numberFormat(Math.abs(this.point.y), 0)}`
         },
 
         motion: {
@@ -1085,6 +1082,8 @@ $(document).ready(function () {
                 sequence: [84265, 94213, 96053, 99780, 148008, 157992, 182638, 182638, 236136, 270562, 271507, 244159, 233990, 227123, 224022, 222722, 224671, 225720]
             }, {
                 sequence: [64317, 70422, 78005, 94709, 102596, 131737, 156652, 156652, 229762, 254287, 262825, 248173, 243564, 237053, 229793, 220629, 208957, 198834]
+            }, {
+                sequence: [47556, 64288, 77089, 92356, 101138, 133109, 145123, 145123, 194284, 236509, 264849, 241270, 234603, 230729, 228480, 224179, 221215, 215572]
             }, ]
 
         }],
