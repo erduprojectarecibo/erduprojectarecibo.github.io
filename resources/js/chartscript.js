@@ -1008,7 +1008,7 @@ $(document).ready(function () {
             type: 'bar',
         },
         title: {
-            text: 'Población total de Puerto Rico 1899 - 2016 edades 15-39',
+            text: 'Población total de Puerto Rico 1960 - 2016 edades 15-39',
 
         },
         subtitle: {
