@@ -3,7 +3,9 @@ Highcharts.setOptions({
         thousandsSep: ','
     },
     chart: {
+
         backgroundColor: '#FFF',
+        reflow: true,
     },
 
     legend: {
