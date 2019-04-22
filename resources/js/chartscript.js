@@ -20,6 +20,13 @@ Highcharts.setOptions({
         }
     },
 
+    responsive:{
+        rules: {
+            condition: {
+                maxWidth: 992
+            }
+        }
+    },
     title: {
         style: {
             color: '#22292F',
