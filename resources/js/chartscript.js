@@ -4,6 +4,7 @@ Highcharts.setOptions({
     },
     chart: {
         backgroundColor: '#FFF',
+        reflow: true,
     },
 
     legend: {
@@ -273,7 +274,7 @@ $(document).ready(function () {
             series: {
                 lineWidth: 5,
                 animation: {
-                    duration: 8500
+                    duration: 10500
                 }
             },
 
