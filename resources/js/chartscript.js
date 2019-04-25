@@ -1341,3 +1341,268 @@ $(document).ready(function () {
         ]
     })
 });
+
+$(document).ready(function () {
+    Highcharts.chart('chart15', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Comparacioón cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2014)',
+
+        },
+        subtitle: {
+            text: 'Fuente: Bureau of Justice Statistics',
+        },
+        xAxis: [{
+            categories: [1965,
+                1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973,
+                1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981,
+                1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+                1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
+                1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+                2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+                2014,
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Tasa de Delitos',
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        series: [{
+            name: 'Puerto Rico',
+            type: 'line',
+            color: '#008445',
+            data: [
+                2233, 2314, 2317, 2480, 2304, 2451, 2582, 2545, 2575,
+                2880, 3031, 2910, 2709, 2590, 2574, 2884, 3011, 2977,
+                2807, 3087, 3472, 3531, 3222, 3251, 3169, 3526, 3372,
+                3605, 3362, 3205, 2902, 2708, 2553, 2322, 2150, 1993,
+                1836, 2374, 2138, 1840, 1702, 1633, 1662, 1828, 1776,
+                1670, 1692, 1698, 1619, 1527,
+            ],
+        }, {
+            name: 'Nueva York',
+            type: 'line',
+            color: '#FFD13F',
+            data: [
+                3066, 3338, 3777, 4579, 4570, 4971, 5084, 4381, 4459,
+                5034, 5636, 6225, 6088, 5792, 6205, 6912, 6905, 6468,
+                5903, 5577, 5589, 5768, 5952, 6309, 6293, 6364, 6245,
+                5858, 5551, 5071, 4560, 4132, 3911, 3588, 3279, 3100,
+                2914, 2807, 2715, 2633, 2546, 2500, 2402, 2392, 2316,
+                2352, 2304, 2323, 2215, 2100,
+            ],
+
+        }, {
+            name: 'Florida',
+            type: 'line',
+            color: '#ff0000',
+            data: [
+                3320, 3716, 4104, 4498, 4743, 5317, 5673, 5377, 5960,
+                7387, 7721, 7017, 6739, 7069, 7688, 8402, 8032, 7465,
+                6781, 6821, 7574, 8228, 8503, 8938, 8804, 8811, 8547,
+                8358, 8351, 8250, 7702, 7497, 7272, 6886, 6205, 5695,
+                5578, 5428, 5188, 4894, 4722,
+                4703, 4811, 4829, 4453, 4093, 4032, 3763, 3567, 3956,
+            ],
+        },]
+    })
+});
+
+$(document).ready(function () {
+    Highcharts.chart('chart16', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Grafica 1: Delitos Tipo 1 por cada 100,000 Habitantes (1960-1992)',
+
+        },
+        subtitle: {
+            text: ' ',
+        },
+        xAxis: [{
+            categories: [1960, 1961, 1962, 1963, 1964, 1965,
+                1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973,
+                1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981,
+                1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+                1990, 1991, 1992
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#B8C2CC'
+                }
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            type: 'line',
+            color: 'red',
+            name: 'Regression Line',
+            data: [
+                [0, 1416],
+                [32, 3605]
+            ],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            enableMouseTracking: false
+        }, {
+            name: 'Delitos Tipo 1',
+            type: 'line',
+            color: '#008445',
+            data: [
+                1416.104572, 1598.844245, 1964.293466, 2195.586773, 2256.785848, 2233.240433,
+                2314.070046, 2316.533838, 2480.463552, 2304.146602, 2450.928879, 2582.148868,
+                2545.423132, 2574.967556, 2879.930288, 3030.591794, 2910.256033, 2708.909496,
+                2590.113544, 2573.861158, 2883.76109, 3011.43529, 2976.652763, 2806.569634,
+                3086.889969, 3471.642035, 3531.054711, 3222.13231, 3251.40087, 3169.039743,
+                3525.661832, 3372.166579, 3605.097052
+            ],
+        }]
+    })
+});
+
+
+
+$(document).ready(function () {
+    Highcharts.chart('chart17', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Grafica 2: Delitos Tipo 1 por cada 100,000 Habitantes (1992-2018)',
+
+        },
+        subtitle: {
+            text: ' ',
+        },
+        xAxis: [{
+            categories: [1992, 1993, 1994, 1995, 1996, 1997,
+                1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+                2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+                2014, 2015, 2016, 2017, 2018
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#B8C2CC'
+                }
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            type: 'line',
+            color: 'red',
+            name: 'Regression Line',
+            data: [
+                [0, 3605],
+                [26, 977]
+            ],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            enableMouseTracking: false
+        }, {
+            name: 'Delitos Tipo 1',
+            type: 'line',
+            color: '#008445',
+            data: [
+                3605.097052,
+                3361.848004, 3205.444207, 2902.390407,
+                2708.142965, 2553.36373, 2321.678695, 2149.865699, 1993.023532, 1836.191406,
+                2374.401136, 2137.636415, 1840.090016, 1702.141802, 1632.654563, 1662.148641,
+                1827.71734, 1775.981777, 1670.464967, 1692.347589, 1698.176386, 1618.973588,
+                1527.346835, 1340.142802, 1255.416084, 1166.824535, 970.3254364
+
+            ],
+        }]
+    })
+});
