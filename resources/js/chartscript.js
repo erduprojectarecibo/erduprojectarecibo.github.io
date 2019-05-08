@@ -1348,7 +1348,7 @@ $(document).ready(function () {
             zoomType: 'x',
         },
         title: {
-            text: 'Comparacioón cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2014)',
+            text: 'Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2014)',
 
         },
         subtitle: {
