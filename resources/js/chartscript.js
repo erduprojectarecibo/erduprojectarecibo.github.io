@@ -986,9 +986,7 @@ $(document).ready(function () {
             text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
 
         },
-        subtitle: {
-            text: ' ',
-        },
+        
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
                 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973,
@@ -1005,6 +1003,12 @@ $(document).ready(function () {
 
             title: {
                 text: 'Total Delitos Tipo 1',
+
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '',
+
             },
 
             opposite: true
@@ -1021,8 +1025,8 @@ $(document).ready(function () {
         },
 
         series: [{
-            name: 'Total Delitos Tipo 1',
-            type: 'spline',
+            name: 'Delitos Tipo 1',
+            type: 'area',
             yAxis: 1,
             color: '#008445',
             data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438,
@@ -1031,9 +1035,8 @@ $(document).ready(function () {
                 106088, 99788, 94875, 87020, 81880, 75379, 70120, 90783, 81788, 70339, 65045, 62126, 62879,
                 68738, 66429, 62238, 62257, 61720, 58171, 53990, 46559, 42766, 38939, 31216
             ],
-
-        }]
-    })
+        },           
+    ]})
 });
 
 $(document).ready(function () {
