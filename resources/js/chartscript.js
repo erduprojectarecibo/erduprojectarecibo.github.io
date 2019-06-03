@@ -35,10 +35,39 @@ Highcharts.setOptions({
             fontWeight: 'bold'
         }
     },
+    
+    yAxis: {
+        title: {
+            style: {
+                color: '#B8C2CC'
+            }
+        },
+
+
+        labels: {
+            style: {
+                color: '#606F7B',
+            }
+        }
+    },
+
+    xAxis: {
+        labels: {
+            style: {
+                color: '#606F7B',
+            }
+        }
+    },
 
     credits: {
         enabled: false
-    }
+    },
+
+    tooltip: {
+        backgroundColor: "#FFF",
+        borderColor: '#000',
+        
+    },
 
 });
 
@@ -108,17 +137,13 @@ $(document).ready(function () {
         },
 
         tooltip: {
-            backgroundColor: '#FFF',
             // This controls the hovering box when mouse is over data
             formatter: function () {
-                return '<b>' + this.series.name + ', Age ' + this.point.category + '</b><br/>' +
+                return '<b>' + this.series.name + ', Edades ' + this.point.category + '</b><br/>' +
                     'Población: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
             }
         },
 
-        credits: {
-            enabled: false
-        },
 
         motion: {
             // Enables the motion aspect of the graph
@@ -219,8 +244,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 $(document).ready(function () {
     Highcharts.chart('chart2', {
 
@@ -244,35 +267,20 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B',
-                }
-            },
+
             title: {
                 text: 'Total Población',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Total Delitos Tipo 1',
-                style: {
-                    color: '#B8C2CC',
-                }
+
             },
-            labels: {
-                style: {
-                    color: '#606F7B',
-                }
-            },
+
             opposite: true
         }],
-        tooltip: {
-            backgroundColor: '#fff',
-            shared: true,
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -281,9 +289,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -340,23 +345,14 @@ $(document).ready(function () {
         }],
         yAxis: [{ // Primary yAxis
             labels: {
-                style: {
-                    color: '#606F7B'
-                }
+
             },
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
-        tooltip: {
-            borderColor: '#FFD13F',
-            valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -365,9 +361,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -411,36 +404,19 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
             title: {
                 text: 'Puntuación Promedio',
-                style: {
-                    color: '#B8C2CC'
-                }
+            
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
-                style: {
-                    color: '#B8C2CC',
-                }
+
             },
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             opposite: true
         }],
-        tooltip: {
-            shared: true,
-            backgroundColor: "#FFF",
-            borderColor: '#ff0000',
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -449,9 +425,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -523,11 +496,7 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             min: '250000',
             max: '750000',
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+            
             title: {
                 text: 'Total de Estudiantes Matriculados',
                 style: {
@@ -535,12 +504,7 @@ $(document).ready(function () {
                 }
             }
         }],
-        tooltip: {
-            shared: true,
-            backgroundColor: '#FFF',
-            borderColor: '#008445',
-
-        },
+        
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -549,9 +513,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -591,37 +552,18 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-
-                style: {
-                    color: '#606F7B'
-                }
-            },
             title: {
                 text: 'Puntuación Promedio',
-                style: {
-                    color: '#B8C2CC'
-                }
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
-                style: {
-                    color: '#B8C2CC',
-                }
+
             },
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             opposite: true
         }],
-        tooltip: {
-            shared: true,
-            backgroundColor: "#FFF",
-            borderColor: '#ff0000',
-        },
+        
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -631,9 +573,7 @@ $(document).ready(function () {
             },
 
         },
-        credits: {
-            enabled: false
-        },
+
 
         series: [{
             name: 'Escuela Pública',
@@ -696,23 +636,13 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             title: {
                 text: 'Total de Estdiantes',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
 
-        tooltip: {
-            shared: true,
-            backgroundColor: '#FFF'
-        },
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -721,9 +651,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -771,37 +698,20 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
 
-                style: {
-                    color: '#606F7B'
-                }
-            },
             title: {
                 text: 'Puntuación Promedio',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }, { // Secondary yAxis
             title: {
                 text: 'Ventaja Privada',
-                style: {
-                    color: '#B8C2CC',
-                }
+
             },
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             opposite: true
         }],
-        tooltip: {
-            shared: true,
-            backgroundColor: "#FFF",
-            borderColor: '#ff0000',
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -811,9 +721,7 @@ $(document).ready(function () {
             },
 
         },
-        credits: {
-            enabled: false
-        },
+
 
         series: [{
             name: 'Escuela Pública',
@@ -876,20 +784,13 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 format: '$ {value}',
-                style: {
-                    color: '#606F7B',
-                }
             },
             title: {
                 text: 'PIB per Capita (US Current)',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
         tooltip: {
-            shared: true,
-            backgroundColor: "#FFF",
             valueDecimals: 2,
             valuePrefix: '$',
             valueSuffix: ' USD'
@@ -902,9 +803,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -953,20 +851,14 @@ $(document).ready(function () {
         yAxis: [{ // Primary yAxis
             labels: {
                 format: '$ {value}',
-                style: {
-                    color: '#606F7B',
-                }
             },
             title: {
                 text: 'PIB (US Current)',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
         tooltip: {
-            shared: true,
-            backgroundColor: "#777",
+
             valuePrefix: '$',
             valueSuffix: ' USD'
         },
@@ -979,9 +871,7 @@ $(document).ready(function () {
             },
 
         },
-        credits: {
-            enabled: false
-        },
+
 
         series: [{
             name: 'PIB (US Current)',
@@ -1024,7 +914,6 @@ $(document).ready(function () {
             reversed: false,
             labels: {
                 style: {
-                    color: '#606F7B',
                     step: 1
                 }
             }
@@ -1035,7 +924,6 @@ $(document).ready(function () {
             linkedTo: 0,
             labels: {
                 style: {
-                    color: '#606F7B',
                     step: 1
                 }
             }
@@ -1046,9 +934,6 @@ $(document).ready(function () {
                 text: null
             },
             labels: {
-                style: {
-                    color: '#606F7B'
-                },
                 formatter: function () {
                     return Math.abs(this.value / 10000) + '%';
                 }
@@ -1096,15 +981,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     Highcharts.chart('chart12', {
-        chart: {
-            zoomType: 'x',
-        },
+
         title: {
-            text: 'Poblacion Total edades 15-39',
+            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
 
         },
         subtitle: {
-            text: '',
+            text: ' ',
         },
         xAxis: [{
             categories: [1960, 1961, 1962, 1963, 1964, 1965,
@@ -1114,48 +997,41 @@ $(document).ready(function () {
                 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
                 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
                 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
-                2014, 2015
+                2014, 2015, 2016, 2017, 2018
             ],
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             title: {
-                text: 'Población total',
-            }
+                text: 'Total Delitos Tipo 1',
+            },
+
+            opposite: true
         }],
-        tooltip: {
-            borderColor: '#FFD13F',
-            valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
                 animation: {
-                    duration: 7500
+                    duration: 10500
                 }
             },
 
         },
+
         series: [{
-            name: 'Población Total',
-            type: 'area',
+            name: 'Total Delitos Tipo 1',
+            type: 'spline',
+            yAxis: 1,
             color: '#008445',
-            data: [
-                813581, 843460, 871295, 895214, 914527, 930061, 711901, 716434, 828847, 989064,
-                1008540, 1044303, 1082002, 1120311, 1158525, 1196346, 1035747, 1226048, 1240028,
-                1253413, 1264886, 1280581, 1293751, 1048647, 1318647, 1331660, 1125121, 1354226,
-                1361414, 1366931, 1128641, 1148601, 1388667, 871711, 1404179, 1107172, 1413075,
-                1415560, 1416744, 1142686, 1410775, 1408843, 1168104, 1397577, 1391685, 1114513,
-                1380887, 1375178, 1370344, 1100124, 1362697, 1357571, 1353197, 1349179, 1344675,
-                1339004
+            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438,
+                70423, 72363, 82293, 88095, 86079, 81544, 79343, 80181, 92180, 96640, 96738, 92252,
+                102525, 116432, 119522, 110018, 111947, 110027, 124371, 119731, 128874, 121035, 116263,
+                106088, 99788, 94875, 87020, 81880, 75379, 70120, 90783, 81788, 70339, 65045, 62126, 62879,
+                68738, 66429, 62238, 62257, 61720, 58171, 53990, 46559, 42766, 38939, 31216
             ],
+
         }]
     })
 });
@@ -1185,20 +1061,14 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             title: {
                 text: 'Población total',
             }
         }],
         tooltip: {
-            borderColor: '#FFD13F',
             valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
+            
         },
         plotOptions: {
             series: {
@@ -1253,20 +1123,13 @@ $(document).ready(function () {
         }],
         yAxis: [{ // Primary yAxis
 
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
             title: {
                 text: 'Población total',
             }
         }],
         tooltip: {
-            borderColor: '#FFD13F',
             valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
+            
         },
         plotOptions: {
             series: {
@@ -1370,20 +1233,12 @@ $(document).ready(function () {
         }],
         yAxis: [{ // Primary yAxis
 
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
             title: {
                 text: 'Tasa de Delitos',
             }
         }],
         tooltip: {
-            borderColor: '#FFD13F',
             valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
         },
         plotOptions: {
             series: {
@@ -1457,23 +1312,15 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+            
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
         tooltip: {
-            borderColor: '#FFD13F',
             valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
+            
         },
         plotOptions: {
             series: {
@@ -1483,9 +1330,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -1544,23 +1388,14 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#B8C2CC'
-                }
+
             }
         }],
         tooltip: {
-            borderColor: '#FFD13F',
             valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
         },
         plotOptions: {
             series: {
@@ -1570,9 +1405,6 @@ $(document).ready(function () {
                 }
             },
 
-        },
-        credits: {
-            enabled: false
         },
 
         series: [{
@@ -1634,21 +1466,12 @@ $(document).ready(function () {
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
+
             title: {
                 text: 'Total de Asesinatos',
             }
         }],
-        tooltip: {
-            borderColor: '#FFD13F',
-            valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
-        },
+
         plotOptions: {
             series: {
                 lineWidth: 5,
@@ -1691,40 +1514,14 @@ $(document).ready(function () {
             text: '',
         },
         xAxis: [{
-            categories: ['Luis Muñoz Marín',
-                'Roberto Sánchez Vilella',
-                'Luis Ferré Aguayo',
-                'Rafael Hernández Colón',
-                'Carlos Romero Barceló',
-                'Carlos Romero Barceló',
-                'Rafael Hernández Colón',
-                'Rafael Hernández Colón',
-                'Pedro Rosselló González',
-                'Pedro Rosselló González',
-                'Sila Calderón Serra',
-                'Aníbal Acevedo Vilá',
-                'Luís Fortuño Burset',
-                'Alejandro García Padilla',
-                'Ricardo Rosselló Nevares'
+            categories: ['Luis Muñoz Marín','Roberto Sánchez Vilella','Luis Ferré Aguayo','Rafael Hernández Colón',
+            'Carlos Romero Barceló','Carlos Romero Barceló','Rafael Hernández Colón','Rafael Hernández Colón',
+            'Pedro Rosselló González','Pedro Rosselló González','Sila Calderón Serra','Aníbal Acevedo Vilá',
+            'Luís Fortuño Burset','Alejandro García Padilla','Ricardo Rosselló Nevares'
             ],
             crosshair: true
         }],
-        yAxis: [{ // Primary yAxis
-            labels: {
-                style: {
-                    color: '#606F7B'
-                }
-            },
-            title: {
-                text: null,
-            }
-        }],
-        tooltip: {
-            borderColor: '#FFD13F',
-            valueDecimals: 1,
-            backgroundColor: '#FFF',
-            shared: true
-        },
+
         plotOptions: {
 
             series: {
@@ -1801,7 +1598,5 @@ $(document).ready(function () {
 
         }],
 
-
     });
 });
-
