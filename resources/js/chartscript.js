@@ -77,7 +77,7 @@ Highcharts.setOptions({
         $scope.$evalAsync(function () {
             chart.reflow();
             //The below is an event that will trigger all instances of charts to reflow
-            $scope.$broadcast('highchartsng.reflow');
+            //$scope.$broadcast('highchartsng.reflow');
         });
     },
 
