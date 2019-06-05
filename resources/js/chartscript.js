@@ -1,3 +1,74 @@
+/**
+ * Highcharts plugin to defer initial series animation until the element has
+ * appeared.
+ *
+ * Updated 2019-04-10
+ *
+ * @todo
+ * - If the element is greater than the viewport (or a certain fraction of it),
+ *   show the series when it is partially visible.
+ */
+(function (H) {
+
+    var pendingRenders = [];
+
+    function isElementInViewport(el) {
+
+        var rect = el.getBoundingClientRect();
+
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (
+                window.innerHeight ||
+                document.documentElement.clientHeight
+            ) &&
+            rect.right <= (
+                window.innerWidth ||
+                document.documentElement.clientWidth
+            )
+        );
+    }
+
+    H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+        var series = this,
+            renderTo = this.chart.container.parentNode;
+
+        // It is appeared, render it
+        if (isElementInViewport(renderTo) || !series.options.animation) {
+            proceed.call(series);
+
+            // It is not appeared, halt renering until appear
+        } else {
+            pendingRenders.push({
+                element: renderTo,
+                appear: function () {
+                    proceed.call(series);
+                }
+            });
+        }
+    });
+
+    function recalculate() {
+        pendingRenders.forEach(function (item) {
+            if (isElementInViewport(item.element)) {
+                item.appear();
+                H.erase(pendingRenders, item);
+            }
+        });
+    }
+
+    if (window.addEventListener) {
+        ['DOMContentLoaded', 'load', 'scroll', 'resize']
+        .forEach(function (eventType) {
+            addEventListener(eventType, recalculate, false);
+        });
+    }
+
+}(Highcharts));
+
+
+
 Highcharts.setOptions({
     lang: {
         thousandsSep: ','
@@ -5,7 +76,6 @@ Highcharts.setOptions({
     chart: {
 
         backgroundColor: '#FFF',
-        reflow: true,
     },
 
     legend: {
@@ -71,14 +141,6 @@ Highcharts.setOptions({
             opacity: 0.86
         }
         
-    },
-
-    func: function (chart) {
-        $scope.$evalAsync(function () {
-            chart.reflow();
-            //The below is an event that will trigger all instances of charts to reflow
-            //$scope.$broadcast('highchartsng.reflow');
-        });
     },
 
 });
