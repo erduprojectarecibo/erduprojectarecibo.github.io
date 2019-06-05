@@ -66,7 +66,19 @@ Highcharts.setOptions({
     tooltip: {
         backgroundColor: "#FFF",
         borderColor: '#000',
+        valueDecimals: 1,
+        style: {
+            opacity: 0.86
+        }
         
+    },
+
+    func: function (chart) {
+        $scope.$evalAsync(function () {
+            chart.reflow();
+            //The below is an event that will trigger all instances of charts to reflow
+            //$scope.$broadcast('highchartsng.reflow');
+        });
     },
 
 });
@@ -288,7 +300,6 @@ $(document).ready(function () {
                     duration: 10500
                 }
             },
-
         },
 
         series: [{
@@ -1338,7 +1349,7 @@ $(document).ready(function () {
         series: [{
             type: 'line',
             color: 'red',
-            name: 'Regression Line',
+            name: 'Línea de Regresión',
             data: [
                 [0, 1416],
                 [32, 3605]
@@ -1413,7 +1424,7 @@ $(document).ready(function () {
         series: [{
             type: 'line',
             color: 'red',
-            name: 'Regression Line',
+            name: 'Línea de Regresión',
             data: [
                 [0, 3605],
                 [26, 977]
