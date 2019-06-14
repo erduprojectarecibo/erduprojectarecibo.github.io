@@ -172,7 +172,7 @@ $(document).ready(function () {
 
         },
         subtitle: {
-            text: 'Año:' + {},
+            text: '',
 
         },
         xAxis: [{
