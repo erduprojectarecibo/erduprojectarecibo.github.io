@@ -1,10 +1,10 @@
 var CONFIG = {
  "data": {
-  "_lastModified": 1560267392772,
-  "lastModified": 1560267392772,
-  "path": "./data/GapminderCrime.csv",
+  "_lastModified": 1560532044285,
+  "lastModified": 1560532044285,
+  "path": "./data/GapminderCrime1.csv",
   "reader": "csv",
-  "ddfPath": "./data/GapminderCrime.csv"
+  "ddfPath": "./data/GapminderCrime1.csv"
  },
  "locale": {
   "filePath": "assets/translation/",
@@ -62,9 +62,9 @@ var CONFIG = {
     "scaleType": "linear",
     "spaceRef": null,
     "use": "indicator",
-    "which": "Tasa de crímenes contra la propiedad",
-    "zoomedMax": null,
-    "zoomedMin": 500
+    "which": "Tasa de delitos contra la propiedad",
+    "zoomedMax": 7819.9,
+    "zoomedMin": 1185.6
    },
    "axis_y": {
     "allow": {
@@ -86,9 +86,9 @@ var CONFIG = {
     "fixBaseline": null,
     "scaleType": "linear",
     "use": "indicator",
-    "which": "Tasa de crímenes violentos",
-    "zoomedMax": null,
-    "zoomedMin": 250
+    "which": "Tasa de delitos violentos contra la persona",
+    "zoomedMax": 1244.3,
+    "zoomedMin": 299.5
    },
    "color": {
     "allow": {
@@ -118,6 +118,7 @@ var CONFIG = {
      "11": "#7fb5ed",
      "Florida": "#e2c85c",
      "New York": "#821717",
+     "Puerto Rico": "#178217",
      "_default": "#ffb600"
     },
     "paletteLabels": null,
@@ -145,7 +146,7 @@ var CONFIG = {
    "limit": 5000,
    "opacityHighlightDim": 0.1,
    "opacityRegular": 1,
-   "opacitySelectDim": 0.4,
+   "opacitySelectDim": 0.3,
    "select": [],
    "size": {
     "allow": {
@@ -195,7 +196,7 @@ var CONFIG = {
     "domainMin": null,
     "extent": [
      0,
-     0.47
+     0.31
     ],
     "fixBaseline": 0,
     "scaleType": "ordinal",
@@ -242,7 +243,7 @@ var CONFIG = {
    "autoconfig": {
     "type": "time"
    },
-   "delay": 296,
+   "delay": 286,
    "delayThresholdX2": 90,
    "delayThresholdX4": 45,
    "dim": "Year",
@@ -282,7 +283,7 @@ var CONFIG = {
   ],
   "chart": {
    "decorations": {
-    "enabled": true,
+    "enabled": false,
     "xAxisGroups": null
    },
    "labels": {
@@ -291,7 +292,7 @@ var CONFIG = {
    },
    "lockNonSelected": 0,
    "margin": {
-    "left": 79.938,
+    "left": 136.35,
     "top": 0
    },
    "superhighlightOnMinimapHover": true,
@@ -303,7 +304,7 @@ var CONFIG = {
     "showProjectionLineY": true
    }
   },
-  "cursorMode": "arrow",
+  "cursorMode": "hand",
   "datawarning": {
    "doubtDomain": [],
    "doubtRange": []
@@ -340,7 +341,7 @@ var CONFIG = {
    ]
   },
   "panWithArrow": false,
-  "presentation": false,
+  "presentation": true,
   "show_ticks": true,
   "splash": false,
   "zoomOnScrolling": false

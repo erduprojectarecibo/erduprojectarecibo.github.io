@@ -1089,7 +1089,7 @@ $(document).ready(function () {
             zoomType: 'x',
         },
         title: {
-            text: 'Población Total por segmentos de edades entre 15-39, Años 1960-2015',
+            text: 'Gráfica 7: Población Total por segmentos de edades entre 15-39, Años 1960-2015',
 
         },
         subtitle: {
@@ -1292,10 +1292,6 @@ $(document).ready(function () {
             valueDecimals: 1,
         },
 
-
-
-
-
         series: [{
             type: 'line',
             color: 'red',
@@ -1400,7 +1396,7 @@ $(document).ready(function () {
             zoomType: 'x',
         },
         title: {
-            text: 'Tasa de Asesinatos por cada 100,000 habitantes 1960-2018',
+            text: 'Gráfica 4: Tasa de Asesinatos por cada 100,000 habitantes 1960-2018',
 
         },
         subtitle: {
@@ -1458,6 +1454,7 @@ $(document).ready(function () {
             text: '',
         },
         xAxis: [{
+            
             categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo', 'Rafael Hernández Colón',
                 'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón', 'Rafael Hernández Colón',
                 'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra', 'Aníbal Acevedo Vilá',
@@ -1465,6 +1462,11 @@ $(document).ready(function () {
             ],
             crosshair: true
         }],
+
+        yAxis: {
+            min: -25000,
+            max: 25000,
+        },
 
         plotOptions: {
 
