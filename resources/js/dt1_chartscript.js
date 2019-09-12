@@ -154,7 +154,11 @@ Highcharts.setOptions({
     },
 });
 
+/* ********************************************************************************************************************************************** */
+
 // Tasa de Delitos Tipo 1 por cada 100,000 Habitantes (1960-2018)
+
+/* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
     Highcharts.chart('chart3', {
@@ -263,7 +267,11 @@ $(document).ready(function() {
     });
 })
 
+/* ********************************************************************************************************************************************** */
+
 // Tasa Ascendente de Delitos Tipo 1 por cada 100,000 habitantes (1960-1992)
+
+/* ********************************************************************************************************************************************** */
 
 $(document.ready(function() {
     var chart2 = Highcharts.chart('chart16', {
@@ -811,7 +819,11 @@ setTimeout(function() {
 }, 19500)
 }))
 
+/* ********************************************************************************************************************************************** */
+
 // Tasa Descendente de Delitos Tipo 1 por cada 100,000 habitantes (1992-2018)
+
+/* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
     var chart3 = Highcharts.chart('chart17', {
@@ -1287,4 +1299,957 @@ setTimeout(function() {
     })
 }, 19500)
 
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Total de Delitos Tipo 1 en Puerto Rico (1960-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart12a', {
+
+        chart: {
+            type: 'area',
+            zoomType: 'x',
+            backgroundColor: '#101010',
+            borderColor: '#202020',
+            borderWidth: 3,
+        },
+
+        title: {
+            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
+            style: {
+                color: '#FFFFFF'
+            }
+        },
+
+        xAxis: {
+            categories: ['1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970',
+                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
+            ],
+            labels: {
+                style: {
+                    color: '#FFFFFF'
+                }
+            }
+        },
+
+        yAxis: {
+            title: {
+                text: 'Delitos Tipo 1',
+                style: {
+                    color: '#FFFFFF'
+                }
+            },
+            labels: {
+                style: {
+                    color:"#ffffff"
+                }
+            },
+            min: 0,
+            max: 150000,
+            gridLineWidth:0,
+            // plotLines: [{
+            //     value: 721419,
+            //     color: '#2a8e40',
+            //     dashStyle: 'shortdash',
+            //     width: 2,
+            //     label: {
+            //         text:"Valor Máximo (721419)",
+            //         style: {
+            //             // color:"#ffffff"
+            //         }
+            //     }
+            // }, {
+            //     value: 295851,
+            //     color: '#2a8e40',
+            //     dashStyle: 'shortdash',
+            //     width: 2,
+            //     label: {
+            //         text:"Valor Mínimo (295851)",
+            //         y:15,
+            //         style: {
+            //             // color:"#ffffff"
+            //         }                
+            //     }
+            // }]
+        },
+        legend: {
+            itemStyle: {
+                color: '#FFFFFF'
+            }
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                    style: {
+                        color: '#FFFFFF'
+                    }
+                },
+                style: {
+                    color: '#FFFFFF'
+                },
+                pointStart: 1960
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Delitos Tipo 1',
+            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
+86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
+121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
+62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Tasa de Asesinatos y Homicidios en Puerto Rico (1960-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    var chart5 = Highcharts.chart('chart18a', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+            backgroundColor: '#101010',
+            borderColor: '#202020',
+            borderWidth: 3,
+        },
+
+        title: {
+            text: 'Gráfica 4: Tasa Anual de Asesinatos y Homicidios por cada 100,000 Habitantes (1960-2018)',
+            style: {
+                color: '#FFFFFF'
+            }
+        },
+
+        xAxis: {
+            
+            labels: {
+                style: {
+                    color: '#FFFFFF'
+                }
+            },
+            type: 'datetime',
+            dateTimeLabelFormats: { 
+            year: '%Y'
+            },
+            tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
+        },
+
+        yAxis: {
+            title: {
+                text: 'Asesinatos y Homicidios por cada 100,000 Habitantes',
+                style: {
+                    color: '#FFFFFF'
+                }
+            },
+            labels: {
+                style: {
+                    color:"#ffffff"
+                }
+            },
+            min: 0,
+            max: 40,
+            gridLineWidth:0,
+            // plotLines: [{
+            //     value: 721419,
+            //     color: '#2a8e40',
+            //     dashStyle: 'shortdash',
+            //     width: 2,
+            //     label: {
+            //         text:"Valor Máximo (721419)",
+            //         style: {
+            //             // color:"#ffffff"
+            //         }
+            //     }
+            // }, {
+            //     value: 295851,
+            //     color: '#2a8e40',
+            //     dashStyle: 'shortdash',
+            //     width: 2,
+            //     label: {
+            //         text:"Valor Mínimo (295851)",
+            //         y:15,
+            //         style: {
+            //             // color:"#ffffff"
+            //         }                
+            //     }
+            // }]
+        },
+        legend: {
+            itemStyle: {
+                color: '#FFFFFF'
+            }
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                    style: {
+                        color: '#FFFFFF'
+                    }
+                },
+                style: {
+                    color: '#FFFFFF'
+                },
+                
+            }
+        },
+
+        tooltip: {
+            shared: true,
+        },
+
+        series: [{
+            name: 'Asesinatos y Homicidios',
+            data: [{
+'x': Date.UTC(1959, 0),
+// Jan, 1, 1960
+'y':null
+},
+{
+'x': Date.UTC(1960, 0),
+// Jan, 1, 1960
+'y':7.2
+},
+{
+'x': Date.UTC(1961, 0),
+// Jan, 1, 1961
+'y':7.2
+},
+{
+'x': Date.UTC(1962, 0),
+// Jan, 1, 1962
+'y':8.9
+},
+{
+'x': Date.UTC(1963, 0),
+// Jan, 1, 1963
+'y':8.8
+},
+{
+'x': Date.UTC(1964, 0),
+// Jan, 1, 1964
+'y':9.4
+},
+{
+'x': Date.UTC(1965, 0),
+// Jan, 1, 1965
+'y':8.2
+},
+{
+'x': Date.UTC(1966, 0),
+// Jan, 1, 1966
+'y':7.8
+},
+{
+'x': Date.UTC(1967, 0),
+// Jan, 1, 1967
+'y':7.1
+},
+{
+'x': Date.UTC(1968, 0),
+// Jan, 1, 1968
+'y':7.7
+},
+{
+'x': Date.UTC(1969, 0),
+// Jan, 1, 1969
+'y':6.9
+},
+{
+'x': Date.UTC(1970, 0),
+// Jan, 1, 1970
+'y':7.1
+},
+{
+'x': Date.UTC(1971, 0),
+// Jan, 1, 1971
+'y':10.4
+},
+{
+'x': Date.UTC(1972, 0),
+// Jan, 1, 1972
+'y':11.5
+},
+{
+'x': Date.UTC(1973, 0),
+// Jan, 1, 1973
+'y':15
+},
+{
+'x': Date.UTC(1974, 0),
+// Jan, 1, 1974
+'y':18.2
+},
+{
+'x': Date.UTC(1975, 0),
+// Jan, 1, 1975
+'y':17.2
+},
+{
+'x': Date.UTC(1976, 0),
+// Jan, 1, 1976
+'y':15
+},
+{
+'x': Date.UTC(1977, 0),
+// Jan, 1, 1977
+'y':15.5
+},
+{
+'x': Date.UTC(1978, 0),
+// Jan, 1, 1978
+'y':15.8
+},
+{
+'x': Date.UTC(1979, 0),
+// Jan, 1, 1979
+'y':15.3
+},
+{
+'x': Date.UTC(1980, 0),
+// Jan, 1, 1980
+'y':14.8
+},
+{
+'x': Date.UTC(1981, 0),
+// Jan, 1, 1981
+'y':16.4
+},
+{
+'x': Date.UTC(1982, 0),
+// Jan, 1, 1982
+'y':14.9
+},
+{
+'x': Date.UTC(1983, 0),
+// Jan, 1, 1983
+'y':12.8
+},
+{
+'x': Date.UTC(1984, 0),
+// Jan, 1, 1984
+'y':14.5
+},
+{
+'x': Date.UTC(1985, 0),
+// Jan, 1, 1985
+'y':17.1
+},
+{
+'x': Date.UTC(1986, 0),
+// Jan, 1, 1986
+'y':21.2
+},
+{
+'x': Date.UTC(1987, 0),
+// Jan, 1, 1987
+'y':14.9
+},
+{
+'x': Date.UTC(1988, 0),
+// Jan, 1, 1988
+'y':17.3
+},
+{
+'x': Date.UTC(1989, 0),
+// Jan, 1, 1989
+'y':13.5
+},
+{
+'x': Date.UTC(1990, 0),
+// Jan, 1, 1990
+'y':17
+},
+{
+'x': Date.UTC(1991, 0),
+// Jan, 1, 1991
+'y':23
+},
+{
+'x': Date.UTC(1992, 0),
+// Jan, 1, 1992
+'y':24.2
+},
+{
+'x': Date.UTC(1993, 0),
+// Jan, 1, 1993
+'y':26.5
+},
+{
+'x': Date.UTC(1994, 0),
+// Jan, 1, 1994
+'y':27.4
+},
+{
+'x': Date.UTC(1995, 0),
+// Jan, 1, 1995
+'y':23.6
+},
+{
+'x': Date.UTC(1996, 0),
+// Jan, 1, 1996
+'y':23.6
+},
+{
+'x': Date.UTC(1997, 0),
+// Jan, 1, 1997
+'y':19.5
+},
+{
+'x': Date.UTC(1998, 0),
+// Jan, 1, 1998
+'y':17.4
+},
+{
+'x': Date.UTC(1999, 0),
+// Jan, 1, 1999
+'y':15.6
+},
+{
+'x': Date.UTC(2000, 0),
+// Jan, 1, 2000
+'y':18.4
+},
+{
+'x': Date.UTC(2001, 0),
+// Jan, 1, 2001
+'y':19.6
+},
+{
+'x': Date.UTC(2002, 0),
+// Jan, 1, 2002
+'y':20.2
+},
+{
+'x': Date.UTC(2003, 0),
+// Jan, 1, 2003
+'y':20.6
+},
+{
+'x': Date.UTC(2004, 0),
+// Jan, 1, 2004
+'y':20.7
+},
+{
+'x': Date.UTC(2005, 0),
+// Jan, 1, 2005
+'y':20.2
+},
+{
+'x': Date.UTC(2006, 0),
+// Jan, 1, 2006
+'y':19.7
+},
+{
+'x': Date.UTC(2007, 0),
+// Jan, 1, 2007
+'y':19.3
+},
+{
+'x': Date.UTC(2008, 0),
+// Jan, 1, 2008
+'y':21.7
+},
+{
+'x': Date.UTC(2009, 0),
+// Jan, 1, 2009
+'y':24.1
+},
+{
+'x': Date.UTC(2010, 0),
+// Jan, 1, 2010
+'y':27.3
+},
+{
+'x': Date.UTC(2011, 0),
+// Jan, 1, 2011
+'y':31.6
+},
+{
+'x': Date.UTC(2012, 0),
+// Jan, 1, 2012
+'y':27.6
+},
+{
+'x': Date.UTC(2013, 0),
+// Jan, 1, 2013
+'y':25.1
+},
+{
+'x': Date.UTC(2014, 0),
+// Jan, 1, 2014
+'y':19.8
+},
+{
+'x': Date.UTC(2015, 0),
+// Jan, 1, 2015
+'y':17.8
+},
+{
+'x': Date.UTC(2016, 0),
+// Jan, 1, 2016
+'y':20.5
+},
+{
+'x': Date.UTC(2017, 0),
+// Jan, 1, 2017
+'y':21.4
+},
+{
+'x': Date.UTC(2018, 0),
+// Jan, 1, 2018
+'y':20.1
+},
+{
+'x': Date.UTC(2019, 0),
+// Jan, 1, 2019
+'y':null
+},
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        },{
+            name:' ',
+            data: [
+            {
+                'x': Date.UTC(1960, 0),
+                // Enero, 1, 1960
+                'y':0
+                },
+                {
+                'x': Date.UTC(2018, 0),
+                // Enero, 1, 2018
+                'y':0
+                },
+            ],
+            color: 'transparent',
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+
+    setTimeout(function() { chart5.update({
+            series: [{
+            name: 'Asesinatos y Homicidios',
+            data: [{
+'x': Date.UTC(1959, 0),
+// Jan, 1, 1960
+'y':null
+},
+{
+'x': Date.UTC(1960, 0),
+// Jan, 1, 1960
+'y':7.2
+},
+{
+'x': Date.UTC(1961, 0),
+// Jan, 1, 1961
+'y':7.2
+},
+{
+'x': Date.UTC(1962, 0),
+// Jan, 1, 1962
+'y':8.9
+},
+{
+'x': Date.UTC(1963, 0),
+// Jan, 1, 1963
+'y':8.8
+},
+{
+'x': Date.UTC(1964, 0),
+// Jan, 1, 1964
+'y':9.4
+},
+{
+'x': Date.UTC(1965, 0),
+// Jan, 1, 1965
+'y':8.2
+},
+{
+'x': Date.UTC(1966, 0),
+// Jan, 1, 1966
+'y':7.8
+},
+{
+'x': Date.UTC(1967, 0),
+// Jan, 1, 1967
+'y':7.1
+},
+{
+'x': Date.UTC(1968, 0),
+// Jan, 1, 1968
+'y':7.7
+},
+{
+'x': Date.UTC(1969, 0),
+// Jan, 1, 1969
+'y':6.9
+},
+{
+'x': Date.UTC(1970, 0),
+// Jan, 1, 1970
+'y':7.1
+},
+{
+'x': Date.UTC(1971, 0),
+// Jan, 1, 1971
+'y':10.4
+},
+{
+'x': Date.UTC(1972, 0),
+// Jan, 1, 1972
+'y':11.5
+},
+{
+'x': Date.UTC(1973, 0),
+// Jan, 1, 1973
+'y':15
+},
+{
+'x': Date.UTC(1974, 0),
+// Jan, 1, 1974
+'y':18.2
+},
+{
+'x': Date.UTC(1975, 0),
+// Jan, 1, 1975
+'y':17.2
+},
+{
+'x': Date.UTC(1976, 0),
+// Jan, 1, 1976
+'y':15
+},
+{
+'x': Date.UTC(1977, 0),
+// Jan, 1, 1977
+'y':15.5
+},
+{
+'x': Date.UTC(1978, 0),
+// Jan, 1, 1978
+'y':15.8
+},
+{
+'x': Date.UTC(1979, 0),
+// Jan, 1, 1979
+'y':15.3
+},
+{
+'x': Date.UTC(1980, 0),
+// Jan, 1, 1980
+'y':14.8
+},
+{
+'x': Date.UTC(1981, 0),
+// Jan, 1, 1981
+'y':16.4
+},
+{
+'x': Date.UTC(1982, 0),
+// Jan, 1, 1982
+'y':14.9
+},
+{
+'x': Date.UTC(1983, 0),
+// Jan, 1, 1983
+'y':12.8
+},
+{
+'x': Date.UTC(1984, 0),
+// Jan, 1, 1984
+'y':14.5
+},
+{
+'x': Date.UTC(1985, 0),
+// Jan, 1, 1985
+'y':17.1
+},
+{
+'x': Date.UTC(1986, 0),
+// Jan, 1, 1986
+'y':21.2
+},
+{
+'x': Date.UTC(1987, 0),
+// Jan, 1, 1987
+'y':14.9
+},
+{
+'x': Date.UTC(1988, 0),
+// Jan, 1, 1988
+'y':17.3
+},
+{
+'x': Date.UTC(1989, 0),
+// Jan, 1, 1989
+'y':13.5
+},
+{
+'x': Date.UTC(1990, 0),
+// Jan, 1, 1990
+'y':17
+},
+{
+'x': Date.UTC(1991, 0),
+// Jan, 1, 1991
+'y':23
+},
+{
+'x': Date.UTC(1992, 0),
+// Jan, 1, 1992
+'y':24.2
+},
+{
+'x': Date.UTC(1993, 0),
+// Jan, 1, 1993
+'y':26.5
+},
+{
+'x': Date.UTC(1994, 0),
+// Jan, 1, 1994
+'y':27.4
+},
+{
+'x': Date.UTC(1995, 0),
+// Jan, 1, 1995
+'y':23.6
+},
+{
+'x': Date.UTC(1996, 0),
+// Jan, 1, 1996
+'y':23.6
+},
+{
+'x': Date.UTC(1997, 0),
+// Jan, 1, 1997
+'y':19.5
+},
+{
+'x': Date.UTC(1998, 0),
+// Jan, 1, 1998
+'y':17.4
+},
+{
+'x': Date.UTC(1999, 0),
+// Jan, 1, 1999
+'y':15.6
+},
+{
+'x': Date.UTC(2000, 0),
+// Jan, 1, 2000
+'y':18.4
+},
+{
+'x': Date.UTC(2001, 0),
+// Jan, 1, 2001
+'y':19.6
+},
+{
+'x': Date.UTC(2002, 0),
+// Jan, 1, 2002
+'y':20.2
+},
+{
+'x': Date.UTC(2003, 0),
+// Jan, 1, 2003
+'y':20.6
+},
+{
+'x': Date.UTC(2004, 0),
+// Jan, 1, 2004
+'y':20.7
+},
+{
+'x': Date.UTC(2005, 0),
+// Jan, 1, 2005
+'y':20.2
+},
+{
+'x': Date.UTC(2006, 0),
+// Jan, 1, 2006
+'y':19.7
+},
+{
+'x': Date.UTC(2007, 0),
+// Jan, 1, 2007
+'y':19.3
+},
+{
+'x': Date.UTC(2008, 0),
+// Jan, 1, 2008
+'y':21.7
+},
+{
+'x': Date.UTC(2009, 0),
+// Jan, 1, 2009
+'y':24.1
+},
+{
+'x': Date.UTC(2010, 0),
+// Jan, 1, 2010
+'y':27.3
+},
+{
+'x': Date.UTC(2011, 0),
+// Jan, 1, 2011
+'y':31.6
+},
+{
+'x': Date.UTC(2012, 0),
+// Jan, 1, 2012
+'y':27.6
+},
+{
+'x': Date.UTC(2013, 0),
+// Jan, 1, 2013
+'y':25.1
+},
+{
+'x': Date.UTC(2014, 0),
+// Jan, 1, 2014
+'y':19.8
+},
+{
+'x': Date.UTC(2015, 0),
+// Jan, 1, 2015
+'y':17.8
+},
+{
+'x': Date.UTC(2016, 0),
+// Jan, 1, 2016
+'y':20.5
+},
+{
+'x': Date.UTC(2017, 0),
+// Jan, 1, 2017
+'y':21.4
+},
+{
+'x': Date.UTC(2018, 0),
+// Jan, 1, 2018
+'y':20.1
+},
+{
+'x': Date.UTC(2019, 0),
+// Jan, 1, 2019
+'y':null
+},
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        },{
+            name:'Tendencia General',
+            data: [
+            {
+                'x': Date.UTC(1960, 0),
+                // Enero, 1, 1960
+                'y':7.2
+                },
+                {
+                'x': Date.UTC(2018, 0),
+                // Enero, 1, 2018
+                'y':20.1
+                },
+            ],
+            color: 'lightblue',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
+            dataLabels: {
+                enabled: true,
+                style: {
+                    color:'white'
+                }
+            },
+        }],
+    })
+}, 13000)
+
+setTimeout(function() {
+    chart5.update({
+        subtitle: {
+            text: 'La Tendencia General de la Tasa de Asesinatos y Homicidios es Ascendente',
+            style: {
+                color: "white"
+            },
+            y:150,
+            x:300,
+            animation: {
+                enabled: true,
+                duration: 2000,
+            },
+        },
+    })
+}, 19500)
 })
