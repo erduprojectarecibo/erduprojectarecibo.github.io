@@ -1308,7 +1308,7 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart12a', {
+    Highcharts.chart('chart12', {
 
         chart: {
             type: 'area',
@@ -1355,30 +1355,6 @@ $(document).ready(function() {
             min: 0,
             max: 150000,
             gridLineWidth:0,
-            // plotLines: [{
-            //     value: 721419,
-            //     color: '#2a8e40',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text:"Valor Máximo (721419)",
-            //         style: {
-            //             // color:"#ffffff"
-            //         }
-            //     }
-            // }, {
-            //     value: 295851,
-            //     color: '#2a8e40',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text:"Valor Mínimo (295851)",
-            //         y:15,
-            //         style: {
-            //             // color:"#ffffff"
-            //         }                
-            //     }
-            // }]
         },
         legend: {
             itemStyle: {
@@ -1446,7 +1422,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    var chart5 = Highcharts.chart('chart18a', {
+    var chart5 = Highcharts.chart('chart18', {
 
         chart: {
             type: 'line',
@@ -1492,30 +1468,6 @@ $(document).ready(function() {
             min: 0,
             max: 40,
             gridLineWidth:0,
-            // plotLines: [{
-            //     value: 721419,
-            //     color: '#2a8e40',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text:"Valor Máximo (721419)",
-            //         style: {
-            //             // color:"#ffffff"
-            //         }
-            //     }
-            // }, {
-            //     value: 295851,
-            //     color: '#2a8e40',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text:"Valor Mínimo (295851)",
-            //         y:15,
-            //         style: {
-            //             // color:"#ffffff"
-            //         }                
-            //     }
-            // }]
         },
         legend: {
             itemStyle: {
@@ -2252,4 +2204,267 @@ setTimeout(function() {
         },
     })
 }, 19500)
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart19', {
+        chart: {
+            type: 'column',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
+
+        },
+        subtitle: {
+            text: '',
+        },
+
+        xAxis: [{
+
+            categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
+                'Rafael Hernández Colón',
+                'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
+                'Rafael Hernández Colón',
+                'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
+                'Aníbal Acevedo Vilá',
+                'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló Nevares'
+            ],
+            crosshair: true
+        }],
+
+        yAxis: {
+            min: -25000,
+            max: 25000,
+            title: {
+                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
+            }
+        },
+
+        plotOptions: {
+
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        series: [{
+            name: 'Magnitud de Cambio',
+            data: [{
+                name: '1961-1964',
+                color: '#eb1b24',
+                y: 18764,
+            }, {
+                name: '1965-1968',
+                color: '#eb1b24',
+                y: 8499
+            }, {
+                name: '1969-1972',
+                color: '#2b378d',
+                y: 8943
+            }, {
+                name: '1973-1976',
+                color: '#eb1b24',
+                y: 13716
+            }, {
+                name: '1977-1980',
+                color: '#2b378d',
+                y: 10636
+            }, {
+                name: '1981-1984',
+                color: '#2b378d',
+                y: 5880
+            }, {
+                name: '1985-1988',
+                color: '#eb1b24',
+                y: -4485
+            }, {
+                name: '1989-1992',
+                color: '#eb1b24',
+                y: 19029
+            }, {
+                name: '1993-1996',
+                color: '#2b378d',
+                y: -21247
+            }, {
+                name: '1997-2000',
+                color: '#2b378d',
+                y: -19496
+            }, {
+                name: '2001-2004',
+                color: '#eb1b24',
+                y: -2
+            }, {
+                name: '2005-2008',
+                color: '#eb1b24',
+                y: 3696
+            }, {
+                name: '2009-2012',
+                color: '#2b378d',
+                y: -5479
+            }, {
+                name: '2013-2016',
+                color: '#eb1b24',
+                y: -15325
+            }, {
+                name: '2017-2018 *',
+                color: '#2b378d',
+                y: -7749
+            }]
+        }],
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart15', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+            backgroundColor: '#101010',
+            borderColor: '#202020',
+            borderWidth: 3,
+        },
+
+        title: {
+            text: 'Gráfica 6: Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
+            style: {
+                color: '#FFFFFF'
+            }
+        },
+
+        xAxis: {
+            categories: ['1965', '1966', '1967', '1968', '1969', '1970',
+                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016'
+            ],
+            labels: {
+                style: {
+                    color: '#FFFFFF'
+                }
+            }
+        },
+
+        yAxis: {
+            title: {
+                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#FFFFFF'
+                }
+            },
+            labels: {
+                style: {
+                    color:"#ffffff"
+                }
+            },
+            min: 0,
+            max: 10000,
+            gridLineWidth:0,
+        },
+        legend: {
+            itemStyle: {
+                color: '#FFFFFF'
+            }
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                    style: {
+                        color: '#FFFFFF'
+                    }
+                },
+                style: {
+                    color: '#FFFFFF'
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Tasa Florida',
+            data: [
+            3320.2, 3716.3, 4103.6, 4498.5, 4742.5, 5317.2, 5673.0, 5376.9, 5960.3, 7387.3, 7721.2, 7016.7, 6738.6, 7069.5,
+7688.1, 8402.0, 8032.5, 7465.2, 6781.1, 6821.2, 7574.2, 8228.4, 8503.2, 8937.6, 8804.5, 8810.8, 8547.2, 8358.2, 8351.0,
+8250.0, 7701.5, 7497.4, 7271.8, 6886.0, 6205.4, 5694.7, 5577.5, 5427.6, 5188.3, 4894.3, 4721.7, 4702.6, 4811.3, 4829.4,
+4453.3, 4092.7, 4032.0, 3763.2, 3567.1, 3955.9, 3279.4, 3117.1
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            },
+        },
+        {
+            name: 'Tasa Nueva York',
+            data: [
+            3065.6, 3338.1, 3776.9, 4579.3, 4569.7, 4971.3, 5084.1, 4380.9, 4458.5, 5034.0, 5635.7, 6225.1, 6087.6, 5792.2,
+6205.1, 6911.6, 6905.4, 6468.1, 5902.6, 5577.3, 5588.5, 5767.7, 5952.4, 6309.3, 6293.2, 6363.8, 6244.6, 5858.4, 5551.3,
+5070.6, 4560.1, 4132.3, 3910.9, 3588.5, 3279.4, 3099.6, 2913.5, 2807.1, 2714.7, 2632.9, 2546.3, 2499.7, 2402.3, 2391.7,
+2316.3, 2352.1, 2303.9, 2323.3, 2214.5, 2100.0, 1986.8, 1921.8
+            ],
+            color: 'red',
+            animation: {
+                enabled: true,
+                duration: 12500,
+                easing: 'linear'
+            },
+        },
+        {
+            name: 'Tasa Puerto Rico',
+            data: [
+            2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0, 2879.9, 3030.6, 2910.3, 2708.9, 2590.1,
+2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3501.5, 3222.1, 3251.4, 3163.8, 3525.7, 3372.2, 3605.1, 3361.8,
+3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6, 1832.3, 1702.3, 1632.9, 1662.2, 1827.9,
+1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
+            ],
+            color: 'gold',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
 })
