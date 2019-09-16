@@ -528,7 +528,7 @@ $(document).ready(function() {
     });
 
 function update_data() {
-    chart.update({
+    chart2.update({
 
         plotOptions: {
             series: {
@@ -758,7 +758,7 @@ function update_data() {
 }
 
 function update_data2() {
-    chart.update({
+    chart2.update({
          subtitle: {
              text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
              style: {
