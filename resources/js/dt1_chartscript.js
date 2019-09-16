@@ -266,7 +266,6 @@ $(document).ready(function() {
             style: {
                 color: "transparent"
             },
-            y:500
         },
 
         xAxis: {
@@ -296,6 +295,14 @@ $(document).ready(function() {
 
         plotOptions: {
             series: {
+                animation: {
+                    duration:6000
+                },
+                events: {
+                    afterAnimate: function() {
+                        update_data();
+                    }
+                },
                 label: {
                     enabled: false,
                     connectorAllowed: false,
@@ -486,11 +493,6 @@ $(document).ready(function() {
 },
             ],
             color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         },{
             name:' ',
             data: [
@@ -506,12 +508,6 @@ $(document).ready(function() {
                 },
             ],
             color: 'transparent',
-            
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         }],
 
         responsive: {
@@ -531,7 +527,26 @@ $(document).ready(function() {
 
     });
 
-    setTimeout(function() { chart2.update({
+function update_data() {
+    chart.update({
+
+        plotOptions: {
+            series: {
+                animation: {
+                    duration:6000
+                },
+                events: {
+                    afterAnimate: function() {
+                        update_data2();
+                    }
+                },
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            },
+        },
+
             series: [{
             name: 'Delitos Tipo 1',
             data: [{
@@ -711,11 +726,6 @@ $(document).ready(function() {
 },
             ],
             color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         },{
             name:'Razón de Cambio Promedio',
             data: [
@@ -733,38 +743,36 @@ $(document).ready(function() {
             color: 'lightblue',
             dataLabels: {
                 enabled: true,
-                animation: {
-                    enabled: true,
-                    duration: 6000,
-                    easing: 'linear'
+                style: {
+                    color:'white'
                 },
             },
             animation: {
                 enabled: true,
                 duration: 6000,
-                easing: 'linear'
+                easing: 'linear',
             },
         }],
     })
-}, 13000)
 
-setTimeout(function() {
-    chart2.update({
-        subtitle: {
-            text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
-            y:120,
-            x:300,
-            style: {
-                color: "black"
-            },
-            animation: {
-                enabled: true,
-                duration: 2000,
-            },
-        },
-    })
-}, 19500)
-});
+}
+
+function update_data2() {
+    chart.update({
+         subtitle: {
+             text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
+             style: {
+                 color: "black"
+             },
+             y:120,
+             x:300,
+             animation: {
+                 enabled: true,
+                 duration: 2000,
+             },
+         },
+     })
+}
 
 /* ********************************************************************************************************************************************** */
 
