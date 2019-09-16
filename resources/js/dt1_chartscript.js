@@ -750,7 +750,7 @@ function update_data() {
                 'y':null
                 },
             ],
-            color: 'transparent',
+            color: 'lightblue',
         }]
     })
 
