@@ -161,7 +161,7 @@ Highcharts.setOptions({
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart3', {
+    Highcharts.chart('chart3a', {
 
         chart: {
             type: 'area',
@@ -274,7 +274,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document.ready(function() {
-    var chart2 = Highcharts.chart('chart16', {
+    var chart2 = Highcharts.chart('chart16a', {
 
         chart: {
             type: 'line',
@@ -826,7 +826,7 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    var chart3 = Highcharts.chart('chart17', {
+    var chart3 = Highcharts.chart('chart17a', {
 
         chart: {
             type: 'line',
@@ -1308,7 +1308,7 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart12', {
+    Highcharts.chart('chart12a', {
 
         chart: {
             type: 'area',
@@ -1422,7 +1422,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    var chart5 = Highcharts.chart('chart18', {
+    var chart5 = Highcharts.chart('chart18a', {
 
         chart: {
             type: 'line',
@@ -2213,7 +2213,7 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart19', {
+    Highcharts.chart('chart19a', {
         chart: {
             type: 'column',
             zoomType: 'x',
@@ -2332,7 +2332,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart15', {
+    Highcharts.chart('chart15a', {
 
         chart: {
             type: 'line',
