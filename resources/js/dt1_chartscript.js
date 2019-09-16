@@ -727,7 +727,7 @@ function update_data() {
             ],
             color: '#2a8e40',
         },{
-            name:' ',
+            name:'Razón de Cambio Promedio',
             data: [
             {
                 'x': Date.UTC(1959, 0),
@@ -745,7 +745,7 @@ function update_data() {
                 'y':3605
                 },
                 {
-                'x': Date.UTC(1992, 0),
+                'x': Date.UTC(1993, 0),
                 // Enero, 1, 1992
                 'y':null
                 },
@@ -763,7 +763,7 @@ function update_data2() {
              style: {
                  color: "black"
              },
-             y:120,
+             y:100,
              x:100,
              animation: {
                  enabled: true,
