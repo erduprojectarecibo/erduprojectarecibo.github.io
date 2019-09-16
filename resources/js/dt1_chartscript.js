@@ -274,7 +274,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart12a', {
+    Highcharts.chart('chart012', {
 
         chart: {
             type: 'area',
