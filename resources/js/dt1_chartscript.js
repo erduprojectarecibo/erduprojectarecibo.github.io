@@ -1,4 +1,3 @@
-  
 /**
  * Highcharts plugin to defer initial series animation until the element has
  * appeared.
@@ -243,210 +242,6 @@ $(document).ready(function() {
         }
     });
 })
-
-/* ********************************************************************************************************************************************** */
-
-//Total de Delitos Tipo 1 en Puerto Rico (1960-2018)
-
-/* ********************************************************************************************************************************************** */
-
-$(document).ready(function() {
-    Highcharts.chart('chart012', {
-
-        chart: {
-            type: 'area',
-            zoomType: 'x',
-        },
-
-        title: {
-            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
-        },
-
-        xAxis: {
-            categories: ['1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970',
-                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
-                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
-                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
-                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
-                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
-            ],
-        },
-
-        yAxis: {
-            title: {
-                text: 'Delitos Tipo 1',
-            },
-            min: 0,
-            max: 150000,
-            gridLineWidth:0,
-        },
-
-        plotOptions: {
-            series: {
-                label: {
-                    enabled: false,
-                    connectorAllowed: false,
-                },
-                pointStart: 1960
-            }
-        },
-
-        tooltip: {
-            shared: true
-        },
-
-        series: [{
-            name: 'Delitos Tipo 1',
-            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
-86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
-121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
-62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
-        }
-
-    });
-})
-
-/* ********************************************************************************************************************************************** */
-
-//Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)
-
-/* ********************************************************************************************************************************************** */
-
-$(document).ready(function() {
-    Highcharts.chart('chart019', {
-        chart: {
-            type: 'column',
-            zoomType: 'x',
-        },
-
-        title: {
-            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
-
-        },
-        subtitle: {
-            text: '',
-        },
-
-        xAxis: [{
-
-            categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
-                'Rafael Hernández Colón',
-                'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
-                'Rafael Hernández Colón',
-                'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
-                'Aníbal Acevedo Vilá',
-                'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló Nevares'
-            ],
-            crosshair: true
-        }],
-
-        yAxis: {
-            min: -25000,
-            max: 25000,
-            title: {
-                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
-            }
-        },
-
-        plotOptions: {
-
-            series: {
-                lineWidth: 5,
-                animation: {
-                    duration: 7500
-                }
-            },
-
-        },
-        series: [{
-            name: 'Magnitud de Cambio',
-            data: [{
-                name: '1961-1964',
-                color: '#eb1b24',
-                y: 18764,
-            }, {
-                name: '1965-1968',
-                color: '#eb1b24',
-                y: 8499
-            }, {
-                name: '1969-1972',
-                color: '#2b378d',
-                y: 8943
-            }, {
-                name: '1973-1976',
-                color: '#eb1b24',
-                y: 13716
-            }, {
-                name: '1977-1980',
-                color: '#2b378d',
-                y: 10636
-            }, {
-                name: '1981-1984',
-                color: '#2b378d',
-                y: 5880
-            }, {
-                name: '1985-1988',
-                color: '#eb1b24',
-                y: -4485
-            }, {
-                name: '1989-1992',
-                color: '#eb1b24',
-                y: 19029
-            }, {
-                name: '1993-1996',
-                color: '#2b378d',
-                y: -21247
-            }, {
-                name: '1997-2000',
-                color: '#2b378d',
-                y: -19496
-            }, {
-                name: '2001-2004',
-                color: '#eb1b24',
-                y: -2
-            }, {
-                name: '2005-2008',
-                color: '#eb1b24',
-                y: 3696
-            }, {
-                name: '2009-2012',
-                color: '#2b378d',
-                y: -5479
-            }, {
-                name: '2013-2016',
-                color: '#eb1b24',
-                y: -15325
-            }, {
-                name: '2017-2018 *',
-                color: '#2b378d',
-                y: -7749
-            }]
-        }],
-    });
-})
-
 
 /* ********************************************************************************************************************************************** */
 
@@ -969,7 +764,7 @@ setTimeout(function() {
         },
     })
 }, 19500)
-}))
+});
 
 /* ********************************************************************************************************************************************** */
 
@@ -1420,6 +1215,90 @@ setTimeout(function() {
     })
 }, 19500)
 
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Total de Delitos Tipo 1 en Puerto Rico (1960-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart012', {
+
+        chart: {
+            type: 'area',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
+        },
+
+        xAxis: {
+            categories: ['1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970',
+                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Delitos Tipo 1',
+            },
+            min: 0,
+            max: 150000,
+            gridLineWidth:0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1960
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Delitos Tipo 1',
+            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
+86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
+121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
+62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
 })
 
 /* ********************************************************************************************************************************************** */
@@ -2180,6 +2059,125 @@ setTimeout(function() {
 
 /* ********************************************************************************************************************************************** */
 
+//Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart019', {
+        chart: {
+            type: 'column',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
+
+        },
+        subtitle: {
+            text: '',
+        },
+
+        xAxis: [{
+
+            categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
+                'Rafael Hernández Colón',
+                'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
+                'Rafael Hernández Colón',
+                'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
+                'Aníbal Acevedo Vilá',
+                'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló Nevares'
+            ],
+            crosshair: true
+        }],
+
+        yAxis: {
+            min: -25000,
+            max: 25000,
+            title: {
+                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
+            }
+        },
+
+        plotOptions: {
+
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        series: [{
+            name: 'Magnitud de Cambio',
+            data: [{
+                name: '1961-1964',
+                color: '#eb1b24',
+                y: 18764,
+            }, {
+                name: '1965-1968',
+                color: '#eb1b24',
+                y: 8499
+            }, {
+                name: '1969-1972',
+                color: '#2b378d',
+                y: 8943
+            }, {
+                name: '1973-1976',
+                color: '#eb1b24',
+                y: 13716
+            }, {
+                name: '1977-1980',
+                color: '#2b378d',
+                y: 10636
+            }, {
+                name: '1981-1984',
+                color: '#2b378d',
+                y: 5880
+            }, {
+                name: '1985-1988',
+                color: '#eb1b24',
+                y: -4485
+            }, {
+                name: '1989-1992',
+                color: '#eb1b24',
+                y: 19029
+            }, {
+                name: '1993-1996',
+                color: '#2b378d',
+                y: -21247
+            }, {
+                name: '1997-2000',
+                color: '#2b378d',
+                y: -19496
+            }, {
+                name: '2001-2004',
+                color: '#eb1b24',
+                y: -2
+            }, {
+                name: '2005-2008',
+                color: '#eb1b24',
+                y: 3696
+            }, {
+                name: '2009-2012',
+                color: '#2b378d',
+                y: -5479
+            }, {
+                name: '2013-2016',
+                color: '#eb1b24',
+                y: -15325
+            }, {
+                name: '2017-2018 *',
+                color: '#2b378d',
+                y: -7749
+            }]
+        }],
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
 //Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)
 
 /* ********************************************************************************************************************************************** */
@@ -2291,4 +2289,3 @@ $(document).ready(function() {
 
     });
 })
-
