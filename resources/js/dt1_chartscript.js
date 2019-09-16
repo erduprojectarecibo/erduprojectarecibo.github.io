@@ -550,7 +550,7 @@ function update_data() {
             series: [{
             name: 'Delitos Tipo 1',
             data: [{
-'x': Date.UTC(1959, 0),
+                'x': Date.UTC(1959, 0),
 // Jan, 1, 1959
 'y':null
 },
@@ -727,7 +727,7 @@ function update_data() {
             ],
             color: '#2a8e40',
         },{
-            name:'Razón de Cambio Promedio',
+            name:' ',
             data: [
             {
                 'x': Date.UTC(1960, 0),
@@ -740,19 +740,8 @@ function update_data() {
                 'y':3605
                 },
             ],
-            color: 'lightblue',
-            dataLabels: {
-                enabled: true,
-                style: {
-                    color:'white'
-                },
-            },
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear',
-            },
-        }],
+            color: 'transparent',
+        }]
     })
 
 }
@@ -765,7 +754,7 @@ function update_data2() {
                  color: "black"
              },
              y:120,
-             x:200,
+             x:100,
              animation: {
                  enabled: true,
                  duration: 2000,
