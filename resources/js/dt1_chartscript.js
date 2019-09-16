@@ -161,21 +161,15 @@ Highcharts.setOptions({
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart3a', {
+    Highcharts.chart('chart03', {
 
         chart: {
             type: 'area',
             zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
         },
 
         title: {
             text: 'Delitos Tipo 1 por cada 100,000 Habitantes, Puerto Rico (1960-2018)',
-            style: {
-                color: '#FFFFFF'
-            }
         },
 
         xAxis: {
@@ -186,24 +180,13 @@ $(document).ready(function() {
                 '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
                 '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
             ],
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            }
         },
 
         yAxis: {
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#FFFFFF'
-                }
             },
             labels: {
-                style: {
-                    color:"#ffffff"
-                }
             },
             min: 0,
             max: 4500,
@@ -211,7 +194,6 @@ $(document).ready(function() {
         },
         legend: {
             itemStyle: {
-                color: '#FFFFFF'
             }
         },
 
@@ -220,12 +202,6 @@ $(document).ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
                 },
                 pointStart: 1960
             }
@@ -269,140 +245,20 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
-//Total de Delitos Tipo 1 en Puerto Rico (1960-2018)
-
-/* ********************************************************************************************************************************************** */
-
-$(document).ready(function() {
-    Highcharts.chart('chart012', {
-
-        chart: {
-            type: 'area',
-            zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
-        },
-
-        title: {
-            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
-            style: {
-                color: '#FFFFFF'
-            }
-        },
-
-        xAxis: {
-            categories: ['1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970',
-                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
-                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
-                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
-                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
-                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
-            ],
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            }
-        },
-
-        yAxis: {
-            title: {
-                text: 'Delitos Tipo 1',
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
-            labels: {
-                style: {
-                    color:"#ffffff"
-                }
-            },
-            min: 0,
-            max: 150000,
-            gridLineWidth:0,
-        },
-        legend: {
-            itemStyle: {
-                color: '#FFFFFF'
-            }
-        },
-
-        plotOptions: {
-            series: {
-                label: {
-                    enabled: false,
-                    connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
-                },
-                pointStart: 1960
-            }
-        },
-
-        tooltip: {
-            shared: true
-        },
-
-        series: [{
-            name: 'Delitos Tipo 1',
-            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
-86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
-121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
-62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
-        }
-
-    });
-})
-
-/* ********************************************************************************************************************************************** */
-
 // Tasa Ascendente de Delitos Tipo 1 por cada 100,000 habitantes (1960-1992)
 
 /* ********************************************************************************************************************************************** */
 
 $(document.ready(function() {
-    var chart2 = Highcharts.chart('chart16a', {
+    var chart2 = Highcharts.chart('chart016', {
 
         chart: {
             type: 'line',
             zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
         },
 
         title: {
             text: 'Gráfica 1: Delitos Tipo 1 por cada 100,000 Habitantes (1960-1992)',
-            style: {
-                color: '#FFFFFF'
-            }
         },
 
         subtitle: {
@@ -414,11 +270,6 @@ $(document.ready(function() {
         },
 
         xAxis: {
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
             type: 'datetime',
             dateTimeLabelFormats: { 
             year: '%Y'
@@ -430,14 +281,8 @@ $(document.ready(function() {
         yAxis: {
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#FFFFFF'
-                }
             },
             labels: {
-                style: {
-                    color:"#ffffff"
-                },
                 formatter: function() {
                     return Highcharts.numberFormat(this.value, 0, ' ', ', ')
                 }
@@ -447,9 +292,6 @@ $(document.ready(function() {
             gridLineWidth:0,
         },
         legend: {
-            itemStyle: {
-                color: '#FFFFFF'
-            }
         },
 
         plotOptions: {
@@ -457,12 +299,6 @@ $(document.ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
                 },
             },
         },
@@ -897,9 +733,6 @@ $(document.ready(function() {
             color: 'lightblue',
             dataLabels: {
                 enabled: true,
-                style: {
-                    color:'white'
-                },
                 animation: {
                     enabled: true,
                     duration: 6000,
@@ -919,11 +752,11 @@ setTimeout(function() {
     chart2.update({
         subtitle: {
             text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
-            style: {
-                color: "white"
-            },
             y:120,
             x:300,
+            style: {
+                color: "black"
+            },
             animation: {
                 enabled: true,
                 duration: 2000,
@@ -940,21 +773,15 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    var chart3 = Highcharts.chart('chart17a', {
+    var chart3 = Highcharts.chart('chart017', {
 
         chart: {
             type: 'line',
             zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
         },
 
         title: {
             text: 'Gráfica 2: Delitos Tipo 1 por cada 100,000 Habitantes (1992-2018)',
-            style: {
-                color: '#FFFFFF'
-            }
         },
 
         subtitle: {
@@ -966,11 +793,6 @@ $(document).ready(function() {
         },
 
         xAxis: {
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
             type: 'datetime',
             dateTimeLabelFormats: { 
             year: '%Y'
@@ -981,14 +803,8 @@ $(document).ready(function() {
         yAxis: {
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#FFFFFF'
-                }
             },
             labels: {
-                style: {
-                    color:"#ffffff"
-                },
                 formatter: function() {
                     return Highcharts.numberFormat(this.value, 0, ' ', ', ')
                 }
@@ -997,23 +813,12 @@ $(document).ready(function() {
             max: 4500,
             gridLineWidth:0,
         },
-        legend: {
-            itemStyle: {
-                color: '#FFFFFF'
-            }
-        },
 
         plotOptions: {
             series: {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
                 },
             },
         },
@@ -1383,9 +1188,6 @@ $(document).ready(function() {
             color: 'lightblue',
             dataLabels: {
                 enabled: true,
-                style: {
-                    color: 'white'
-                }
             },
             animation: {
                 enabled: true,
@@ -1401,7 +1203,7 @@ setTimeout(function() {
         subtitle: {
             text: 'Razón de Cambio Promedio en la tasa fue de -97 delitos por año.',
             style: {
-                color: "white"
+                color: "black"
             },
             y:400,
             x:300,
@@ -1415,7 +1217,89 @@ setTimeout(function() {
 
 })
 
+/* ********************************************************************************************************************************************** */
 
+//Total de Delitos Tipo 1 en Puerto Rico (1960-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart012', {
+
+        chart: {
+            type: 'area',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
+        },
+
+        xAxis: {
+            categories: ['1960', '1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970',
+                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Delitos Tipo 1',
+            },
+            min: 0,
+            max: 150000,
+            gridLineWidth:0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1960
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Delitos Tipo 1',
+            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
+86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
+121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
+62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 15000,
+                easing: 'linear'
+            },
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+})
 
 /* ********************************************************************************************************************************************** */
 
@@ -1424,30 +1308,18 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    var chart5 = Highcharts.chart('chart18a', {
+    var chart5 = Highcharts.chart('chart018', {
 
         chart: {
             type: 'line',
             zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
         },
 
         title: {
             text: 'Gráfica 4: Tasa Anual de Asesinatos y Homicidios por cada 100,000 Habitantes (1960-2018)',
-            style: {
-                color: '#FFFFFF'
-            }
         },
 
         xAxis: {
-            
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
             type: 'datetime',
             dateTimeLabelFormats: { 
             year: '%Y'
@@ -1458,23 +1330,10 @@ $(document).ready(function() {
         yAxis: {
             title: {
                 text: 'Asesinatos y Homicidios por cada 100,000 Habitantes',
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
-            labels: {
-                style: {
-                    color:"#ffffff"
-                }
             },
             min: 0,
             max: 40,
             gridLineWidth:0,
-        },
-        legend: {
-            itemStyle: {
-                color: '#FFFFFF'
-            }
         },
 
         plotOptions: {
@@ -1482,14 +1341,7 @@ $(document).ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
-                },
-                
+                },                
             }
         },
 
@@ -2182,9 +2034,6 @@ $(document).ready(function() {
             },
             dataLabels: {
                 enabled: true,
-                style: {
-                    color:'white'
-                }
             },
         }],
     })
@@ -2195,7 +2044,7 @@ setTimeout(function() {
         subtitle: {
             text: 'La Tendencia General de la Tasa de Asesinatos y Homicidios es Ascendente',
             style: {
-                color: "white"
+                color: "black"
             },
             y:150,
             x:300,
@@ -2215,7 +2064,7 @@ setTimeout(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart19a', {
+    Highcharts.chart('chart019', {
         chart: {
             type: 'column',
             zoomType: 'x',
@@ -2334,21 +2183,15 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('chart15a', {
+    Highcharts.chart('chart015', {
 
         chart: {
             type: 'line',
-            zoomType: 'x',
-            backgroundColor: '#101010',
-            borderColor: '#202020',
-            borderWidth: 3,
+            zoomType: 'x',  
         },
 
         title: {
             text: 'Gráfica 6: Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
-            style: {
-                color: '#FFFFFF'
-            }
         },
 
         xAxis: {
@@ -2359,33 +2202,15 @@ $(document).ready(function() {
                 '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
                 '2011', '2012', '2013', '2014', '2015', '2016'
             ],
-            labels: {
-                style: {
-                    color: '#FFFFFF'
-                }
-            }
         },
 
         yAxis: {
             title: {
                 text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
-                style: {
-                    color: '#FFFFFF'
-                }
-            },
-            labels: {
-                style: {
-                    color:"#ffffff"
-                }
             },
             min: 0,
             max: 10000,
             gridLineWidth:0,
-        },
-        legend: {
-            itemStyle: {
-                color: '#FFFFFF'
-            }
         },
 
         plotOptions: {
@@ -2393,12 +2218,6 @@ $(document).ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                    style: {
-                        color: '#FFFFFF'
-                    }
-                },
-                style: {
-                    color: '#FFFFFF'
                 },
             }
         },
