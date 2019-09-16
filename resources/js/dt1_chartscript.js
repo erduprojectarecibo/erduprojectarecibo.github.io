@@ -730,6 +730,11 @@ function update_data() {
             name:' ',
             data: [
             {
+                'x': Date.UTC(1959, 0),
+                // Enero, 1, 1959
+                'y':null
+                },
+                {
                 'x': Date.UTC(1960, 0),
                 // Enero, 1, 1985
                 'y':1416
@@ -738,6 +743,11 @@ function update_data() {
                 'x': Date.UTC(1992, 0),
                 // Enero, 1, 1992
                 'y':3605
+                },
+                {
+                'x': Date.UTC(1992, 0),
+                // Enero, 1, 1992
+                'y':null
                 },
             ],
             color: 'transparent',
