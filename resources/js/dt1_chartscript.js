@@ -454,7 +454,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document.ready(function() {
-    var chart2 = Highcharts.chart('chart016', {
+    Highcharts.chart('chart016', {
 
         chart: {
             type: 'line',
@@ -467,10 +467,8 @@ $(document.ready(function() {
 
         subtitle: {
             text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
-            style: {
-                color: "transparent"
-            },
-            y:500
+            y:120,
+            x:300
         },
 
         xAxis: {
@@ -701,12 +699,12 @@ $(document.ready(function() {
             {
                 'x': Date.UTC(1960, 0),
                 // Enero, 1, 1985
-                'y':0
+                'y':1416
                 },
                 {
                 'x': Date.UTC(1992, 0),
                 // Enero, 1, 1992
-                'y':0
+                'y':3605
                 },
             ],
             color: 'transparent',
@@ -734,242 +732,7 @@ $(document.ready(function() {
         }
 
     });
-
-    setTimeout(function() { chart2.update({
-            series: [{
-            name: 'Delitos Tipo 1',
-            data: [{
-'x': Date.UTC(1959, 0),
-// Jan, 1, 1959
-'y':null
-},
-{
-'x': Date.UTC(1960, 0),
-// Jan, 1, 1960
-'y':1416.1
-},
-{
-'x': Date.UTC(1961, 0),
-// Jan, 1, 1961
-'y':1598.8
-},
-{
-'x': Date.UTC(1962, 0),
-// Jan, 1, 1962
-'y':1964.3
-},
-{
-'x': Date.UTC(1963, 0),
-// Jan, 1, 1963
-'y':2195.6
-},
-{
-'x': Date.UTC(1964, 0),
-// Jan, 1, 1964
-'y':2256.8
-},
-{
-'x': Date.UTC(1965, 0),
-// Jan, 1, 1965
-'y':2233.2
-},
-{
-'x': Date.UTC(1966, 0),
-// Jan, 1, 1966
-'y':2314.1
-},
-{
-'x': Date.UTC(1967, 0),
-// Jan, 1, 1967
-'y':2316.5
-},
-{
-'x': Date.UTC(1968, 0),
-// Jan, 1, 1968
-'y':2480.5
-},
-{
-'x': Date.UTC(1969, 0),
-// Jan, 1, 1969
-'y':2304.1
-},
-{
-'x': Date.UTC(1970, 0),
-// Jan, 1, 1970
-'y':2450.9
-},
-{
-'x': Date.UTC(1971, 0),
-// Jan, 1, 1971
-'y':2582.1
-},
-{
-'x': Date.UTC(1972, 0),
-// Jan, 1, 1972
-'y':2545.4
-},
-{
-'x': Date.UTC(1973, 0),
-// Jan, 1, 1973
-'y':2575
-},
-{
-'x': Date.UTC(1974, 0),
-// Jan, 1, 1974
-'y':2879.9
-},
-{
-'x': Date.UTC(1975, 0),
-// Jan, 1, 1975
-'y':3030.6
-},
-{
-'x': Date.UTC(1976, 0),
-// Jan, 1, 1976
-'y':2910.3
-},
-{
-'x': Date.UTC(1977, 0),
-// Jan, 1, 1977
-'y':2708.9
-},
-{
-'x': Date.UTC(1978, 0),
-// Jan, 1, 1978
-'y':2590.1
-},
-{
-'x': Date.UTC(1979, 0),
-// Jan, 1, 1979
-'y':2573.9
-},
-{
-'x': Date.UTC(1980, 0),
-// Jan, 1, 1980
-'y':2883.8
-},
-{
-'x': Date.UTC(1981, 0),
-// Jan, 1, 1981
-'y':3011.6
-},
-{
-'x': Date.UTC(1982, 0),
-// Jan, 1, 1982
-'y':2976.7
-},
-{
-'x': Date.UTC(1983, 0),
-// Jan, 1, 1983
-'y':2806.6
-},
-{
-'x': Date.UTC(1984, 0),
-// Jan, 1, 1984
-'y':3086.9
-},
-{
-'x': Date.UTC(1985, 0),
-// Jan, 1, 1985
-'y':3471.6
-},
-{
-'x': Date.UTC(1986, 0),
-// Jan, 1, 1986
-'y':3501.5
-},
-{
-'x': Date.UTC(1987, 0),
-// Jan, 1, 1987
-'y':3222.1
-},
-{
-'x': Date.UTC(1988, 0),
-// Jan, 1, 1988
-'y':3251.4
-},
-{
-'x': Date.UTC(1989, 0),
-// Jan, 1, 1989
-'y':3163.8
-},
-{
-'x': Date.UTC(1990, 0),
-// Jan, 1, 1990
-'y':3525.7
-},
-{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':3372.2
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':3605.1
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':null
-},
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
-        },{
-            name:'Razón de Cambio Promedio',
-            data: [
-            {
-                'x': Date.UTC(1960, 0),
-                // Enero, 1, 1985
-                'y':1416
-                },
-                {
-                'x': Date.UTC(1992, 0),
-                // Enero, 1, 1992
-                'y':3605
-                },
-            ],
-            color: 'lightblue',
-            dataLabels: {
-                enabled: true,
-                animation: {
-                    enabled: true,
-                    duration: 6000,
-                    easing: 'linear'
-                },
-            },
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }],
-    })
-}, 13000)
-
-setTimeout(function() {
-    chart2.update({
-        subtitle: {
-            text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
-            y:120,
-            x:300,
-            style: {
-                color: "black"
-            },
-            animation: {
-                enabled: true,
-                duration: 2000,
-            },
-        },
-    })
-}, 19500)
-}))
-
+    
 /* ********************************************************************************************************************************************** */
 
 // Tasa Descendente de Delitos Tipo 1 por cada 100,000 habitantes (1992-2018)
