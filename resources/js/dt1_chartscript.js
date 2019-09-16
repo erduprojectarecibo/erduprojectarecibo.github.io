@@ -329,6 +329,126 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
+//Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('chart019', {
+        chart: {
+            type: 'column',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
+
+        },
+        subtitle: {
+            text: '',
+        },
+
+        xAxis: [{
+
+            categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
+                'Rafael Hernández Colón',
+                'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
+                'Rafael Hernández Colón',
+                'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
+                'Aníbal Acevedo Vilá',
+                'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló Nevares'
+            ],
+            crosshair: true
+        }],
+
+        yAxis: {
+            min: -25000,
+            max: 25000,
+            title: {
+                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
+            }
+        },
+
+        plotOptions: {
+
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        series: [{
+            name: 'Magnitud de Cambio',
+            data: [{
+                name: '1961-1964',
+                color: '#eb1b24',
+                y: 18764,
+            }, {
+                name: '1965-1968',
+                color: '#eb1b24',
+                y: 8499
+            }, {
+                name: '1969-1972',
+                color: '#2b378d',
+                y: 8943
+            }, {
+                name: '1973-1976',
+                color: '#eb1b24',
+                y: 13716
+            }, {
+                name: '1977-1980',
+                color: '#2b378d',
+                y: 10636
+            }, {
+                name: '1981-1984',
+                color: '#2b378d',
+                y: 5880
+            }, {
+                name: '1985-1988',
+                color: '#eb1b24',
+                y: -4485
+            }, {
+                name: '1989-1992',
+                color: '#eb1b24',
+                y: 19029
+            }, {
+                name: '1993-1996',
+                color: '#2b378d',
+                y: -21247
+            }, {
+                name: '1997-2000',
+                color: '#2b378d',
+                y: -19496
+            }, {
+                name: '2001-2004',
+                color: '#eb1b24',
+                y: -2
+            }, {
+                name: '2005-2008',
+                color: '#eb1b24',
+                y: 3696
+            }, {
+                name: '2009-2012',
+                color: '#2b378d',
+                y: -5479
+            }, {
+                name: '2013-2016',
+                color: '#eb1b24',
+                y: -15325
+            }, {
+                name: '2017-2018 *',
+                color: '#2b378d',
+                y: -7749
+            }]
+        }],
+    });
+})
+
+
+/* ********************************************************************************************************************************************** */
+
 // Tasa Ascendente de Delitos Tipo 1 por cada 100,000 habitantes (1960-1992)
 
 /* ********************************************************************************************************************************************** */
@@ -2055,125 +2175,6 @@ setTimeout(function() {
         },
     })
 }, 19500)
-})
-
-/* ********************************************************************************************************************************************** */
-
-//Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)
-
-/* ********************************************************************************************************************************************** */
-
-$(document).ready(function() {
-    Highcharts.chart('chart019', {
-        chart: {
-            type: 'column',
-            zoomType: 'x',
-        },
-
-        title: {
-            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
-
-        },
-        subtitle: {
-            text: '',
-        },
-
-        xAxis: [{
-
-            categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
-                'Rafael Hernández Colón',
-                'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
-                'Rafael Hernández Colón',
-                'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
-                'Aníbal Acevedo Vilá',
-                'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló Nevares'
-            ],
-            crosshair: true
-        }],
-
-        yAxis: {
-            min: -25000,
-            max: 25000,
-            title: {
-                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
-            }
-        },
-
-        plotOptions: {
-
-            series: {
-                lineWidth: 5,
-                animation: {
-                    duration: 7500
-                }
-            },
-
-        },
-        series: [{
-            name: 'Magnitud de Cambio',
-            data: [{
-                name: '1961-1964',
-                color: '#eb1b24',
-                y: 18764,
-            }, {
-                name: '1965-1968',
-                color: '#eb1b24',
-                y: 8499
-            }, {
-                name: '1969-1972',
-                color: '#2b378d',
-                y: 8943
-            }, {
-                name: '1973-1976',
-                color: '#eb1b24',
-                y: 13716
-            }, {
-                name: '1977-1980',
-                color: '#2b378d',
-                y: 10636
-            }, {
-                name: '1981-1984',
-                color: '#2b378d',
-                y: 5880
-            }, {
-                name: '1985-1988',
-                color: '#eb1b24',
-                y: -4485
-            }, {
-                name: '1989-1992',
-                color: '#eb1b24',
-                y: 19029
-            }, {
-                name: '1993-1996',
-                color: '#2b378d',
-                y: -21247
-            }, {
-                name: '1997-2000',
-                color: '#2b378d',
-                y: -19496
-            }, {
-                name: '2001-2004',
-                color: '#eb1b24',
-                y: -2
-            }, {
-                name: '2005-2008',
-                color: '#eb1b24',
-                y: 3696
-            }, {
-                name: '2009-2012',
-                color: '#2b378d',
-                y: -5479
-            }, {
-                name: '2013-2016',
-                color: '#eb1b24',
-                y: -15325
-            }, {
-                name: '2017-2018 *',
-                color: '#2b378d',
-                y: -7749
-            }]
-        }],
-    });
 })
 
 /* ********************************************************************************************************************************************** */
