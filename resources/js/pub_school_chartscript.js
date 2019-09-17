@@ -161,7 +161,7 @@ Highcharts.setOptions({
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('container', {
+    Highcharts.chart('chart05', {
 
         chart: {
             type: 'area',
