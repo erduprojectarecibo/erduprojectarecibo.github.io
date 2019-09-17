@@ -769,7 +769,7 @@ function update_data2() {
                  color: "black"
              },
              y:100,
-             x:100,
+             x:60,
          },
      })
 }
@@ -1251,7 +1251,7 @@ function update_data4() {
                 color: "black"
             },
             y:100,
-            x:150,
+            x:60,
         },
     })
 }
