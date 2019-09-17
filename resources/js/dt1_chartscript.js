@@ -2084,7 +2084,7 @@ $(document).ready(function() {
                 'y':20.1
                 },
             ],
-            color: 'lightblue',
+            color: '#FEDA35',
             animation: {
                 enabled: true,
                 duration: 8000,
@@ -2104,8 +2104,8 @@ $(document).ready(function() {
                 style: {
                     color: "black"
                 },
-                y:150,
-                x:300,
+                y:100,
+                x:40,
                 animation: {
                     enabled: true,
                     duration: 2000,
