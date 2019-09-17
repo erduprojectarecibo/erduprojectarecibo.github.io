@@ -273,7 +273,7 @@ $(document).ready(function() {
             dateTimeLabelFormats: { 
             year: '%Y'
             },
-            tickInterval: Date.UTC(2010, 0) - Date.UTC(2009, 0)
+            tickInterval: Date.UTC(2010, 0) - Date.UTC(2008, 0)
 
         },
 
