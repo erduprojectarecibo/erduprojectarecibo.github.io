@@ -497,7 +497,12 @@ $(document).ready(function() {
         },{
             name:' ',
             data: [
-            {
+                {
+                'x': Date.UTC(1959, 0),
+                // Enero, 1, 1959
+                'y':null
+                },
+                {
                 'x': Date.UTC(1960, 0),
                 // Enero, 1, 1985
                 'y':0
@@ -506,6 +511,11 @@ $(document).ready(function() {
                 'x': Date.UTC(1992, 0),
                 // Enero, 1, 1992
                 'y':0
+                },
+                {
+                'x': Date.UTC(1993, 0),
+                // Enero, 1, 1993
+                'y':null
                 },
             ],
             color: 'transparent',
@@ -545,6 +555,7 @@ function update_data() {
                     enabled: false,
                     connectorAllowed: false,
                 },
+                pointStart: Date.UTC(1959, 0)
             },
         },
 
@@ -1246,8 +1257,8 @@ function update_data4() {
             style: {
                 color: "black"
             },
-            y:200,
-            x:100,
+            y:100,
+            x:150,
         },
     })
 }
