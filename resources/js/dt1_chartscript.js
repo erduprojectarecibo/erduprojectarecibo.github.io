@@ -296,7 +296,7 @@ $(document).ready(function() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:6000
+                    duration:8000
                 },
                 events: {
                     afterAnimate: function() {
@@ -307,6 +307,7 @@ $(document).ready(function() {
                     enabled: false,
                     connectorAllowed: false,
                 },
+                pointStart: Date.UTC(1959, 0)
             },
         },
 
@@ -533,7 +534,7 @@ function update_data() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:6000
+                    duration:8000
                 },
                 events: {
                     afterAnimate: function() {
@@ -765,10 +766,6 @@ function update_data2() {
              },
              y:100,
              x:100,
-             animation: {
-                 enabled: true,
-                 duration: 2000,
-             },
          },
      })
 }
@@ -798,7 +795,6 @@ $(document).ready(function() {
             style: {
                 color: "transparent"
             },
-            y:500
         },
 
         xAxis: {
@@ -828,6 +824,14 @@ $(document).ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
+                },
+                animation: {
+                    duration:8000
+                },
+                events: {
+                    afterAnimate: function() {
+                        update_data3();
+                    }
                 },
             },
         },
@@ -985,24 +989,29 @@ $(document).ready(function() {
 },
             ],
             color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         },{
             name:' ',
             data: [
-            {
-                'x': Date.UTC(1992, 0),
-                // Enero, 1, 1992
-                'y':0
-                },
                 {
-                'x': Date.UTC(2018, 0),
-                // Enero, 1, 2018
-                'y':0
-                },
+                    'x': Date.UTC(1991, 0),
+                    // Enero, 1, 1991
+                    'y':null
+                    },
+                    {
+                    'x': Date.UTC(1992, 0),
+                    // Enero, 1, 1992
+                    'y':0
+                    },
+                    {
+                    'x': Date.UTC(2018, 0),
+                    // Enero, 1, 2018
+                    'y':0
+                    },
+                    {
+                    'x': Date.UTC(2019, 0),
+                    // Enero, 1, 2019
+                    'y':null
+                    },
             ],
             color:'transparent',
         }],
@@ -1024,12 +1033,30 @@ $(document).ready(function() {
 
     });
 
-    setTimeout(function() { chart3.update({
+function update_data3() {
+    chart3.update({
 
-            series: [{
-            name: 'Delitos Tipo 1',
-            data: [{
-                'x': Date.UTC(1991, 0),
+        plotOptions: {
+            series: {
+                animation: {
+                    duration:8000
+                },
+                events: {
+                    afterAnimate: function() {
+                        update_data4();
+                    }
+                },
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            },
+        },
+
+        series: [{
+        name: 'Delitos Tipo 1',
+        data: [{
+            'x': Date.UTC(1991, 0),
 // Jan, 1, 1991
 'y':null
 },
@@ -1173,56 +1200,57 @@ $(document).ready(function() {
 // Jan, 1, 2019
 'y':null
 },
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
-        },{
-            name:'Razón de Cambio Promedio',
-            data: [
+        ],
+        color: '#2a8e40',
+    },{
+        name:'Razón de Cambio Promedio',
+        data: [
             {
-                'x': Date.UTC(1992, 0),
-                // Enero, 1, 1992
-                'y':3605
-                },
-                {
-                'x': Date.UTC(2018, 0),
-                // Enero, 1, 2018
-                'y':976.9
-                },
-            ],
-            color: 'lightblue',
-            dataLabels: {
-                enabled: true,
+            'x': Date.UTC(1991, 0),
+            // Enero, 1, 1991
+            'y':null
             },
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
+            {
+            'x': Date.UTC(1992, 0),
+            // Enero, 1, 1992
+            'y':3605
             },
-        }],
-    })
-}, 13000);
+            {
+            'x': Date.UTC(2018, 0),
+            // Enero, 1, 2018
+            'y':976.9
+            },
+            {
+            'x': Date.UTC(2019, 0),
+            // Enero, 1, 2019
+            'y':null
+            },
+        ],
+        color: 'lightblue',
+        dataLabels: {
+            enabled: true,
+        },
+        animation: {
+            enabled: true,
+            duration: 6000,
+            easing: 'linear'
+        },
+    }],
+})
+}
 
-setTimeout(function() {
+function update_data4() {
     chart3.update({
         subtitle: {
             text: 'Razón de Cambio Promedio en la tasa fue de -97 delitos por año.',
             style: {
                 color: "black"
             },
-            y:400,
-            x:300,
-            animation: {
-                enabled: true,
-                duration: 2000,
-            },
+            y:200,
+            x:100,
         },
     })
-}, 19500)
+}
 
 })
 
@@ -1707,6 +1735,7 @@ $(document).ready(function() {
     });
 
     setTimeout(function() { chart5.update({
+        
             series: [{
             name: 'Asesinatos y Homicidios',
             data: [{
