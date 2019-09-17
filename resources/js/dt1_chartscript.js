@@ -747,7 +747,7 @@ function update_data() {
                 'y':null
                 },
             ],
-            color: 'lightblue',
+            color: '#FEDA35',
             dataLabels: {
                 enabled: true,
             },
@@ -1222,7 +1222,7 @@ function update_data3() {
             {
             'x': Date.UTC(2018, 0),
             // Enero, 1, 2018
-            'y':976.9
+            'y':977
             },
             {
             'x': Date.UTC(2019, 0),
@@ -1230,7 +1230,7 @@ function update_data3() {
             'y':null
             },
         ],
-        color: 'lightblue',
+        color: '#FEDA35',
         dataLabels: {
             enabled: true,
         },
@@ -2134,8 +2134,8 @@ $(document).ready(function() {
         }],
 
         yAxis: {
-            min: -25000,
-            max: 25000,
+            min: -20000,
+            max: 20000,
             title: {
                 text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
             }
