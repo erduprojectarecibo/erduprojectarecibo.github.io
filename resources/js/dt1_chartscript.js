@@ -2134,8 +2134,8 @@ $(document).ready(function() {
         }],
 
         yAxis: {
-            min: -20000,
-            max: 20000,
+            min: -22500,
+            max: 22500,
             title: {
                 text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
             }
