@@ -1382,8 +1382,16 @@ $(document).ready(function() {
                 label: {
                     enabled: false,
                     connectorAllowed: false,
-                },                
-            }
+                },
+                animation: {
+                    duration:8000
+                },
+                events: {
+                    afterAnimate: function() {
+                        update_data5();
+                    }
+                },
+            },
         },
 
         tooltip: {
@@ -1699,11 +1707,6 @@ $(document).ready(function() {
 },
             ],
             color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         },{
             name:' ',
             data: [
@@ -1738,8 +1741,26 @@ $(document).ready(function() {
 
     });
 
-    setTimeout(function() { chart5.update({
-        
+    function update_data5() {
+        chart5.update({
+
+            plotOptions: {
+                series: {
+                    animation: {
+                        duration:8000
+                    },
+                    events: {
+                        afterAnimate: function() {
+                            update_data6();
+                        }
+                    },
+                    label: {
+                        enabled: false,
+                        connectorAllowed: false,
+                    },
+                },
+            },
+
             series: [{
             name: 'Asesinatos y Homicidios',
             data: [{
@@ -2049,11 +2070,6 @@ $(document).ready(function() {
 },
             ],
             color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 15000,
-                easing: 'linear'
-            },
         },{
             name:'Tendencia General',
             data: [
@@ -2071,7 +2087,7 @@ $(document).ready(function() {
             color: 'lightblue',
             animation: {
                 enabled: true,
-                duration: 6000,
+                duration: 8000,
                 easing: 'linear'
             },
             dataLabels: {
@@ -2079,24 +2095,25 @@ $(document).ready(function() {
             },
         }],
     })
-}, 13000)
+    }
 
-setTimeout(function() {
-    chart5.update({
-        subtitle: {
-            text: 'La Tendencia General de la Tasa de Asesinatos y Homicidios es Ascendente',
-            style: {
-                color: "black"
+    function update_data6() {
+        chart5.update({
+            subtitle: {
+                text: 'La Tendencia General de la Tasa de Asesinatos y Homicidios es Ascendente',
+                style: {
+                    color: "black"
+                },
+                y:150,
+                x:300,
+                animation: {
+                    enabled: true,
+                    duration: 2000,
+                },
             },
-            y:150,
-            x:300,
-            animation: {
-                enabled: true,
-                duration: 2000,
-            },
-        },
-    })
-}, 19500)
+        })
+    }
+
 })
 
 /* ********************************************************************************************************************************************** */
