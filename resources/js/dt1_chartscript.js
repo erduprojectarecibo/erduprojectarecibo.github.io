@@ -748,6 +748,14 @@ function update_data() {
                 },
             ],
             color: 'lightblue',
+            dataLabels: {
+                enabled: true,
+            },
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
         }]
     })
 
