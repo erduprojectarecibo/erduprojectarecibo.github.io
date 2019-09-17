@@ -148,7 +148,7 @@ Highcharts.setOptions({
         series: {
             lineWidth: 5,
             animation: {
-                duration: 5000
+                duration: 8000
             }
         },
     },
@@ -221,7 +221,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 15000,
+                duration: 8000,
                 easing: 'linear'
             },
         }],
@@ -273,7 +273,7 @@ $(document).ready(function() {
             dateTimeLabelFormats: { 
             year: '%Y'
             },
-            tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
+            tickInterval: Date.UTC(2010, 0) - Date.UTC(2009, 0)
 
         },
 
@@ -1326,7 +1326,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 15000,
+                duration: 8000,
                 easing: 'linear'
             },
         }],
@@ -2153,7 +2153,7 @@ $(document).ready(function() {
             series: {
                 lineWidth: 5,
                 animation: {
-                    duration: 7500
+                    duration: 8000
                 }
             },
 
@@ -2286,7 +2286,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 10000,
+                duration: 8000,
                 easing: 'linear'
             },
         },
@@ -2301,7 +2301,7 @@ $(document).ready(function() {
             color: 'red',
             animation: {
                 enabled: true,
-                duration: 12500,
+                duration: 10000,
                 easing: 'linear'
             },
         },
@@ -2316,7 +2316,7 @@ $(document).ready(function() {
             color: 'gold',
             animation: {
                 enabled: true,
-                duration: 15000,
+                duration: 12000,
                 easing: 'linear'
             },
         }],
