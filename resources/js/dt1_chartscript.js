@@ -521,21 +521,6 @@ $(document).ready(function() {
             color: 'transparent',
         }],
 
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
-        }
-
     });
 
 function update_data() {
