@@ -764,7 +764,7 @@ function update_data() {
 function update_data2() {
     chart2.update({
          subtitle: {
-             text: 'Razón de Cambio Promedio fue de 66 delitos por año.',
+             text: 'Razón de Cambio Promedio: 66 delitos por año.',
              style: {
                  color: "black"
              },
@@ -1246,7 +1246,7 @@ function update_data3() {
 function update_data4() {
     chart3.update({
         subtitle: {
-            text: 'Razón de Cambio Promedio fue de -97 delitos por año.',
+            text: 'Razón de Cambio Promedio: -97 delitos por año.',
             style: {
                 color: "black"
             },
