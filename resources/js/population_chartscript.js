@@ -325,8 +325,6 @@ $(document).ready(function () {
                 sequence: [3533, 4250, 5018, 6042, 8634]
             }, {
                 sequence: [3973, 5065, 6157, 7614, 12244]
-            }, {
-                sequence: [44, 33, 143, 122, 588]
             }]
         }],
     });
@@ -353,7 +351,7 @@ $(document).ready(function () {
 
         },
         xAxis: [{
-            categories: categories,
+            categories: categories2,
             reversed: false,
             labels: {
                 style: {
