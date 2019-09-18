@@ -2,7 +2,7 @@
  * Highcharts plugin to defer initial series animation until the element has
  * appeared.
  *
- * Updated 2019-04-10
+ * Updated 2019-09-18
  *
  * @todo
  * - If the element is greater than the viewport (or a certain fraction of it),
