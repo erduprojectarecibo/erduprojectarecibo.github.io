@@ -169,7 +169,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Delitos Tipo 1 por cada 100,000 Habitantes, Puerto Rico (1960-2018)',
+            text: 'Tasa de delitos tipo 1 en Puerto Rico (1960-2018)',
         },
 
         xAxis: {
@@ -184,7 +184,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                text: 'Tasa de delitos tipo 1 por cada 100,000 Habitantes',
             },
             labels: {
             },
@@ -212,11 +212,12 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Delitos Tipo 1',
-            data: [1416.1, 1598.8, 1964.3, 2195.6, 2256.8, 2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0,
-2879.9, 3030.6, 2910.3, 2708.9, 2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3501.5, 3222.1, 3251.4, 3163.8,
-3525.7, 3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6, 1832.3, 1702.3,
-1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0, 1171.8, 976.9
+            name: 'Tasa Delitos Tipo 1',
+            data: [1416.1, 1598.8, 1964.3, 2195.6, 2256.8, 2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4,
+                2575.0, 2879.9, 3030.6, 2910.3, 2708.9, 2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6,
+                3531.1, 3222.1, 3251.4, 3169.0, 3525.7, 3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7,
+                2149.9, 1993.0, 1836.2, 2385.7, 2137.6, 1832.3, 1702.3, 1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9,
+                1698.5, 1619.2, 1527.8, 1341.3, 1258.0, 1171.8, 976.9
             ],
             color: '#2a8e40',
             animation: {
@@ -258,7 +259,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 1: Delitos Tipo 1 por cada 100,000 Habitantes (1960-1992)',
+            text: 'Gráfica 1: Tendencia tasa delitos tipo 1 de 1960 a 1992',
         },
 
         subtitle: {
@@ -279,7 +280,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                text: 'Tasa delitos tipo 1 por cada 100,000 habitantes',
             },
             labels: {
                 formatter: function() {
@@ -316,7 +317,7 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Delitos Tipo 1',
+            name: 'Tasa Delitos Tipo 1',
             data: [{
                 'x': Date.UTC(1959, 0),
 // Jan, 1, 1959
@@ -455,7 +456,7 @@ $(document).ready(function() {
 {
 'x': Date.UTC(1986, 0),
 // Jan, 1, 1986
-'y':3501.5
+'y':3531.1
 },
 {
 'x': Date.UTC(1987, 0),
@@ -470,7 +471,7 @@ $(document).ready(function() {
 {
 'x': Date.UTC(1989, 0),
 // Jan, 1, 1989
-'y':3163.8
+'y':3169.0
 },
 {
 'x': Date.UTC(1990, 0),
@@ -545,7 +546,7 @@ function update_data() {
         },
 
             series: [{
-            name: 'Delitos Tipo 1',
+            name: 'Tasa Delitos Tipo 1',
             data: [{
                 'x': Date.UTC(1959, 0),
 // Jan, 1, 1959
@@ -791,7 +792,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 2: Delitos Tipo 1 por cada 100,000 Habitantes (1992-2018)',
+            text: 'Gráfica 2: Tendencia tasa delitos tipo 1 de 1992 a 2018',
         },
 
         subtitle: {
@@ -811,7 +812,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                text: 'Tasa delitos tipo 1 por cada 100,000 habitantes',
             },
             labels: {
                 formatter: function() {
@@ -845,7 +846,7 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Delitos Tipo 1',
+            name: 'Tasa Delitos Tipo 1',
             data: [{
 'x': Date.UTC(1991, 0),
 // Jan, 1, 1991
@@ -1058,7 +1059,7 @@ function update_data3() {
         },
 
         series: [{
-        name: 'Delitos Tipo 1',
+        name: 'Tasa Delitos Tipo 1',
         data: [{
             'x': Date.UTC(1991, 0),
 // Jan, 1, 1991
@@ -1273,7 +1274,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 3: Total Delitos Tipo 1 en Puerto Rico (1960-2018)',
+            text: 'Gráfica 3: Total delitos tipo 1 en Puerto Rico de 1960 a 2018',
         },
 
         xAxis: {
@@ -1288,7 +1289,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Delitos Tipo 1',
+                text: 'Total delitos tipo 1',
             },
             min: 0,
             max: 150000,
@@ -1310,11 +1311,11 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Delitos Tipo 1',
-            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095,
-86079, 81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 118522, 110018, 111947, 109845, 124371, 119731, 128874,
-121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211, 62269,
-62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
+            name: 'Total Delitos Tipo 1',
+            data: [33272, 37982, 47514, 54159, 56746, 57117, 60013, 60735, 65616, 61480, 66470, 70438, 70423, 72363, 82293, 88095, 86079,
+                81544, 79343, 80181, 92180, 96645, 96738, 92252, 102525, 116432, 119522, 110018, 111947, 110027, 124371, 119731, 128874,
+                121035, 116263, 106088, 99788, 94875, 87020, 81880, 75379, 70120, 91223, 81788, 70118, 65050, 62135, 62881, 68746, 67211,
+                62269, 62279, 61732, 58180, 54006, 46587, 42855, 38964, 31215
             ],
             color: '#2a8e40',
             animation: {
@@ -1357,7 +1358,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 4: Tasa Anual de Asesinatos y Homicidios por cada 100,000 Habitantes (1960-2018)',
+            text: 'Gráfica 4: Tasa anual de asesinatos y homicidios de 1960 a 2018',
         },
 
         xAxis: {
@@ -1370,7 +1371,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Asesinatos y Homicidios por cada 100,000 Habitantes',
+                text: 'Tasa de asesinatos y homicidios',
             },
             min: 0,
             max: 40,
@@ -1399,7 +1400,7 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Asesinatos y Homicidios',
+            name: 'Tasa Asesinatos y Homicidios',
             data: [{
 'x': Date.UTC(1959, 0),
 // Jan, 1, 1960
@@ -1762,7 +1763,7 @@ $(document).ready(function() {
             },
 
             series: [{
-            name: 'Asesinatos y Homicidios',
+            name: 'Tasa Asesinatos y Homicidios',
             data: [{
 'x': Date.UTC(1959, 0),
 // Jan, 1, 1960
@@ -2154,7 +2155,7 @@ $(document).ready(function() {
             min: -20000,
             max: 20000,
             title: {
-                text: 'Magnitud del Cambio en el Total de Delitos Tipo 1'
+                text: 'Cambio en el total de delitos tipo 1'
             }
         },
 
@@ -2201,7 +2202,7 @@ $(document).ready(function() {
             }, {
                 name: '1989-1992',
                 color: '#eb1b24',
-                y: 19029
+                y: 18847
             }, {
                 name: '1993-1996',
                 color: '#2b378d',
@@ -2250,7 +2251,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 6: Comparación cronológica Tasa de Delitos Tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 6: Comparación cronológica Tasa de delitos tipo 1 de nueva York, Florida y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
@@ -2265,7 +2266,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                text: 'Tasa delitos tipo 1',
             },
             min: 0,
             max: 10000,
@@ -2318,10 +2319,10 @@ $(document).ready(function() {
         {
             name: 'Tasa Puerto Rico',
             data: [
-            2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0, 2879.9, 3030.6, 2910.3, 2708.9, 2590.1,
-2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3501.5, 3222.1, 3251.4, 3163.8, 3525.7, 3372.2, 3605.1, 3361.8,
-3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6, 1832.3, 1702.3, 1632.9, 1662.2, 1827.9,
-1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
+                2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0, 2879.9, 3030.6, 2910.3, 2708.9,
+                2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3531.1, 3222.1, 3251.4, 3169.0, 3525.7,
+                3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6,
+                1832.3, 1702.3, 1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
             ],
             color: 'gold',
             animation: {
