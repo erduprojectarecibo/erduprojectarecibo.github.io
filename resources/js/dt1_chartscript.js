@@ -2251,7 +2251,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 6: Comparación cronológica Tasa de delitos tipo 1 de nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 6: Comparación cronológica Tasa de delitos tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
