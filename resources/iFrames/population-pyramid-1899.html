@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+        <div id="pchart01"></div>
+        <div id="play-controls">
+            <button id="play-pause-button" class="fa fa-play" title="play"></button>
+            <input id="play-range" type="range" value="0" min="0" max="5" />
+            <output id="play-output" for="play-range" name="year">1995</output>
+        </div>
+</body>
+
+<style>
+    #pchart01 {
+        width:800px;
+        height:600px;
+    }
+
+    @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+#play-controls {
+    min-width: 310px;
+    max-width: 800px;
+}
+#play-controls * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#play-pause-button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid silver;
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+#play-range {
+    width: 70%;
+}
+#play-output {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<script>
+(function (H) {
+
+var pendingRenders = [];
+
+function isElementInViewport(el) {
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (
+            window.innerHeight ||
+            document.documentElement.clientHeight
+        ) &&
+        rect.right <= (
+            window.innerWidth ||
+            document.documentElement.clientWidth
+        )
+    );
+}
+
+H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+    var series = this,
+        renderTo = this.chart.container.parentNode;
+
+    // It is appeared, render it
+    if (isElementInViewport(renderTo) || !series.options.animation) {
+        proceed.call(series);
+
+        // It is not appeared, halt rendering until appear
+    } else {
+        pendingRenders.push({
+            element: renderTo,
+            appear: function () {
+                proceed.call(series);
+            }
+        });
+    }
+});
+
+function recalculate() {
+    pendingRenders.forEach(function (item) {
+        if (isElementInViewport(item.element)) {
+            item.appear();
+            H.erase(pendingRenders, item);
+        }
+    });
+}
+
+if (window.addEventListener) {
+    ['DOMContentLoaded', 'load', 'scroll', 'resize']
+    .forEach(function (eventType) {
+        addEventListener(eventType, recalculate, false);
+    });
+}
+
+}(Highcharts));
+
+
+
+Highcharts.setOptions({
+lang: {
+    thousandsSep: ','
+},
+chart: {
+
+    backgroundColor: '#FFF',
+},
+
+legend: {
+    itemStyle: {
+        color: '#000'
+    },
+    itemHiddenStyle: {
+        color: '#777'
+    },
+    itemHoverStyle: {
+        color: '#777'
+    }
+},
+
+title: {
+    style: {
+        color: '#22292F',
+        fill: '#22292F',
+        fontWeight: 'bold'
+    }
+},
+
+subtitle: {
+    style: {
+        color: '#8795A1',
+        fill: '#8795A1',
+        fontWeight: 'bold'
+    }
+},
+
+yAxis: {
+    title: {
+        style: {
+            color: '#B8C2CC'
+        }
+    },
+
+
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+xAxis: {
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+credits: {
+    enabled: false
+},
+
+tooltip: {
+    backgroundColor: "#FFF",
+    borderColor: '#000',
+    valueDecimals: 1,
+    style: {
+        opacity: 0.86
+    },
+    shared: true
+
+},
+
+plotOptions: {
+    series: {
+        lineWidth: 5,
+        animation: {
+            duration: 5000
+        }
+    },
+},
+
+});
+
+var categories = ['0-4', '5-9', '10-14', '15-19',
+'20-24', '25-29', '30-34', '35-39', '40-44',
+'45-49', '50-54', '55-59', '60-64', '65-69',
+'70-74', '75 +'
+];
+
+var dataSequence = [
+            { 
+            name:'1899',
+            data: [-76774,-72920,-65112,-42919,-41664,-39469,-31365,-24251,-22179,-13454,-16124,-8287,-8471,-3551,-2713,-2945]
+            }, {
+                name:'1910',
+                data: [-94213,-76572,-74280,-53388,-53492,-45836,-35331,-32283,-26539,-18977,-16867,-9241,-8996,-4612,-3156,-3497]
+            }, {
+                name:'1920',
+                data: [-100898,-99150,-85702,-60183,-62114,-44138,-37540,-38438,-31174,-28368,-21878,-11610,-12374,-5415,-4138,-4551]
+            }, {
+                name: '1930',
+                data: [-114045,-113532,-101375,-87907,-74461,-47519,-46720,-45554,-37666,-29935,-24552,-14177,-15616,-6960,-5680,-5962]
+            }, {
+                name:'1940',
+                data: []
+            }, {
+                name:'1950',
+                data: []
+            },
+]
+
+var dataSequence2 = [
+            { 
+            name:'1899',
+            data: []
+            }, {
+                name:'1910',
+                data: []
+            }, {
+                name:'1920',
+                data: []
+            }, {
+                name: '1930',
+                data: []
+            }, {
+                name:'1940',
+                data: []
+            }, {
+                name:'1950',
+                data: []
+            },
+]
+
+   var chart = Highcharts.chart('pchart01', {
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: 'Pirámide Poblacional de Puerto Rico',
+
+        },
+        subtitle: {
+            text: '',
+
+        },
+        xAxis: [{
+            categories: categories,
+            reversed: false,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
+            }
+        }, { // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categories,
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+             max: 200000, // This prevents the data to shift right while in motion
+             min: -200000,
+            title: {
+                text: null
+            },
+            labels: {
+                style: {
+                    color: '#606F7B'
+                },
+                formatter: function () {
+                    return Math.abs(this.value / 10000) + '%';
+                }
+            }
+        },
+
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
+
+            }
+        },
+
+        tooltip: {
+            // This controls the hovering box when mouse is over data
+            formatter: function () {
+                return '<b>' + this.series.name + ', Edades ' + this.point.category + '</b><br/>' +
+                    'Población: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+            }
+        },
+
+        series: [{
+            name: 'Masculino',
+            color: '#008445',
+            borderColor: '#008445', 
+            data: dataSequence[0].data.slice(),
+        }, {
+            name: 'Femenino',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: dataSequence2[0].data.slice()
+        }],
+    });
+
+    function update(increment) {
+        var input = $('#play-range')[0],
+            output = $('#play-output')[0];
+
+        if (increment) {
+            input.value = parseInt(input.value) + increment;
+        }
+        chart.series[0].setData(dataSequence[input.value].data); // Increment dataset (updates chart)
+        chart.series[1].setData(dataSequence2[input.value].data); // Increment dataset (updates chart)
+        output.innerHTML = dataSequence[input.value].name; // Output value
+        if (input.value >= input.max) { // Auto-pause
+            pause($('#play-pause-button')[0]);
+        }
+    }
+
+    /**
+     * Play the timeline.
+     */
+    function play(button) {
+        button.title = 'pause';
+        button.className = 'fa fa-pause';
+        chart.sequenceTimer = setInterval ( function () {
+            update(1);
+        }, 1000);
+    }
+    
+    /** 
+     * Pause the timeline, either when the range is ended, or when clicking the pause button.
+     * Pausing stops the timer and resets the button to play mode.
+     */
+    function pause(button) {
+        button.title = 'play';
+        button.className = 'fa fa-play';
+        clearTimeout(chart.sequenceTimer);
+        chart.sequenceTimer = undefined;
+    }
+
+     /**
+     * Toggle play and pause from the button
+     */
+     $('#play-pause-button').bind('click', function () {
+        if (chart.sequenceTimer === undefined) {
+            play(this);
+        } else {
+            pause(this);
+        }
+    });
+    
+    /**
+     * Update the chart when the input is changed
+     */
+    $('#play-range').bind('input', function () {
+        update();
+    });
+
+</script>
+</html>
