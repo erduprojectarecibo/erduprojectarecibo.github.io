@@ -735,7 +735,10 @@ function update_data() {
                 {
                 'x': Date.UTC(1960, 0),
                 // Enero, 1, 1985
-                'y':1416
+                'y':1416,
+                dataLabels: {
+                    y:24
+                }
                 },
                 {
                 'x': Date.UTC(1992, 0),
@@ -1223,7 +1226,10 @@ function update_data3() {
             {
             'x': Date.UTC(2018, 0),
             // Enero, 1, 2018
-            'y':977
+            'y':977,
+            dataLabels: {
+                y:24
+            }
             },
             {
             'x': Date.UTC(2019, 0),
@@ -2077,7 +2083,10 @@ $(document).ready(function() {
             {
                 'x': Date.UTC(1960, 0),
                 // Enero, 1, 1960
-                'y':7.2
+                'y':7.2,
+                dataLabels: {
+                    y:24
+                }
                 },
                 {
                 'x': Date.UTC(2018, 0),
