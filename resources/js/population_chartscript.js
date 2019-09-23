@@ -209,8 +209,8 @@ $(document).ready(function () {
             }
         }],
         yAxis: {
-//             max: 200000, // This prevents the data to shift right while in motion
-//             min: -200000,
+             max: 200000, // This prevents the data to shift right while in motion
+             min: -200000,
             title: {
                 text: null
             },
@@ -372,8 +372,8 @@ $(document).ready(function () {
             }
         }],
         yAxis: {
-//             max: 200000, // This prevents the data to shift right while in motion
-//             min: -200000,
+             max: 200000, // This prevents the data to shift right while in motion
+             min: -200000,
             title: {
                 text: null
             },
