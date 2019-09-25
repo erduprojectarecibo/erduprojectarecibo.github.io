@@ -276,6 +276,10 @@ $(document).ready(function() {
             max: 25000,
         },
 
+        legend: {
+            symbolRadius: 0
+        },
+
         plotOptions: {
             column: {
                 negativeColor:'red'
@@ -294,13 +298,13 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Total de Matrículas',
+            name: 'Cambio Total en Matrículas',
             data: [0, 19672, 3732, 13758, 3729, 14528, 10633, 13828, 1350, -7714.5, -7714.5, -8563, 16411.5, 16411.5, -4269.5, -4269.5,
 8539, -12625, -6869, -9002, -6009, -7425, -6652, -11144, -10468, -6491, -2342, -5358, -5574, -9565, 5725, -8759, -1704, -3295, -843,
 -294, -8548, -7675, -11586, -9268, -12158, -19352, -17573, -22930, -10242, -19658, -20995, -18131, -10675, -12984, -31132, -14637,
 -19085, -26674, -23571, 0
             ],
-            color: '#2a8e40',
+            color: 'black',
             animation: {
                 enabled: true,
                 duration: 8000,
@@ -368,6 +372,10 @@ $(document).ready(function() {
             min: -10,
             max: 10,
         },
+
+        legend: {
+            symbolRadius: 0
+        },
         
         plotOptions: {
             column: {
@@ -396,7 +404,7 @@ $(document).ready(function() {
 0.0, -1.4, -1.3, -1.9, -1.6, -2.1, -3.4, -3.2, -4.4, -2.0, -4.0, -4.4, -4.0, -2.5, -3.1, -7.6, -3.9, -5.2,
 -7.7, -7.4,
             ],
-            color: '#2a8e40',
+            color: 'black',
             animation: {
                 enabled: true,
                 duration: 8000,
