@@ -9,22 +9,41 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 <body>
+        <h1>Pirámide Poblacional de Puerto Rico</h1>
+        <h2 id=year-subtitle> 1899</h2>
+
         <div id="pchart01"></div>
         <div id="play-controls">
             <button id="play-pause-button" class="fa fa-play" title="play"> &#9654; </button>
             <input id="play-range" type="range" value="0" min="0" max="5" />
-            <output id="play-output" for="play-range" name="year">1899</output>
         </div>
 </body>
 
 
 <style>
-    #pchart01 {
-        width:800px;
-        height:600px;
+    body {
+        height:100%;
+        width:100%;
     }
 
-    @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+    #pchart01 {
+        width:50%;
+        height:80%;
+        margin-left:25%;
+    }
+
+    h1 {
+        margin-bottom:-12px;
+        text-align:center;
+        font-family: Helvetica, sans-serif
+    }
+
+    h2 {
+        text-align:center;
+        font-family: Helvetica, sans-serif;
+        margin-bottom:-3px;
+    }
+
 .loading {
     margin-top: 10em;
     text-align: center;
@@ -34,9 +53,10 @@
     min-width: 310px;
     max-width: 800px;
 }
-#play-controls * {
-    display: inline-block;
-    vertical-align: middle;
+#play-controls {
+    min-width: 50%;
+    max-width: 50%;
+    margin-left:31%;
 }
 #play-pause-button {
     width: 30px;
@@ -178,6 +198,14 @@ xAxis: {
     }
 },
 
+exporting: {
+        buttons: {
+            contextButton: {
+                x: -60,
+            }
+        }
+    },
+
 credits: {
     enabled: false
 },
@@ -259,11 +287,7 @@ var dataSequence2 = [
             type: 'bar',
         },
         title: {
-            text: 'Pirámide Poblacional de Puerto Rico',
-
-        },
-        subtitle: {
-            text: '',
+            text: ' ',
 
         },
         xAxis: [{
@@ -315,8 +339,9 @@ var dataSequence2 = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.series.name + ', Edades ' + this.point.category + '</b><br/>' +
-                    'Población: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
-            }
+                    'Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0);
+            },
+            shared:false
         },
 
         series: [{
@@ -341,7 +366,7 @@ var dataSequence2 = [
         }
         chart.series[0].setData(dataSequence[input.value].data); // Increment dataset (updates chart)
         chart.series[1].setData(dataSequence2[input.value].data); // Increment dataset (updates chart)
-        output.innerHTML = dataSequence[input.value].name; // Output value
+        document.getElementById('year-subtitle').innerHTML = dataSequence[input.value].name; // Output value
         if (input.value >= input.max) { // Auto-pause
             pause($('#play-pause-button')[0]);
         }
