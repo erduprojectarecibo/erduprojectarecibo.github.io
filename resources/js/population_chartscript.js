@@ -292,7 +292,7 @@ $(document).ready(function () {
             name: 'Femenino',
             color: '#FFD13F',
             borderColor: '#FFD13F',
-            //             1899   1910   1920   1930    1940 
+            //             1899   1910   1920   1930    1940    1950
             data: [{
                 sequence: [73629, 90976, 99357, 112423, 138151, 181263]
             }, {
