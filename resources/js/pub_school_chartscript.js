@@ -169,7 +169,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Total de Matrículas Realizadas en Escuelas Públicas de Puerto Rico (1965-2019)',
+            text: 'Cronología de la matrícula total en agosto del Departamento de Educación',
         },
 
         xAxis: {
@@ -183,7 +183,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Total de Matrículas',
+                text: 'Total de Estudiantes Matriculados',
                 style: {
                 }
             },
@@ -206,7 +206,7 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Total de Matrículas',
+            name: 'Matrícula Total Agosto',
             data: [631358, 651030, 654762, 668520, 672249, 686777, 697410, 711238, 712588, 704873.5, 697159, 688596, 705007.5, 721419, 717149.5,
 712880, 721419, 708794, 701925, 692923, 686914, 679489, 672837, 661693, 651225, 644734, 642392, 637034, 631460, 621895, 627620, 618861, 617157,
 613862, 613019, 612725, 604177, 596502, 584916, 575648, 563490, 544138, 526565, 503635, 493393, 473735, 452740, 434609, 423934, 410950, 379818,
@@ -245,7 +245,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('epchart02', {
+    Highcharts.chart('container', {
 
         chart: {
             type: 'column',
@@ -253,7 +253,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Cambio Anual en Matrículas Realizadas en Escuelas Públicas de Puerto Rico (1965-2019)',
+            text: 'Cambio en la matrícula total anual (1966-2019)',
         },
 
         xAxis: {
@@ -267,13 +267,13 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Cambio Anual en Matrículas Realizadas',
+                text: 'Valor Total',
                 style: {
                     // color: '#FFFFFF'
                 }
             },
-            min: -35000,
-            max: 25000,
+            min: -40000,
+            max: 40000,
         },
 
         legend: {
@@ -289,7 +289,10 @@ $(document).ready(function() {
                     enabled:false,
                     connectorAllowed: false,
                 },
-                pointStart: 1965
+                pointStart: 1965,
+                column: {
+                negativeColor:'red'
+            },
             }
         },
 
@@ -298,7 +301,7 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Cambio Total en Matrículas',
+            name: 'Cambio Total Positivo en la Matrícula',
             data: [0, 19672, 3732, 13758, 3729, 14528, 10633, 13828, 1350, -7714.5, -7714.5, -8563, 16411.5, 16411.5, -4269.5, -4269.5,
 8539, -12625, -6869, -9002, -6009, -7425, -6652, -11144, -10468, -6491, -2342, -5358, -5574, -9565, 5725, -8759, -1704, -3295, -843,
 -294, -8548, -7675, -11586, -9268, -12158, -19352, -17573, -22930, -10242, -19658, -20995, -18131, -10675, -12984, -31132, -14637,
@@ -310,6 +313,10 @@ $(document).ready(function() {
                 duration: 8000,
                 easing: 'linear'
             },
+        }, {
+            name: 'Cambio Total Negativo en la Matrícula',
+            color:'red',
+            type:'area',
         }],
 
         responsive: {
@@ -347,7 +354,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Cambio Porcentual Anual en Matrículas Realizadas en Escuelas Públicas de Puerto Rico (1965-2019)',
+            text: 'Cambio porcentual en la matrícula total anual (1966-2019)',
         },
 
         xAxis: {
@@ -361,7 +368,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Cambio Porcentual Anual en Matrículas Realizadas',
+                text: 'Valor Porcentual',
             },
             
             labels: {
@@ -369,8 +376,8 @@ $(document).ready(function() {
                 return this.value+"%";
                 },
             },
-            min: -10,
-            max: 10,
+            min: -8,
+            max: 8,
         },
 
         legend: {
@@ -398,11 +405,11 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Cambio Porcentual en Matrículas',
+            name: 'Cambio Porcentual Positivo en la Matrícula',
             data: [ 0, 3.1, 0.6, 2.1, 0.6, 2.2, 1.5, 2.0, 0.2, -1.1, -1.1, -1.2, 2.4, 2.3, -0.6, -0.6, 1.2,
 -1.8, -1.0, -1.3, -0.9, -1.1, -1.0, -1.7, -1.6, -1.0, -0.4, -0.8, -0.9, -1.5, 0.9, -1.4, -0.3, -0.5, -0.1,
 0.0, -1.4, -1.3, -1.9, -1.6, -2.1, -3.4, -3.2, -4.4, -2.0, -4.0, -4.4, -4.0, -2.5, -3.1, -7.6, -3.9, -5.2,
--7.7, -7.4,
+-7.7, -7.4, 0
             ],
             color: 'black',
             animation: {
@@ -410,6 +417,10 @@ $(document).ready(function() {
                 duration: 8000,
                 easing: 'linear'
             },
+        }, {
+            name: 'Cambio Porcentual Negativo en la Matrícula',
+            color:'red',
+            type:'area',
         }],
 
         responsive: {
