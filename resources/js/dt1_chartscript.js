@@ -2184,107 +2184,77 @@ $(document).ready(function() {
                 name: '1961-1964',
                 color: '#eb1b24',
                 y: 18764,
-                animation: {
-                    duration:1000
-                }
+                
             }, {
                 name: '1965-1968',
                 color: '#eb1b24',
                 y: 8499,
-                animation: {
-                    duration:2000
-                }
+                
             }, {
                 name: '1969-1972',
                 color: '#2b378d',
                 y: 8943,
-                animation: {
-                    duration:300
-                }
+                
             }, {
                 name: '1973-1976',
                 color: '#eb1b24',
                 y: 13716,
-                animation: {
-                    duration:4000
-                }
+                
             }, {
                 name: '1977-1980',
                 color: '#2b378d',
                 y: 10636,
-                animation: {
-                    duration:5000
-                }
+                
             }, {
                 name: '1981-1984',
                 color: '#2b378d',
                 y: 5880,
-                animation: {
-                    duration:6000
-                }
+                
             }, {
                 name: '1985-1988',
                 color: '#eb1b24',
                 y: -4485,
-                animation: {
-                    duration:7000
-                }
+                
             }, {
                 name: '1989-1992',
                 color: '#eb1b24',
                 y: 18847,
-                animation: {
-                    duration:8000
-                }
+                
             }, {
                 name: '1993-1996',
                 color: '#2b378d',
                 y: -21247,
-                animation: {
-                    duration:9000
-                }
+                
             }, {
                 name: '1997-2000',
                 color: '#2b378d',
                 y: -19496,
-                animation: {
-                    duration:10000
-                }
+                
             }, {
                 name: '2001-2004',
                 color: '#eb1b24',
                 y: -2,
-                animation: {
-                    duration:11000
-                }
+                
             }, {
                 name: '2005-2008',
                 color: '#eb1b24',
                 y: 3696,
-                animation: {
-                    duration:12000
-                }
+                
             }, {
                 name: '2009-2012',
                 color: '#2b378d',
                 y: -5479,
-                animation: {
-                    duration:13000
-                }
+                
             }, {
                 name: '2013-2016',
                 color: '#eb1b24',
                 y: -15325,
-                animation: {
-                    duration:14000
-                }
+                
             }, {
                 name: '2017-2018 *',
                 color: '#2b378d',
                 y: -7749,
-                animation: {
-                    duration:15000
-                }
+                
             }]
         }],
     });
