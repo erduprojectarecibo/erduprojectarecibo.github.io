@@ -245,7 +245,7 @@ $(document).ready(function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('container', {
+    Highcharts.chart('epchart02', {
 
         chart: {
             type: 'column',
