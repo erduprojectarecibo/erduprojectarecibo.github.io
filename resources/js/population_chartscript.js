@@ -502,3 +502,99 @@ $(document).ready(function () {
         }],
     });
 });
+
+/* ********************************************************************************************************************************************** */
+
+// Nacimientos Vivos y Defunciones Puerto Rico (1935-2017)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('pchart03', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Nacimientos Vivos Y Defunciones <br/>Puerto Rico (1935-2017)',
+        },
+
+        credits: {
+            enabled:true,
+            text: 'Fuente: Registro Demográfico y Estadísticas Vitales, Departamento de Salud'
+        },
+
+        xAxis: {
+            categories: ['1935', '1940', '1945', '1950', '1955', '1960', '1965', '1970', '1975', '1980', '1985',
+                '1990', '1995', '2000', '2005', '2010', '2015', '2016', '2017'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Total',
+            },
+            labels: {
+            },
+            min: 0,
+            max: 4500,
+            gridLineWidth:0,
+        },
+        legend: {
+            itemStyle: {
+            }
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Nacimientos',
+            data: [67585, 72258, 86552, 83485, 79221, 76015, 79586, 67735, 69491, 73089, 63629, 66355, 63518, 59468, 50637, 42249, 31229, 28344, 24298
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            }
+        }, {
+            name: 'Defunciones',
+            data: [30753, 34477, 28880, 21917, 16243, 15841, 17719, 18018, 19072, 20456, 23194, 26148, 29195, 28550, 29702, 20528, 28406, 29849, 31094
+            ],
+            color: '#FEDA35',
+            animation: {
+                enabled: true,
+                duration: 11000,
+                easing: 'linear'
+            }
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+})
