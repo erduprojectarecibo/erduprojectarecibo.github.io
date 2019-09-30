@@ -283,7 +283,10 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Tasa delitos tipo 1 por cada 100,000 habitantes',
+                text: 'Delitos tipo 1 por cada 100,000 habitantes',
+                style: {
+                    color:'black'
+                }
             },
             labels: {
                 formatter: function() {
@@ -798,7 +801,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 2: Tendencia tasa delitos tipo 1 de 1992 a 2018',
+            text: 'Gráfica 2: Tendencia delitos tipo 1 de 1992 a 2018',
         },
 
         subtitle: {
@@ -818,7 +821,10 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Tasa delitos tipo 1 por cada 100,000 habitantes',
+                text: 'Delitos tipo 1 por cada 100,000 habitantes',
+                style: {
+                    color:'black'
+                }
             },
             labels: {
                 formatter: function() {
