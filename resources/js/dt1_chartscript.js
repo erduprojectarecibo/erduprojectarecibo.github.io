@@ -169,7 +169,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Delitos tipo 1 en Puerto Rico (1960-2018)',
+            text: 'Delitos tipo 1 en Puerto Rico de 1960 a 2018',
         },
 
         xAxis: {
@@ -303,7 +303,7 @@ $(document).ready(function() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:7000
+                    duration:6000
                 },
                 events: {
                     afterAnimate: function() {
@@ -536,7 +536,7 @@ function update_data() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:8000
+                    duration: 6000
                 },
                 events: {
                     afterAnimate: function() {
@@ -843,7 +843,7 @@ $(document).ready(function() {
                     connectorAllowed: false,
                 },
                 animation: {
-                    duration:8000
+                    duration: 6000
                 },
                 events: {
                     afterAnimate: function() {
@@ -1056,7 +1056,7 @@ function update_data3() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:8000
+                    duration: 6000
                 },
                 events: {
                     afterAnimate: function() {
@@ -1289,7 +1289,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Gráfica 3: Total delitos tipo 1 en Puerto Rico de 1960 a 2018',
+            text: 'Gráfica 3: Total de delitos tipo 1 en Puerto Rico de 1960 a 2018',
         },
 
         xAxis: {
@@ -1304,7 +1304,10 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Total delitos tipo 1',
+                text: 'Cantidad delitos tipo 1',
+                style: {
+                    color:'black'
+                }
             },
             min: 0,
             max: 150000,
@@ -1387,6 +1390,9 @@ $(document).ready(function() {
         yAxis: {
             title: {
                 text: 'Tasa de asesinatos y homicidios',
+                style: {
+                    color:'black'
+                }
             },
             min: 0,
             max: 40,
@@ -1400,7 +1406,7 @@ $(document).ready(function() {
                     connectorAllowed: false,
                 },
                 animation: {
-                    duration:8000
+                    duration: 6000
                 },
                 events: {
                     afterAnimate: function() {
@@ -1763,7 +1769,7 @@ $(document).ready(function() {
             plotOptions: {
                 series: {
                     animation: {
-                        duration:8000
+                        duration: 6000
                     },
                     events: {
                         afterAnimate: function() {
@@ -2173,7 +2179,10 @@ $(document).ready(function() {
             min: -20000,
             max: 20000,
             title: {
-                text: 'Cambio en el total de delitos tipo 1'
+                text: 'Cambio en el total de delitos tipo 1',
+                style: {
+                    color:'black'
+                }
             }
         },
 
