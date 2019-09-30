@@ -302,10 +302,10 @@ $(document).ready(function() {
 
         series: [{
             name: 'Cambio Total Positivo en la Matrícula',
-            data: [0, 19672, 3732, 13758, 3729, 14528, 10633, 13828, 1350, -7714.5, -7714.5, -8563, 16411.5, 16411.5, -4269.5, -4269.5,
-8539, -12625, -6869, -9002, -6009, -7425, -6652, -11144, -10468, -6491, -2342, -5358, -5574, -9565, 5725, -8759, -1704, -3295, -843,
--294, -8548, -7675, -11586, -9268, -12158, -19352, -17573, -22930, -10242, -19658, -20995, -18131, -10675, -12984, -31132, -14637,
--19085, -26674, -23571, 0
+            data: [null, 19672, 3732, 13758, 3729, 14528, 10633, 13828, 1350, null, null, null, null, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, 5725, null, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+                null, null, null, null
             ],
             color: 'black',
             animation: {
@@ -315,6 +315,11 @@ $(document).ready(function() {
             },
         }, {
             name: 'Cambio Total Negativo en la Matrícula',
+            data: [null, null, null, null, null, null, null, null, null, -7714.5, -7714.5, -8563, 16411.5, 16411.5, -4269.5, -4269.5,
+                null, -12625, -6869, -9002, -6009, -7425, -6652, -11144, -10468, -6491, -2342, -5358, -5574, -9565, null, -8759, -1704, -3295, -843,
+                -294, -8548, -7675, -11586, -9268, -12158, -19352, -17573, -22930, -10242, -19658, -20995, -18131, -10675, -12984, -31132, -14637,
+                -19085, -26674, -23571, null
+                            ],
             color:'red',
             type:'area',
         }],
@@ -406,10 +411,10 @@ $(document).ready(function() {
 
         series: [{
             name: 'Cambio Porcentual Positivo en la Matrícula',
-            data: [ 0, 3.1, 0.6, 2.1, 0.6, 2.2, 1.5, 2.0, 0.2, -1.1, -1.1, -1.2, 2.4, 2.3, -0.6, -0.6, 1.2,
--1.8, -1.0, -1.3, -0.9, -1.1, -1.0, -1.7, -1.6, -1.0, -0.4, -0.8, -0.9, -1.5, 0.9, -1.4, -0.3, -0.5, -0.1,
-0.0, -1.4, -1.3, -1.9, -1.6, -2.1, -3.4, -3.2, -4.4, -2.0, -4.0, -4.4, -4.0, -2.5, -3.1, -7.6, -3.9, -5.2,
--7.7, -7.4, 0
+            data: [ 0, 3.1, 0.6, 2.1, 0.6, 2.2, 1.5, 2.0, 0.2, null, null, null, 2.4, 2.3, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null, null, null, 0.9, null, null, null, null,
+0.0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+null, null, null
             ],
             color: 'black',
             animation: {
@@ -419,6 +424,12 @@ $(document).ready(function() {
             },
         }, {
             name: 'Cambio Porcentual Negativo en la Matrícula',
+            data: [ null, null, null, null, null, null, null, null, null, -1.1, -1.1, -1.2, null, null, -0.6, -0.6, null,
+                -1.8, -1.0, -1.3, -0.9, -1.1, -1.0, -1.7, -1.6, -1.0, -0.4, -0.8, -0.9, -1.5, null, -1.4, -0.3, -0.5, -0.1,
+                null, -1.4, -1.3, -1.9, -1.6, -2.1, -3.4, -3.2, -4.4, -2.0, -4.0, -4.4, -4.0, -2.5, -3.1, -7.6, -3.9, -5.2,
+                -7.7, -7.4, null
+                            ],
+                
             color:'red',
             type:'area',
         }],
