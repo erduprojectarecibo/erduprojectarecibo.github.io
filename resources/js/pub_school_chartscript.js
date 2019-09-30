@@ -267,7 +267,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Valor Total',
+                text: 'Valor del Cambio Total',
                 style: {
                     // color: '#FFFFFF'
                 }
@@ -368,7 +368,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Valor Porcentual',
+                text: 'Valor del Cambio Porcentual',
             },
             
             labels: {
