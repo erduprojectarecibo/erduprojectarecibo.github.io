@@ -185,6 +185,9 @@ $(document).ready(function() {
         yAxis: {
             title: {
                 text: 'Delitos tipo 1 por cada 100,000 habitantes',
+                style: {
+                    color: 'black'
+                }
             },
             labels: {
             },
