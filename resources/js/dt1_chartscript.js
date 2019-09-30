@@ -148,7 +148,7 @@ Highcharts.setOptions({
         series: {
             lineWidth: 5,
             animation: {
-                duration: 8000
+                duration: 7000
             }
         },
     },
@@ -222,7 +222,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 8000,
+                duration: 7000,
                 easing: 'linear'
             },
         }],
@@ -297,7 +297,7 @@ $(document).ready(function() {
         plotOptions: {
             series: {
                 animation: {
-                    duration:8000
+                    duration:7000
                 },
                 events: {
                     afterAnimate: function() {
@@ -1326,7 +1326,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 8000,
+                duration: 7000,
                 easing: 'linear'
             },
         }],
@@ -2097,7 +2097,7 @@ $(document).ready(function() {
             color: '#FEDA35',
             animation: {
                 enabled: true,
-                duration: 8000,
+                duration: 7000,
                 easing: 'linear'
             },
             dataLabels: {
@@ -2173,7 +2173,7 @@ $(document).ready(function() {
             series: {
                 lineWidth: 5,
                 animation: {
-                    duration: 8000
+                    duration: 7000
                 }
             },
 
@@ -2321,7 +2321,7 @@ $(document).ready(function() {
             color: '#2a8e40',
             animation: {
                 enabled: true,
-                duration: 8000,
+                duration: 7000,
                 easing: 'linear'
             },
         },
