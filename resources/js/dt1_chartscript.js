@@ -108,7 +108,7 @@ Highcharts.setOptions({
     yAxis: {
         title: {
             style: {
-                color: '#B8C2CC'
+                color: 'black'
             }
         },
 
@@ -169,7 +169,7 @@ $(document).ready(function() {
         },
 
         title: {
-            text: 'Tasa de delitos tipo 1 en Puerto Rico (1960-2018)',
+            text: 'Delitos tipo 1 en Puerto Rico (1960-2018)',
         },
 
         xAxis: {
@@ -184,7 +184,7 @@ $(document).ready(function() {
 
         yAxis: {
             title: {
-                text: 'Tasa de delitos tipo 1 por cada 100,000 Habitantes',
+                text: 'Delitos tipo 1 por cada 100,000 habitantes',
             },
             labels: {
             },
