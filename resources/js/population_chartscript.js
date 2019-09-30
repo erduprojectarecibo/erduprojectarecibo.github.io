@@ -156,178 +156,216 @@ Highcharts.setOptions({
 
 });
 
-var categories = ['0-4', '5-9', '10-14', '15-19',
+var categories = [' ','0-4', '5-9', '10-14', '15-19',
     '20-24', '25-29', '30-34', '35-39', '40-44',
     '45-49', '50-54', '55-59', '60-64', '65-69',
-    '70-74', '75 +'
-];
+    '70-74', '75+', ' ', 'Segmento <br/> Poblacional'
+    ];
 
-var categories2 = ['0-4', '5-9', '10-14', '15-19',
+var categories2 = [' ','0-4', '5-9', '10-14', '15-19',
     '20-24', '25-29', '30-34', '35-39', '40-44',
     '45-49', '50-54', '55-59', '60-64', '65-69',
-    '70-74', '75-79', '80-84', '85 +'
-];
+    '70-74', '75-79', '80-84', '85+', ' ', 'Segmento <br/> Poblacional'
+    ];
 
 /* ********************************************************************************************************************************************** */
 
-// Pirámide Poblacional de Puerto Rico (1899-1940)
+// Pirámide Poblacional de Puerto Rico (1950)
 
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
-    Highcharts.chart('pchart01', {
-        chart: {
-            type: 'bar',
-        },
-        title: {
-            text: 'Pirámide Poblacional de Puerto Rico',
+    
+    var categoriesTotalArr1 = ['<strong> 2,210,703 </strong>', '366,277', '318,368', '270,730', '220,452', '193,113', '158,136', '131,892', '133,242', '91,225', '75,728', '71,223', '46,418', '48,905', '32,763', '21,424', '11,757', '9,673', '93,77', ' ', 'Total por <br/> Segmento']
 
-        },
-        subtitle: {
-            text: '',
-
-        },
-        xAxis: [{
-            categories: categories,
-            reversed: false,
-            labels: {
-                style: {
-                    color: '#606F7B',
-                    step: 1
+    var dataSequenceA1 = [
+                { 
+                name:'1950',
+                data: [null,-185014,-161446,-138696,-108984,-91269,-76528,-66769,-67324,-47745,-39893,-36548,-24692,-25636,-16270,-10679,-5671,-4172,-3610, null, null]
                 }
-            }
-        }, { // Mirror axis in the right side
-            opposite: true,
-            reversed: false,
-            categories: categories,
-            linkedTo: 0,
-            labels: {
-                style: {
-                    color: '#606F7B',
-                    step: 1
+    ]
+    
+    var dataSequenceA2 = [
+                { 
+                name:'1950',
+                data: [null,181263,156922,132034,111468,101844,81608,65123,65918,43480,35835,34675,21726,23269,16493,10745,6086,5501,5767, null, null]
                 }
-            }
-        }],
-        yAxis: {
-             max: 200000, // This prevents the data to shift right while in motion
-             min: -200000,
-            title: {
-                text: null
+    ]
+    
+       var chart = Highcharts.chart('pchart01', {
+            chart: {
+                type: 'bar',
             },
-            labels: {
-                style: {
-                    color: '#606F7B'
-                },
-                formatter: function () {
-                    return Math.abs(this.value / 10000) + '%';
+            title: {
+                text: ' ',
+    
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
                 }
-            }
-        },
+            }, { // Mirror axis in the right side
+                opposite: true,
+                reversed: false,
+                categories: categoriesTotalArr1[0],
+                linkedTo: 0,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }],
+            yAxis: {
+                 max: 200000, // This prevents the data to shift right while in motion
+                 min: -200000,
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: 'black'
+                    },
+                    formatter: function () {
+                        return Math.abs(this.value / 10000) + '%';
+                    }
+                }
+            },
+    
+            plotOptions: {
+                // Spacing between data bars
+                series: {
+                    stacking: 'normal',
+    
+                }
+            },
+    
+            tooltip: {
+                // This controls the hovering box when mouse is over data
+                formatter: function () {
+                    return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                        '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+                },
+                shared:false
+            },
+    
+            series: [{
+                name: 'Masculino',
+                color: '#008445',
+                borderColor: '#008445', 
+                data: dataSequenceA1[0].data.slice(),
+            }, {
+                name: 'Femenino',
+                color: '#FFD13F',
+                borderColor: '#FFD13F',
+                data: dataSequenceA2[0].data.slice()
+            }],
+        });
+});
 
-        plotOptions: {
-            // Spacing between data bars
-            series: {
-                stacking: 'normal',
+/* ********************************************************************************************************************************************** */
 
-            }
-        },
+// Pirámide Poblacional de Puerto Rico (2000)
 
-        tooltip: {
-            // This controls the hovering box when mouse is over data
-            formatter: function () {
-                return '<b>' + this.series.name + ', Edades ' + this.point.category + '</b><br/>' +
-                    'Población: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
-            }
-        },
+/* ********************************************************************************************************************************************** */
 
+$(document).ready(function () {
 
-        motion: {
-            // Enables the motion aspect of the graph
-            enabled: true,
-            labels: [1899, 1910, 1920, 1930, 1940, 1950],
-            series: [0, 1],
-            updateInterval: 30,
-            loop: false,
-        },
+    var categoriesTotalArr2 = ['<strong> 3,808,610 </strong>', '295,406', '305,162', '305,800', '313,436', '301,191', '271,507', '262,825', '264,849', '250,814', '233,120', '229,916', '188,883', '160,564', '134,281', '106,670', '83,078', '53,402', '47,706', ' ', 'Total por <br/> Segmento']
 
-        series: [{
-            name: 'Masculino',
-            color: '#008445',
-            borderColor: '#008445',
-            //             1899     1910    1920     1930     1940     1950   
-            data: [{
-                sequence: [-76774, -94213, -100898, -114045, -142289, -185014]
+    var dataSequenceB1 = [
+                {
+                name:'2000',
+                data: [null,-151287,-156253,-155984,-159309,-149426,-133018,-126164,-124421,-116278,-107736,-106091,-87131,-74276,-60982,-47461,-35996,-22697,-19067, null, null]
+                },
+            ]
+    
+    var dataSequenceB2 = [
+                { 
+                name:'2000',
+                data: [null,144119,148909,149816,154127,151765,138489,136661,140428,134536,125384,123825,101752,86288,73299,59209,47082,30705,28639, null, null]
+                },
+            ]
+    
+       var chart = Highcharts.chart('pchart01', {
+            chart: {
+                type: 'bar',
+            },
+            title: {
+                text: ' ',
+    
+            },
+            xAxis: [{
+                categories: categories2,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }, { // Mirror axis in the right side
+                opposite: true,
+                reversed: false,
+                categories: categoriesTotalArr2,
+                linkedTo: 0,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }],
+            yAxis: {
+                 max: 200000, // This prevents the data to shift right while in motion
+                 min: -200000,
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: 'black'
+                    },
+                    formatter: function () {
+                        return Math.abs(this.value / 10000) + '%';
+                    }
+                }
+            },
+    
+            plotOptions: {
+                // Spacing between data bars
+                series: {
+                    stacking: 'normal',
+    
+                }
+            },
+    
+            tooltip: {
+                // This controls the hovering box when mouse is over data
+                formatter: function () {
+                    return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                        '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+                },
+                shared:false
+            },
+    
+            series: [{
+                name: 'Masculino',
+                color: '#008445',
+                borderColor: '#008445', 
+                data: dataSequenceB1[0].data.slice(),
             }, {
-                sequence: [-72920, -76572, -99150, -113532, -127791, -161446]
-            }, {
-                sequence: [-65112, -74280, -85702, -101375, -114496, -138696]
-            }, {
-                sequence: [-42919, -53388, -60183, -87907, -99460, -108984]
-            }, {
-                sequence: [-41664, -53492, -62114, -74461, -102464, -91269]
-            }, {
-                sequence: [-39469, -45836, -44138, -47519, -72263, -76528]
-            }, {
-                sequence: [-31365, -35331, -37540, -46720, -52012, -66769]
-            }, {
-                sequence: [-24251, -32283, -38438, -45554, -50529, -67324]
-            }, {
-                sequence: [-22179, -26539, -31174, -37666, -43739, -47745]
-            }, {
-                sequence: [-13454, -18977, -28368, -29935, -36186, -39893]
-            }, {
-                sequence: [-16124, -16867, -21878, -24552, -30639, -36548]
-            }, {
-                sequence: [-8287, -9241, -11610, -14177, -18931, -24692]
-            }, {
-                sequence: [-8471, -8996, -12374, -15616, -17877, -25636]
-            }, {
-                sequence: [-3551, -4612, -5415, -6960, -12345, -16270]
-            }, {
-                sequence: [-2713, -3156, -4138, -5680, -7943, -10679]
-            }, {
-                sequence: [-2945, -3497, -4551, -5962, -8957, -13453]
-            }]
-        }, {
-            name: 'Femenino',
-            color: '#FFD13F',
-            borderColor: '#FFD13F',
-            //             1899   1910   1920   1930    1940    1950
-            data: [{
-                sequence: [73629, 90976, 99357, 112423, 138151, 181263]
-            }, {
-                sequence: [70626, 74651, 95981, 110490, 123861, 156922]
-            }, {
-                sequence: [59241, 69471, 82352, 97962, 112601, 132034]
-            }, {
-                sequence: [50229, 60401, 66065, 98243, 106689, 111468]
-            }, {
-                sequence: [46811, 55016, 66417, 74875, 103862, 101844]
-            }, {
-                sequence: [44796, 48377, 51915, 52261, 75745, 81608]
-            }, {
-                sequence: [32952, 35091, 40465, 47989, 50584, 65123]
-            }, {
-                sequence: [23305, 32005, 38651, 46802, 50609, 65918]
-            }, {
-                sequence: [22067, 25805, 30276, 34882, 42293, 43480]
-            }, {
-                sequence: [12943, 18186, 21905, 26009, 32816, 35835]
-            }, {
-                sequence: [16747, 16484, 19746, 22667, 26352, 34675]
-            }, {
-                sequence: [7043, 9552, 9976, 11841, 15513, 21726]
-            }, {
-                sequence: [9915, 10137, 12013, 14784, 17510, 23269]
-            }, {
-                sequence: [3128, 5211, 5547, 7146, 12983, 16493]
-            }, {
-                sequence: [3533, 4250, 5018, 6042, 8634, 10745]
-            }, {
-                sequence: [3973, 5065, 6157, 7614, 12244, 17354]
-            }]
-        }],
-    });
+                name: 'Femenino',
+                color: '#FFD13F',
+                borderColor: '#FFD13F',
+                data: dataSequenceB2[0].data.slice()
+            }],
+        });
 });
 
 /* ********************************************************************************************************************************************** */
@@ -336,18 +374,28 @@ $(document).ready(function () {
 
 /* ********************************************************************************************************************************************** */
 
+var categoriesTotalArr3 = ['<strong> 3,411,307 </strong>', '161,514', '188,163', '206,604', '234,298', '240,621', '225,720', '198,834', '215,572', '213,188', '219,701', '228,911', '222,473', '209,821', '199,167', '165,601', '119,272', '81,594', '80,253', ' ', 'Total por <br/> Segmento']
 
-$(document).ready(function () {
-    Highcharts.chart('pchart02', {
+var dataSequenceC1 = [
+            { 
+            name:'2016',
+            data: [null,-82859,-95805,-106372,-119826,-121579,-111318,-94823,-101801,-101315,-104318,-105712,-102248,-95407,-89977,-74072,-52531,-33887,-29822, null, null]
+            },
+]
+
+var dataSequenceC2 = [
+            { 
+            name:'2016',
+            data: [null,78655,92358,100232,114472,119042,114402,104011,113771,111873,115383,123199,120225,114414,109190,91529,66741,47707,50431, null, null]
+            },
+]
+
+   var chart = Highcharts.chart('pchart01', {
         chart: {
             type: 'bar',
         },
         title: {
-            text: 'Pirámide Poblacional de Puerto Rico',
-
-        },
-        subtitle: {
-            text: '',
+            text: ' ',
 
         },
         xAxis: [{
@@ -355,18 +403,18 @@ $(document).ready(function () {
             reversed: false,
             labels: {
                 style: {
-                    color: '#606F7B',
+                    color: 'black',
                     step: 1
                 }
             }
         }, { // Mirror axis in the right side
             opposite: true,
             reversed: false,
-            categories: categories2,
+            categories: categoriesTotalArr3,
             linkedTo: 0,
             labels: {
                 style: {
-                    color: '#606F7B',
+                    color: 'black',
                     step: 1
                 }
             }
@@ -379,7 +427,7 @@ $(document).ready(function () {
             },
             labels: {
                 style: {
-                    color: '#606F7B'
+                    color: 'black'
                 },
                 formatter: function () {
                     return Math.abs(this.value / 10000) + '%';
@@ -398,110 +446,24 @@ $(document).ready(function () {
         tooltip: {
             // This controls the hovering box when mouse is over data
             formatter: function () {
-                return '<b>' + this.series.name + ', Edades ' + this.point.category + '</b><br/>' +
-                    'Población: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
-            }
-        },
-
-
-        motion: {
-            // Enables the motion aspect of the graph
-            enabled: true,
-            labels: [1950, 1960, 1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
-            series: [0, 1],
-            updateInterval: 30,
-            loop: false,
+                return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                    '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+            },
+            shared:false
         },
 
         series: [{
             name: 'Masculino',
             color: '#008445',
-            borderColor: '#008445',
-            //            1950      1960     1970     1980      1990     2000     2010     2011     2012     2013     2014    2015    2016      
-            data: [{
-                sequence: [-185014, -179619, -161296, -173228, -153759, -151287, -115173, -109274, -105154, -101293, -95367, -89507, -82859]
-            }, {
-                sequence: [-161446, -165930, -171035, -168162, -161328, -156253, -123228, -117830, -114514, -111406, -107325, -102622, -95805]
-            }, {
-                sequence: [-138696, -162244, -169789, -172494, -172707, -155984, -137289, -133296, -128247, -123386, -118226, -112350, -106372]
-            }, {
-                sequence: [-108984, -122602, -143806, -168399, -165632, -159309, -144853, -140690, -136873, -133136, -128109, -124179, -119826]
-            }, {
-                sequence: [-91269, -79792, -108077, -129243, -140998, -149426, -130577, -132906, -132908, -132865, -130133, -125971, -121579]
-            }, {
-                sequence: [-76528, -61971, -84729, -110820, -129010, -133018, -118578, -114401, -111201, -110342, -110101, -111167, -111318]
-            }, {
-                sequence: [-66769, -58723, -73492, -107419, -119225, -126164, -119708, -117297, -113364, -110163, -105508, -99855, -94823]
-            }, {
-                sequence: [-67324, -61592, -68187, -91456, -110440, -124421, -115981, -112635, -110288, -108926, -106632, -104890, -101801]
-            }, {
-                sequence: [-47745, -53087, -61530, -78063, -105352, -116278, -114941, -113429, -111925, -110432, -107690, -104593, -101315]
-            }, {
-                sequence: [-39893, -53781, -59437, -68328, -91398, -107736, -115470, -114769, -113396, -111394, -108553, -106235, -104318]
-            }, {
-                sequence: [-36548, -39832, -53032, -61175, -75988, -106091, -110600, -110268, -109277, -109245, -108642, -107561, -105712]
-            }, {
-                sequence: [-24692, -34404, -49156, -57158, -65701, -87131, -102262, -102603, -102880, -102986, -102652, -102377, -102248]
-            }, {
-                sequence: [-25636, -29095, -40673, -50641, -57878, -74276, -100090, -98590, -96264, -94764, -94038, -93510, -95407]
-            }, {
-                sequence: [-16270, -24525, -32914, -45989, -52353, -60982, -80178, -84113, -86904, -88998, -89784, -89880, -89977]
-            }, {
-                sequence: [-10679, -16370, -21845, -31795, -40323, -47461, -61731, -63207, -64783, -66798, -68402, -70294, -74072]
-            }, {
-                sequence: [-5671, -10275, -13854, -21669, -31519, -35996, -43625, -45248, -46569, -47978, -49660, -50879, -52531]
-            }, {
-                sequence: [-4172, -4636, -7784, -11138, -18376, -22697, -27582, -28640, -29296, -29942, -30879, -32160, -33887]
-            }, {
-                sequence: [-3610, -4286, -9313, -9550, -13655, -19067, -23305, -24249, -25232, -26234, -27202, -28118, -29822]
-            }, ]
-
+            borderColor: '#008445', 
+            data: dataSequenceC1[0].data.slice(),
         }, {
             name: 'Femenino',
             color: '#FFD13F',
             borderColor: '#FFD13F',
-            //             1950    1960    1970    1980    1990    2000    2010    2011    2012    2013   2014   2015   2016 
-            data: [{
-                sequence: [181263, 174783, 156810, 167424, 148414, 144119, 109583, 104188, 100124, 95880, 90534, 85368, 78655]
-            }, {
-                sequence: [156922, 161599, 167219, 162169, 155145, 148909, 116776, 111079, 107807, 104830, 101589, 97790, 92358]
-            }, {
-                sequence: [132034, 158963, 164771, 165797, 166866, 149816, 131282, 126549, 121522, 115798, 110918, 105397, 100232]
-            }, {
-                sequence: [111468, 124258, 147520, 168735, 161085, 154127, 139406, 134268, 131006, 126984, 121857, 118389, 114472]
-            }, {
-                sequence: [101844, 91873, 125799, 143187, 146229, 151765, 130273, 131188, 130631, 129555, 127367, 122821, 119042]
-            }, {
-                sequence: [81608, 74219, 97909, 125316, 141552, 138489, 125581, 119589, 115922, 113680, 112621, 113504, 114402]
-            }, {
-                sequence: [65123, 68006, 83160, 122343, 135062, 136661, 128465, 126267, 123689, 119630, 115121, 109102, 104011]
-            }, {
-                sequence: [65918, 69072, 76936, 102828, 126069, 140428, 125289, 121968, 120441, 119554, 117547, 116325, 113771]
-            }, {
-                sequence: [43480, 54266, 67317, 87589, 120618, 134536, 127317, 124337, 122370, 120217, 118107, 115224, 111873]
-            }, {
-                sequence: [35835, 51807, 62529, 76692, 102586, 125384, 132516, 131004, 128923, 125518, 121517, 118525, 115383]
-            }, {
-                sequence: [34675, 35376, 52539, 68611, 85886, 123825, 129221, 127952, 126840, 126767, 126454, 124980, 123199]
-            }, {
-                sequence: [21726, 31488, 47297, 62380, 75251, 101752, 121345, 122116, 122708, 122538, 121918, 121569, 120225]
-            }, {
-                sequence: [23269, 28976, 40911, 54294, 66974, 86288, 117987, 117000, 115373, 114020, 113773, 113409, 114414]
-            }, {
-                sequence: [16493, 23579, 33469, 48555, 60365, 73299, 95233, 100410, 104048, 106619, 108029, 109224, 109190]
-            }, {
-                sequence: [10745, 15134, 21564, 33685, 46356, 59209, 74520, 76739, 79358, 82143, 84654, 87289, 91529]
-            }, {
-                sequence: [6086, 10961, 14512, 23712, 36303, 47082, 57115, 58771, 60226, 61775, 63458, 65082, 66741]
-            }, {
-                sequence: [5501, 5488, 10687, 13107, 22624, 30705, 39418, 40699, 41744, 42796, 44175, 46233, 47707]
-            }, {
-                sequence: [5767, 6953, 11135, 13369, 19010, 28639, 39291, 41167, 42680, 44487, 46346, 47803, 50431]
-            }]
-
+            data: dataSequenceC2[0].data.slice()
         }],
     });
-});
 
 /* ********************************************************************************************************************************************** */
 
