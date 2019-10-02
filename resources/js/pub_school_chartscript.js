@@ -300,13 +300,13 @@ $(document).ready(function() {
             shared: true,
             formatter: function() {
                 if (this.y<0) {
-                    return 'Cambio Porcentual Negativo en la Matrícula: ' + this.y
+                    return 'Cambio Total Negativo en la Matrícula: ' + this.y
                 }
                 else if (this.x == '1965' || this.x == '2020') {
                     return 'N/A'
                 }
                 else {
-                        return 'Cambio Porcentual Positivo en la Matrícula: ' + this.y
+                        return 'Cambio Total Positivo en la Matrícula: ' + this.y
                 }
             },
         },
