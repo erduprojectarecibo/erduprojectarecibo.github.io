@@ -192,7 +192,7 @@ $(document).ready(function () {
                 }
     ]
     
-       var chart = Highcharts.chart('pchart1950', {
+    Highcharts.chart('pchart01', {
             chart: {
                 type: 'bar',
             },
@@ -292,7 +292,7 @@ $(document).ready(function () {
                 },
             ]
     
-       var chart = Highcharts.chart('pchart2000', {
+    Highcharts.chart('pchart02', {
             chart: {
                 type: 'bar',
             },
@@ -390,14 +390,16 @@ var dataSequenceC2 = [
             },
 ]
 
-    var chart = Highcharts.chart('pchart2016', {
+Highcharts.chart('pchart03', {
         chart: {
             type: 'bar',
         },
+
         title: {
             text: ' ',
 
         },
+
         xAxis: [{
             categories: categories2,
             reversed: false,
@@ -419,6 +421,7 @@ var dataSequenceC2 = [
                 }
             }
         }],
+
         yAxis: {
              max: 200000, // This prevents the data to shift right while in motion
              min: -200000,
@@ -464,6 +467,7 @@ var dataSequenceC2 = [
             data: dataSequenceC2[0].data.slice()
         }],
     });
+
 /* ********************************************************************************************************************************************** */
 
 // Nacimientos Vivos y Defunciones Puerto Rico (1935-2017)
@@ -471,7 +475,7 @@ var dataSequenceC2 = [
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function() {
-    Highcharts.chart('pchart03', {
+    Highcharts.chart('pchart04', {
 
         chart: {
             type: 'line',
