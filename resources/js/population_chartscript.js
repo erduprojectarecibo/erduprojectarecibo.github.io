@@ -390,9 +390,7 @@ var dataSequenceC2 = [
             },
 ]
 
-$(document).ready(function() {
-    Highcharts.chart('pchart2016', {
-    
+    var chart = Highcharts.chart('pchart2016', {
         chart: {
             type: 'bar',
         },
@@ -466,7 +464,6 @@ $(document).ready(function() {
             data: dataSequenceC2[0].data.slice()
         }],
     });
-})
 /* ********************************************************************************************************************************************** */
 
 // Nacimientos Vivos y Defunciones Puerto Rico (1935-2017)
