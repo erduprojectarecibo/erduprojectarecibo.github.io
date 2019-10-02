@@ -160,7 +160,7 @@ Highcharts.setOptions({
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     Highcharts.chart('chart03', {
 
         chart: {
@@ -189,15 +189,13 @@ $(document).ready(function() {
                     color: 'black'
                 }
             },
-            labels: {
-            },
+            labels: {},
             min: 0,
             max: 4500,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
         legend: {
-            itemStyle: {
-            }
+            itemStyle: {}
         },
 
         plotOptions: {
@@ -253,7 +251,7 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     var chart2 = Highcharts.chart('chart016', {
 
         chart: {
@@ -274,8 +272,8 @@ $(document).ready(function() {
 
         xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { 
-            year: '%Y'
+            dateTimeLabelFormats: {
+                year: '%Y'
             },
             tickInterval: Date.UTC(2010, 0) - Date.UTC(2008, 0)
 
@@ -285,28 +283,27 @@ $(document).ready(function() {
             title: {
                 text: 'Delitos tipo 1 por cada 100,000 habitantes',
                 style: {
-                    color:'black'
+                    color: 'black'
                 }
             },
             labels: {
-                formatter: function() {
+                formatter: function () {
                     return Highcharts.numberFormat(this.value, 0, ' ', ', ')
                 }
             },
             min: 0,
             max: 4500,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
-        legend: {
-        },
+        legend: {},
 
         plotOptions: {
             series: {
                 animation: {
-                    duration:6000
+                    duration: 6000
                 },
                 events: {
-                    afterAnimate: function() {
+                    afterAnimate: function () {
                         update_data();
                     }
                 },
@@ -325,204 +322,203 @@ $(document).ready(function() {
         series: [{
             name: 'Tasa Delitos Tipo 1',
             data: [{
-                'x': Date.UTC(1959, 0),
-// Jan, 1, 1959
-'y':null
-},
-{
-'x': Date.UTC(1960, 0),
-// Jan, 1, 1960
-'y':1416.1
-},
-{
-'x': Date.UTC(1961, 0),
-// Jan, 1, 1961
-'y':1598.8
-},
-{
-'x': Date.UTC(1962, 0),
-// Jan, 1, 1962
-'y':1964.3
-},
-{
-'x': Date.UTC(1963, 0),
-// Jan, 1, 1963
-'y':2195.6
-},
-{
-'x': Date.UTC(1964, 0),
-// Jan, 1, 1964
-'y':2256.8
-},
-{
-'x': Date.UTC(1965, 0),
-// Jan, 1, 1965
-'y':2233.2
-},
-{
-'x': Date.UTC(1966, 0),
-// Jan, 1, 1966
-'y':2314.1
-},
-{
-'x': Date.UTC(1967, 0),
-// Jan, 1, 1967
-'y':2316.5
-},
-{
-'x': Date.UTC(1968, 0),
-// Jan, 1, 1968
-'y':2480.5
-},
-{
-'x': Date.UTC(1969, 0),
-// Jan, 1, 1969
-'y':2304.1
-},
-{
-'x': Date.UTC(1970, 0),
-// Jan, 1, 1970
-'y':2450.9
-},
-{
-'x': Date.UTC(1971, 0),
-// Jan, 1, 1971
-'y':2582.1
-},
-{
-'x': Date.UTC(1972, 0),
-// Jan, 1, 1972
-'y':2545.4
-},
-{
-'x': Date.UTC(1973, 0),
-// Jan, 1, 1973
-'y':2575
-},
-{
-'x': Date.UTC(1974, 0),
-// Jan, 1, 1974
-'y':2879.9
-},
-{
-'x': Date.UTC(1975, 0),
-// Jan, 1, 1975
-'y':3030.6
-},
-{
-'x': Date.UTC(1976, 0),
-// Jan, 1, 1976
-'y':2910.3
-},
-{
-'x': Date.UTC(1977, 0),
-// Jan, 1, 1977
-'y':2708.9
-},
-{
-'x': Date.UTC(1978, 0),
-// Jan, 1, 1978
-'y':2590.1
-},
-{
-'x': Date.UTC(1979, 0),
-// Jan, 1, 1979
-'y':2573.9
-},
-{
-'x': Date.UTC(1980, 0),
-// Jan, 1, 1980
-'y':2883.8
-},
-{
-'x': Date.UTC(1981, 0),
-// Jan, 1, 1981
-'y':3011.6
-},
-{
-'x': Date.UTC(1982, 0),
-// Jan, 1, 1982
-'y':2976.7
-},
-{
-'x': Date.UTC(1983, 0),
-// Jan, 1, 1983
-'y':2806.6
-},
-{
-'x': Date.UTC(1984, 0),
-// Jan, 1, 1984
-'y':3086.9
-},
-{
-'x': Date.UTC(1985, 0),
-// Jan, 1, 1985
-'y':3471.6
-},
-{
-'x': Date.UTC(1986, 0),
-// Jan, 1, 1986
-'y':3531.1
-},
-{
-'x': Date.UTC(1987, 0),
-// Jan, 1, 1987
-'y':3222.1
-},
-{
-'x': Date.UTC(1988, 0),
-// Jan, 1, 1988
-'y':3251.4
-},
-{
-'x': Date.UTC(1989, 0),
-// Jan, 1, 1989
-'y':3169.0
-},
-{
-'x': Date.UTC(1990, 0),
-// Jan, 1, 1990
-'y':3525.7
-},
-{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':3372.2
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':3605.1
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':null
-},
+                    'x': Date.UTC(1959, 0),
+                    // Jan, 1, 1959
+                    'y': null
+                },
+                {
+                    'x': Date.UTC(1960, 0),
+                    // Jan, 1, 1960
+                    'y': 1416.1
+                },
+                {
+                    'x': Date.UTC(1961, 0),
+                    // Jan, 1, 1961
+                    'y': 1598.8
+                },
+                {
+                    'x': Date.UTC(1962, 0),
+                    // Jan, 1, 1962
+                    'y': 1964.3
+                },
+                {
+                    'x': Date.UTC(1963, 0),
+                    // Jan, 1, 1963
+                    'y': 2195.6
+                },
+                {
+                    'x': Date.UTC(1964, 0),
+                    // Jan, 1, 1964
+                    'y': 2256.8
+                },
+                {
+                    'x': Date.UTC(1965, 0),
+                    // Jan, 1, 1965
+                    'y': 2233.2
+                },
+                {
+                    'x': Date.UTC(1966, 0),
+                    // Jan, 1, 1966
+                    'y': 2314.1
+                },
+                {
+                    'x': Date.UTC(1967, 0),
+                    // Jan, 1, 1967
+                    'y': 2316.5
+                },
+                {
+                    'x': Date.UTC(1968, 0),
+                    // Jan, 1, 1968
+                    'y': 2480.5
+                },
+                {
+                    'x': Date.UTC(1969, 0),
+                    // Jan, 1, 1969
+                    'y': 2304.1
+                },
+                {
+                    'x': Date.UTC(1970, 0),
+                    // Jan, 1, 1970
+                    'y': 2450.9
+                },
+                {
+                    'x': Date.UTC(1971, 0),
+                    // Jan, 1, 1971
+                    'y': 2582.1
+                },
+                {
+                    'x': Date.UTC(1972, 0),
+                    // Jan, 1, 1972
+                    'y': 2545.4
+                },
+                {
+                    'x': Date.UTC(1973, 0),
+                    // Jan, 1, 1973
+                    'y': 2575
+                },
+                {
+                    'x': Date.UTC(1974, 0),
+                    // Jan, 1, 1974
+                    'y': 2879.9
+                },
+                {
+                    'x': Date.UTC(1975, 0),
+                    // Jan, 1, 1975
+                    'y': 3030.6
+                },
+                {
+                    'x': Date.UTC(1976, 0),
+                    // Jan, 1, 1976
+                    'y': 2910.3
+                },
+                {
+                    'x': Date.UTC(1977, 0),
+                    // Jan, 1, 1977
+                    'y': 2708.9
+                },
+                {
+                    'x': Date.UTC(1978, 0),
+                    // Jan, 1, 1978
+                    'y': 2590.1
+                },
+                {
+                    'x': Date.UTC(1979, 0),
+                    // Jan, 1, 1979
+                    'y': 2573.9
+                },
+                {
+                    'x': Date.UTC(1980, 0),
+                    // Jan, 1, 1980
+                    'y': 2883.8
+                },
+                {
+                    'x': Date.UTC(1981, 0),
+                    // Jan, 1, 1981
+                    'y': 3011.6
+                },
+                {
+                    'x': Date.UTC(1982, 0),
+                    // Jan, 1, 1982
+                    'y': 2976.7
+                },
+                {
+                    'x': Date.UTC(1983, 0),
+                    // Jan, 1, 1983
+                    'y': 2806.6
+                },
+                {
+                    'x': Date.UTC(1984, 0),
+                    // Jan, 1, 1984
+                    'y': 3086.9
+                },
+                {
+                    'x': Date.UTC(1985, 0),
+                    // Jan, 1, 1985
+                    'y': 3471.6
+                },
+                {
+                    'x': Date.UTC(1986, 0),
+                    // Jan, 1, 1986
+                    'y': 3531.1
+                },
+                {
+                    'x': Date.UTC(1987, 0),
+                    // Jan, 1, 1987
+                    'y': 3222.1
+                },
+                {
+                    'x': Date.UTC(1988, 0),
+                    // Jan, 1, 1988
+                    'y': 3251.4
+                },
+                {
+                    'x': Date.UTC(1989, 0),
+                    // Jan, 1, 1989
+                    'y': 3169.0
+                },
+                {
+                    'x': Date.UTC(1990, 0),
+                    // Jan, 1, 1990
+                    'y': 3525.7
+                },
+                {
+                    'x': Date.UTC(1991, 0),
+                    // Jan, 1, 1991
+                    'y': 3372.2
+                },
+                {
+                    'x': Date.UTC(1992, 0),
+                    // Jan, 1, 1992
+                    'y': 3605.1
+                },
+                {
+                    'x': Date.UTC(1993, 0),
+                    // Jan, 1, 1993
+                    'y': null
+                },
             ],
             color: '#2a8e40',
-        },{
-            name:' ',
-            data: [
-                {
-                'x': Date.UTC(1959, 0),
-                // Enero, 1, 1959
-                'y':null
+        }, {
+            name: ' ',
+            data: [{
+                    'x': Date.UTC(1959, 0),
+                    // Enero, 1, 1959
+                    'y': null
                 },
                 {
-                'x': Date.UTC(1960, 0),
-                // Enero, 1, 1985
-                'y':0
+                    'x': Date.UTC(1960, 0),
+                    // Enero, 1, 1985
+                    'y': 0
                 },
                 {
-                'x': Date.UTC(1992, 0),
-                // Enero, 1, 1992
-                'y':0
+                    'x': Date.UTC(1992, 0),
+                    // Enero, 1, 1992
+                    'y': 0
                 },
                 {
-                'x': Date.UTC(1993, 0),
-                // Enero, 1, 1993
-                'y':null
+                    'x': Date.UTC(1993, 0),
+                    // Enero, 1, 1993
+                    'y': null
                 },
             ],
             color: 'transparent',
@@ -530,259 +526,258 @@ $(document).ready(function() {
 
     });
 
-function update_data() {
-    chart2.update({
+    function update_data() {
+        chart2.update({
 
-        plotOptions: {
-            series: {
-                animation: {
-                    duration: 6000
+            plotOptions: {
+                series: {
+                    animation: {
+                        duration: 6000
+                    },
+                    events: {
+                        afterAnimate: function () {
+                            update_data2();
+                        }
+                    },
+                    label: {
+                        enabled: false,
+                        connectorAllowed: false,
+                    },
+                    pointStart: Date.UTC(1959, 0)
                 },
-                events: {
-                    afterAnimate: function() {
-                        update_data2();
-                    }
-                },
-                label: {
-                    enabled: false,
-                    connectorAllowed: false,
-                },
-                pointStart: Date.UTC(1959, 0)
             },
-        },
 
             series: [{
-            name: 'Tasa Delitos Tipo 1',
-            data: [{
-                'x': Date.UTC(1959, 0),
-// Jan, 1, 1959
-'y':null
-},
-{
-'x': Date.UTC(1960, 0),
-// Jan, 1, 1960
-'y':1416.1
-},
-{
-'x': Date.UTC(1961, 0),
-// Jan, 1, 1961
-'y':1598.8
-},
-{
-'x': Date.UTC(1962, 0),
-// Jan, 1, 1962
-'y':1964.3
-},
-{
-'x': Date.UTC(1963, 0),
-// Jan, 1, 1963
-'y':2195.6
-},
-{
-'x': Date.UTC(1964, 0),
-// Jan, 1, 1964
-'y':2256.8
-},
-{
-'x': Date.UTC(1965, 0),
-// Jan, 1, 1965
-'y':2233.2
-},
-{
-'x': Date.UTC(1966, 0),
-// Jan, 1, 1966
-'y':2314.1
-},
-{
-'x': Date.UTC(1967, 0),
-// Jan, 1, 1967
-'y':2316.5
-},
-{
-'x': Date.UTC(1968, 0),
-// Jan, 1, 1968
-'y':2480.5
-},
-{
-'x': Date.UTC(1969, 0),
-// Jan, 1, 1969
-'y':2304.1
-},
-{
-'x': Date.UTC(1970, 0),
-// Jan, 1, 1970
-'y':2450.9
-},
-{
-'x': Date.UTC(1971, 0),
-// Jan, 1, 1971
-'y':2582.1
-},
-{
-'x': Date.UTC(1972, 0),
-// Jan, 1, 1972
-'y':2545.4
-},
-{
-'x': Date.UTC(1973, 0),
-// Jan, 1, 1973
-'y':2575
-},
-{
-'x': Date.UTC(1974, 0),
-// Jan, 1, 1974
-'y':2879.9
-},
-{
-'x': Date.UTC(1975, 0),
-// Jan, 1, 1975
-'y':3030.6
-},
-{
-'x': Date.UTC(1976, 0),
-// Jan, 1, 1976
-'y':2910.3
-},
-{
-'x': Date.UTC(1977, 0),
-// Jan, 1, 1977
-'y':2708.9
-},
-{
-'x': Date.UTC(1978, 0),
-// Jan, 1, 1978
-'y':2590.1
-},
-{
-'x': Date.UTC(1979, 0),
-// Jan, 1, 1979
-'y':2573.9
-},
-{
-'x': Date.UTC(1980, 0),
-// Jan, 1, 1980
-'y':2883.8
-},
-{
-'x': Date.UTC(1981, 0),
-// Jan, 1, 1981
-'y':3011.6
-},
-{
-'x': Date.UTC(1982, 0),
-// Jan, 1, 1982
-'y':2976.7
-},
-{
-'x': Date.UTC(1983, 0),
-// Jan, 1, 1983
-'y':2806.6
-},
-{
-'x': Date.UTC(1984, 0),
-// Jan, 1, 1984
-'y':3086.9
-},
-{
-'x': Date.UTC(1985, 0),
-// Jan, 1, 1985
-'y':3471.6
-},
-{
-'x': Date.UTC(1986, 0),
-// Jan, 1, 1986
-'y':3501.5
-},
-{
-'x': Date.UTC(1987, 0),
-// Jan, 1, 1987
-'y':3222.1
-},
-{
-'x': Date.UTC(1988, 0),
-// Jan, 1, 1988
-'y':3251.4
-},
-{
-'x': Date.UTC(1989, 0),
-// Jan, 1, 1989
-'y':3163.8
-},
-{
-'x': Date.UTC(1990, 0),
-// Jan, 1, 1990
-'y':3525.7
-},
-{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':3372.2
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':3605.1
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':null
-},
-            ],
-            color: '#2a8e40',
-        },{
-            name:'Razón de Cambio Promedio',
-            data: [
-            {
-                'x': Date.UTC(1959, 0),
-                // Enero, 1, 1959
-                'y':null
-                },
-                {
-                'x': Date.UTC(1960, 0),
-                // Enero, 1, 1985
-                'y':1416,
+                name: 'Tasa Delitos Tipo 1',
+                data: [{
+                        'x': Date.UTC(1959, 0),
+                        // Jan, 1, 1959
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1960, 0),
+                        // Jan, 1, 1960
+                        'y': 1416.1
+                    },
+                    {
+                        'x': Date.UTC(1961, 0),
+                        // Jan, 1, 1961
+                        'y': 1598.8
+                    },
+                    {
+                        'x': Date.UTC(1962, 0),
+                        // Jan, 1, 1962
+                        'y': 1964.3
+                    },
+                    {
+                        'x': Date.UTC(1963, 0),
+                        // Jan, 1, 1963
+                        'y': 2195.6
+                    },
+                    {
+                        'x': Date.UTC(1964, 0),
+                        // Jan, 1, 1964
+                        'y': 2256.8
+                    },
+                    {
+                        'x': Date.UTC(1965, 0),
+                        // Jan, 1, 1965
+                        'y': 2233.2
+                    },
+                    {
+                        'x': Date.UTC(1966, 0),
+                        // Jan, 1, 1966
+                        'y': 2314.1
+                    },
+                    {
+                        'x': Date.UTC(1967, 0),
+                        // Jan, 1, 1967
+                        'y': 2316.5
+                    },
+                    {
+                        'x': Date.UTC(1968, 0),
+                        // Jan, 1, 1968
+                        'y': 2480.5
+                    },
+                    {
+                        'x': Date.UTC(1969, 0),
+                        // Jan, 1, 1969
+                        'y': 2304.1
+                    },
+                    {
+                        'x': Date.UTC(1970, 0),
+                        // Jan, 1, 1970
+                        'y': 2450.9
+                    },
+                    {
+                        'x': Date.UTC(1971, 0),
+                        // Jan, 1, 1971
+                        'y': 2582.1
+                    },
+                    {
+                        'x': Date.UTC(1972, 0),
+                        // Jan, 1, 1972
+                        'y': 2545.4
+                    },
+                    {
+                        'x': Date.UTC(1973, 0),
+                        // Jan, 1, 1973
+                        'y': 2575
+                    },
+                    {
+                        'x': Date.UTC(1974, 0),
+                        // Jan, 1, 1974
+                        'y': 2879.9
+                    },
+                    {
+                        'x': Date.UTC(1975, 0),
+                        // Jan, 1, 1975
+                        'y': 3030.6
+                    },
+                    {
+                        'x': Date.UTC(1976, 0),
+                        // Jan, 1, 1976
+                        'y': 2910.3
+                    },
+                    {
+                        'x': Date.UTC(1977, 0),
+                        // Jan, 1, 1977
+                        'y': 2708.9
+                    },
+                    {
+                        'x': Date.UTC(1978, 0),
+                        // Jan, 1, 1978
+                        'y': 2590.1
+                    },
+                    {
+                        'x': Date.UTC(1979, 0),
+                        // Jan, 1, 1979
+                        'y': 2573.9
+                    },
+                    {
+                        'x': Date.UTC(1980, 0),
+                        // Jan, 1, 1980
+                        'y': 2883.8
+                    },
+                    {
+                        'x': Date.UTC(1981, 0),
+                        // Jan, 1, 1981
+                        'y': 3011.6
+                    },
+                    {
+                        'x': Date.UTC(1982, 0),
+                        // Jan, 1, 1982
+                        'y': 2976.7
+                    },
+                    {
+                        'x': Date.UTC(1983, 0),
+                        // Jan, 1, 1983
+                        'y': 2806.6
+                    },
+                    {
+                        'x': Date.UTC(1984, 0),
+                        // Jan, 1, 1984
+                        'y': 3086.9
+                    },
+                    {
+                        'x': Date.UTC(1985, 0),
+                        // Jan, 1, 1985
+                        'y': 3471.6
+                    },
+                    {
+                        'x': Date.UTC(1986, 0),
+                        // Jan, 1, 1986
+                        'y': 3501.5
+                    },
+                    {
+                        'x': Date.UTC(1987, 0),
+                        // Jan, 1, 1987
+                        'y': 3222.1
+                    },
+                    {
+                        'x': Date.UTC(1988, 0),
+                        // Jan, 1, 1988
+                        'y': 3251.4
+                    },
+                    {
+                        'x': Date.UTC(1989, 0),
+                        // Jan, 1, 1989
+                        'y': 3163.8
+                    },
+                    {
+                        'x': Date.UTC(1990, 0),
+                        // Jan, 1, 1990
+                        'y': 3525.7
+                    },
+                    {
+                        'x': Date.UTC(1991, 0),
+                        // Jan, 1, 1991
+                        'y': 3372.2
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Jan, 1, 1992
+                        'y': 3605.1
+                    },
+                    {
+                        'x': Date.UTC(1993, 0),
+                        // Jan, 1, 1993
+                        'y': null
+                    },
+                ],
+                color: '#2a8e40',
+            }, {
+                name: 'Razón de Cambio Promedio',
+                data: [{
+                        'x': Date.UTC(1959, 0),
+                        // Enero, 1, 1959
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1960, 0),
+                        // Enero, 1, 1985
+                        'y': 1416,
+                        dataLabels: {
+                            y: 24
+                        }
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Enero, 1, 1992
+                        'y': 3605
+                    },
+                    {
+                        'x': Date.UTC(1993, 0),
+                        // Enero, 1, 1992
+                        'y': null
+                    },
+                ],
+                color: '#FEDA35',
                 dataLabels: {
-                    y:24
-                }
+                    enabled: true,
                 },
-                {
-                'x': Date.UTC(1992, 0),
-                // Enero, 1, 1992
-                'y':3605
+                animation: {
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
                 },
-                {
-                'x': Date.UTC(1993, 0),
-                // Enero, 1, 1992
-                'y':null
-                },
-            ],
-            color: '#FEDA35',
-            dataLabels: {
-                enabled: true,
-            },
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }]
-    })
+            }]
+        })
 
-}
+    }
 
-function update_data2() {
-    chart2.update({
-         subtitle: {
-             text: 'Razón de Cambio Promedio: 66 delitos por año.',
-             style: {
-                 color: "black"
-             },
-             y:100,
-             x:40,
-         },
-     })
-}
+    function update_data2() {
+        chart2.update({
+            subtitle: {
+                text: 'Razón de Cambio Promedio: 66 delitos por año.',
+                style: {
+                    color: "black"
+                },
+                y: 100,
+                x: 40,
+            },
+        })
+    }
 
 });
 
@@ -792,7 +787,7 @@ function update_data2() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     var chart3 = Highcharts.chart('chart017', {
 
         chart: {
@@ -813,8 +808,8 @@ $(document).ready(function() {
 
         xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { 
-            year: '%Y'
+            dateTimeLabelFormats: {
+                year: '%Y'
             },
             tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
         },
@@ -823,17 +818,17 @@ $(document).ready(function() {
             title: {
                 text: 'Delitos tipo 1 por cada 100,000 habitantes',
                 style: {
-                    color:'black'
+                    color: 'black'
                 }
             },
             labels: {
-                formatter: function() {
+                formatter: function () {
                     return Highcharts.numberFormat(this.value, 0, ' ', ', ')
                 }
             },
             min: 0,
             max: 4500,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
 
         plotOptions: {
@@ -846,7 +841,7 @@ $(document).ready(function() {
                     duration: 6000
                 },
                 events: {
-                    afterAnimate: function() {
+                    afterAnimate: function () {
                         update_data3();
                     }
                 },
@@ -860,177 +855,176 @@ $(document).ready(function() {
         series: [{
             name: 'Tasa Delitos Tipo 1',
             data: [{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':null
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':3605.1
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':3361.8
-},
-{
-'x': Date.UTC(1994, 0),
-// Jan, 1, 1994
-'y':3205.4
-},
-{
-'x': Date.UTC(1995, 0),
-// Jan, 1, 1995
-'y':2902.4
-},
-{
-'x': Date.UTC(1996, 0),
-// Jan, 1, 1996
-'y':2708.1
-},
-{
-'x': Date.UTC(1997, 0),
-// Jan, 1, 1997
-'y':2553.3
-},
-{
-'x': Date.UTC(1998, 0),
-// Jan, 1, 1998
-'y':2321.7
-},
-{
-'x': Date.UTC(1999, 0),
-// Jan, 1, 1999
-'y':2149.9
-},
-{
-'x': Date.UTC(2000, 0),
-// Jan, 1, 2000
-'y':1993
-},
-{
-'x': Date.UTC(2001, 0),
-// Jan, 1, 2001
-'y':1836.2
-},
-{
-'x': Date.UTC(2002, 0),
-// Jan, 1, 2002
-'y':2385.7
-},
-{
-'x': Date.UTC(2003, 0),
-// Jan, 1, 2003
-'y':2137.6
-},
-{
-'x': Date.UTC(2004, 0),
-// Jan, 1, 2004
-'y':1832.3
-},
-{
-'x': Date.UTC(2005, 0),
-// Jan, 1, 2005
-'y':1702.3
-},
-{
-'x': Date.UTC(2006, 0),
-// Jan, 1, 2006
-'y':1632.9
-},
-{
-'x': Date.UTC(2007, 0),
-// Jan, 1, 2007
-'y':1662.2
-},
-{
-'x': Date.UTC(2008, 0),
-// Jan, 1, 2008
-'y':1827.9
-},
-{
-'x': Date.UTC(2009, 0),
-// Jan, 1, 2009
-'y':1796.9
-},
-{
-'x': Date.UTC(2010, 0),
-// Jan, 1, 2010
-'y':1673.2
-},
-{
-'x': Date.UTC(2011, 0),
-// Jan, 1, 2011
-'y':1692.9
-},
-{
-'x': Date.UTC(2012, 0),
-// Jan, 1, 2012
-'y':1698.5
-},
-{
-'x': Date.UTC(2013, 0),
-// Jan, 1, 2013
-'y':1619.2
-},
-{
-'x': Date.UTC(2014, 0),
-// Jan, 1, 2014
-'y':1527.8
-},
-{
-'x': Date.UTC(2015, 0),
-// Jan, 1, 2015
-'y':1341.3
-},
-{
-'x': Date.UTC(2016, 0),
-// Jan, 1, 2016
-'y':1258
-},
-{
-'x': Date.UTC(2017, 0),
-// Jan, 1, 2017
-'y':1171.8
-},
-{
-'x': Date.UTC(2018, 0),
-// Jan, 1, 2018
-'y':976.9
-},
-{
-'x': Date.UTC(2019, 0),
-// Jan, 1, 2019
-'y':null
-},
+                    'x': Date.UTC(1991, 0),
+                    // Jan, 1, 1991
+                    'y': null
+                },
+                {
+                    'x': Date.UTC(1992, 0),
+                    // Jan, 1, 1992
+                    'y': 3605.1
+                },
+                {
+                    'x': Date.UTC(1993, 0),
+                    // Jan, 1, 1993
+                    'y': 3361.8
+                },
+                {
+                    'x': Date.UTC(1994, 0),
+                    // Jan, 1, 1994
+                    'y': 3205.4
+                },
+                {
+                    'x': Date.UTC(1995, 0),
+                    // Jan, 1, 1995
+                    'y': 2902.4
+                },
+                {
+                    'x': Date.UTC(1996, 0),
+                    // Jan, 1, 1996
+                    'y': 2708.1
+                },
+                {
+                    'x': Date.UTC(1997, 0),
+                    // Jan, 1, 1997
+                    'y': 2553.3
+                },
+                {
+                    'x': Date.UTC(1998, 0),
+                    // Jan, 1, 1998
+                    'y': 2321.7
+                },
+                {
+                    'x': Date.UTC(1999, 0),
+                    // Jan, 1, 1999
+                    'y': 2149.9
+                },
+                {
+                    'x': Date.UTC(2000, 0),
+                    // Jan, 1, 2000
+                    'y': 1993
+                },
+                {
+                    'x': Date.UTC(2001, 0),
+                    // Jan, 1, 2001
+                    'y': 1836.2
+                },
+                {
+                    'x': Date.UTC(2002, 0),
+                    // Jan, 1, 2002
+                    'y': 2385.7
+                },
+                {
+                    'x': Date.UTC(2003, 0),
+                    // Jan, 1, 2003
+                    'y': 2137.6
+                },
+                {
+                    'x': Date.UTC(2004, 0),
+                    // Jan, 1, 2004
+                    'y': 1832.3
+                },
+                {
+                    'x': Date.UTC(2005, 0),
+                    // Jan, 1, 2005
+                    'y': 1702.3
+                },
+                {
+                    'x': Date.UTC(2006, 0),
+                    // Jan, 1, 2006
+                    'y': 1632.9
+                },
+                {
+                    'x': Date.UTC(2007, 0),
+                    // Jan, 1, 2007
+                    'y': 1662.2
+                },
+                {
+                    'x': Date.UTC(2008, 0),
+                    // Jan, 1, 2008
+                    'y': 1827.9
+                },
+                {
+                    'x': Date.UTC(2009, 0),
+                    // Jan, 1, 2009
+                    'y': 1796.9
+                },
+                {
+                    'x': Date.UTC(2010, 0),
+                    // Jan, 1, 2010
+                    'y': 1673.2
+                },
+                {
+                    'x': Date.UTC(2011, 0),
+                    // Jan, 1, 2011
+                    'y': 1692.9
+                },
+                {
+                    'x': Date.UTC(2012, 0),
+                    // Jan, 1, 2012
+                    'y': 1698.5
+                },
+                {
+                    'x': Date.UTC(2013, 0),
+                    // Jan, 1, 2013
+                    'y': 1619.2
+                },
+                {
+                    'x': Date.UTC(2014, 0),
+                    // Jan, 1, 2014
+                    'y': 1527.8
+                },
+                {
+                    'x': Date.UTC(2015, 0),
+                    // Jan, 1, 2015
+                    'y': 1341.3
+                },
+                {
+                    'x': Date.UTC(2016, 0),
+                    // Jan, 1, 2016
+                    'y': 1258
+                },
+                {
+                    'x': Date.UTC(2017, 0),
+                    // Jan, 1, 2017
+                    'y': 1171.8
+                },
+                {
+                    'x': Date.UTC(2018, 0),
+                    // Jan, 1, 2018
+                    'y': 976.9
+                },
+                {
+                    'x': Date.UTC(2019, 0),
+                    // Jan, 1, 2019
+                    'y': null
+                },
             ],
             color: '#2a8e40',
-        },{
-            name:' ',
-            data: [
-                {
+        }, {
+            name: ' ',
+            data: [{
                     'x': Date.UTC(1991, 0),
                     // Enero, 1, 1991
-                    'y':null
-                    },
-                    {
+                    'y': null
+                },
+                {
                     'x': Date.UTC(1992, 0),
                     // Enero, 1, 1992
-                    'y':0
-                    },
-                    {
+                    'y': 0
+                },
+                {
                     'x': Date.UTC(2018, 0),
                     // Enero, 1, 2018
-                    'y':0
-                    },
-                    {
+                    'y': 0
+                },
+                {
                     'x': Date.UTC(2019, 0),
                     // Enero, 1, 2019
-                    'y':null
-                    },
+                    'y': null
+                },
             ],
-            color:'transparent',
+            color: 'transparent',
         }],
 
         responsive: {
@@ -1050,227 +1044,226 @@ $(document).ready(function() {
 
     });
 
-function update_data3() {
-    chart3.update({
+    function update_data3() {
+        chart3.update({
 
-        plotOptions: {
-            series: {
+            plotOptions: {
+                series: {
+                    animation: {
+                        duration: 6000
+                    },
+                    events: {
+                        afterAnimate: function () {
+                            update_data4();
+                        }
+                    },
+                    label: {
+                        enabled: false,
+                        connectorAllowed: false,
+                    },
+                },
+            },
+
+            series: [{
+                name: 'Tasa Delitos Tipo 1',
+                data: [{
+                        'x': Date.UTC(1991, 0),
+                        // Jan, 1, 1991
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Jan, 1, 1992
+                        'y': 3605.1
+                    },
+                    {
+                        'x': Date.UTC(1993, 0),
+                        // Jan, 1, 1993
+                        'y': 3361.8
+                    },
+                    {
+                        'x': Date.UTC(1994, 0),
+                        // Jan, 1, 1994
+                        'y': 3205.4
+                    },
+                    {
+                        'x': Date.UTC(1995, 0),
+                        // Jan, 1, 1995
+                        'y': 2902.4
+                    },
+                    {
+                        'x': Date.UTC(1996, 0),
+                        // Jan, 1, 1996
+                        'y': 2708.1
+                    },
+                    {
+                        'x': Date.UTC(1997, 0),
+                        // Jan, 1, 1997
+                        'y': 2553.3
+                    },
+                    {
+                        'x': Date.UTC(1998, 0),
+                        // Jan, 1, 1998
+                        'y': 2321.7
+                    },
+                    {
+                        'x': Date.UTC(1999, 0),
+                        // Jan, 1, 1999
+                        'y': 2149.9
+                    },
+                    {
+                        'x': Date.UTC(2000, 0),
+                        // Jan, 1, 2000
+                        'y': 1993
+                    },
+                    {
+                        'x': Date.UTC(2001, 0),
+                        // Jan, 1, 2001
+                        'y': 1836.2
+                    },
+                    {
+                        'x': Date.UTC(2002, 0),
+                        // Jan, 1, 2002
+                        'y': 2385.7
+                    },
+                    {
+                        'x': Date.UTC(2003, 0),
+                        // Jan, 1, 2003
+                        'y': 2137.6
+                    },
+                    {
+                        'x': Date.UTC(2004, 0),
+                        // Jan, 1, 2004
+                        'y': 1832.3
+                    },
+                    {
+                        'x': Date.UTC(2005, 0),
+                        // Jan, 1, 2005
+                        'y': 1702.3
+                    },
+                    {
+                        'x': Date.UTC(2006, 0),
+                        // Jan, 1, 2006
+                        'y': 1632.9
+                    },
+                    {
+                        'x': Date.UTC(2007, 0),
+                        // Jan, 1, 2007
+                        'y': 1662.2
+                    },
+                    {
+                        'x': Date.UTC(2008, 0),
+                        // Jan, 1, 2008
+                        'y': 1827.9
+                    },
+                    {
+                        'x': Date.UTC(2009, 0),
+                        // Jan, 1, 2009
+                        'y': 1796.9
+                    },
+                    {
+                        'x': Date.UTC(2010, 0),
+                        // Jan, 1, 2010
+                        'y': 1673.2
+                    },
+                    {
+                        'x': Date.UTC(2011, 0),
+                        // Jan, 1, 2011
+                        'y': 1692.9
+                    },
+                    {
+                        'x': Date.UTC(2012, 0),
+                        // Jan, 1, 2012
+                        'y': 1698.5
+                    },
+                    {
+                        'x': Date.UTC(2013, 0),
+                        // Jan, 1, 2013
+                        'y': 1619.2
+                    },
+                    {
+                        'x': Date.UTC(2014, 0),
+                        // Jan, 1, 2014
+                        'y': 1527.8
+                    },
+                    {
+                        'x': Date.UTC(2015, 0),
+                        // Jan, 1, 2015
+                        'y': 1341.3
+                    },
+                    {
+                        'x': Date.UTC(2016, 0),
+                        // Jan, 1, 2016
+                        'y': 1258
+                    },
+                    {
+                        'x': Date.UTC(2017, 0),
+                        // Jan, 1, 2017
+                        'y': 1171.8
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Jan, 1, 2018
+                        'y': 976.9
+                    },
+                    {
+                        'x': Date.UTC(2019, 0),
+                        // Jan, 1, 2019
+                        'y': null
+                    },
+                ],
+                color: '#2a8e40',
+            }, {
+                name: 'Razón de Cambio Promedio',
+                data: [{
+                        'x': Date.UTC(1991, 0),
+                        // Enero, 1, 1991
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Enero, 1, 1992
+                        'y': 3605
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Enero, 1, 2018
+                        'y': 977,
+                        dataLabels: {
+                            y: 24
+                        }
+                    },
+                    {
+                        'x': Date.UTC(2019, 0),
+                        // Enero, 1, 2019
+                        'y': null
+                    },
+                ],
+                color: '#FEDA35',
+                dataLabels: {
+                    enabled: true,
+                },
                 animation: {
-                    duration: 6000
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
                 },
-                events: {
-                    afterAnimate: function() {
-                        update_data4();
-                    }
-                },
-                label: {
-                    enabled: false,
-                    connectorAllowed: false,
-                },
-            },
-        },
+            }],
+        })
+    }
 
-        series: [{
-        name: 'Tasa Delitos Tipo 1',
-        data: [{
-            'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':null
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':3605.1
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':3361.8
-},
-{
-'x': Date.UTC(1994, 0),
-// Jan, 1, 1994
-'y':3205.4
-},
-{
-'x': Date.UTC(1995, 0),
-// Jan, 1, 1995
-'y':2902.4
-},
-{
-'x': Date.UTC(1996, 0),
-// Jan, 1, 1996
-'y':2708.1
-},
-{
-'x': Date.UTC(1997, 0),
-// Jan, 1, 1997
-'y':2553.3
-},
-{
-'x': Date.UTC(1998, 0),
-// Jan, 1, 1998
-'y':2321.7
-},
-{
-'x': Date.UTC(1999, 0),
-// Jan, 1, 1999
-'y':2149.9
-},
-{
-'x': Date.UTC(2000, 0),
-// Jan, 1, 2000
-'y':1993
-},
-{
-'x': Date.UTC(2001, 0),
-// Jan, 1, 2001
-'y':1836.2
-},
-{
-'x': Date.UTC(2002, 0),
-// Jan, 1, 2002
-'y':2385.7
-},
-{
-'x': Date.UTC(2003, 0),
-// Jan, 1, 2003
-'y':2137.6
-},
-{
-'x': Date.UTC(2004, 0),
-// Jan, 1, 2004
-'y':1832.3
-},
-{
-'x': Date.UTC(2005, 0),
-// Jan, 1, 2005
-'y':1702.3
-},
-{
-'x': Date.UTC(2006, 0),
-// Jan, 1, 2006
-'y':1632.9
-},
-{
-'x': Date.UTC(2007, 0),
-// Jan, 1, 2007
-'y':1662.2
-},
-{
-'x': Date.UTC(2008, 0),
-// Jan, 1, 2008
-'y':1827.9
-},
-{
-'x': Date.UTC(2009, 0),
-// Jan, 1, 2009
-'y':1796.9
-},
-{
-'x': Date.UTC(2010, 0),
-// Jan, 1, 2010
-'y':1673.2
-},
-{
-'x': Date.UTC(2011, 0),
-// Jan, 1, 2011
-'y':1692.9
-},
-{
-'x': Date.UTC(2012, 0),
-// Jan, 1, 2012
-'y':1698.5
-},
-{
-'x': Date.UTC(2013, 0),
-// Jan, 1, 2013
-'y':1619.2
-},
-{
-'x': Date.UTC(2014, 0),
-// Jan, 1, 2014
-'y':1527.8
-},
-{
-'x': Date.UTC(2015, 0),
-// Jan, 1, 2015
-'y':1341.3
-},
-{
-'x': Date.UTC(2016, 0),
-// Jan, 1, 2016
-'y':1258
-},
-{
-'x': Date.UTC(2017, 0),
-// Jan, 1, 2017
-'y':1171.8
-},
-{
-'x': Date.UTC(2018, 0),
-// Jan, 1, 2018
-'y':976.9
-},
-{
-'x': Date.UTC(2019, 0),
-// Jan, 1, 2019
-'y':null
-},
-        ],
-        color: '#2a8e40',
-    },{
-        name:'Razón de Cambio Promedio',
-        data: [
-            {
-            'x': Date.UTC(1991, 0),
-            // Enero, 1, 1991
-            'y':null
+    function update_data4() {
+        chart3.update({
+            subtitle: {
+                text: 'Razón de Cambio Promedio: -97 delitos por año.',
+                style: {
+                    color: "black"
+                },
+                y: 100,
+                x: 40,
             },
-            {
-            'x': Date.UTC(1992, 0),
-            // Enero, 1, 1992
-            'y':3605
-            },
-            {
-            'x': Date.UTC(2018, 0),
-            // Enero, 1, 2018
-            'y':977,
-            dataLabels: {
-                y:24
-            }
-            },
-            {
-            'x': Date.UTC(2019, 0),
-            // Enero, 1, 2019
-            'y':null
-            },
-        ],
-        color: '#FEDA35',
-        dataLabels: {
-            enabled: true,
-        },
-        animation: {
-            enabled: true,
-            duration: 6000,
-            easing: 'linear'
-        },
-    }],
-})
-}
-
-function update_data4() {
-    chart3.update({
-        subtitle: {
-            text: 'Razón de Cambio Promedio: -97 delitos por año.',
-            style: {
-                color: "black"
-            },
-            y:100,
-            x:40,
-        },
-    })
-}
+        })
+    }
 
 })
 
@@ -1280,7 +1273,7 @@ function update_data4() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     Highcharts.chart('chart012', {
 
         chart: {
@@ -1306,12 +1299,12 @@ $(document).ready(function() {
             title: {
                 text: 'Cantidad delitos tipo 1',
                 style: {
-                    color:'black'
+                    color: 'black'
                 }
             },
             min: 0,
             max: 150000,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
 
         plotOptions: {
@@ -1367,7 +1360,7 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     var chart5 = Highcharts.chart('chart018', {
 
         chart: {
@@ -1381,8 +1374,8 @@ $(document).ready(function() {
 
         xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { 
-            year: '%Y'
+            dateTimeLabelFormats: {
+                year: '%Y'
             },
             tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
         },
@@ -1391,12 +1384,12 @@ $(document).ready(function() {
             title: {
                 text: 'Tasa de asesinatos y homicidios',
                 style: {
-                    color:'black'
+                    color: 'black'
                 }
             },
             min: 0,
             max: 40,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
 
         plotOptions: {
@@ -1409,7 +1402,7 @@ $(document).ready(function() {
                     duration: 6000
                 },
                 events: {
-                    afterAnimate: function() {
+                    afterAnimate: function () {
                         update_data5();
                     }
                 },
@@ -1423,324 +1416,323 @@ $(document).ready(function() {
         series: [{
             name: 'Tasa Asesinatos y Homicidios',
             data: [{
-'x': Date.UTC(1959, 0),
-// Jan, 1, 1960
-'y':null
-},
-{
-'x': Date.UTC(1960, 0),
-// Jan, 1, 1960
-'y':7.2
-},
-{
-'x': Date.UTC(1961, 0),
-// Jan, 1, 1961
-'y':7.2
-},
-{
-'x': Date.UTC(1962, 0),
-// Jan, 1, 1962
-'y':8.9
-},
-{
-'x': Date.UTC(1963, 0),
-// Jan, 1, 1963
-'y':8.8
-},
-{
-'x': Date.UTC(1964, 0),
-// Jan, 1, 1964
-'y':9.4
-},
-{
-'x': Date.UTC(1965, 0),
-// Jan, 1, 1965
-'y':8.2
-},
-{
-'x': Date.UTC(1966, 0),
-// Jan, 1, 1966
-'y':7.8
-},
-{
-'x': Date.UTC(1967, 0),
-// Jan, 1, 1967
-'y':7.1
-},
-{
-'x': Date.UTC(1968, 0),
-// Jan, 1, 1968
-'y':7.7
-},
-{
-'x': Date.UTC(1969, 0),
-// Jan, 1, 1969
-'y':6.9
-},
-{
-'x': Date.UTC(1970, 0),
-// Jan, 1, 1970
-'y':7.1
-},
-{
-'x': Date.UTC(1971, 0),
-// Jan, 1, 1971
-'y':10.4
-},
-{
-'x': Date.UTC(1972, 0),
-// Jan, 1, 1972
-'y':11.5
-},
-{
-'x': Date.UTC(1973, 0),
-// Jan, 1, 1973
-'y':15
-},
-{
-'x': Date.UTC(1974, 0),
-// Jan, 1, 1974
-'y':18.2
-},
-{
-'x': Date.UTC(1975, 0),
-// Jan, 1, 1975
-'y':17.2
-},
-{
-'x': Date.UTC(1976, 0),
-// Jan, 1, 1976
-'y':15
-},
-{
-'x': Date.UTC(1977, 0),
-// Jan, 1, 1977
-'y':15.5
-},
-{
-'x': Date.UTC(1978, 0),
-// Jan, 1, 1978
-'y':15.8
-},
-{
-'x': Date.UTC(1979, 0),
-// Jan, 1, 1979
-'y':15.3
-},
-{
-'x': Date.UTC(1980, 0),
-// Jan, 1, 1980
-'y':14.8
-},
-{
-'x': Date.UTC(1981, 0),
-// Jan, 1, 1981
-'y':16.4
-},
-{
-'x': Date.UTC(1982, 0),
-// Jan, 1, 1982
-'y':14.9
-},
-{
-'x': Date.UTC(1983, 0),
-// Jan, 1, 1983
-'y':12.8
-},
-{
-'x': Date.UTC(1984, 0),
-// Jan, 1, 1984
-'y':14.5
-},
-{
-'x': Date.UTC(1985, 0),
-// Jan, 1, 1985
-'y':17.1
-},
-{
-'x': Date.UTC(1986, 0),
-// Jan, 1, 1986
-'y':21.2
-},
-{
-'x': Date.UTC(1987, 0),
-// Jan, 1, 1987
-'y':14.9
-},
-{
-'x': Date.UTC(1988, 0),
-// Jan, 1, 1988
-'y':17.3
-},
-{
-'x': Date.UTC(1989, 0),
-// Jan, 1, 1989
-'y':13.5
-},
-{
-'x': Date.UTC(1990, 0),
-// Jan, 1, 1990
-'y':17
-},
-{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':23
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':24.2
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':26.5
-},
-{
-'x': Date.UTC(1994, 0),
-// Jan, 1, 1994
-'y':27.4
-},
-{
-'x': Date.UTC(1995, 0),
-// Jan, 1, 1995
-'y':23.6
-},
-{
-'x': Date.UTC(1996, 0),
-// Jan, 1, 1996
-'y':23.6
-},
-{
-'x': Date.UTC(1997, 0),
-// Jan, 1, 1997
-'y':19.5
-},
-{
-'x': Date.UTC(1998, 0),
-// Jan, 1, 1998
-'y':17.4
-},
-{
-'x': Date.UTC(1999, 0),
-// Jan, 1, 1999
-'y':15.6
-},
-{
-'x': Date.UTC(2000, 0),
-// Jan, 1, 2000
-'y':18.4
-},
-{
-'x': Date.UTC(2001, 0),
-// Jan, 1, 2001
-'y':19.6
-},
-{
-'x': Date.UTC(2002, 0),
-// Jan, 1, 2002
-'y':20.2
-},
-{
-'x': Date.UTC(2003, 0),
-// Jan, 1, 2003
-'y':20.6
-},
-{
-'x': Date.UTC(2004, 0),
-// Jan, 1, 2004
-'y':20.7
-},
-{
-'x': Date.UTC(2005, 0),
-// Jan, 1, 2005
-'y':20.2
-},
-{
-'x': Date.UTC(2006, 0),
-// Jan, 1, 2006
-'y':19.7
-},
-{
-'x': Date.UTC(2007, 0),
-// Jan, 1, 2007
-'y':19.3
-},
-{
-'x': Date.UTC(2008, 0),
-// Jan, 1, 2008
-'y':21.7
-},
-{
-'x': Date.UTC(2009, 0),
-// Jan, 1, 2009
-'y':24.1
-},
-{
-'x': Date.UTC(2010, 0),
-// Jan, 1, 2010
-'y':27.3
-},
-{
-'x': Date.UTC(2011, 0),
-// Jan, 1, 2011
-'y':31.6
-},
-{
-'x': Date.UTC(2012, 0),
-// Jan, 1, 2012
-'y':27.6
-},
-{
-'x': Date.UTC(2013, 0),
-// Jan, 1, 2013
-'y':25.1
-},
-{
-'x': Date.UTC(2014, 0),
-// Jan, 1, 2014
-'y':19.8
-},
-{
-'x': Date.UTC(2015, 0),
-// Jan, 1, 2015
-'y':17.8
-},
-{
-'x': Date.UTC(2016, 0),
-// Jan, 1, 2016
-'y':20.5
-},
-{
-'x': Date.UTC(2017, 0),
-// Jan, 1, 2017
-'y':21.4
-},
-{
-'x': Date.UTC(2018, 0),
-// Jan, 1, 2018
-'y':20.1
-},
-{
-'x': Date.UTC(2019, 0),
-// Jan, 1, 2019
-'y':null
-},
-            ],
-            color: '#2a8e40',
-        },{
-            name:' ',
-            data: [
-            {
-                'x': Date.UTC(1960, 0),
-                // Enero, 1, 1960
-                'y':0
+                    'x': Date.UTC(1959, 0),
+                    // Jan, 1, 1960
+                    'y': null
                 },
                 {
-                'x': Date.UTC(2018, 0),
-                // Enero, 1, 2018
-                'y':0
+                    'x': Date.UTC(1960, 0),
+                    // Jan, 1, 1960
+                    'y': 7.2
+                },
+                {
+                    'x': Date.UTC(1961, 0),
+                    // Jan, 1, 1961
+                    'y': 7.2
+                },
+                {
+                    'x': Date.UTC(1962, 0),
+                    // Jan, 1, 1962
+                    'y': 8.9
+                },
+                {
+                    'x': Date.UTC(1963, 0),
+                    // Jan, 1, 1963
+                    'y': 8.8
+                },
+                {
+                    'x': Date.UTC(1964, 0),
+                    // Jan, 1, 1964
+                    'y': 9.4
+                },
+                {
+                    'x': Date.UTC(1965, 0),
+                    // Jan, 1, 1965
+                    'y': 8.2
+                },
+                {
+                    'x': Date.UTC(1966, 0),
+                    // Jan, 1, 1966
+                    'y': 7.8
+                },
+                {
+                    'x': Date.UTC(1967, 0),
+                    // Jan, 1, 1967
+                    'y': 7.1
+                },
+                {
+                    'x': Date.UTC(1968, 0),
+                    // Jan, 1, 1968
+                    'y': 7.7
+                },
+                {
+                    'x': Date.UTC(1969, 0),
+                    // Jan, 1, 1969
+                    'y': 6.9
+                },
+                {
+                    'x': Date.UTC(1970, 0),
+                    // Jan, 1, 1970
+                    'y': 7.1
+                },
+                {
+                    'x': Date.UTC(1971, 0),
+                    // Jan, 1, 1971
+                    'y': 10.4
+                },
+                {
+                    'x': Date.UTC(1972, 0),
+                    // Jan, 1, 1972
+                    'y': 11.5
+                },
+                {
+                    'x': Date.UTC(1973, 0),
+                    // Jan, 1, 1973
+                    'y': 15
+                },
+                {
+                    'x': Date.UTC(1974, 0),
+                    // Jan, 1, 1974
+                    'y': 18.2
+                },
+                {
+                    'x': Date.UTC(1975, 0),
+                    // Jan, 1, 1975
+                    'y': 17.2
+                },
+                {
+                    'x': Date.UTC(1976, 0),
+                    // Jan, 1, 1976
+                    'y': 15
+                },
+                {
+                    'x': Date.UTC(1977, 0),
+                    // Jan, 1, 1977
+                    'y': 15.5
+                },
+                {
+                    'x': Date.UTC(1978, 0),
+                    // Jan, 1, 1978
+                    'y': 15.8
+                },
+                {
+                    'x': Date.UTC(1979, 0),
+                    // Jan, 1, 1979
+                    'y': 15.3
+                },
+                {
+                    'x': Date.UTC(1980, 0),
+                    // Jan, 1, 1980
+                    'y': 14.8
+                },
+                {
+                    'x': Date.UTC(1981, 0),
+                    // Jan, 1, 1981
+                    'y': 16.4
+                },
+                {
+                    'x': Date.UTC(1982, 0),
+                    // Jan, 1, 1982
+                    'y': 14.9
+                },
+                {
+                    'x': Date.UTC(1983, 0),
+                    // Jan, 1, 1983
+                    'y': 12.8
+                },
+                {
+                    'x': Date.UTC(1984, 0),
+                    // Jan, 1, 1984
+                    'y': 14.5
+                },
+                {
+                    'x': Date.UTC(1985, 0),
+                    // Jan, 1, 1985
+                    'y': 17.1
+                },
+                {
+                    'x': Date.UTC(1986, 0),
+                    // Jan, 1, 1986
+                    'y': 21.2
+                },
+                {
+                    'x': Date.UTC(1987, 0),
+                    // Jan, 1, 1987
+                    'y': 14.9
+                },
+                {
+                    'x': Date.UTC(1988, 0),
+                    // Jan, 1, 1988
+                    'y': 17.3
+                },
+                {
+                    'x': Date.UTC(1989, 0),
+                    // Jan, 1, 1989
+                    'y': 13.5
+                },
+                {
+                    'x': Date.UTC(1990, 0),
+                    // Jan, 1, 1990
+                    'y': 17
+                },
+                {
+                    'x': Date.UTC(1991, 0),
+                    // Jan, 1, 1991
+                    'y': 23
+                },
+                {
+                    'x': Date.UTC(1992, 0),
+                    // Jan, 1, 1992
+                    'y': 24.2
+                },
+                {
+                    'x': Date.UTC(1993, 0),
+                    // Jan, 1, 1993
+                    'y': 26.5
+                },
+                {
+                    'x': Date.UTC(1994, 0),
+                    // Jan, 1, 1994
+                    'y': 27.4
+                },
+                {
+                    'x': Date.UTC(1995, 0),
+                    // Jan, 1, 1995
+                    'y': 23.6
+                },
+                {
+                    'x': Date.UTC(1996, 0),
+                    // Jan, 1, 1996
+                    'y': 23.6
+                },
+                {
+                    'x': Date.UTC(1997, 0),
+                    // Jan, 1, 1997
+                    'y': 19.5
+                },
+                {
+                    'x': Date.UTC(1998, 0),
+                    // Jan, 1, 1998
+                    'y': 17.4
+                },
+                {
+                    'x': Date.UTC(1999, 0),
+                    // Jan, 1, 1999
+                    'y': 15.6
+                },
+                {
+                    'x': Date.UTC(2000, 0),
+                    // Jan, 1, 2000
+                    'y': 18.4
+                },
+                {
+                    'x': Date.UTC(2001, 0),
+                    // Jan, 1, 2001
+                    'y': 19.6
+                },
+                {
+                    'x': Date.UTC(2002, 0),
+                    // Jan, 1, 2002
+                    'y': 20.2
+                },
+                {
+                    'x': Date.UTC(2003, 0),
+                    // Jan, 1, 2003
+                    'y': 20.6
+                },
+                {
+                    'x': Date.UTC(2004, 0),
+                    // Jan, 1, 2004
+                    'y': 20.7
+                },
+                {
+                    'x': Date.UTC(2005, 0),
+                    // Jan, 1, 2005
+                    'y': 20.2
+                },
+                {
+                    'x': Date.UTC(2006, 0),
+                    // Jan, 1, 2006
+                    'y': 19.7
+                },
+                {
+                    'x': Date.UTC(2007, 0),
+                    // Jan, 1, 2007
+                    'y': 19.3
+                },
+                {
+                    'x': Date.UTC(2008, 0),
+                    // Jan, 1, 2008
+                    'y': 21.7
+                },
+                {
+                    'x': Date.UTC(2009, 0),
+                    // Jan, 1, 2009
+                    'y': 24.1
+                },
+                {
+                    'x': Date.UTC(2010, 0),
+                    // Jan, 1, 2010
+                    'y': 27.3
+                },
+                {
+                    'x': Date.UTC(2011, 0),
+                    // Jan, 1, 2011
+                    'y': 31.6
+                },
+                {
+                    'x': Date.UTC(2012, 0),
+                    // Jan, 1, 2012
+                    'y': 27.6
+                },
+                {
+                    'x': Date.UTC(2013, 0),
+                    // Jan, 1, 2013
+                    'y': 25.1
+                },
+                {
+                    'x': Date.UTC(2014, 0),
+                    // Jan, 1, 2014
+                    'y': 19.8
+                },
+                {
+                    'x': Date.UTC(2015, 0),
+                    // Jan, 1, 2015
+                    'y': 17.8
+                },
+                {
+                    'x': Date.UTC(2016, 0),
+                    // Jan, 1, 2016
+                    'y': 20.5
+                },
+                {
+                    'x': Date.UTC(2017, 0),
+                    // Jan, 1, 2017
+                    'y': 21.4
+                },
+                {
+                    'x': Date.UTC(2018, 0),
+                    // Jan, 1, 2018
+                    'y': 20.1
+                },
+                {
+                    'x': Date.UTC(2019, 0),
+                    // Jan, 1, 2019
+                    'y': null
+                },
+            ],
+            color: '#2a8e40',
+        }, {
+            name: ' ',
+            data: [{
+                    'x': Date.UTC(1960, 0),
+                    // Enero, 1, 1960
+                    'y': 0
+                },
+                {
+                    'x': Date.UTC(2018, 0),
+                    // Enero, 1, 2018
+                    'y': 0
                 },
             ],
             color: 'transparent',
@@ -1772,7 +1764,7 @@ $(document).ready(function() {
                         duration: 6000
                     },
                     events: {
-                        afterAnimate: function() {
+                        afterAnimate: function () {
                             update_data6();
                         }
                     },
@@ -1784,342 +1776,341 @@ $(document).ready(function() {
             },
 
             series: [{
-            name: 'Tasa Asesinatos y Homicidios',
-            data: [{
-'x': Date.UTC(1959, 0),
-// Jan, 1, 1960
-'y':null
-},
-{
-'x': Date.UTC(1960, 0),
-// Jan, 1, 1960
-'y':7.2
-},
-{
-'x': Date.UTC(1961, 0),
-// Jan, 1, 1961
-'y':7.2
-},
-{
-'x': Date.UTC(1962, 0),
-// Jan, 1, 1962
-'y':8.9
-},
-{
-'x': Date.UTC(1963, 0),
-// Jan, 1, 1963
-'y':8.8
-},
-{
-'x': Date.UTC(1964, 0),
-// Jan, 1, 1964
-'y':9.4
-},
-{
-'x': Date.UTC(1965, 0),
-// Jan, 1, 1965
-'y':8.2
-},
-{
-'x': Date.UTC(1966, 0),
-// Jan, 1, 1966
-'y':7.8
-},
-{
-'x': Date.UTC(1967, 0),
-// Jan, 1, 1967
-'y':7.1
-},
-{
-'x': Date.UTC(1968, 0),
-// Jan, 1, 1968
-'y':7.7
-},
-{
-'x': Date.UTC(1969, 0),
-// Jan, 1, 1969
-'y':6.9
-},
-{
-'x': Date.UTC(1970, 0),
-// Jan, 1, 1970
-'y':7.1
-},
-{
-'x': Date.UTC(1971, 0),
-// Jan, 1, 1971
-'y':10.4
-},
-{
-'x': Date.UTC(1972, 0),
-// Jan, 1, 1972
-'y':11.5
-},
-{
-'x': Date.UTC(1973, 0),
-// Jan, 1, 1973
-'y':15
-},
-{
-'x': Date.UTC(1974, 0),
-// Jan, 1, 1974
-'y':18.2
-},
-{
-'x': Date.UTC(1975, 0),
-// Jan, 1, 1975
-'y':17.2
-},
-{
-'x': Date.UTC(1976, 0),
-// Jan, 1, 1976
-'y':15
-},
-{
-'x': Date.UTC(1977, 0),
-// Jan, 1, 1977
-'y':15.5
-},
-{
-'x': Date.UTC(1978, 0),
-// Jan, 1, 1978
-'y':15.8
-},
-{
-'x': Date.UTC(1979, 0),
-// Jan, 1, 1979
-'y':15.3
-},
-{
-'x': Date.UTC(1980, 0),
-// Jan, 1, 1980
-'y':14.8
-},
-{
-'x': Date.UTC(1981, 0),
-// Jan, 1, 1981
-'y':16.4
-},
-{
-'x': Date.UTC(1982, 0),
-// Jan, 1, 1982
-'y':14.9
-},
-{
-'x': Date.UTC(1983, 0),
-// Jan, 1, 1983
-'y':12.8
-},
-{
-'x': Date.UTC(1984, 0),
-// Jan, 1, 1984
-'y':14.5
-},
-{
-'x': Date.UTC(1985, 0),
-// Jan, 1, 1985
-'y':17.1
-},
-{
-'x': Date.UTC(1986, 0),
-// Jan, 1, 1986
-'y':21.2
-},
-{
-'x': Date.UTC(1987, 0),
-// Jan, 1, 1987
-'y':14.9
-},
-{
-'x': Date.UTC(1988, 0),
-// Jan, 1, 1988
-'y':17.3
-},
-{
-'x': Date.UTC(1989, 0),
-// Jan, 1, 1989
-'y':13.5
-},
-{
-'x': Date.UTC(1990, 0),
-// Jan, 1, 1990
-'y':17
-},
-{
-'x': Date.UTC(1991, 0),
-// Jan, 1, 1991
-'y':23
-},
-{
-'x': Date.UTC(1992, 0),
-// Jan, 1, 1992
-'y':24.2
-},
-{
-'x': Date.UTC(1993, 0),
-// Jan, 1, 1993
-'y':26.5
-},
-{
-'x': Date.UTC(1994, 0),
-// Jan, 1, 1994
-'y':27.4
-},
-{
-'x': Date.UTC(1995, 0),
-// Jan, 1, 1995
-'y':23.6
-},
-{
-'x': Date.UTC(1996, 0),
-// Jan, 1, 1996
-'y':23.6
-},
-{
-'x': Date.UTC(1997, 0),
-// Jan, 1, 1997
-'y':19.5
-},
-{
-'x': Date.UTC(1998, 0),
-// Jan, 1, 1998
-'y':17.4
-},
-{
-'x': Date.UTC(1999, 0),
-// Jan, 1, 1999
-'y':15.6
-},
-{
-'x': Date.UTC(2000, 0),
-// Jan, 1, 2000
-'y':18.4
-},
-{
-'x': Date.UTC(2001, 0),
-// Jan, 1, 2001
-'y':19.6
-},
-{
-'x': Date.UTC(2002, 0),
-// Jan, 1, 2002
-'y':20.2
-},
-{
-'x': Date.UTC(2003, 0),
-// Jan, 1, 2003
-'y':20.6
-},
-{
-'x': Date.UTC(2004, 0),
-// Jan, 1, 2004
-'y':20.7
-},
-{
-'x': Date.UTC(2005, 0),
-// Jan, 1, 2005
-'y':20.2
-},
-{
-'x': Date.UTC(2006, 0),
-// Jan, 1, 2006
-'y':19.7
-},
-{
-'x': Date.UTC(2007, 0),
-// Jan, 1, 2007
-'y':19.3
-},
-{
-'x': Date.UTC(2008, 0),
-// Jan, 1, 2008
-'y':21.7
-},
-{
-'x': Date.UTC(2009, 0),
-// Jan, 1, 2009
-'y':24.1
-},
-{
-'x': Date.UTC(2010, 0),
-// Jan, 1, 2010
-'y':27.3
-},
-{
-'x': Date.UTC(2011, 0),
-// Jan, 1, 2011
-'y':31.6
-},
-{
-'x': Date.UTC(2012, 0),
-// Jan, 1, 2012
-'y':27.6
-},
-{
-'x': Date.UTC(2013, 0),
-// Jan, 1, 2013
-'y':25.1
-},
-{
-'x': Date.UTC(2014, 0),
-// Jan, 1, 2014
-'y':19.8
-},
-{
-'x': Date.UTC(2015, 0),
-// Jan, 1, 2015
-'y':17.8
-},
-{
-'x': Date.UTC(2016, 0),
-// Jan, 1, 2016
-'y':20.5
-},
-{
-'x': Date.UTC(2017, 0),
-// Jan, 1, 2017
-'y':21.4
-},
-{
-'x': Date.UTC(2018, 0),
-// Jan, 1, 2018
-'y':20.1
-},
-{
-'x': Date.UTC(2019, 0),
-// Jan, 1, 2019
-'y':null
-},
-            ],
-            color: '#2a8e40',
-        },{
-            name:'Tendencia General',
-            data: [
-            {
-                'x': Date.UTC(1960, 0),
-                // Enero, 1, 1960
-                'y':7.2,
+                name: 'Tasa Asesinatos y Homicidios',
+                data: [{
+                        'x': Date.UTC(1959, 0),
+                        // Jan, 1, 1960
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1960, 0),
+                        // Jan, 1, 1960
+                        'y': 7.2
+                    },
+                    {
+                        'x': Date.UTC(1961, 0),
+                        // Jan, 1, 1961
+                        'y': 7.2
+                    },
+                    {
+                        'x': Date.UTC(1962, 0),
+                        // Jan, 1, 1962
+                        'y': 8.9
+                    },
+                    {
+                        'x': Date.UTC(1963, 0),
+                        // Jan, 1, 1963
+                        'y': 8.8
+                    },
+                    {
+                        'x': Date.UTC(1964, 0),
+                        // Jan, 1, 1964
+                        'y': 9.4
+                    },
+                    {
+                        'x': Date.UTC(1965, 0),
+                        // Jan, 1, 1965
+                        'y': 8.2
+                    },
+                    {
+                        'x': Date.UTC(1966, 0),
+                        // Jan, 1, 1966
+                        'y': 7.8
+                    },
+                    {
+                        'x': Date.UTC(1967, 0),
+                        // Jan, 1, 1967
+                        'y': 7.1
+                    },
+                    {
+                        'x': Date.UTC(1968, 0),
+                        // Jan, 1, 1968
+                        'y': 7.7
+                    },
+                    {
+                        'x': Date.UTC(1969, 0),
+                        // Jan, 1, 1969
+                        'y': 6.9
+                    },
+                    {
+                        'x': Date.UTC(1970, 0),
+                        // Jan, 1, 1970
+                        'y': 7.1
+                    },
+                    {
+                        'x': Date.UTC(1971, 0),
+                        // Jan, 1, 1971
+                        'y': 10.4
+                    },
+                    {
+                        'x': Date.UTC(1972, 0),
+                        // Jan, 1, 1972
+                        'y': 11.5
+                    },
+                    {
+                        'x': Date.UTC(1973, 0),
+                        // Jan, 1, 1973
+                        'y': 15
+                    },
+                    {
+                        'x': Date.UTC(1974, 0),
+                        // Jan, 1, 1974
+                        'y': 18.2
+                    },
+                    {
+                        'x': Date.UTC(1975, 0),
+                        // Jan, 1, 1975
+                        'y': 17.2
+                    },
+                    {
+                        'x': Date.UTC(1976, 0),
+                        // Jan, 1, 1976
+                        'y': 15
+                    },
+                    {
+                        'x': Date.UTC(1977, 0),
+                        // Jan, 1, 1977
+                        'y': 15.5
+                    },
+                    {
+                        'x': Date.UTC(1978, 0),
+                        // Jan, 1, 1978
+                        'y': 15.8
+                    },
+                    {
+                        'x': Date.UTC(1979, 0),
+                        // Jan, 1, 1979
+                        'y': 15.3
+                    },
+                    {
+                        'x': Date.UTC(1980, 0),
+                        // Jan, 1, 1980
+                        'y': 14.8
+                    },
+                    {
+                        'x': Date.UTC(1981, 0),
+                        // Jan, 1, 1981
+                        'y': 16.4
+                    },
+                    {
+                        'x': Date.UTC(1982, 0),
+                        // Jan, 1, 1982
+                        'y': 14.9
+                    },
+                    {
+                        'x': Date.UTC(1983, 0),
+                        // Jan, 1, 1983
+                        'y': 12.8
+                    },
+                    {
+                        'x': Date.UTC(1984, 0),
+                        // Jan, 1, 1984
+                        'y': 14.5
+                    },
+                    {
+                        'x': Date.UTC(1985, 0),
+                        // Jan, 1, 1985
+                        'y': 17.1
+                    },
+                    {
+                        'x': Date.UTC(1986, 0),
+                        // Jan, 1, 1986
+                        'y': 21.2
+                    },
+                    {
+                        'x': Date.UTC(1987, 0),
+                        // Jan, 1, 1987
+                        'y': 14.9
+                    },
+                    {
+                        'x': Date.UTC(1988, 0),
+                        // Jan, 1, 1988
+                        'y': 17.3
+                    },
+                    {
+                        'x': Date.UTC(1989, 0),
+                        // Jan, 1, 1989
+                        'y': 13.5
+                    },
+                    {
+                        'x': Date.UTC(1990, 0),
+                        // Jan, 1, 1990
+                        'y': 17
+                    },
+                    {
+                        'x': Date.UTC(1991, 0),
+                        // Jan, 1, 1991
+                        'y': 23
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Jan, 1, 1992
+                        'y': 24.2
+                    },
+                    {
+                        'x': Date.UTC(1993, 0),
+                        // Jan, 1, 1993
+                        'y': 26.5
+                    },
+                    {
+                        'x': Date.UTC(1994, 0),
+                        // Jan, 1, 1994
+                        'y': 27.4
+                    },
+                    {
+                        'x': Date.UTC(1995, 0),
+                        // Jan, 1, 1995
+                        'y': 23.6
+                    },
+                    {
+                        'x': Date.UTC(1996, 0),
+                        // Jan, 1, 1996
+                        'y': 23.6
+                    },
+                    {
+                        'x': Date.UTC(1997, 0),
+                        // Jan, 1, 1997
+                        'y': 19.5
+                    },
+                    {
+                        'x': Date.UTC(1998, 0),
+                        // Jan, 1, 1998
+                        'y': 17.4
+                    },
+                    {
+                        'x': Date.UTC(1999, 0),
+                        // Jan, 1, 1999
+                        'y': 15.6
+                    },
+                    {
+                        'x': Date.UTC(2000, 0),
+                        // Jan, 1, 2000
+                        'y': 18.4
+                    },
+                    {
+                        'x': Date.UTC(2001, 0),
+                        // Jan, 1, 2001
+                        'y': 19.6
+                    },
+                    {
+                        'x': Date.UTC(2002, 0),
+                        // Jan, 1, 2002
+                        'y': 20.2
+                    },
+                    {
+                        'x': Date.UTC(2003, 0),
+                        // Jan, 1, 2003
+                        'y': 20.6
+                    },
+                    {
+                        'x': Date.UTC(2004, 0),
+                        // Jan, 1, 2004
+                        'y': 20.7
+                    },
+                    {
+                        'x': Date.UTC(2005, 0),
+                        // Jan, 1, 2005
+                        'y': 20.2
+                    },
+                    {
+                        'x': Date.UTC(2006, 0),
+                        // Jan, 1, 2006
+                        'y': 19.7
+                    },
+                    {
+                        'x': Date.UTC(2007, 0),
+                        // Jan, 1, 2007
+                        'y': 19.3
+                    },
+                    {
+                        'x': Date.UTC(2008, 0),
+                        // Jan, 1, 2008
+                        'y': 21.7
+                    },
+                    {
+                        'x': Date.UTC(2009, 0),
+                        // Jan, 1, 2009
+                        'y': 24.1
+                    },
+                    {
+                        'x': Date.UTC(2010, 0),
+                        // Jan, 1, 2010
+                        'y': 27.3
+                    },
+                    {
+                        'x': Date.UTC(2011, 0),
+                        // Jan, 1, 2011
+                        'y': 31.6
+                    },
+                    {
+                        'x': Date.UTC(2012, 0),
+                        // Jan, 1, 2012
+                        'y': 27.6
+                    },
+                    {
+                        'x': Date.UTC(2013, 0),
+                        // Jan, 1, 2013
+                        'y': 25.1
+                    },
+                    {
+                        'x': Date.UTC(2014, 0),
+                        // Jan, 1, 2014
+                        'y': 19.8
+                    },
+                    {
+                        'x': Date.UTC(2015, 0),
+                        // Jan, 1, 2015
+                        'y': 17.8
+                    },
+                    {
+                        'x': Date.UTC(2016, 0),
+                        // Jan, 1, 2016
+                        'y': 20.5
+                    },
+                    {
+                        'x': Date.UTC(2017, 0),
+                        // Jan, 1, 2017
+                        'y': 21.4
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Jan, 1, 2018
+                        'y': 20.1
+                    },
+                    {
+                        'x': Date.UTC(2019, 0),
+                        // Jan, 1, 2019
+                        'y': null
+                    },
+                ],
+                color: '#2a8e40',
+            }, {
+                name: 'Tendencia General',
+                data: [{
+                        'x': Date.UTC(1960, 0),
+                        // Enero, 1, 1960
+                        'y': 7.2,
+                        dataLabels: {
+                            y: 24
+                        }
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Enero, 1, 2018
+                        'y': 20.1
+                    },
+                ],
+                color: '#FEDA35',
+                animation: {
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
+                },
                 dataLabels: {
-                    y:24
-                }
+                    enabled: true,
                 },
-                {
-                'x': Date.UTC(2018, 0),
-                // Enero, 1, 2018
-                'y':20.1
-                },
-            ],
-            color: '#FEDA35',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-            dataLabels: {
-                enabled: true,
-            },
-        }],
-    })
+            }],
+        })
     }
 
     function update_data6() {
@@ -2129,8 +2120,8 @@ $(document).ready(function() {
                 style: {
                     color: "black"
                 },
-                y:100,
-                x:40,
+                y: 100,
+                x: 40,
                 animation: {
                     enabled: true,
                     duration: 2000,
@@ -2138,7 +2129,778 @@ $(document).ready(function() {
             },
         })
     }
+})
 
+/* ********************************************************************************************************************************************** */
+
+//Total de Asesinatos y Homicidios en Puerto Rico (1960-2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    var chart6 = Highcharts.chart('chart020', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 4: Total anual de asesinatos y homicidios de 1960 a 2018',
+        },
+
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                year: '%Y'
+            },
+            tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
+        },
+
+        yAxis: {
+            title: {
+                text: 'Cantidad de asesinatos y homicidios',
+                style: {
+                    color: 'black'
+                }
+            },
+            min: 0,
+            max: 40,
+            gridLineWidth: 0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                animation: {
+                    duration: 6000
+                },
+                events: {
+                    afterAnimate: function () {
+                        update_data7();
+                    }
+                },
+            },
+        },
+
+        tooltip: {
+            shared: true,
+        },
+
+        series: [{
+            name: 'Total Asesinatos y Homicidios',
+            data: [{
+                    'x': Date.UTC(1959, 0),
+                    // Jan, 1, 1960
+                    'y': null
+                },
+                {
+                    'x': Date.UTC(1960, 0),
+                    // Jan, 1, 1960
+                    'y': 168
+                },
+                {
+                    'x': Date.UTC(1961, 0),
+                    // Jan, 1, 1961
+                    'y': 171
+                },
+                {
+                    'x': Date.UTC(1962, 0),
+                    // Jan, 1, 1962
+                    'y': 215
+                },
+                {
+                    'x': Date.UTC(1963, 0),
+                    // Jan, 1, 1963
+                    'y': 216
+                },
+                {
+                    'x': Date.UTC(1964, 0),
+                    // Jan, 1, 1964
+                    'y': 237
+                },
+                {
+                    'x': Date.UTC(1965, 0),
+                    // Jan, 1, 1965
+                    'y': 209
+                },
+                {
+                    'x': Date.UTC(1966, 0),
+                    // Jan, 1, 1966
+                    'y': 202
+                },
+                {
+                    'x': Date.UTC(1967, 0),
+                    // Jan, 1, 1967
+                    'y': 185
+                },
+                {
+                    'x': Date.UTC(1968, 0),
+                    // Jan, 1, 1968
+                    'y': 205
+                },
+                {
+                    'x': Date.UTC(1969, 0),
+                    // Jan, 1, 1969
+                    'y': 183
+                },
+                {
+                    'x': Date.UTC(1970, 0),
+                    // Jan, 1, 1970
+                    'y': 192
+                },
+                {
+                    'x': Date.UTC(1971, 0),
+                    // Jan, 1, 1971
+                    'y': 283
+                },
+                {
+                    'x': Date.UTC(1972, 0),
+                    // Jan, 1, 1972
+                    'y': 319
+                },
+                {
+                    'x': Date.UTC(1973, 0),
+                    // Jan, 1, 1973
+                    'y': 421
+                },
+                {
+                    'x': Date.UTC(1974, 0),
+                    // Jan, 1, 1974
+                    'y': 519
+                },
+                {
+                    'x': Date.UTC(1975, 0),
+                    // Jan, 1, 1975
+                    'y': 499
+                },
+                {
+                    'x': Date.UTC(1976, 0),
+                    // Jan, 1, 1976
+                    'y': 444
+                },
+                {
+                    'x': Date.UTC(1977, 0),
+                    // Jan, 1, 1977
+                    'y': 467
+                },
+                {
+                    'x': Date.UTC(1978, 0),
+                    // Jan, 1, 1978
+                    'y': 485
+                },
+                {
+                    'x': Date.UTC(1979, 0),
+                    // Jan, 1, 1979
+                    'y': 476
+                },
+                {
+                    'x': Date.UTC(1980, 0),
+                    // Jan, 1, 1980
+                    'y': 472
+                },
+                {
+                    'x': Date.UTC(1981, 0),
+                    // Jan, 1, 1981
+                    'y': 527
+                },
+                {
+                    'x': Date.UTC(1982, 0),
+                    // Jan, 1, 1982
+                    'y': 485
+                },
+                {
+                    'x': Date.UTC(1983, 0),
+                    // Jan, 1, 1983
+                    'y': 421
+                },
+                {
+                    'x': Date.UTC(1984, 0),
+                    // Jan, 1, 1984
+                    'y': 483
+                },
+                {
+                    'x': Date.UTC(1985, 0),
+                    // Jan, 1, 1985
+                    'y': 572
+                },
+                {
+                    'x': Date.UTC(1986, 0),
+                    // Jan, 1, 1986
+                    'y': 719
+                },
+                {
+                    'x': Date.UTC(1987, 0),
+                    // Jan, 1, 1987
+                    'y': 508
+                },
+                {
+                    'x': Date.UTC(1988, 0),
+                    // Jan, 1, 1988
+                    'y': 596
+                },
+                {
+                    'x': Date.UTC(1989, 0),
+                    // Jan, 1, 1989
+                    'y': 467
+                },
+                {
+                    'x': Date.UTC(1990, 0),
+                    // Jan, 1, 1990
+                    'y': 600
+                },
+                {
+                    'x': Date.UTC(1991, 0),
+                    // Jan, 1, 1991
+                    'y': 817
+                },
+                {
+                    'x': Date.UTC(1992, 0),
+                    // Jan, 1, 1992
+                    'y': 864
+                },
+                {
+                    'x': Date.UTC(1993, 0),
+                    // Jan, 1, 1993
+                    'y': 954
+                },
+                {
+                    'x': Date.UTC(1994, 0),
+                    // Jan, 1, 1994
+                    'y': 995
+                },
+                {
+                    'x': Date.UTC(1995, 0),
+                    // Jan, 1, 1995
+                    'y': 864
+                },
+                {
+                    'x': Date.UTC(1996, 0),
+                    // Jan, 1, 1996
+                    'y': 868
+                },
+                {
+                    'x': Date.UTC(1997, 0),
+                    // Jan, 1, 1997
+                    'y': 723
+                },
+                {
+                    'x': Date.UTC(1998, 0),
+                    // Jan, 1, 1998
+                    'y': 652
+                },
+                {
+                    'x': Date.UTC(1999, 0),
+                    // Jan, 1, 1999
+                    'y': 593
+                },
+                {
+                    'x': Date.UTC(2000, 0),
+                    // Jan, 1, 2000
+                    'y': 695
+                },
+                {
+                    'x': Date.UTC(2001, 0),
+                    // Jan, 1, 2001
+                    'y': 747
+                },
+                {
+                    'x': Date.UTC(2002, 0),
+                    // Jan, 1, 2002
+                    'y': 774
+                },
+                {
+                    'x': Date.UTC(2003, 0),
+                    // Jan, 1, 2003
+                    'y': 787
+                },
+                {
+                    'x': Date.UTC(2004, 0),
+                    // Jan, 1, 2004
+                    'y': 793
+                },
+                {
+                    'x': Date.UTC(2005, 0),
+                    // Jan, 1, 2005
+                    'y': 771
+                },
+                {
+                    'x': Date.UTC(2006, 0),
+                    // Jan, 1, 2006
+                    'y': 748
+                },
+                {
+                    'x': Date.UTC(2007, 0),
+                    // Jan, 1, 2007
+                    'y': 730
+                },
+                {
+                    'x': Date.UTC(2008, 0),
+                    // Jan, 1, 2008
+                    'y': 815
+                },
+                {
+                    'x': Date.UTC(2009, 0),
+                    // Jan, 1, 2009
+                    'y': 901
+                },
+                {
+                    'x': Date.UTC(2010, 0),
+                    // Jan, 1, 2010
+                    'y': 1017
+                },
+                {
+                    'x': Date.UTC(2011, 0),
+                    // Jan, 1, 2011
+                    'y': 1164
+                },
+                {
+                    'x': Date.UTC(2012, 0),
+                    // Jan, 1, 2012
+                    'y': 1004
+                },
+                {
+                    'x': Date.UTC(2013, 0),
+                    // Jan, 1, 2013
+                    'y': 902
+                },
+                {
+                    'x': Date.UTC(2014, 0),
+                    // Jan, 1, 2014
+                    'y': 700
+                },
+                {
+                    'x': Date.UTC(2015, 0),
+                    // Jan, 1, 2015
+                    'y': 619
+                },
+                {
+                    'x': Date.UTC(2016, 0),
+                    // Jan, 1, 2016
+                    'y': 700
+                },
+                {
+                    'x': Date.UTC(2017, 0),
+                    // Jan, 1, 2017
+                    'y': 710
+                },
+                {
+                    'x': Date.UTC(2018, 0),
+                    // Jan, 1, 2018
+                    'y': 641
+                },
+            ],
+            color: '#2a8e40',
+        }, {
+            name: ' ',
+            data: [{
+                    'x': Date.UTC(1960, 0),
+                    // Enero, 1, 1960
+                    'y': 0
+                },
+                {
+                    'x': Date.UTC(2018, 0),
+                    // Enero, 1, 2018
+                    'y': 0
+                },
+            ],
+            color: 'transparent',
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+
+    function update_data7() {
+        chart6.update({
+
+            plotOptions: {
+                series: {
+                    animation: {
+                        duration: 6000
+                    },
+                    events: {
+                        afterAnimate: function () {
+                            update_data8();
+                        }
+                    },
+                    label: {
+                        enabled: false,
+                        connectorAllowed: false,
+                    },
+                },
+            },
+
+            series: [{
+                name: 'Tasa Asesinatos y Homicidios',
+                data: [{
+                        'x': Date.UTC(1959, 0),
+                        // Jan, 1, 1960
+                        'y': null
+                    },
+                    {
+                        'x': Date.UTC(1960, 0),
+                        // Jan, 1, 1960
+                        'y': 168
+                    },
+                    {
+                        'x': Date.UTC(1961, 0),
+                        // Jan, 1, 1961
+                        'y': 171
+                    },
+                    {
+                        'x': Date.UTC(1962, 0),
+                        // Jan, 1, 1962
+                        'y': 215
+                    },
+                    {
+                        'x': Date.UTC(1963, 0),
+                        // Jan, 1, 1963
+                        'y': 216
+                    },
+                    {
+                        'x': Date.UTC(1964, 0),
+                        // Jan, 1, 1964
+                        'y': 237
+                    },
+                    {
+                        'x': Date.UTC(1965, 0),
+                        // Jan, 1, 1965
+                        'y': 209
+                    },
+                    {
+                        'x': Date.UTC(1966, 0),
+                        // Jan, 1, 1966
+                        'y': 202
+                    },
+                    {
+                        'x': Date.UTC(1967, 0),
+                        // Jan, 1, 1967
+                        'y': 185
+                    },
+                    {
+                        'x': Date.UTC(1968, 0),
+                        // Jan, 1, 1968
+                        'y': 205
+                    },
+                    {
+                        'x': Date.UTC(1969, 0),
+                        // Jan, 1, 1969
+                        'y': 183
+                    },
+                    {
+                        'x': Date.UTC(1970, 0),
+                        // Jan, 1, 1970
+                        'y': 192
+                    },
+                    {
+                        'x': Date.UTC(1971, 0),
+                        // Jan, 1, 1971
+                        'y': 283
+                    },
+                    {
+                        'x': Date.UTC(1972, 0),
+                        // Jan, 1, 1972
+                        'y': 319
+                    },
+                    {
+                        'x': Date.UTC(1973, 0),
+                        // Jan, 1, 1973
+                        'y': 421
+                    },
+                    {
+                        'x': Date.UTC(1974, 0),
+                        // Jan, 1, 1974
+                        'y': 519
+                    },
+                    {
+                        'x': Date.UTC(1975, 0),
+                        // Jan, 1, 1975
+                        'y': 499
+                    },
+                    {
+                        'x': Date.UTC(1976, 0),
+                        // Jan, 1, 1976
+                        'y': 444
+                    },
+                    {
+                        'x': Date.UTC(1977, 0),
+                        // Jan, 1, 1977
+                        'y': 467
+                    },
+                    {
+                        'x': Date.UTC(1978, 0),
+                        // Jan, 1, 1978
+                        'y': 485
+                    },
+                    {
+                        'x': Date.UTC(1979, 0),
+                        // Jan, 1, 1979
+                        'y': 476
+                    },
+                    {
+                        'x': Date.UTC(1980, 0),
+                        // Jan, 1, 1980
+                        'y': 472
+                    },
+                    {
+                        'x': Date.UTC(1981, 0),
+                        // Jan, 1, 1981
+                        'y': 527
+                    },
+                    {
+                        'x': Date.UTC(1982, 0),
+                        // Jan, 1, 1982
+                        'y': 485
+                    },
+                    {
+                        'x': Date.UTC(1983, 0),
+                        // Jan, 1, 1983
+                        'y': 421
+                    },
+                    {
+                        'x': Date.UTC(1984, 0),
+                        // Jan, 1, 1984
+                        'y': 483
+                    },
+                    {
+                        'x': Date.UTC(1985, 0),
+                        // Jan, 1, 1985
+                        'y': 572
+                    },
+                    {
+                        'x': Date.UTC(1986, 0),
+                        // Jan, 1, 1986
+                        'y': 719
+                    },
+                    {
+                        'x': Date.UTC(1987, 0),
+                        // Jan, 1, 1987
+                        'y': 508
+                    },
+                    {
+                        'x': Date.UTC(1988, 0),
+                        // Jan, 1, 1988
+                        'y': 596
+                    },
+                    {
+                        'x': Date.UTC(1989, 0),
+                        // Jan, 1, 1989
+                        'y': 467
+                    },
+                    {
+                        'x': Date.UTC(1990, 0),
+                        // Jan, 1, 1990
+                        'y': 600
+                    },
+                    {
+                        'x': Date.UTC(1991, 0),
+                        // Jan, 1, 1991
+                        'y': 817
+                    },
+                    {
+                        'x': Date.UTC(1992, 0),
+                        // Jan, 1, 1992
+                        'y': 864
+                    },
+                    {
+                        'x': Date.UTC(1993, 0),
+                        // Jan, 1, 1993
+                        'y': 954
+                    },
+                    {
+                        'x': Date.UTC(1994, 0),
+                        // Jan, 1, 1994
+                        'y': 995
+                    },
+                    {
+                        'x': Date.UTC(1995, 0),
+                        // Jan, 1, 1995
+                        'y': 864
+                    },
+                    {
+                        'x': Date.UTC(1996, 0),
+                        // Jan, 1, 1996
+                        'y': 868
+                    },
+                    {
+                        'x': Date.UTC(1997, 0),
+                        // Jan, 1, 1997
+                        'y': 723
+                    },
+                    {
+                        'x': Date.UTC(1998, 0),
+                        // Jan, 1, 1998
+                        'y': 652
+                    },
+                    {
+                        'x': Date.UTC(1999, 0),
+                        // Jan, 1, 1999
+                        'y': 593
+                    },
+                    {
+                        'x': Date.UTC(2000, 0),
+                        // Jan, 1, 2000
+                        'y': 695
+                    },
+                    {
+                        'x': Date.UTC(2001, 0),
+                        // Jan, 1, 2001
+                        'y': 747
+                    },
+                    {
+                        'x': Date.UTC(2002, 0),
+                        // Jan, 1, 2002
+                        'y': 774
+                    },
+                    {
+                        'x': Date.UTC(2003, 0),
+                        // Jan, 1, 2003
+                        'y': 787
+                    },
+                    {
+                        'x': Date.UTC(2004, 0),
+                        // Jan, 1, 2004
+                        'y': 793
+                    },
+                    {
+                        'x': Date.UTC(2005, 0),
+                        // Jan, 1, 2005
+                        'y': 771
+                    },
+                    {
+                        'x': Date.UTC(2006, 0),
+                        // Jan, 1, 2006
+                        'y': 748
+                    },
+                    {
+                        'x': Date.UTC(2007, 0),
+                        // Jan, 1, 2007
+                        'y': 730
+                    },
+                    {
+                        'x': Date.UTC(2008, 0),
+                        // Jan, 1, 2008
+                        'y': 815
+                    },
+                    {
+                        'x': Date.UTC(2009, 0),
+                        // Jan, 1, 2009
+                        'y': 901
+                    },
+                    {
+                        'x': Date.UTC(2010, 0),
+                        // Jan, 1, 2010
+                        'y': 1017
+                    },
+                    {
+                        'x': Date.UTC(2011, 0),
+                        // Jan, 1, 2011
+                        'y': 1164
+                    },
+                    {
+                        'x': Date.UTC(2012, 0),
+                        // Jan, 1, 2012
+                        'y': 1004
+                    },
+                    {
+                        'x': Date.UTC(2013, 0),
+                        // Jan, 1, 2013
+                        'y': 902
+                    },
+                    {
+                        'x': Date.UTC(2014, 0),
+                        // Jan, 1, 2014
+                        'y': 700
+                    },
+                    {
+                        'x': Date.UTC(2015, 0),
+                        // Jan, 1, 2015
+                        'y': 619
+                    },
+                    {
+                        'x': Date.UTC(2016, 0),
+                        // Jan, 1, 2016
+                        'y': 700
+                    },
+                    {
+                        'x': Date.UTC(2017, 0),
+                        // Jan, 1, 2017
+                        'y': 710
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Jan, 1, 2018
+                        'y': 641
+                    },
+                    {
+                        'x': Date.UTC(2019, 0),
+                        // Jan, 1, 2019
+                        'y': null
+                    },
+                ],
+                color: '#2a8e40',
+            }, {
+                name: 'Tendencia General',
+                data: [{
+                        'x': Date.UTC(1960, 0),
+                        // Enero, 1, 1960
+                        'y': 168,
+                        dataLabels: {
+                            y: 24
+                        }
+                    },
+                    {
+                        'x': Date.UTC(2018, 0),
+                        // Enero, 1, 2018
+                        'y': 641
+                    },
+                ],
+                color: '#FEDA35',
+                animation: {
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
+                },
+                dataLabels: {
+                    enabled: true,
+                },
+            }],
+        })
+    }
+
+    function update_data8() {
+        chart6.update({
+            subtitle: {
+                text: 'La Tendencia General de la Cantidad de Asesinatos y Homicidios es Ascendente',
+                style: {
+                    color: "black"
+                },
+                y: 90,
+                x: 40,
+                animation: {
+                    enabled: true,
+                    duration: 2000,
+                },
+            },
+        })
+    }
 })
 
 /* ********************************************************************************************************************************************** */
@@ -2147,7 +2909,7 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     Highcharts.chart('chart019', {
         chart: {
             type: 'column',
@@ -2181,7 +2943,7 @@ $(document).ready(function() {
             title: {
                 text: 'Cambio en el total de delitos tipo 1',
                 style: {
-                    color:'black'
+                    color: 'black'
                 }
             }
         },
@@ -2202,77 +2964,77 @@ $(document).ready(function() {
                 name: '1961-1964',
                 color: '#eb1b24',
                 y: 18764,
-                
+
             }, {
                 name: '1965-1968',
                 color: '#eb1b24',
                 y: 8499,
-                
+
             }, {
                 name: '1969-1972',
                 color: '#2b378d',
                 y: 8943,
-                
+
             }, {
                 name: '1973-1976',
                 color: '#eb1b24',
                 y: 13716,
-                
+
             }, {
                 name: '1977-1980',
                 color: '#2b378d',
                 y: 10636,
-                
+
             }, {
                 name: '1981-1984',
                 color: '#2b378d',
                 y: 5880,
-                
+
             }, {
                 name: '1985-1988',
                 color: '#eb1b24',
                 y: -4485,
-                
+
             }, {
                 name: '1989-1992',
                 color: '#eb1b24',
                 y: 18847,
-                
+
             }, {
                 name: '1993-1996',
                 color: '#2b378d',
                 y: -21247,
-                
+
             }, {
                 name: '1997-2000',
                 color: '#2b378d',
                 y: -19496,
-                
+
             }, {
                 name: '2001-2004',
                 color: '#eb1b24',
                 y: -2,
-                
+
             }, {
                 name: '2005-2008',
                 color: '#eb1b24',
                 y: 3696,
-                
+
             }, {
                 name: '2009-2012',
                 color: '#2b378d',
                 y: -5479,
-                
+
             }, {
                 name: '2013-2016',
                 color: '#eb1b24',
                 y: -15325,
-                
+
             }, {
                 name: '2017-2018 *',
                 color: '#2b378d',
                 y: -7749,
-                
+
             }]
         }],
     });
@@ -2284,12 +3046,12 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
-$(document).ready(function() {
+$(document).ready(function () {
     Highcharts.chart('chart015', {
 
         chart: {
             type: 'line',
-            zoomType: 'x',  
+            zoomType: 'x',
         },
 
         title: {
@@ -2312,7 +3074,7 @@ $(document).ready(function() {
             },
             min: 0,
             max: 10000,
-            gridLineWidth:0,
+            gridLineWidth: 0,
         },
 
         plotOptions: {
@@ -2329,50 +3091,51 @@ $(document).ready(function() {
         },
 
         series: [{
-            name: 'Tasa Florida',
-            data: [
-            3320.2, 3716.3, 4103.6, 4498.5, 4742.5, 5317.2, 5673.0, 5376.9, 5960.3, 7387.3, 7721.2, 7016.7, 6738.6, 7069.5,
-7688.1, 8402.0, 8032.5, 7465.2, 6781.1, 6821.2, 7574.2, 8228.4, 8503.2, 8937.6, 8804.5, 8810.8, 8547.2, 8358.2, 8351.0,
-8250.0, 7701.5, 7497.4, 7271.8, 6886.0, 6205.4, 5694.7, 5577.5, 5427.6, 5188.3, 4894.3, 4721.7, 4702.6, 4811.3, 4829.4,
-4453.3, 4092.7, 4032.0, 3763.2, 3567.1, 3955.9, 3279.4, 3117.1
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
+                name: 'Tasa Florida',
+                data: [
+                    3320.2, 3716.3, 4103.6, 4498.5, 4742.5, 5317.2, 5673.0, 5376.9, 5960.3, 7387.3, 7721.2, 7016.7, 6738.6, 7069.5,
+                    7688.1, 8402.0, 8032.5, 7465.2, 6781.1, 6821.2, 7574.2, 8228.4, 8503.2, 8937.6, 8804.5, 8810.8, 8547.2, 8358.2, 8351.0,
+                    8250.0, 7701.5, 7497.4, 7271.8, 6886.0, 6205.4, 5694.7, 5577.5, 5427.6, 5188.3, 4894.3, 4721.7, 4702.6, 4811.3, 4829.4,
+                    4453.3, 4092.7, 4032.0, 3763.2, 3567.1, 3955.9, 3279.4, 3117.1
+                ],
+                color: '#2a8e40',
+                animation: {
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
+                },
             },
-        },
-        {
-            name: 'Tasa Nueva York',
-            data: [
-            3065.6, 3338.1, 3776.9, 4579.3, 4569.7, 4971.3, 5084.1, 4380.9, 4458.5, 5034.0, 5635.7, 6225.1, 6087.6, 5792.2,
-6205.1, 6911.6, 6905.4, 6468.1, 5902.6, 5577.3, 5588.5, 5767.7, 5952.4, 6309.3, 6293.2, 6363.8, 6244.6, 5858.4, 5551.3,
-5070.6, 4560.1, 4132.3, 3910.9, 3588.5, 3279.4, 3099.6, 2913.5, 2807.1, 2714.7, 2632.9, 2546.3, 2499.7, 2402.3, 2391.7,
-2316.3, 2352.1, 2303.9, 2323.3, 2214.5, 2100.0, 1986.8, 1921.8
-            ],
-            color: 'red',
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
+            {
+                name: 'Tasa Nueva York',
+                data: [
+                    3065.6, 3338.1, 3776.9, 4579.3, 4569.7, 4971.3, 5084.1, 4380.9, 4458.5, 5034.0, 5635.7, 6225.1, 6087.6, 5792.2,
+                    6205.1, 6911.6, 6905.4, 6468.1, 5902.6, 5577.3, 5588.5, 5767.7, 5952.4, 6309.3, 6293.2, 6363.8, 6244.6, 5858.4, 5551.3,
+                    5070.6, 4560.1, 4132.3, 3910.9, 3588.5, 3279.4, 3099.6, 2913.5, 2807.1, 2714.7, 2632.9, 2546.3, 2499.7, 2402.3, 2391.7,
+                    2316.3, 2352.1, 2303.9, 2323.3, 2214.5, 2100.0, 1986.8, 1921.8
+                ],
+                color: 'red',
+                animation: {
+                    enabled: true,
+                    duration: 10000,
+                    easing: 'linear'
+                },
             },
-        },
-        {
-            name: 'Tasa Puerto Rico',
-            data: [
-                2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0, 2879.9, 3030.6, 2910.3, 2708.9,
-                2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3531.1, 3222.1, 3251.4, 3169.0, 3525.7,
-                3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6,
-                1832.3, 1702.3, 1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
-            ],
-            color: 'gold',
-            animation: {
-                enabled: true,
-                duration: 12000,
-                easing: 'linear'
-            },
-        }],
+            {
+                name: 'Tasa Puerto Rico',
+                data: [
+                    2233.2, 2314.1, 2316.5, 2480.5, 2304.1, 2450.9, 2582.1, 2545.4, 2575.0, 2879.9, 3030.6, 2910.3, 2708.9,
+                    2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3531.1, 3222.1, 3251.4, 3169.0, 3525.7,
+                    3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6,
+                    1832.3, 1702.3, 1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
+                ],
+                color: 'gold',
+                animation: {
+                    enabled: true,
+                    duration: 12000,
+                    easing: 'linear'
+                },
+            }
+        ],
 
         responsive: {
             rules: [{
