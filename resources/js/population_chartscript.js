@@ -192,7 +192,7 @@ $(document).ready(function () {
                 }
     ]
     
-       var chart = Highcharts.chart('pchart01', {
+       var chart = Highcharts.chart('pchart1950', {
             chart: {
                 type: 'bar',
             },
@@ -292,7 +292,7 @@ $(document).ready(function () {
                 },
             ]
     
-       var chart = Highcharts.chart('pchart01', {
+       var chart = Highcharts.chart('pchart2000', {
             chart: {
                 type: 'bar',
             },
@@ -390,7 +390,7 @@ var dataSequenceC2 = [
             },
 ]
 
-   var chart = Highcharts.chart('pchart01', {
+   var chart = Highcharts.chart('pchart2016', {
         chart: {
             type: 'bar',
         },
