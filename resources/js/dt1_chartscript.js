@@ -2144,11 +2144,11 @@ $(document).ready(function () {
             type: 'line',
             zoomType: 'x',
         },
-
+        
         title: {
             text: 'Gráfica 4: Total anual de asesinatos y homicidios de 1960 a 2018',
         },
-
+        
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: {
@@ -2156,7 +2156,7 @@ $(document).ready(function () {
             },
             tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
         },
-
+        
         yAxis: {
             title: {
                 text: 'Cantidad de asesinatos y homicidios',
@@ -2165,10 +2165,10 @@ $(document).ready(function () {
                 }
             },
             min: 0,
-            max: 40,
+            max: 1200,
             gridLineWidth: 0,
         },
-
+        
         plotOptions: {
             series: {
                 label: {
@@ -2185,11 +2185,11 @@ $(document).ready(function () {
                 },
             },
         },
-
+        
         tooltip: {
             shared: true,
         },
-
+        
         series: [{
             name: 'Total Asesinatos y Homicidios',
             data: [{
@@ -2492,6 +2492,11 @@ $(document).ready(function () {
                     // Jan, 1, 2018
                     'y': 641
                 },
+                {
+                    'x': Date.UTC(2019, 0),
+                    // Jan, 1, 2019
+                    'y': null
+                },
             ],
             color: '#2a8e40',
         }, {
@@ -2509,7 +2514,7 @@ $(document).ready(function () {
             ],
             color: 'transparent',
         }],
-
+        
         responsive: {
             rules: [{
                 condition: {
@@ -2524,12 +2529,12 @@ $(document).ready(function () {
                 }
             }]
         }
-
-    });
-
-    function update_data7() {
+        
+        });
+        
+        function update_data7() {
         chart6.update({
-
+        
             plotOptions: {
                 series: {
                     animation: {
@@ -2546,7 +2551,7 @@ $(document).ready(function () {
                     },
                 },
             },
-
+        
             series: [{
                 name: 'Tasa Asesinatos y Homicidios',
                 data: [{
@@ -2883,16 +2888,16 @@ $(document).ready(function () {
                 },
             }],
         })
-    }
-
-    function update_data8() {
+        }
+        
+        function update_data8() {
         chart6.update({
             subtitle: {
                 text: 'La Tendencia General de la Cantidad de Asesinatos y Homicidios es Ascendente',
                 style: {
                     color: "black"
                 },
-                y: 90,
+                y: 80,
                 x: 40,
                 animation: {
                     enabled: true,
@@ -3127,6 +3132,120 @@ $(document).ready(function () {
                     2590.1, 2573.9, 2883.8, 3011.6, 2976.7, 2806.6, 3086.9, 3471.6, 3531.1, 3222.1, 3251.4, 3169.0, 3525.7,
                     3372.2, 3605.1, 3361.8, 3205.4, 2902.4, 2708.1, 2553.3, 2321.7, 2149.9, 1993.0, 1836.2, 2385.7, 2137.6,
                     1832.3, 1702.3, 1632.9, 1662.2, 1827.9, 1796.9, 1673.2, 1692.9, 1698.5, 1619.2, 1527.8, 1341.3, 1258.0
+                ],
+                color: 'gold',
+                animation: {
+                    enabled: true,
+                    duration: 12000,
+                    easing: 'linear'
+                },
+            }
+        ],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+//Comparación cronológica Tasa de Asesinatos y Homicidios de Nueva York, Florida y Puerto Rico (1965-2016)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    Highcharts.chart('charta015', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 6: Comparación cronológica Tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
+        },
+
+        xAxis: {
+            categories: ['1965', '1966', '1967', '1968', '1969', '1970',
+                '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Tasa asesinatos y homicidios',
+            },
+            min: 0,
+            max: 35,
+            gridLineWidth: 0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+                name: 'Tasa Florida',
+                data: [
+                    8.92, 10.30, 10.51, 11.87, 11.33, 12.67, 13.25, 12.73, 15.37, 14.72, 13.52, 10.72, 10.16, 11.04, 12.23, 14.50, 14.97,
+                    13.53, 11.23, 11.52, 11.40, 11.74, 11.40, 11.44, 11.09, 10.66, 9.40, 8.96, 8.95, 8.35, 7.32, 7.48, 6.91, 6.48, 5.68,
+                    5.65, 5.34, 5.46, 5.44, 5.44, 4.97, 6.24, 6.59, 6.37, 5.49, 5.24, 5.16, 5.22, 4.96, 5.78, 5.10, 5.40,
+                ],
+                color: '#2a8e40',
+                animation: {
+                    enabled: true,
+                    duration: 6000,
+                    easing: 'linear'
+                },
+            },
+            {
+                name: 'Tasa Nueva York',
+                data: [
+                    4.63, 4.83, 5.43, 6.54, 7.23, 7.94, 9.91, 11.03, 11.17, 10.60, 11.02, 10.89, 10.71, 10.25, 11.85, 12.73,
+                    12.31, 11.40, 11.08, 10.07, 9.46, 10.73, 11.31, 12.54, 12.51, 14.48, 14.24, 13.23, 13.30, 11.10, 8.55, 7.44,
+                    6.03, 5.08, 4.96, 5.02, 5.03, 4.75, 4.86, 4.61, 4.52, 4.78, 4.17, 4.29, 4.00, 4.48, 3.94, 3.49, 3.27, 3.12, 3.10, 
+                    3.20
+                ],
+                color: 'red',
+                animation: {
+                    enabled: true,
+                    duration: 10000,
+                    easing: 'linear'
+                },
+            },
+            {
+                name: 'Tasa Puerto Rico',
+                data: [
+                    8.17, 7.79, 7.06, 7.75, 6.86, 7.08, 10.37, 11.53, 14.98, 18.16, 17.17, 15.01, 15.51, 15.83, 15.28, 14.77, 16.42,
+                14.92, 12.81, 14.54, 17.06, 21.24, 14.88, 17.31, 13.45, 17.01, 23.01, 24.17, 26.50, 27.43, 23.64, 23.56, 19.46, 17.40,
+                15.57, 18.38, 19.56, 20.24, 20.57, 20.72, 20.18, 19.66, 19.30, 21.67, 24.09, 27.33, 31.64, 27.62, 25.10, 19.80, 17.82, 
+                20.55
                 ],
                 color: 'gold',
                 animation: {
