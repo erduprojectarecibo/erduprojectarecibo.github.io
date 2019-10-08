@@ -450,7 +450,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
           _this._trails.run(["findVisible", "reveal", "opacityHandler"]);
         });
         _this.updateBubbleOpacity();
-        _this._updateDoubtOpacity();
       },
       "change:marker.superHighlight": function changeMarkerSuperHighlight(evt, path) {
         if (_this2._readyOnce) {
@@ -726,8 +725,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
 
     this.updateUIStrings();
 
-    this.wScale = d3.scaleLinear().domain(this.model.ui.datawarning.doubtDomain).range(this.model.ui.datawarning.doubtRange);
-
     this._labels.readyOnce();
 
     _this._readyOnce = true;
@@ -766,7 +763,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
       _this.redrawDataPoints();
       _this.selectDataPoints();
       _this.updateBubbleOpacity();
-      _this._updateDoubtOpacity();
       _this.zoomToMarkerMaxMin(); // includes redraw data points and trail resize
       if (!_this.model.time.splash) {
         _this._trails.run(["findVisible", "reveal", "opacityHandler"]);
@@ -827,7 +823,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     this.frame = frame;
     this.updateTime();
 
-    this._updateDoubtOpacity();
     this._trails.run("findVisible");
     if (this.model.ui.adaptMinMaxZoom) {
       this._panZoom.expandCanvas();
@@ -943,17 +938,9 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     this.dataWarningEl.on("click", function () {
       _this.parent.findChildByName("gapminder-datawarning").toggle();
     }).on("mouseover", function () {
-      _this._updateDoubtOpacity(1);
     }).on("mouseout", function () {
-      _this._updateDoubtOpacity();
     });
   },
-  _updateDoubtOpacity: function _updateDoubtOpacity(opacity) {
-    if (opacity == null) opacity = this.wScale(+this.model.time.formatDate(this.time));
-    if (this.someSelected) opacity = 1;
-    this.dataWarningEl.style("opacity", opacity);
-  },
-
 
   /*
    * UPDATE ENTITIES:
