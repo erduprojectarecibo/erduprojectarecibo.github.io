@@ -257,10 +257,7 @@ exports.default = Vizabi.Tool.extend("BubbleChart", {
         trails: true,
         lockNonSelected: 0
       },
-      datawarning: {
-        doubtDomain: [],
-        doubtRange: []
-      },
+      
       show_ticks: true,
       presentation: false,
       panWithArrow: false,
