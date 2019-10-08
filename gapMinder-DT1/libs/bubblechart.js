@@ -897,7 +897,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     sTitle.attr("text-anchor", "end");
 
     utils.setIcon(this.dataWarningEl, iconWarn).select("svg").attr("width", "0px").attr("height", "0px");
-    this.dataWarningEl.append("text").attr("text-anchor", "end").text(this.translator("hints/dataWarning"));
 
     utils.setIcon(this.yInfoEl, iconQuestion).select("svg").attr("width", "0px").attr("height", "0px").style('opacity', Number(Boolean(conceptPropsY.description || conceptPropsY.sourceLink)));
 
