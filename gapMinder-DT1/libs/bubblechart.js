@@ -257,7 +257,10 @@ exports.default = Vizabi.Tool.extend("BubbleChart", {
         trails: true,
         lockNonSelected: 0
       },
-      
+      datawarning: {
+        doubtDomain: [],
+        doubtRange: []
+      },
       show_ticks: true,
       presentation: false,
       panWithArrow: false,
@@ -491,6 +494,14 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
           });
         })(_this.model.time.value);
       },
+      "change:ui.adaptMinMaxZoom": function changeUiAdaptMinMaxZoom() {
+        //console.log("EVENT change:ui:adaptMinMaxZoom");
+        if (_this.model.ui.adaptMinMaxZoom) {
+          _this._panZoom.expandCanvas(500);
+        } else {
+          _this._panZoom.reset();
+        }
+      },
       "change:marker.size.extent": function changeMarkerSizeExtent(evt, path) {
         //console.log("EVENT change:marker:size:max");
         if (!_this._readyOnce) return;
@@ -568,6 +579,7 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     _this.COLOR_BLACKISH = "#333";
     _this.COLOR_WHITEISH = "#fdfdfd";
 
+    this.isCanvasPreviouslyExpanded = false;
     this.draggingNow = null;
 
     this._trails = new _trail2.default(this);
@@ -755,6 +767,7 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
       if (!_this.model.time.splash) {
         _this._trails.run(["findVisible", "reveal", "opacityHandler"]);
       }
+      if (_this.model.ui.adaptMinMaxZoom) _this._panZoom.expandCanvas();
     });
   },
 
@@ -811,6 +824,11 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     this.updateTime();
 
     this._trails.run("findVisible");
+    if (this.model.ui.adaptMinMaxZoom) {
+      this._panZoom.expandCanvas();
+    } else {
+      this.redrawDataPoints();
+    }
     this._trails.run("reveal", null, this.duration);
     this.tooltipMobile.classed("vzb-hidden", true);
     this._reorderEntities();
@@ -882,6 +900,7 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     sTitle.attr("text-anchor", "end");
 
     utils.setIcon(this.dataWarningEl, iconWarn).select("svg").attr("width", "0px").attr("height", "0px");
+    this.dataWarningEl.append("text").attr("text-anchor", "end").text(this.translator("hints/dataWarning"));
 
     utils.setIcon(this.yInfoEl, iconQuestion).select("svg").attr("width", "0px").attr("height", "0px").style('opacity', Number(Boolean(conceptPropsY.description || conceptPropsY.sourceLink)));
 
@@ -915,11 +934,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     this.xInfoEl.on("mouseout", function () {
       if (_this.model.time.dragging) return;
       _this.parent.findChildByName("gapminder-datanotes").hide();
-    });
-    this.dataWarningEl.on("click", function () {
-      _this.parent.findChildByName("gapminder-datawarning").toggle();
-    }).on("mouseover", function () {
-    }).on("mouseout", function () {
     });
   },
 
@@ -2365,7 +2379,78 @@ var PanZoom = Vizabi.Class.extend({
       }
     };
   },
+  expandCanvas: function expandCanvas(duration) {
+    var _this = this.context;
+    if (!duration) duration = _this.duration;
 
+    //d3 extent returns min and max of the input array as [min, max]
+    var mmX = d3.extent(utils.values(_this.frame.axis_x));
+    var mmY = d3.extent(utils.values(_this.frame.axis_y));
+
+    //protection agains unreasonable min-max results -- abort function
+    if (!mmX[0] && mmX[0] !== 0 || !mmX[1] && mmX[1] !== 0 || !mmY[0] && mmY[0] !== 0 || !mmY[1] && mmY[1] !== 0) {
+      return utils.warn("panZoom.expandCanvas: X or Y min/max are broken. Aborting with no action");
+    }
+    /*
+     * Use a range bumped scale to correctly accommodate the range bump
+     * gutter.
+     */
+    var suggestedFrame = {
+      x1: _this.xScale(mmX[0]),
+      y1: _this.yScale(mmY[0]),
+      x2: _this.xScale(mmX[1]),
+      y2: _this.yScale(mmY[1])
+    };
+    var xBounds = [0, _this.width];
+    var yBounds = [_this.height, 0];
+
+    // Get the current zoom frame based on the current dimensions.
+    var frame = {
+      x1: xBounds[0],
+      x2: xBounds[1],
+      y1: yBounds[0],
+      y2: yBounds[1]
+    };
+
+    var TOLERANCE = 0.0;
+
+    /*
+     * If there is no current zoom frame, or if any of the suggested frame
+     * points extend outside of the current zoom frame, then expand the
+     * canvas.
+     */
+    if (!_this.isCanvasPreviouslyExpanded || suggestedFrame.x1 < frame.x1 * (1 - TOLERANCE) || suggestedFrame.x2 > frame.x2 * (1 + TOLERANCE) || suggestedFrame.y2 < frame.y2 * (1 - TOLERANCE) || suggestedFrame.y1 > frame.y1 * (1 + TOLERANCE)) {
+      /*
+       * If there is already a zoom frame, then clamp the suggested frame
+       * points to only zoom out and expand the canvas.
+       *
+       * If any of x1, x2, y1, or y2 is within the current frame
+       * boundaries, then clamp them to the frame boundaries. If any of
+       * the above values will translate into a data value that is outside
+       * of the possible data range, then clamp them to the frame
+       * coordinate that corresponds to the maximum data value that can
+       * be displayed.
+       */
+      if (_this.isCanvasPreviouslyExpanded) {
+        /*
+         * Calculate bounds and bumped scale for calculating the data boundaries
+         * to which the suggested frame points need to be clamped.
+         */
+        var xBoundsBumped = _this._rangeBump(xBounds);
+        var yBoundsBumped = _this._rangeBump(yBounds);
+
+        if (suggestedFrame.x1 > xBoundsBumped[0]) suggestedFrame.x1 = xBoundsBumped[0];
+        if (suggestedFrame.x2 < xBoundsBumped[1]) suggestedFrame.x2 = xBoundsBumped[1];
+        if (suggestedFrame.y1 < yBoundsBumped[0]) suggestedFrame.y1 = yBoundsBumped[0];
+        if (suggestedFrame.y2 > yBoundsBumped[0]) suggestedFrame.y2 = yBoundsBumped[1];
+      }
+
+      _this.isCanvasPreviouslyExpanded = true;
+      this._zoomOnRectangle(_this.element, suggestedFrame.x1, suggestedFrame.y1, suggestedFrame.x2, suggestedFrame.y2, false, duration);
+    } else {
+      _this.redrawDataPoints(duration);
+    }
+  },
   zoomToMaxMin: function zoomToMaxMin(zoomedMinX, zoomedMaxX, zoomedMinY, zoomedMaxY, duration, dontFeedToState) {
     var _this = this.context;
     var minX = zoomedMinX;
@@ -2536,6 +2621,7 @@ var PanZoom = Vizabi.Class.extend({
   },
   reset: function reset(element, duration) {
     var _this = this.context;
+    _this.isCanvasPreviouslyExpanded = false;
 
     //this.zoomer.scale(1);
     this.zoomer.ratioY = 1;
