@@ -129,6 +129,14 @@ Highcharts.setOptions({
         }
     },
 
+    exporting: {
+        buttons: {
+            contextButton: {
+                x: -60,
+            }
+        }
+    },
+    
     credits: {
         enabled: false
     },
