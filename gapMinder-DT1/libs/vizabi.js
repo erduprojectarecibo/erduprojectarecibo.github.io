@@ -15948,8 +15948,6 @@ var class_active_locked = "vzb-active-locked";
 var class_expand_dialog = "vzb-dialog-side";
 var class_hide_btn = "vzb-dialog-side-btn";
 var class_unavailable = "vzb-unavailable";
-var class_vzb_fullscreen = "vzb-force-fullscreen";
-var class_container_fullscreen = "vzb-container-fullscreen";
 
 var ButtonList = _component2.default.extend({
 
@@ -16012,12 +16010,7 @@ var ButtonList = _component2.default.extend({
         icon: "cursorPlus",
         required: false
       },
-      "fullscreen": {
-        title: "buttons/expand",
-        icon: "expand",
-        func: this.toggleFullScreen.bind(this),
-        required: true
-      },
+      
       "trails": {
         title: "buttons/trails",
         icon: "trails",
@@ -16477,129 +16470,7 @@ var ButtonList = _component2.default.extend({
 
     btn.classed(class_active_locked, this.model.ui.presentation);
   },
-  toggleFullScreen: function toggleFullScreen(id, emulateClick) {
-
-    if (!window) return;
-
-    var component = this;
-    var pholder = component.placeholder;
-    var pholder_found = false;
-    var btn = this.element.selectAll(".vzb-buttonlist-btn[data-btn='" + id + "']");
-    var fs = !this.model.ui.fullscreen;
-    var body_overflow = fs ? "hidden" : this._prev_body_overflow;
-
-    while (!(pholder_found = utils.hasClass(pholder, "vzb-placeholder"))) {
-      component = component.parent;
-      pholder = component.placeholder;
-    }
-
-    //TODO: figure out a way to avoid fullscreen resize delay in firefox
-    if (fs) {
-      this.resizeInExitHandler = false;
-      launchIntoFullscreen(pholder);
-      subscribeFullscreenChangeEvent.call(this, this.toggleFullScreen.bind(this, id, true));
-    } else {
-      this.resizeInExitHandler = !emulateClick;
-      exitFullscreen.call(this);
-    }
-    utils.classed(pholder, class_vzb_fullscreen, fs);
-    if (typeof container !== "undefined") {
-      utils.classed(container, class_container_fullscreen, fs);
-    }
-
-    this.model.ui.fullscreen = fs;
-    var translator = this.model.locale.getTFunction();
-    btn.classed(class_active_locked, fs);
-
-    btn.select(".vzb-buttonlist-btn-icon").html(iconset[fs ? "unexpand" : "expand"]);
-
-    btn.select(".vzb-buttonlist-btn-title>span").text(translator("buttons/" + (fs ? "unexpand" : "expand"))).attr("data-vzb-translate", "buttons/" + (fs ? "unexpand" : "expand"));
-
-    //restore body overflow
-    document.body.style.overflow = body_overflow;
-
-    if (!this.resizeInExitHandler) this.root.ui.resizeHandler();
-
-    //force window resize event
-    // utils.defer(function() {
-    //   event = window.document.createEvent("HTMLEvents");
-    //   event.initEvent("resize", true, true);
-    //   event.eventName = "resize";
-    //   window.dispatchEvent(event);
-    // });
-  }
 });
-
-function isFullscreen() {
-  if (!window) return false;
-  if (window.document.webkitIsFullScreen !== undefined) return window.document.webkitIsFullScreen;
-  if (window.document.mozFullScreen !== undefined) return window.document.mozFullScreen;
-  if (window.document.msFullscreenElement !== undefined) return window.document.msFullscreenElement;
-
-  return false;
-}
-
-function exitHandler(emulateClickFunc) {
-  if (!isFullscreen()) {
-    removeFullscreenChangeEvent.call(this);
-    if (!this.resizeInExitHandler) {
-      emulateClickFunc();
-    } else {
-      this.root.ui.resizeHandler();
-    }
-  }
-}
-
-function subscribeFullscreenChangeEvent(exitFunc) {
-  if (!window) return;
-  var doc = window.document;
-
-  this.exitFullscreenHandler = exitHandler.bind(this, exitFunc);
-  doc.addEventListener("webkitfullscreenchange", this.exitFullscreenHandler, false);
-  doc.addEventListener("mozfullscreenchange", this.exitFullscreenHandler, false);
-  doc.addEventListener("fullscreenchange", this.exitFullscreenHandler, false);
-  doc.addEventListener("MSFullscreenChange", this.exitFullscreenHandler, false);
-}
-
-function removeFullscreenChangeEvent() {
-  var doc = window.document;
-
-  doc.removeEventListener("webkitfullscreenchange", this.exitFullscreenHandler);
-  doc.removeEventListener("mozfullscreenchange", this.exitFullscreenHandler);
-  doc.removeEventListener("fullscreenchange", this.exitFullscreenHandler);
-  doc.removeEventListener("MSFullscreenChange", this.exitFullscreenHandler);
-}
-
-function launchIntoFullscreen(elem) {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  } else if (elem.mozRequestFullScreen) {
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen && allowWebkitFullscreenAPI()) {
-    elem.webkitRequestFullscreen();
-  }
-}
-
-function exitFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen && allowWebkitFullscreenAPI()) {
-    document.webkitExitFullscreen();
-  } else {
-    removeFullscreenChangeEvent.call(this);
-    this.resizeInExitHandler = false;
-  }
-}
-
-function allowWebkitFullscreenAPI() {
-  return !(navigator.vendor && navigator.vendor.indexOf("Apple") > -1 && navigator.userAgent && !navigator.userAgent.match("CriOS"));
-}
 
 exports.default = ButtonList;
 
