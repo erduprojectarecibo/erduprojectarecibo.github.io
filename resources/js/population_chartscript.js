@@ -186,6 +186,11 @@ var categories2 = [' ','0-4', '5-9', '10-14', '15-19',
 $(document).ready(function() {
 
     Highcharts.chart('pchart05', {
+            legend: {
+                layout: 'horizontal',
+                align: 'right',
+                verticalAlign: 'bottom',
+            },
             chart: {
                 type: 'bar',
             },
@@ -532,7 +537,7 @@ $(document).ready(function() {
             xAxis: [{
                 categories: categories,
                 reversed: false,
-                offset: 100,
+                offset: 150,
                 labels: {
                     style: {
                         color: 'black',
