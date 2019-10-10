@@ -201,18 +201,8 @@ $(document).ready(function() {
                         color: 'black',
                         step: 1
                     }
-                }
-            //} { // Mirror axis in the right side
-              //  opposite: false,
-              //  reversed: false,
-              //  categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Segmento'],
-              //  linkedTo: 0,
-              //  labels: {
-              //      style: {
-              //          color: 'black',
-              //          step: 1
-              //      }
-              //  }
+                },
+                lineWidth: 0  
             }],
             yAxis: {
                  max: 200000, // This prevents the data to shift right while in motion
@@ -256,7 +246,8 @@ $(document).ready(function() {
                 name: 'Femenino',
                 color: '#FFD13F',
                 borderColor: '#FFD13F',
-                data: [null,73629,70626,59241,50229,46811,44796,32952,23305,22067,12943,16747,7043,9915,3128,3533,3973, null, null]
+                data: [null,73629,70626,59241,50229,46811,44796,32952,23305,22067,12943,16747,7043,9915,3128,3533,3973, null, null],
+                showInLegend: false
             }],
         });
 });    
@@ -577,7 +568,8 @@ $(document).ready(function() {
                 name: 'Masculino',
                 color: '#008445',
                 borderColor: '#008445', 
-                data: [null, -64214, -86451, -92874, -107734, -112963, -102593, -83426, -86871, -101051, -98088, -100502, -102079, -93692, -88787, -74464, -124626, null, null]
+                data: [null, -64214, -86451, -92874, -107734, -112963, -102593, -83426, -86871, -101051, -98088, -100502, -102079, -93692, -88787, -74464, -124626, null, null],
+                showInLegend: false
             }, {
                 name: 'Femenino',
                 color: '#FFD13F',
@@ -670,6 +662,78 @@ Highcharts.chart('pchart03', {
             color: '#FFD13F',
             borderColor: '#FFD13F',
             data: [null,78655,92358,100232,114472,119042,114402,104011,113771,111873,115383,123199,120225,114414,109190,91529,66741,47707,50431, null, null]
+        }],
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+// Dummy Categories (1950-2016)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    Highcharts.chart('paxis', {
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: ' ',
+
+        },
+        xAxis: [{ // Mirror axis in the right side
+            categories: [' ','0-4', '5-9', '10-14', '15-19',
+            '20-24', '25-29', '30-34', '35-39', '40-44',
+            '45-49', '50-54', '55-59', '60-64', '65-69',
+            '70-74', '75+', ' ', 'Grupos <br/> de Edad'
+            ],
+            opposite: true,
+            reversed: false,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+             max: 0, // This prevents the data to shift right while in motion
+             min: 1,
+            title: {
+                text: null
+            },
+            labels: {
+                    enabled: false
+            }
+        },
+
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
+
+            }
+        },
+
+        tooltip: {
+            // This controls the hovering box when mouse is over data
+            formatter: function () {
+                return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                    '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+            },
+            shared:false
+        },
+
+        series: [{
+            name: 'Masculino',
+            color: '#008445',
+            borderColor: '#008445', 
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            }, {
+            name: 'Femenino',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         }],
     });
 })
