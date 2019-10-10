@@ -194,7 +194,7 @@ $(document).ready(function() {
     
             },
             xAxis: [{
-                categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Segmento'],
+                categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Grupo'],
                 reversed: false,
                 labels: {
                     style: {
@@ -530,7 +530,7 @@ $(document).ready(function() {
     
             },
             xAxis: [{
-                categories: categories2,
+                categories: categories,
                 reversed: false,
                 labels: {
                     style: {
@@ -541,7 +541,7 @@ $(document).ready(function() {
             }, { // Mirror axis in the right side
                 opposite: true,
                 reversed: false,
-                categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','128,683','89,096','81,618',' ','Total por <br/> Segmento'],
+                categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','299,397',' ','Total por <br/> Grupo'],
                 linkedTo: 0,
                 labels: {
                     style: {
