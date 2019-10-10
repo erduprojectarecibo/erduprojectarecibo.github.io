@@ -202,17 +202,17 @@ $(document).ready(function() {
                         step: 1
                     }
                 }
-            }, { // Mirror axis in the right side
-                opposite: false,
-                reversed: false,
-                categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Segmento'],
-                linkedTo: 0,
-                labels: {
-                    style: {
-                        color: 'black',
-                        step: 1
-                    }
-                }
+            //} { // Mirror axis in the right side
+              //  opposite: false,
+              //  reversed: false,
+              //  categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Segmento'],
+              //  linkedTo: 0,
+              //  labels: {
+              //      style: {
+              //          color: 'black',
+              //          step: 1
+              //      }
+              //  }
             }],
             yAxis: {
                  max: 200000, // This prevents the data to shift right while in motion
