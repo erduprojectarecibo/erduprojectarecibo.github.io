@@ -524,7 +524,16 @@ $(document).ready(function() {
                 text: ' ',
     
             },
-            xAxis: [{ // Mirror axis in the right side
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            },{ // Mirror axis in the right side
                 categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','299,397',' ','Total por <br/> Grupo'],
                 opposite: true,
                 reversed: false,
