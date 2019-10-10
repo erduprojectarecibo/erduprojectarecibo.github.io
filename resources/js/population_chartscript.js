@@ -517,6 +517,11 @@ $(document).ready(function() {
 $(document).ready(function() {
     
     Highcharts.chart('pchart07', {
+            legend: {
+                layout: 'horizontal',
+                align: 'left',
+                verticalAlign: 'bottom',
+            },
             chart: {
                 type: 'bar',
             },
@@ -527,6 +532,7 @@ $(document).ready(function() {
             xAxis: [{
                 categories: categories,
                 reversed: false,
+                offset: 100,
                 labels: {
                     style: {
                         color: 'black',
