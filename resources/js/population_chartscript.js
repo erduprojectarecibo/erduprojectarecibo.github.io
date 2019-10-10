@@ -540,9 +540,9 @@ $(document).ready(function() {
                 reversed: false,
                 offset: 35,
                 labels: {
+                    align: 'center',
                     style: {
                         color: 'black',
-                        align:'center',
                         step: 1
                     }
                 },
