@@ -178,6 +178,90 @@ var categories2 = [' ','0-4', '5-9', '10-14', '15-19',
 
 /* ********************************************************************************************************************************************** */
 
+// Pirámide Poblacional de Puerto Rico (1899)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+
+    Highcharts.chart('pchart05', {
+            chart: {
+                type: 'bar',
+            },
+            title: {
+                text: ' ',
+    
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }, { // Mirror axis in the right side
+                opposite: true,
+                reversed: false,
+                categories: ['<strong> 953,136 </strong>','150,403', '143,546', '124,353', '93,148', '88,475', '84,265', '64,317', '47,556', '44,246', '26,397', '32,871', '15,330', '18,386', '6,679', '6,246', '6,918', ' ', 'Total por <br/> Segmento'],
+                linkedTo: 0,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }],
+            yAxis: {
+                 max: 200000, // This prevents the data to shift right while in motion
+                 min: -200000,
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: 'black'
+                    },
+                    formatter: function () {
+                        return Math.abs(this.value / 10000) + '%';
+                    }
+                }
+            },
+    
+            plotOptions: {
+                // Spacing between data bars
+                series: {
+                    stacking: 'normal',
+    
+                }
+            },
+    
+            tooltip: {
+                // This controls the hovering box when mouse is over data
+                formatter: function () {
+                    return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                        '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+                },
+                shared:false
+            },
+    
+            series: [{
+                name: 'Masculino',
+                color: '#008445',
+                borderColor: '#008445', 
+                data: [null,-76774,-72920,-65112,-42919,-41664,-39469,-31365,-24251,-22179,-13454,-16124,-8287,-8471,-3551,-2713,-2945, null, null]
+            }, {
+                name: 'Femenino',
+                color: '#FFD13F',
+                borderColor: '#FFD13F',
+                data: [null,73629,70626,59241,50229,46811,44796,32952,23305,22067,12943,16747,7043,9915,3128,3533,3973, null, null]
+            }],
+        });
+});    
+
+/* ********************************************************************************************************************************************** */
+
 // Pirámide Poblacional de Puerto Rico (1950)
 
 /* ********************************************************************************************************************************************** */
