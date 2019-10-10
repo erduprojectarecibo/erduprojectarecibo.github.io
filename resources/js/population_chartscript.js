@@ -715,6 +715,10 @@ $(document).ready(function() {
             }
         },
 
+        exporting: { 
+            enabled: false 
+        },
+
         plotOptions: {
             // Spacing between data bars
             series: {
@@ -736,12 +740,14 @@ $(document).ready(function() {
             name: 'Masculino',
             color: '#008445',
             borderColor: '#008445', 
-            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            showInLegend:false
             }, {
             name: 'Femenino',
             color: '#FFD13F',
             borderColor: '#FFD13F',
-            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            showInLegend:false
         }],
     });
 })
