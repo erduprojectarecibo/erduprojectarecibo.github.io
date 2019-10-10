@@ -430,6 +430,174 @@ $(document).ready(function() {
 
 /* ********************************************************************************************************************************************** */
 
+// Pirámide Poblacional de Puerto Rico (2018)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    
+    Highcharts.chart('pchart06', {
+            chart: {
+                type: 'bar',
+            },
+            title: {
+                text: ' ',
+    
+            },
+            xAxis: [{
+                categories: categories2,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }, { // Mirror axis in the right side
+                opposite: true,
+                reversed: false,
+                categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','128,683','89,096','81,618',' ','Total por <br/> Segmento'],
+                linkedTo: 0,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }],
+            yAxis: {
+                 max: 200000, // This prevents the data to shift right while in motion
+                 min: -200000,
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: 'black'
+                    },
+                    formatter: function () {
+                        return Math.abs(this.value / 10000) + '%';
+                    }
+                }
+            },
+    
+            plotOptions: {
+                // Spacing between data bars
+                series: {
+                    stacking: 'normal',
+    
+                }
+            },
+    
+            tooltip: {
+                // This controls the hovering box when mouse is over data
+                formatter: function () {
+                    return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                        '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+                },
+                shared:false
+            },
+    
+            series: [{
+                name: 'Masculino',
+                color: '#008445',
+                borderColor: '#008445', 
+                data: [null, -64214, -86451, -92874, -107734, -112963, -102593, -83426, -86871, -101051, -98088, -100502, -102079, -93692, -88787, -74464, -55060, -37568, -31998,null, null]
+            }, {
+                name: 'Femenino',
+                color: '#FFD13F',
+                borderColor: '#FFD13F',
+                data: [null, 61582, 81019, 88172, 102317, 109797, 104125, 91301, 99263, 109794, 107733, 115805, 112820, 117671, 98828, 99740, 73623, 51528, 49620,null, null]
+            }],
+        });
+});
+
+/* ********************************************************************************************************************************************** */
+
+// Pirámide Poblacional de Puerto Rico (2018) Duplicado
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function() {
+    
+    Highcharts.chart('pchart07', {
+            chart: {
+                type: 'bar',
+            },
+            title: {
+                text: ' ',
+    
+            },
+            xAxis: [{
+                categories: categories2,
+                reversed: false,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }, { // Mirror axis in the right side
+                opposite: true,
+                reversed: false,
+                categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','128,683','89,096','81,618',' ','Total por <br/> Segmento'],
+                linkedTo: 0,
+                labels: {
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                }
+            }],
+            yAxis: {
+                 max: 200000, // This prevents the data to shift right while in motion
+                 min: -200000,
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: {
+                        color: 'black'
+                    },
+                    formatter: function () {
+                        return Math.abs(this.value / 10000) + '%';
+                    }
+                }
+            },
+    
+            plotOptions: {
+                // Spacing between data bars
+                series: {
+                    stacking: 'normal',
+    
+                }
+            },
+    
+            tooltip: {
+                // This controls the hovering box when mouse is over data
+                formatter: function () {
+                    return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                        '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+                },
+                shared:false
+            },
+    
+            series: [{
+                name: 'Masculino',
+                color: '#008445',
+                borderColor: '#008445', 
+                data: [null, -64214, -86451, -92874, -107734, -112963, -102593, -83426, -86871, -101051, -98088, -100502, -102079, -93692, -88787, -74464, -55060, -37568, -31998,null, null]
+            }, {
+                name: 'Femenino',
+                color: '#FFD13F',
+                borderColor: '#FFD13F',
+                data: [null, 61582, 81019, 88172, 102317, 109797, 104125, 91301, 99263, 109794, 107733, 115805, 112820, 117671, 98828, 99740, 73623, 51528, 49620,null, null]
+            }],
+        });
+});
+
+/* ********************************************************************************************************************************************** */
+
 // Pirámide Poblacional de Puerto Rico (1950-2016)
 
 /* ********************************************************************************************************************************************** */
