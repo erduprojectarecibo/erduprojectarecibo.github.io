@@ -87,7 +87,8 @@ Highcharts.setOptions({
         },
         itemHoverStyle: {
             color: '#777'
-        }
+        },
+        symbolRadius: 0
     },
 
     title: {
@@ -722,9 +723,9 @@ $(document).ready(function() {
             max: 100000,
             gridLineWidth:0,
         },
+        
         legend: {
-            itemStyle: {
-            }
+            symbolRadius: 1
         },
         
         plotOptions: {
