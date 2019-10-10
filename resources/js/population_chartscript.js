@@ -538,7 +538,7 @@ $(document).ready(function() {
             xAxis: [{
                 categories: categories,
                 reversed: false,
-                offset: 35,
+                offset: 25,
                 labels: {
                     align: 'center',
                     style: {
