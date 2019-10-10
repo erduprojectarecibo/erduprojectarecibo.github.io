@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+    <div id=text>
+        <h2>Pirámide Poblacional de Puerto Rico</h2>
+        <h3 id=year-subtitle> 2010</h3>
+    </div>
+        <div id="pchart01"></div>
+        <div id="play-controls">
+            <button id="play-pause-button" class="fa fa-play" title="play"> &#9654; </button>
+            <input id="play-range" type="range" value="0" min="0" max="8" />
+        </div>
+</body>
+
+<style>
+
+    body {
+        height:100%;
+        width:100%;
+    }
+
+    #pchart01 {
+        width:95%;
+        height:80%;
+        margin-left:2.5%;
+    }
+
+
+    h2 {
+        margin-bottom:-12px;
+        text-align:center;
+        font-family: Helvetica, sans-serif
+    }
+
+    h3 {
+        text-align:center;
+        font-family: Helvetica, sans-serif;
+        margin-bottom:-3px;
+    }
+
+    @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+#play-controls {
+    min-width: 50%;
+    max-width: 50%;
+    margin-left:31%;
+}
+#play-controls * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#play-pause-button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid silver;
+    border-radius: 3px;
+    background: #f8f8f8;
+}
+#play-range {
+    width: 70%;
+}
+#play-output {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:-600px
+}
+</style>
+
+<script>
+(function (H) {
+
+var pendingRenders = [];
+
+function isElementInViewport(el) {
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (
+            window.innerHeight ||
+            document.documentElement.clientHeight
+        ) &&
+        rect.right <= (
+            window.innerWidth ||
+            document.documentElement.clientWidth
+        )
+    );
+}
+
+H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+    var series = this,
+        renderTo = this.chart.container.parentNode;
+
+    // It is appeared, render it
+    if (isElementInViewport(renderTo) || !series.options.animation) {
+        proceed.call(series);
+
+        // It is not appeared, halt rendering until appear
+    } else {
+        pendingRenders.push({
+            element: renderTo,
+            appear: function () {
+                proceed.call(series);
+            }
+        });
+    }
+});
+
+function recalculate() {
+    pendingRenders.forEach(function (item) {
+        if (isElementInViewport(item.element)) {
+            item.appear();
+            H.erase(pendingRenders, item);
+        }
+    });
+}
+
+if (window.addEventListener) {
+    ['DOMContentLoaded', 'load', 'scroll', 'resize']
+    .forEach(function (eventType) {
+        addEventListener(eventType, recalculate, false);
+    });
+}
+
+}(Highcharts));
+
+
+
+Highcharts.setOptions({
+lang: {
+    thousandsSep: ','
+},
+chart: {
+
+    backgroundColor: '#FFF',
+},
+
+legend: {
+    itemStyle: {
+        color: '#000'
+    },
+    itemHiddenStyle: {
+        color: '#777'
+    },
+    itemHoverStyle: {
+        color: '#777'
+    }
+},
+
+title: {
+    style: {
+        color: '#22292F',
+        fill: '#22292F',
+        fontWeight: 'bold'
+    }
+},
+
+subtitle: {
+    style: {
+        color: '#8795A1',
+        fill: '#8795A1',
+        fontWeight: 'bold'
+    }
+},
+
+yAxis: {
+    title: {
+        style: {
+            color: '#B8C2CC'
+        }
+    },
+
+
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+
+xAxis: {
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+exporting: {
+        buttons: {
+            contextButton: {
+                x: -60,
+            }
+        }
+    },
+
+credits: {
+    enabled: false
+},
+
+tooltip: {
+    backgroundColor: "#FFF",
+    borderColor: '#000',
+    valueDecimals: 1,
+    style: {
+        opacity: 0.86
+    },
+    shared: true
+
+},
+ 
+plotOptions: {
+    series: {
+        lineWidth: 5,
+        animation: {
+            duration: 5000
+        }
+    },
+},
+
+});
+
+var categories = [' ','0-4', '5-9', '10-14', '15-19',
+'20-24', '25-29', '30-34', '35-39', '40-44',
+'45-49', '50-54', '55-59', '60-64', '65-69',
+'70-74', '75-79', '80-84', '85+', ' ', 'Segmento <br/> Poblacional'
+];
+
+var categoriesTotalArr1 = [
+    ['<strong> 3,725,789 </strong>', '366,277', '318,368', '270,730','220,452', '193,113', '158,136', '131,892', '133,242', '91,225', '75,728', '71,223', '46,418', '48,905', '32,763', '21,424', '11,757', '9,673', '9,377', ' ', 'Total por <br/> Segmento'],
+    ['<strong>3,706,690</strong>','216,792','227,780','265,472','284,644','268,487','229,891','241,726','231,289','250,809','244,634','238,502','219,782','221,810','184,785','141,443','100,863','73,234','64,747',' ','Total por <br/> Segmento'],
+    ['<strong>3,667,084</strong>','209,354','232,111','247,073','277,622','268,787','221,743','234,921','238,641','237,598','244,185','234,882','216,295','221,838','186,659','150,232','106,282','67,229','71,632',' ','Total por <br/> Segmento'],
+    ['<strong>3,615,086</strong>','199,347','211,587','248,980','268,619','269,135','214,687','225,021','234,520','239,356','235,580','233,662','221,081','213,848','194,905','150,988','110,143','71,818','71,809',' ','Total por <br/> Segmento'],
+    ['<strong>3,548,397</strong>','184,288','208,167','234,338','252,830','268,097','212,446','218,044','224,255','234,011','230,033','231,131','219,054','214,692','199,273','155,156','114,574','77,640','70,368',' ','Total por <br/> Segmento'],
+    ['<strong>3,474,182</strong>','172,896','203,080','217,606','244,432','253,642','217,408','203,761','222,803','225,640','223,995','231,091','216,773','214,090','205,597','151,944','114,694','79,562','75,168',' ','Total por <br/> Segmento'],
+    ['<strong>3,411,307</strong>','159,753','185,471','211,269','238,225','244,392','217,901','195,228','220,529','219,823','215,840','224,693','220,311','211,987','199,951','165,497','122,779','80,953','76,705',' ','Total por <br/> Segmento'],
+    ['<strong>3,337,177</strong>','146,699','172,834','205,425','231,633','236,911','209,110','187,547','215,747','212,097','209,816','220,787','217,142','212,674','192,654','176,220','129,338','85,815','74,728',' ','Total por <br/> Segmento'],
+    ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','128,683','89,096','81,618',' ','Total por <br/> Segmento'],
+]
+var dataSequence = [
+            {
+            name:'2010',
+            data: [null,-115173,-123228,-137289,-144853,-130577,-118578,-119708,-115981,-114941,-115470,-110600,-102262,-100090,-80178,-61731,-43625,-27582,-23305, null, null]
+            }, {
+            name:'2011',
+            data: [null,-109033, -115621, -136877, -141431, -136865, -111182, -115948, -110168, -122061, -113353, -110304, -98571, -102826, -83535, -63891, -42052, -31897, -24609, null, null]
+            }, {
+            name:'2012',
+            data: [null,-108250, -122716, -123441, -142134, -136531, -108161, -113251, -114797, -113428, -113761, -108650, -97901, -101382, -83614, -68681, -47027, -26109, -27439, null, null]
+            }, {
+            name:'2013',
+            data: [null,-104371, -109778, -127066, -137441, -135005, -104403, -106568, -112937, -114999, -111413, -107336, -103349, -94571, -88935, -67063, -46800, -30757, -26328, null, null]
+            }, {
+            name:'2014',
+            data: [null,-98195, -108880, -119508, -130840, -138787, -102210, -103821, -109424, -110908, -109923, -106273, -101832, -96148, -92287, -67739, -49552, -32265, -25824, null, null]
+            }, {
+            name:'2015',
+            data: [null, -90553, -104542, -112409, -122491, -128474, -108645, -96789, -104409, -109901, -105964, -106070, -97796, -98092, -92882, -67648, -48629, -35075, -27098, null, null]
+            }, {
+            name:'2016',
+            data: [null, -82575, -95153, -107834, -124079, -122178, -107832, -94137, -103902, -104591, -102591, -102751, -102496, -95161, -90979, -73753, -54441, -35012, -26102,null, null]
+            },{
+            name:'2017',
+            data: [null, -82207, -88402, -106966, -119812, -120883, -100098, -91930, -97265, -102266, -98331, -102602, -102315, -94029, -85611, -80600, -57117, -34262, -27301,null, null]
+            },{
+            name:'2018',
+            data: [null, -64214, -86451, -92874, -107734, -112963, -102593, -83426, -86871, -101051, -98088, -100502, -102079, -93692, -88787, -74464, -55060, -37568, -31998,null, null]
+            },
+            
+]
+
+var dataSequence2 = [
+            {
+            name:'2010',
+            data: [null,109583,116776,131282,139406,130273,125581,128465,125289,127317,132516,129221,121345,117987,95233,74520,57115,39418,39291, null, null]
+            }, {
+            name:'2011',
+            data: [null, 107759, 112159, 128595, 143213, 131622, 118709, 125778, 121121, 128748, 131281, 128198, 121211, 118984, 101250, 77552, 58811, 41337, 40138,null, null]
+            }, {
+            name:'2012',
+            data: [null, 101104, 109395, 123632, 135488, 132256, 113582, 121670, 123844, 124170, 130424, 126232, 118394, 120456, 103045, 81551, 59255, 41120, 44193,null, null]
+            }, {
+            name:'2013',
+            data: [null, 94976, 101809, 121914, 131178, 134130, 110284, 118453, 121583, 124357, 124167, 126326, 117732, 119277, 105970, 83925, 63343, 41061, 45481,null, null]
+            }, {
+            name:'2014',
+            data: [null, 86093, 99287, 114830, 121990, 129310, 110236, 114223, 114831, 123103, 120110, 124858, 117222, 118544, 106986, 87417, 65022, 45375, 44544,null, null]
+            }, {
+            name:'2015',
+            data: [null, 82343, 98538, 105197, 121941, 125168, 108763, 106972, 118394, 115739, 118031, 125021, 118977, 115998, 112715, 84296, 66065, 44487, 48070,null, null]
+            }, {
+            name:'2016',
+            data: [null, 77178, 90318, 103435, 114146, 122214, 110069, 101091, 116627, 115232, 113249, 121942, 117815, 116826, 108972, 91744, 68338, 45941, 50603,null, null]
+            },{
+            name:'2017',
+            data: [null, 64492, 84432, 98459, 111821, 116028, 109012, 95617, 118482, 109831, 111485, 118185, 114827, 118645, 107043, 95620, 72221, 51553, 47427,null, null]
+            },{
+            name:'2018',
+            data: [null, 61582, 81019, 88172, 102317, 109797, 104125, 91301, 99263, 109794, 107733, 115805, 112820, 117671, 98828, 99740, 73623, 51528, 49620,null, null]
+            },
+]
+
+   var chart = Highcharts.chart('pchart01', {
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: ' ',
+
+        },
+        xAxis: [{
+            categories: categories,
+            reversed: false,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }, { // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categoriesTotalArr1[0],
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+             max: 200000, // This prevents the data to shift right while in motion
+             min: -200000,
+            title: {
+                text: null
+            },
+            labels: {
+                style: {
+                    color: 'black'
+                },
+                formatter: function () {
+                    return Math.abs(this.value / 10000) + '%';
+                }
+            }
+        },
+
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
+
+            }
+        },
+
+        tooltip: {
+            // This controls the hovering box when mouse is over data
+            formatter: function () {
+                return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                    '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+            },
+            shared:false
+        },
+
+        series: [{
+            name: 'Masculino',
+            color: '#008445',
+            borderColor: '#008445', 
+            data: dataSequence[0].data.slice(),
+        }, {
+            name: 'Femenino',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: dataSequence2[0].data.slice()
+        }],
+    });
+
+    function update(increment) {
+        var input = $('#play-range')[0],
+            output = $('#play-output')[0];
+
+        if (increment) {
+            input.value = parseInt(input.value) + increment;
+        }
+        chart.series[0].setData(dataSequence[input.value].data); // Increment dataset (updates chart)
+        chart.series[1].setData(dataSequence2[input.value].data); // Increment dataset (updates chart)
+        chart.update({
+            xAxis: [{
+            categories: categories,
+            reversed: false,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }, { // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categoriesTotalArr1[input.value],
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }],
+        }) // Increment dataset (updates xAxis Total)
+        document.getElementById('year-subtitle').innerHTML= dataSequence[input.value].name
+        if (input.value >= 12) { // Auto-pause
+            pause($('#play-pause-button')[0]);
+        }
+    }
+
+    /**
+     * Play the timeline.
+     */
+    function play(button) {
+        button.title = 'pause';
+        button.className = 'fa fa-pause';
+        button.innerHTML = '<strong>||<strong>';
+        chart.sequenceTimer = setInterval ( function () {
+            update(1);
+        }, 3000);
+    }
+    
+    /** 
+     * Pause the timeline, either when the range is ended, or when clicking the pause button.
+     * Pausing stops the timer and resets the button to play mode.
+     */
+    function pause(button) {
+        button.title = 'play';
+        button.className = 'fa fa-play';
+        button.innerHTML = '&#9654;';
+        clearTimeout(chart.sequenceTimer);
+        chart.sequenceTimer = undefined;
+    }
+
+     /**
+     * Toggle play and pause from the button
+     */
+     $('#play-pause-button').bind('click', function () {
+        if (chart.sequenceTimer === undefined) {
+            play(this);
+        } else {
+            pause(this);
+        }
+    });
+    
+    /**
+     * Update the chart when the input is changed
+     */
+    $('#play-range').bind('input', function () {
+        update();
+    });
+
+</script>
+</html>
