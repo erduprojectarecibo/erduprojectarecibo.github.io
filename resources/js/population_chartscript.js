@@ -526,7 +526,7 @@ $(document).ready(function() {
                 layout: 'horizontal',
                 align: 'left',
                 verticalAlign: 'bottom',
-                x: 25
+                x: 50
             },
             chart: {
                 type: 'bar',
@@ -538,7 +538,7 @@ $(document).ready(function() {
             xAxis: [{
                 categories: categories,
                 reversed: false,
-                offset: 75,
+                offset: 50,
                 labels: {
                     style: {
                         color: 'black',
