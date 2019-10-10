@@ -542,6 +542,7 @@ $(document).ready(function() {
                 labels: {
                     style: {
                         color: 'black',
+                        align:'center',
                         step: 1
                     }
                 },
