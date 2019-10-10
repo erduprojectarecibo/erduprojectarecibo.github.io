@@ -537,7 +537,8 @@ $(document).ready(function() {
             xAxis: [{
                 categories: categories,
                 reversed: false,
-                offset: 150,
+                offset: 100,
+                lineWidth: 0,
                 labels: {
                     style: {
                         color: 'black',
