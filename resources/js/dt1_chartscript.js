@@ -3175,7 +3175,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 6: Comparación cronológica Tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 7: Comparación cronológica Tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
