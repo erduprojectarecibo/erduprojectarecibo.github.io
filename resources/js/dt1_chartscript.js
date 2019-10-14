@@ -2968,6 +2968,7 @@ $(document).ready(function () {
 
         series: [{
             name: 'PNP',
+            color:'#2b378d',
             data: [{
                 name: '1961-1964',
                 color: '#eb1b24',
@@ -3046,7 +3047,7 @@ $(document).ready(function () {
             }]
         }, {
             name: 'PPD',
-            color:'red',
+            color:'#eb1b24',
             type:'area'
         }],
     });
