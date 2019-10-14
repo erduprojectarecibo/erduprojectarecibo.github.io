@@ -186,6 +186,11 @@ var categories2 = [' ','0-4', '5-9', '10-14', '15-19',
 $(document).ready(function() {
 
     Highcharts.chart('pchart05', {
+            legend: {
+                layout: 'horizontal',
+                align: 'right',
+                verticalAlign: 'bottom',
+            },
             chart: {
                 type: 'bar',
             },
@@ -517,6 +522,12 @@ $(document).ready(function() {
 $(document).ready(function() {
     
     Highcharts.chart('pchart07', {
+            legend: {
+                layout: 'horizontal',
+                align: 'left',
+                verticalAlign: 'bottom',
+                x: 100
+            },
             chart: {
                 type: 'bar',
             },
@@ -524,10 +535,23 @@ $(document).ready(function() {
                 text: ' ',
     
             },
-            xAxis: [{ // Mirror axis in the right side
+            xAxis: [{
+                categories: categories,
+                reversed: false,
+                offset: 10,
+                labels: {
+                    align: 'center',
+                    style: {
+                        color: 'black',
+                        step: 1
+                    }
+                },
+                lineWidth: 0
+            },{ // Mirror axis in the right side
                 categories: ['<strong>3,195,153</strong>','125,796','167,470','181,046','210,051','222,760','206,718','174,727','186,134','210,845','205,821','216,307','214,899','211,363','187,615','174,204','299,397',' ','Total por <br/> Grupo'],
                 opposite: true,
                 reversed: false,
+                linkedTo: 0,
                 labels: {
                     style: {
                         color: 'black',
