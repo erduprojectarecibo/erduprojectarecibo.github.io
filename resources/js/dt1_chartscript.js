@@ -2954,17 +2954,20 @@ $(document).ready(function () {
         },
 
         plotOptions: {
-
             series: {
                 lineWidth: 5,
                 animation: {
                     duration: 6000
                 }
             },
-
         },
+
+        legend: {
+            symbolRadius: 0
+        },
+
         series: [{
-            name: 'Magnitud de Cambio',
+            name: 'PNP',
             data: [{
                 name: '1961-1964',
                 color: '#eb1b24',
@@ -3041,6 +3044,10 @@ $(document).ready(function () {
                 y: -7749,
 
             }]
+        }, {
+            name: 'PPD',
+            color:'red',
+            type:'area'
         }],
     });
 })
