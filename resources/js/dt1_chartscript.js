@@ -2964,10 +2964,10 @@ $(document).ready(function () {
         
         tooltip: {
             shared: true,
-            formatter: function() {
-                return this.y;
+            formatter: function(e) {
+                return this.point.name + this.y;
             }
-        }
+        },
 
         legend: {
             symbolRadius: 0
