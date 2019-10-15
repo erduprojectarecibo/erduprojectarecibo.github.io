@@ -2963,10 +2963,10 @@ $(document).ready(function () {
         },
         
         tooltip: {
-            formatter: function(e) {
-                return this.point.name + this.y;
+            formatter: function() {
+                return '<b>'+ this.point.name +'</b>: '+ this.y;
             }
-        },
+        }
 
         legend: {
             symbolRadius: 0
