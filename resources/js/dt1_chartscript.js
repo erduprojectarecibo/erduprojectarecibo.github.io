@@ -2966,7 +2966,7 @@ $(document).ready(function () {
             shared: true,
             formatter: function() {
                 //if (this.color == '#eb1b24') {
-                    return this.y
+                    return this.point.name this.y
                 //}
                 //else {
                 //        return 'PNP: ' + this.color
@@ -2982,7 +2982,7 @@ $(document).ready(function () {
             name: 'PNP',
             color:'#2b378d',
             data: [{
-                name: '1961-1964 PPD',
+                name: '1961-1964 PPD:',
                 color: '#eb1b24',
                 y: 18764,
 
