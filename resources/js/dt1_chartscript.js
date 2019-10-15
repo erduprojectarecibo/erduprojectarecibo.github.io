@@ -2964,9 +2964,9 @@ $(document).ready(function () {
         
         tooltip: {
             shared: true,
-            formatter: function() {
+            formatter: function(e) {
                 //if (this.color == '#eb1b24') {
-                    return this.point.name this.y
+                    return this.point.name + this.point.y
                 //}
                 //else {
                 //        return 'PNP: ' + this.color
