@@ -2962,10 +2962,16 @@ $(document).ready(function () {
             },
         },
         
+        //tooltip: {
+        //    shared: true,
+        //    formatter: function() {
+        //        return this.point.color;
+        //    }
+        //},
+        
         tooltip: {
-            shared: true,
-            formatter: function(e) {
-                return e.point.color;
+        formatter: function() {
+            return '<b>' + (this.point ? this.point.name : this.series.name) + '</b><br/>';
             }
         },
 
