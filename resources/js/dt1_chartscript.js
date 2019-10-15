@@ -2966,7 +2966,7 @@ $(document).ready(function () {
             shared: true,
             formatter: function() {
                 //if (this.color == '#eb1b24') {
-                    return this.name + this.y
+                    return this.y
                 //}
                 //else {
                 //        return 'PNP: ' + this.color
