@@ -2963,6 +2963,7 @@ $(document).ready(function () {
         },
         
         tooltip: {
+            shared: true,
             formatter: function() {
                 return this.y;
             }
