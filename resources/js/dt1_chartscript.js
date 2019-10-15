@@ -2964,8 +2964,8 @@ $(document).ready(function () {
         
         tooltip: {
             shared: true,
-            formatter: function(e) {
-                return this.point.name + this.y;
+            formatter: function() {
+                return this.y;
             }
         },
 
