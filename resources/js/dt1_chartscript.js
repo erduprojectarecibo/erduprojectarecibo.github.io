@@ -2922,7 +2922,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 5: Magnitud del Cambio en el Total de Delitos Tipo 1 por Gobernante y Cuatrenio (1961-2018)',
+            text: 'Gráfica 5: Magnitud del cambio en el total de delitos tipo 1 por gobernante y cuatrenio (1961-2018)',
 
         },
         subtitle: {
@@ -3068,7 +3068,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 6: Comparación cronológica Tasa de delitos tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 6: Comparación cronológica tasa de delitos tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
@@ -3106,10 +3106,10 @@ $(document).ready(function () {
         series: [{
                 name: 'Tasa Florida',
                 data: [
-                    3320.2, 3716.3, 4103.6, 4498.5, 4742.5, 5317.2, 5673.0, 5376.9, 5960.3, 7387.3, 7721.2, 7016.7, 6738.6, 7069.5,
-                    7688.1, 8402.0, 8032.5, 7465.2, 6781.1, 6821.2, 7574.2, 8228.4, 8503.2, 8937.6, 8804.5, 8810.8, 8547.2, 8358.2, 8351.0,
-                    8250.0, 7701.5, 7497.4, 7271.8, 6886.0, 6205.4, 5694.7, 5577.5, 5427.6, 5188.3, 4894.3, 4721.7, 4702.6, 4811.3, 4829.4,
-                    4453.3, 4092.7, 4032.0, 3763.2, 3567.1, 3955.9, 3279.4, 3117.1
+                    3320, 3716, 4104, 4499, 4743, 5317, 5673, 5377, 5960, 7387, 7721, 7017, 6739, 7070,
+                    7688, 8402, 8033, 7465, 6781, 6821, 7574, 8228, 8503, 8938, 8805, 8811, 8547, 8358, 8351,
+                    8250, 7702, 7497, 7272, 6886, 6205, 5695, 5578, 5428, 5188, 4894, 4722, 4703, 4811, 4829,
+                    4453, 4093, 4032, 3763, 3567, 3956, 3279, 3117
                 ],
                 color: '#2a8e40',
                 animation: {
