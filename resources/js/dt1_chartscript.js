@@ -2963,7 +2963,7 @@ $(document).ready(function () {
         },
         
         tooltip: {
-            formatter: function() {
+            formatter: function(e) {
                 return '<b>'+ this.point.name +'</b>: '+ this.y;
             }
         }
