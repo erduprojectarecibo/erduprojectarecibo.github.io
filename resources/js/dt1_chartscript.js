@@ -2965,12 +2965,12 @@ $(document).ready(function () {
         tooltip: {
             shared: true,
             formatter: function() {
-                if (this.color == '#eb1b24') {
-                    return 'PPD: ' + this.color
-                }
-                else {
-                        return 'PNP: ' + this.color
-                }
+                //if (this.color == '#eb1b24') {
+                    return this.name + this.y
+                //}
+                //else {
+                //        return 'PNP: ' + this.color
+                //}
             },
         },
 
@@ -2982,7 +2982,7 @@ $(document).ready(function () {
             name: 'PNP',
             color:'#2b378d',
             data: [{
-                name: '1961-1964',
+                name: '1961-1964 PPD',
                 color: '#eb1b24',
                 y: 18764,
 
