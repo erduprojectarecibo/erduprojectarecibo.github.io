@@ -2964,13 +2964,8 @@ $(document).ready(function () {
         
         tooltip: {
             formatter: function(e) {
-                //if (this.color == '#eb1b24') {
-                    return this.point.name + this.point.y
-                //}
-                //else {
-                //        return 'PNP: ' + this.color
-                //}
-            },
+                return this.point.name + this.point.y;
+            }
         },
 
         legend: {
