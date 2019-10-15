@@ -2964,7 +2964,7 @@ $(document).ready(function () {
         
         tooltip: {
             formatter: function(e) {
-                return this.point.name + this.point.y;
+                return this.point.name + this.y;
             }
         },
 
