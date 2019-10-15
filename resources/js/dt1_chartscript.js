@@ -2962,19 +2962,13 @@ $(document).ready(function () {
             },
         },
         
-        //tooltip: {
-        //    shared: true,
-        //    formatter: function() {
-        //        return this.point.color;
-        //    }
-        //},
-        
         tooltip: {
-        formatter: function() {
-            return '<b>' + (this.point ? this.point.name : this.series.name) + '</b><br/>';
+            shared: true,
+            formatter: function() {
+                return this.y;
             }
         },
-
+        
         legend: {
             symbolRadius: 0
         },
@@ -2983,7 +2977,7 @@ $(document).ready(function () {
             name: 'PNP',
             color:'#2b378d',
             data: [{
-                name: '1961-1964 PPD',
+                name: '1961-1964',
                 color: '#eb1b24',
                 y: 18764,
 
