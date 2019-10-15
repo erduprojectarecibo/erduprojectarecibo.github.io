@@ -135,7 +135,7 @@ Highcharts.setOptions({
     tooltip: {
         backgroundColor: "#FFF",
         borderColor: '#000',
-        valueDecimals: 1,
+        valueDecimals: 0,
         style: {
             opacity: 0.86
         },
@@ -3184,7 +3184,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 7: Comparación cronológica Tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 7: Comparación cronológica tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
