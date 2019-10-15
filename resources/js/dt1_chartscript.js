@@ -3216,7 +3216,8 @@ $(document).ready(function () {
         },
 
         tooltip: {
-            shared: true
+            shared: true,
+            valueDecimals: 1,
         },
 
         series: [{
