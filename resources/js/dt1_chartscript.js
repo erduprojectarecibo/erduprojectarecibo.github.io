@@ -2965,7 +2965,7 @@ $(document).ready(function () {
         tooltip: {
             shared: true,
             formatter: function() {
-                if (this.color = '#eb1b24') {
+                if (this.color == '#eb1b24') {
                     return 'PPD: ' + this.y
                 }
                 else {
