@@ -2966,10 +2966,10 @@ $(document).ready(function () {
             shared: true,
             formatter: function() {
                 if (this.color == '#eb1b24') {
-                    return 'PPD: ' + this.y
+                    return 'PPD: ' + this.color
                 }
                 else {
-                        return 'PNP: ' + this.y
+                        return 'PNP: ' + this.color
                 }
             },
         },
