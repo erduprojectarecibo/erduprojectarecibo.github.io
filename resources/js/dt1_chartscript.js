@@ -2976,7 +2976,7 @@ $(document).ready(function () {
             name: 'PNP',
             color:'#2b378d',
             data: [{
-                name: '1961-1964 PPD:',
+                name: '1961-1964 PPD',
                 color: '#eb1b24',
                 y: 18764,
 
