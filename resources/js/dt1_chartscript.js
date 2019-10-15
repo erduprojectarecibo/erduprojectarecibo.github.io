@@ -135,6 +135,7 @@ Highcharts.setOptions({
     tooltip: {
         backgroundColor: "#FFF",
         borderColor: '#000',
+        valueDecimals: 0,
         style: {
             opacity: 0.86
         },
