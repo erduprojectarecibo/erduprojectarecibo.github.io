@@ -840,8 +840,7 @@ $(document).ready(function() {
             color:'rgb(0,122,204)',
             animation: {
                 enabled: true,
-                duration: 8000,
-                easing: 'linear'
+                duration: 8000
             }
         }, {
             name: 'Defunciones',
@@ -850,8 +849,7 @@ $(document).ready(function() {
             color: 'rgb(200,080,0)',
             animation: {
                 enabled: true,
-                duration: 11000,
-                easing: 'linear'
+                duration: 11000
             }
         }],
         
