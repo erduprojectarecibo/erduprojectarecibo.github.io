@@ -2553,7 +2553,7 @@ $(document).ready(function () {
             },
         
             series: [{
-                name: 'Tasa Asesinatos y Homicidios',
+                name: 'Total Asesinatos y Homicidios',
                 data: [{
                         'x': Date.UTC(1959, 0),
                         // Jan, 1, 1960
