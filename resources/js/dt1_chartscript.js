@@ -169,7 +169,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Delitos tipo 1 en Puerto Rico de 1960 a 2018',
+            text: 'Tasa de delitos tipo 1 en Puerto Rico de 1960 a 2018',
         },
 
         xAxis: {
@@ -796,7 +796,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 2: Tendencia delitos tipo 1 de 1992 a 2018',
+            text: 'Gráfica 2: Tendencia tasa de delitos tipo 1 de 1992 a 2018',
         },
 
         subtitle: {
@@ -2922,7 +2922,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 5: Magnitud del cambio en el total de delitos tipo 1 por gobernante y cuatrenio (1961-2018)',
+            text: 'Gráfica 5: Cambio en el total de delitos tipo 1 por gobernante y cuatrenio (1961-2018)',
 
         },
         subtitle: {
