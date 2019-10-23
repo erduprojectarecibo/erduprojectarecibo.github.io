@@ -3304,7 +3304,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, Brasil, Colombia y Venezuela (1990-2017)',
+            text: 'Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, Brasil, Colombia y Venezuela (1990-2017)',
         },
 
         xAxis: {
@@ -3526,7 +3526,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, El Salvador, Honduras y México (1990-2017)',
+            text: 'Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, El Salvador, Honduras y México (1990-2017)',
         },
 
         xAxis: {
