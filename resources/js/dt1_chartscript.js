@@ -2,8 +2,6 @@
  * Highcharts plugin to defer initial series animation until the element has
  * appeared.
  *
- * Updated 2019-09-18
- *
  * @todo
  * - If the element is greater than the viewport (or a certain fraction of it),
  *   show the series when it is partially visible.
@@ -2144,11 +2142,11 @@ $(document).ready(function () {
             type: 'line',
             zoomType: 'x',
         },
-        
+
         title: {
             text: 'Gráfica 4: Total anual de asesinatos y homicidios de 1960 a 2018',
         },
-        
+
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: {
@@ -2156,7 +2154,7 @@ $(document).ready(function () {
             },
             tickInterval: Date.UTC(2010, 0, 1) - Date.UTC(2009, 0, 1)
         },
-        
+
         yAxis: {
             title: {
                 text: 'Cantidad de asesinatos y homicidios',
@@ -2168,7 +2166,7 @@ $(document).ready(function () {
             max: 1200,
             gridLineWidth: 0,
         },
-        
+
         plotOptions: {
             series: {
                 label: {
@@ -2185,11 +2183,11 @@ $(document).ready(function () {
                 },
             },
         },
-        
+
         tooltip: {
             shared: true,
         },
-        
+
         series: [{
             name: 'Total Asesinatos y Homicidios',
             data: [{
@@ -2514,7 +2512,7 @@ $(document).ready(function () {
             ],
             color: 'transparent',
         }],
-        
+
         responsive: {
             rules: [{
                 condition: {
@@ -2529,12 +2527,12 @@ $(document).ready(function () {
                 }
             }]
         }
-        
-        });
-        
-        function update_data7() {
+
+    });
+
+    function update_data7() {
         chart6.update({
-        
+
             plotOptions: {
                 series: {
                     animation: {
@@ -2551,7 +2549,7 @@ $(document).ready(function () {
                     },
                 },
             },
-        
+
             series: [{
                 name: 'Total Asesinatos y Homicidios',
                 data: [{
@@ -2888,9 +2886,9 @@ $(document).ready(function () {
                 },
             }],
         })
-        }
-        
-        function update_data8() {
+    }
+
+    function update_data8() {
         chart6.update({
             subtitle: {
                 text: 'La Tendencia General de la Cantidad de Asesinatos y Homicidios es Ascendente',
@@ -2961,21 +2959,21 @@ $(document).ready(function () {
                 }
             },
         },
-        
+
         tooltip: {
             shared: true,
-            formatter: function() {
+            formatter: function () {
                 return this.y;
             }
         },
-        
+
         legend: {
             symbolRadius: 0
         },
 
         series: [{
             name: 'PNP',
-            color:'#2b378d',
+            color: '#2b378d',
             data: [{
                 name: '1961-1964',
                 color: '#eb1b24',
@@ -3054,8 +3052,8 @@ $(document).ready(function () {
             }]
         }, {
             name: 'PPD',
-            color:'#eb1b24',
-            type:'area'
+            color: '#eb1b24',
+            type: 'area'
         }],
     });
 })
@@ -3246,7 +3244,7 @@ $(document).ready(function () {
                 data: [
                     4.63, 4.83, 5.43, 6.54, 7.23, 7.94, 9.91, 11.03, 11.17, 10.60, 11.02, 10.89, 10.71, 10.25, 11.85, 12.73,
                     12.31, 11.40, 11.08, 10.07, 9.46, 10.73, 11.31, 12.54, 12.51, 14.48, 14.24, 13.23, 13.30, 11.10, 8.55, 7.44,
-                    6.03, 5.08, 4.96, 5.02, 5.03, 4.75, 4.86, 4.61, 4.52, 4.78, 4.17, 4.29, 4.00, 4.48, 3.94, 3.49, 3.27, 3.12, 3.10, 
+                    6.03, 5.08, 4.96, 5.02, 5.03, 4.75, 4.86, 4.61, 4.52, 4.78, 4.17, 4.29, 4.00, 4.48, 3.94, 3.49, 3.27, 3.12, 3.10,
                     3.20
                 ],
                 color: 'red',
@@ -3260,9 +3258,9 @@ $(document).ready(function () {
                 name: 'Tasa Puerto Rico',
                 data: [
                     8.17, 7.79, 7.06, 7.75, 6.86, 7.08, 10.37, 11.53, 14.98, 18.16, 17.17, 15.01, 15.51, 15.83, 15.28, 14.77, 16.42,
-                14.92, 12.81, 14.54, 17.06, 21.24, 14.88, 17.31, 13.45, 17.01, 23.01, 24.17, 26.50, 27.43, 23.64, 23.56, 19.46, 17.40,
-                15.57, 18.38, 19.56, 20.24, 20.57, 20.72, 20.18, 19.66, 19.30, 21.67, 24.09, 27.33, 31.64, 27.62, 25.10, 19.80, 17.82, 
-                20.55
+                    14.92, 12.81, 14.54, 17.06, 21.24, 14.88, 17.31, 13.45, 17.01, 23.01, 24.17, 26.50, 27.43, 23.64, 23.56, 19.46, 17.40,
+                    15.57, 18.38, 19.56, 20.24, 20.57, 20.72, 20.18, 19.66, 19.30, 21.67, 24.09, 27.33, 31.64, 27.62, 25.10, 19.80, 17.82,
+                    20.55
                 ],
                 color: 'gold',
                 animation: {
