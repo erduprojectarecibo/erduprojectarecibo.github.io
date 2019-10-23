@@ -1088,7 +1088,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 8: Población total por segmentos de edades entre 15-39, <br /> Años 1960-2018',
+            text: 'Gráfica 11: Población total por segmentos de edades entre 15-39, <br /> Años 1960-2018',
 
         },
         subtitle: {
