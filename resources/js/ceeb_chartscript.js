@@ -172,7 +172,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Puntuaciones en el College Board en Aprovechamiento en Matemáticas de Estudiantes de Puerto Rico (1967-2017)',
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Matemáticas de Estudiantes de Puerto Rico (1967-2019)',
         },
 
         xAxis: {
@@ -256,7 +256,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Puntuaciones en el College Board en Aprovechamiento en Español de Estudiantes de Puerto Rico (1967-2017)',
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Español de Estudiantes de Puerto Rico (1967-2019)',
         },
 
         xAxis: {
@@ -341,7 +341,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Puntuaciones en el College Board en Aprovechamiento en Inglés de Estudiantes de Puerto Rico (1967-2017)',
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Inglés de Estudiantes de Puerto Rico (1967-2019)',
         },
 
         xAxis: {
@@ -396,6 +396,95 @@ $(document).ready(function () {
         series: [{
             name: 'Aprovechamiento en Inglés',
             data: [495, 490, 479, 485, 471, 456, 462, 460, 441, 445, 440, 433, 437, 427, 435, 432, 430, 431, 439, 441, 440, 443, 442, 443, 446, 449, 451, 449, 454, 438, 442, 437, 436, 440, 439, 440, 441, 443, 443, 448, 449, 456, 447, 463, 471, 475, 485, 472, 470, 467, 467, 476, 489],
+            color: '#2a8e40'
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+})
+
+$(document).ready(function () {
+    Highcharts.chart('ceebchart04', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'xy',
+        },
+
+        title: {
+            text: 'Total de Estudiantes que tomaron el College Board en Puerto Rico (1967-2019)',
+        },
+
+        xAxis: {
+            categories: ['1967', '1968', '1969', '1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977',
+                '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988',
+                '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Total de Estudiantes',
+            },
+            gridLineWidth: 0,
+            min: 0,
+            max: 40000,
+            plotLines: [{
+                value: 37104,
+                color: '#2a8e40',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: "Valor Máximo",
+                }
+            }, {
+                value: 14912,
+                color: '#2a8e40',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: "Valor Mínimo",
+                    y: 15,
+                }
+            }]
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1967
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Total de Estudiantes',
+            data: [
+                14912, 15846, 16200, 17850, 18690, 19591, 24639, 24125, 26859, 28901, 31973, 33340, 32783, 33478, 32864, 34282, 33206, 32435, 31795, 30685, 31264,
+            30919, 29096, 28394, 28349, 31677, 33724, 31877, 32490, 29640, 29797, 33657, 32813, 31186, 30131, 29886, 30319, 30376, 31015, 31060, 31628, 30190, 37104,
+            27993, 28138, 27680, 26709, 34936, 35538, 33789, 33892, 30549, 33566
+            ],
             color: '#2a8e40'
         }],
 
