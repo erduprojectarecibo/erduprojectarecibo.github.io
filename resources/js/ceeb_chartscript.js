@@ -163,6 +163,13 @@ Highcharts.setOptions({
 
 });
 
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Matemáticas (1967-2019)
+
+/* ********************************************************************************************************************************************** */
+
+
 $(document).ready(function () {
     Highcharts.chart('ceebchart01', {
 
@@ -190,6 +197,7 @@ $(document).ready(function () {
             },
             min: 400,
             max: 525,
+            gridLineWidth: 0,
             plotLines: [{
                 value: 501,
                 color: '#2a8e40',
@@ -246,6 +254,12 @@ $(document).ready(function () {
         }
     });
 })
+
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Español (1967-2019)
+
+/* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
     Highcharts.chart('ceebchart02', {
@@ -332,6 +346,12 @@ $(document).ready(function () {
     });
 })
 
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Inglés (1967-2019)
+
+/* ********************************************************************************************************************************************** */
+
 $(document).ready(function () {
     Highcharts.chart('ceebchart03', {
 
@@ -359,6 +379,7 @@ $(document).ready(function () {
             },
             min: 400,
             max: 525,
+            gridLineWidth: 0,
             plotLines: [{
                 value: 495,
                 color: '#2a8e40',
@@ -415,6 +436,12 @@ $(document).ready(function () {
         }
     });
 })
+
+/* ********************************************************************************************************************************************** */
+
+// CEEB Total de Estudiantes (1967-2019)
+
+/* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
     Highcharts.chart('ceebchart04', {
@@ -486,6 +513,270 @@ $(document).ready(function () {
             27993, 28138, 27680, 26709, 34936, 35538, 33789, 33892, 30549, 33566
             ],
             color: '#2a8e40'
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Matemáticas Pública vs Privada (1987-2019)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    Highcharts.chart('ceebchart05', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Matemáticas entre Estudiantes de Escuela Pública y Privada de Puerto Rico (1987-2019)',
+        },
+
+        xAxis: {
+            categories: ['1987', '1988','1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'
+            ],
+        },
+
+        yAxis: [{
+            title: {
+                text: 'Puntuaciones de College Board',
+            },
+            min: 400,
+            max: 600,
+            gridLineWidth: 0,
+        }, {
+            title: {
+                text:'Diferencia en Puntuaciones',
+            },
+            opposite:true,
+            min:50, 
+            max:130,
+            gridLineWidth: 0,
+        }],
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1987
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Pública',
+            data: [466, 474, 467, 466, 472, 471, 477, 474, 474, 467, 469, 465, 463, 465, 463, 461, 460, 457, 457, 456, 455, 456, 452, 463, 463, 464, 467, 455, 446, 439, 439, 445, 458],
+            color: '#2a8e40'
+        }, {
+            name: 'Privada',
+            data: [586, 586, 582, 572, 568, 565, 563, 558, 563, 547, 548, 541, 550, 552, 555, 547, 546, 556, 547, 546, 539, 535, 540, 534, 527, 532, 530, 528, 531, 526, 519, 540, 532],
+            color: '#FEDA35'
+        }, {
+            name: 'Diferencia',
+            data: [120, 112, 115, 106, 96, 94, 86, 84, 89, 80, 79, 76, 87, 87, 92, 86, 86, 99, 90, 90, 84, 79, 88, 71, 64, 68, 63, 73, 85, 87, 80],
+            color: '#FF0000',
+            yAxis:1
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Español Pública vs Privada (1987-2019)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    Highcharts.chart('ceebchart06', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'xy',
+        },
+
+        title: {
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Español entre Estudiantes de Escuela Pública y Privada de Puerto Rico (1987-2019)',
+        },
+
+        xAxis: {
+            categories: ['1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'
+            ],
+        },
+
+        yAxis: [{
+            title: {
+                text: 'Puntuaciones de College Board',
+            },
+            gridLineWidth: 0,
+            min: 400,
+            max: 600,
+        }, {
+            title: {
+                text:'Diferencia en Puntuaciones',
+            },
+            opposite:true,
+            min:40, 
+            max:100,
+            gridLineWidth: 0,
+        }],
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1987
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Pública',
+            data: [464, 469, 470, 462, 467, 468, 466, 460, 453, 456, 446, 441, 442, 440, 434, 435, 432, 430, 430, 428, 428, 431, 422, 439, 442, 446, 451, 438, 441, 438, 439, 432, 445],
+            color: '#2a8e40'
+        }, {
+            name: 'Privada',
+            data: [545, 543, 555, 540, 536, 533, 534, 528, 522, 511, 514, 499, 496, 503, 499, 497, 496, 484, 490, 489, 488, 493, 495, 487, 483, 488, 490, 486, 497, 497, 491, 506, 503],
+            color: '#FEDA35'
+        }, {
+            name: 'Diferencia',
+            data: [81, 74, 85, 78, 69, 65, 68, 68, 69, 55, 68, 58, 54, 63, 65, 62, 64, 54, 60, 61, 60, 62, 73, 48, 41, 42, 39, 48, 56, 59, 52],
+            color: '#FF0000',
+            yAxis:1
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+})
+
+/* ********************************************************************************************************************************************** */
+
+// CEEB Aprovechamiento en Inglés Pública vs Privada (1987-2019)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    Highcharts.chart('ceebchart07', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'xy',
+        },
+
+        title: {
+            text: 'Puntuaciones en el College Board en Aprovechamiento en Inglés entre Estudiantes de Escuela Pública y Privada de Puerto Rico (1987-2019)',
+        },
+
+        xAxis: {
+            categories: ['1987', '1988','1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+                '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'
+            ],
+        },
+
+        yAxis: [{
+            title: {
+                text: 'Puntuaciones de College Board',
+            },
+            min: 400,
+            max: 600,
+            gridLineWidth: 0,
+        }, {
+            title: {
+                text:'Diferencia en Puntuaciones',
+            },
+            opposite:true,
+            min:70, 
+            max:140,
+            gridLineWidth: 0,
+        }],
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+                pointStart: 1987
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: 'Pública',
+            data: [422, 424, 424, 422, 426, 424, 425, 425, 431, 419, 420, 416, 414, 416, 412, 415, 417, 416, 419, 420, 423, 429, 424, 437, 445, 449, 460, 450, 444, 443, 443, 444, 463], 
+            color: '#2a8e40'
+        }, {
+            name: 'Privada',
+            data: [536, 536, 537, 531, 524, 529, 525, 525, 530, 512, 515, 516, 520, 524, 537, 536, 534, 538, 536, 546, 537, 542, 541, 537, 537, 540, 544, 550, 558, 552, 547, 573, 570], 
+            color: '#FEDA35'
+        }, {
+            name: 'Diferencia',
+            data: [114, 112, 113, 109, 98, 105, 100, 100, 99, 93, 95, 100, 106, 108, 125, 121, 117, 122, 117, 126, 114, 113, 117, 100, 92, 91, 84, 100, 114, 109, 104],
+            color: '#FF0000',
+            yAxis:1
         }],
 
         responsive: {
