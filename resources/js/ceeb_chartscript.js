@@ -131,7 +131,7 @@ Highcharts.setOptions({
     exporting: {
         buttons: {
             contextButton: {
-                x: -60,
+                // x: -60,
             }
         }
     },
