@@ -1380,7 +1380,7 @@ $(document).ready(function () {
 
         yAxis: {
             title: {
-                text: 'Tasa de asesinatos y homicidios',
+                text: 'Tasa de asesinatos por cada 100,000 habitantes',
                 style: {
                     color: 'black'
                 }
@@ -3204,7 +3204,7 @@ $(document).ready(function () {
 
         yAxis: {
             title: {
-                text: 'Tasa asesinatos y homicidios',
+                text: 'Tasa asesinatos por cada 100,000 habitantes',
             },
             min: 0,
             max: 35,
@@ -3318,7 +3318,7 @@ $(document).ready(function () {
 
         yAxis: {
             title: {
-                text: 'Tasa Asesinatos y Homicidios',
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
             },
             min: 0,
             max: 100,
@@ -3429,7 +3429,7 @@ $(document).ready(function () {
 
         yAxis: {
             title: {
-                text: 'Tasa Asesinatos y Homicidios',
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
             },
             min: 0,
             max: 70,
@@ -3540,7 +3540,7 @@ $(document).ready(function () {
 
         yAxis: {
             title: {
-                text: 'Tasa Asesinatos y Homicidios',
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
             },
             min: 0,
             max: 150,
