@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name='author' content="Andy G. Vélez">
+    <title>MLB PR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1" margin=auto>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+
+<style>
+#result {
+    text-align: right;
+    color: gray;
+    min-height: 2em;
+}
+#table-sparkline {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+th {
+    font-weight: bold;
+    text-align: center;
+}
+td, th {
+    padding: 5px;
+    border-bottom: 1px solid silver;
+    height: 20px;
+    text-align: center;
+}
+
+thead th {
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.highcharts-tooltip>span {
+    background: white;
+    border: 1px solid silver;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #888;
+    padding: 8px;
+}
+</style>
+
+<div id="result"></div>
+<h2 style="text-align:center">Gráfica 4: Total Carreras Impulsadas por Temporada</h2>
+<table id="table-sparkline">
+    <thead>
+        <tr>
+            <th>Jugador</th>
+            <th>Promedio Carreras Impulsadas</th>
+            <th>Carreras Impulsadas (RBI) por Intervalo de Edad<p style="position:relative; left:17%; text-align:right; display:inline-block">Valor Crítico de Referencia</p></th>
+        </tr>
+    </thead>
+    <tbody id="tbody-sparkline">
+        <tr>
+            <th>Hank Aaron</th>
+            <td>100</td>
+            <td data-sparkline="null, null, 69, 106, 92, 132, 95, null, 123, 126, 120, 128, 130, 95, 89, 127, 109, 86, null, 97, 118, 118, 77, 96, 69, 60, 35, null, null, null, null"/>
+        </tr>        
+        <tr>
+            <th>Carlos Delgado</th>
+            <td>95</td>
+            <td data-sparkline="null, null, null, null, 24, 11, 92, null, 91, 115, 134, 137, 102, 108, 145, 99, 115, 114, null, 87, 115, 23, null, null, null, null, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Juan González</th>
+            <td>88</td>
+            <td data-sparkline="null, 7, 12, 102, 109, 118, 85, null, 82, 144, 131, 157, 128, 67, 140, 35, 70, 17, null, null, null, null, null, null, null, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Orlando Cepeda</th>
+            <td>80</td>
+            <td data-sparkline="null, null, 96, 105, 96, 142, 114, null, 97, 97, 5, 73, 111, 73, 88, 111, 44, 9, null, 86, 18, null, null, null, null, null, null, null, null, null, null"/>
+        </tr>  
+        <tr>  
+            <th>Carlos Beltrán</th>
+            <td>79</td>
+            <td data-sparkline="null, null, null, 7, 108, 44, 101, null, 105, 100, 104, 78, 116, 112, 112, 48, 27, 84, null, 97, 84, 49, 67, 93, 51, null, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Roberto Clemente</th>
+            <td>73</td>
+            <td data-sparkline="null, null, 47, 60, 30, 50, 50, null, 94, 89, 74, 76, 87, 65, 119, 110, 57, 91, null, 60, 86, 60, null, null, null, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Edgar Martínez</th>
+            <td>70</td>
+            <td data-sparkline="null, null, null, null, null, null, 5, null, 5, 20, 49, 52, 73, 13, 51, 113, 103, 108, null, 102, 86, 145, 116, 59, 98, 63, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Roberto Alomar</th>
+            <td>67</td>
+            <td data-sparkline="null, null, 41, 56, 60, 69, 76, null, 93, 38, 66, 94, 60, 56, 120, 89, 100, 53, null, 39, 24, null, null, null, null, null, null, null, null, null, null"/>
+        </tr>
+        <tr>
+            <th>Iván Rodríguez</th>
+            <td>63</td>
+            <td data-sparkline="null, 27, 37, 66, 57, 67, 86, null, 77, 91, 113, 83, 65, 60, 85, 86, 50, 69, null, 63, 35, 47, 49, 9, null, null, null, null, null, null, null"/>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    /**
+ * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
+ * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
+ */
+Highcharts.SparkLine = function (a, b, c) {
+    var hasRenderToArg = typeof a === 'string' || a.nodeName,
+        options = arguments[hasRenderToArg ? 1 : 0],
+        defaultOptions = {
+            chart: {
+                renderTo: (options.chart && options.chart.renderTo) || this,
+                backgroundColor: null,
+                borderWidth: 0,
+                type: 'areaspline',
+                margin: [0, 0, 20, 0],
+                width: 800,
+                height: 90,
+                zoomType:'x',
+                style: {
+                    overflow: 'visible'
+                },
+
+                // small optimalization, saves 1-2 ms each sparkline
+                skipClone: true
+            },
+            title: {
+                text: ' '
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled:false
+            },
+            xAxis: {
+                categories: [' ','18','19','20','21','22','23','24',' ','25','26','27','28',
+                    '29', '30','31','32','33','34', ' ','35','36','37','38','39','40','41','42','43','44','45','46'],
+                labels: {
+                    formatter: function () {
+                if (this.value == '24' || this.value == '25' || this.value == '34' || this.value == '35') {
+                    return this.value;
+                }
+            }
+                }
+            },
+            yAxis: {
+                endOnTick: false,
+                startOnTick: false,
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    text: null
+                },
+                tickPositions: [0],
+                max:180,
+                min:0,
+                plotLines: [{
+                    value: 100,
+                    color: '#2a8e40',
+                    dashStyle: 'shortdash',
+                    width: 1.2,
+                    label: {
+                        text:"100 RBI",
+                        align:"right",
+                        x:-20
+                    }
+                }]
+
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                hideDelay: 0,
+                outside: true,
+                shared: true
+            },
+            plotOptions: {
+                series: {
+                    showInLegend:false,
+                    animation: 5000,
+                    lineWidth: 1.5,
+                    shadow: false,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    marker: {
+                        radius: 1,
+                        states: {
+                            hover: {
+                                radius: 2
+                            }
+                        }
+                    },
+                    fillOpacity: 0.25
+                },
+            }
+        };
+
+        options = Highcharts.merge(defaultOptions, options);
+
+    return hasRenderToArg ?
+        new Highcharts.Chart(a, options, c) :
+        new Highcharts.Chart(options, b);
+};
+
+var start = +new Date(),
+    $tds = $('td[data-sparkline]'),
+    fullLen = $tds.length,
+    n = 0;
+
+// Creating 153 sparkline charts is quite fast in modern browsers, but IE8 and mobile
+// can take some seconds, so we split the input into chunks and apply them in timeouts
+// in order avoid locking up the browser process and allow interaction.
+function doChunk() {
+    var time = +new Date(),
+        i,
+        len = $tds.length,
+        $td,
+        stringdata,
+        arr,
+        data,
+        chart;
+
+    for (i = 0; i < len; i += 1) {
+        $td = $($tds[i]);
+        stringdata = $td.data('sparkline');
+        arr = stringdata.split('; ');
+        data = $.map(arr[0].split(', '), parseFloat);
+        chart = {};
+
+        if (arr[1]) {
+            chart.type = arr[1];
+        }
+        $td.highcharts('SparkLine', {
+            series: [{
+                name: ' ',
+                data: data,
+                pointStart: 1,
+                color: '#2a8e40',
+                animation: {
+                    enabled: true,
+                    duration: 10000,
+                    easing: 'linear'
+                },
+            }],
+            tooltip: {
+                headerFormat: '<span>' + $td.parent().find('th').html() + '<br>Edad: {point.x}<br></span>',
+                pointFormat: '<b>Valor: {point.y}</b>'
+            },
+            chart: chart,
+        });
+
+n += 1;
+
+// If the process takes too much time, run a timeout to allow interaction with the browser
+if (new Date() - time > 500) {
+    $tds.splice(0, i + 1);
+    setTimeout(doChunk, 0);
+    break;
+}
+
+}
+}
+doChunk();
+
+</script>
+
+</body>
+</html>
