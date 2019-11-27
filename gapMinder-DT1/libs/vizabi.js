@@ -26554,7 +26554,7 @@ var Storage = exports.Storage = function () {
                     err.ddfql = query;
 
                     _this4.defer.reject(err);
-                    console.log(response);
+                    // console.log(response);
                   }
                 });
               }
@@ -29897,7 +29897,7 @@ var TreeMenu = _component2.default.extend({
 
     //default callback
     this._callback = function (indicator) {
-      console.log("Indicator selector: stub callback fired. New indicator is ", indicator);
+      // console.log("Indicator selector: stub callback fired. New indicator is ", indicator);
     };
     this._alignX = "center";
     this._alignY = "center";
@@ -34618,7 +34618,7 @@ exports.default = _class2.default.extend({
     if (result.length / 1024 / 1024 > 2) {
 
       alert("The file size is " + Math.round(result.length / 1024) + "kB, which is too large to download. Will try to print it in the console instead...");
-      console.log(result);
+      // console.log(result);
     } else {
 
       var link = document.createElement('a');
