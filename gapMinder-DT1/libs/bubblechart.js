@@ -121,10 +121,6 @@ exports.default = Vizabi.Tool.extend("BubbleChart", {
       placeholder: ".vzb-tool-treemenu",
       model: ["state.marker", "state.time", "locale", "ui"]
     }, {
-      component: Vizabi.Component.get("datawarning"),
-      placeholder: ".vzb-tool-datawarning",
-      model: ["locale"]
-    }, {
       component: Vizabi.Component.get("datanotes"),
       placeholder: ".vzb-tool-datanotes",
       model: ["state.marker", "locale"]
@@ -651,7 +647,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
 
     this.yInfoEl = this.graph.select(".vzb-bc-axis-y-info");
     this.xInfoEl = this.graph.select(".vzb-bc-axis-x-info");
-    this.dataWarningEl = this.graph.select(".vzb-data-warning");
 
     this.projectionX = this.graph.select(".vzb-bc-projection-x");
     this.projectionY = this.graph.select(".vzb-bc-projection-y");
@@ -898,9 +893,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
     var sTitle = this.sTitleEl.selectAll("text").data([0]);
     sTitle.enter().append("text");
     sTitle.attr("text-anchor", "end");
-
-    utils.setIcon(this.dataWarningEl, iconWarn).select("svg").attr("width", "0px").attr("height", "0px");
-    this.dataWarningEl.append("text").attr("text-anchor", "end").text(this.translator("hints/dataWarning"));
 
     utils.setIcon(this.yInfoEl, iconQuestion).select("svg").attr("width", "0px").attr("height", "0px").style('opacity', Number(Boolean(conceptPropsY.description || conceptPropsY.sourceLink)));
 
@@ -1274,8 +1266,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
       this.xInfoEl.attr("transform", "translate(" + _hTranslate + "," + (_t.translateY - infoElHeight * 0.8) + ")");
     }
 
-    this._resizeDataWarning();
-
     this.model.ui.chart.margin.set("left", margin.left * this.activeProfile.leftMarginRatio, false, false);
   },
   _updateDecorations: function _updateDecorations(duration) {
@@ -1366,22 +1356,6 @@ var BubbleChart = Vizabi.Component.extend("bubblechart", {
 
       this.lineEqualXY.transition().duration(duration || 0).attr("y1", this.yScale(min)).attr("y2", this.yScale(max)).attr("x1", this.xScale(min)).attr("x2", this.xScale(max));
     }
-  },
-  _resizeDataWarning: function _resizeDataWarning() {
-    // reset font size to remove jumpy measurement
-    var dataWarningText = this.dataWarningEl.select("text").style("font-size", null);
-
-    // reduce font size if the caption doesn't fit
-    var dataWarningWidth = dataWarningText.node().getBBox().width + dataWarningText.node().getBBox().height * 3;
-    var remainingWidth = this.width - this.xTitleEl.node().getBBox().width - this.activeProfile.infoElHeight;
-    var font = parseInt(dataWarningText.style("font-size")) * remainingWidth / dataWarningWidth;
-    dataWarningText.style("font-size", dataWarningWidth > remainingWidth ? font + "px" : null);
-
-    // position the warning icon
-    var warnBB = dataWarningText.node().getBBox();
-    this.dataWarningEl.select("svg").attr("width", warnBB.height * 0.75).attr("height", warnBB.height * 0.75).attr("x", -warnBB.width - warnBB.height * 1.2).attr("y", -warnBB.height * 0.65);
-
-    this.dataWarningEl.attr("transform", "translate(" + (this.model.locale.isRTL() ? warnBB.width + warnBB.height : this.width) + "," + (this.height + this.activeProfile.margin.bottom - this.activeProfile.xAxisTitleBottomMargin) + ")");
   },
   updateMarkerSizeLimits: function updateMarkerSizeLimits() {
     var _this = this;
@@ -3488,7 +3462,7 @@ exports.default = Trail;
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Bubble Chart Component -->\n<div class=\"vzb-bubblechart\">\n    <svg class=\"vzb-bubblechart-svg vzb-export\">\n        <g class=\"vzb-bc-graph\">\n            <g class=\"vzb-bc-year\"></g>\n\n            <svg class=\"vzb-bc-axis-x\"><g></g></svg>\n            <svg class=\"vzb-bc-axis-y\"><g></g></svg>\n            <line class=\"vzb-bc-projection-x\"></line>\n            <line class=\"vzb-bc-projection-y\"></line>\n\n            <svg class=\"vzb-bc-bubbles-crop\">\n                <g class=\"vzb-zoom-selection\"></g>\n                <g class=\"vzb-bc-decorations\">\n                    <line class=\"vzb-bc-line-equal-xy vzb-invisible\"></line>\n                    <g class=\"vzb-bc-x-axis-groups\"></g>\n                </g>\n                <rect class=\"vzb-bc-eventarea\"></rect>\n                <g class=\"vzb-bc-trails\"></g>\n                <g class=\"vzb-bc-bubbles\"></g>\n                <g class=\"vzb-bc-lines\"></g>\n                <g class=\"vzb-bc-bubble-crown vzb-hidden\">\n                    <circle class=\"vzb-crown-glow\"></circle>\n                    <circle class=\"vzb-crown\"></circle>\n                </g>\n            </svg>\n\n            <g class=\"vzb-bc-axis-y-subtitle\"></g>\n            <g class=\"vzb-bc-axis-x-subtitle\"></g>\n            <g class=\"vzb-bc-axis-y-title\"></g>\n            <g class=\"vzb-bc-axis-x-title\"></g>\n            <g class=\"vzb-bc-axis-s-title\"></g>\n            <g class=\"vzb-bc-axis-c-title\"></g>\n\n            <g class=\"vzb-bc-axis-y-info vzb-noexport\"></g>\n            <g class=\"vzb-bc-axis-x-info vzb-noexport\"></g>\n\n            <svg class=\"vzb-bc-labels-crop\">\n                <g class=\"vzb-bc-labels\"></g>\n            </svg>\n\n            <g class=\"vzb-data-warning vzb-noexport\">\n                <svg></svg>\n                <text></text>\n            </g>\n\n            <rect class=\"vzb-bc-zoom-rect\"></rect>\n        </g>\n    </svg>\n    <svg>\n        <defs>\n            <filter id=\"vzb-glow-filter\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\">\n                <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"2\"></feGaussianBlur>\n            </filter>\n        </defs>\n    </svg>\n    <!-- This could possibly be another component -->\n    <div class=\"vzb-tooltip vzb-hidden vzb-tooltip-mobile\"></div>\n</div>\n";
+module.exports = "<!-- Bubble Chart Component -->\n<div class=\"vzb-bubblechart\">\n    <svg class=\"vzb-bubblechart-svg vzb-export\">\n        <g class=\"vzb-bc-graph\">\n            <g class=\"vzb-bc-year\"></g>\n\n            <svg class=\"vzb-bc-axis-x\"><g></g></svg>\n            <svg class=\"vzb-bc-axis-y\"><g></g></svg>\n            <line class=\"vzb-bc-projection-x\"></line>\n            <line class=\"vzb-bc-projection-y\"></line>\n\n            <svg class=\"vzb-bc-bubbles-crop\">\n                <g class=\"vzb-zoom-selection\"></g>\n                <g class=\"vzb-bc-decorations\">\n                    <line class=\"vzb-bc-line-equal-xy vzb-invisible\"></line>\n                    <g class=\"vzb-bc-x-axis-groups\"></g>\n                </g>\n                <rect class=\"vzb-bc-eventarea\"></rect>\n                <g class=\"vzb-bc-trails\"></g>\n                <g class=\"vzb-bc-bubbles\"></g>\n                <g class=\"vzb-bc-lines\"></g>\n                <g class=\"vzb-bc-bubble-crown vzb-hidden\">\n                    <circle class=\"vzb-crown-glow\"></circle>\n                    <circle class=\"vzb-crown\"></circle>\n                </g>\n            </svg>\n\n            <g class=\"vzb-bc-axis-y-subtitle\"></g>\n            <g class=\"vzb-bc-axis-x-subtitle\"></g>\n            <g class=\"vzb-bc-axis-y-title\"></g>\n            <g class=\"vzb-bc-axis-x-title\"></g>\n            <g class=\"vzb-bc-axis-s-title\"></g>\n            <g class=\"vzb-bc-axis-c-title\"></g>\n\n            <g class=\"vzb-bc-axis-y-info vzb-noexport\"></g>\n            <g class=\"vzb-bc-axis-x-info vzb-noexport\"></g>\n\n            <svg class=\"vzb-bc-labels-crop\">\n                <g class=\"vzb-bc-labels\"></g>\n            </svg>\n\n                <svg></svg>\n                <text></text>\n            </g>\n\n            <rect class=\"vzb-bc-zoom-rect\"></rect>\n        </g>\n    </svg>\n    <svg>\n        <defs>\n            <filter id=\"vzb-glow-filter\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\">\n                <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"2\"></feGaussianBlur>\n            </filter>\n        </defs>\n    </svg>\n    <!-- This could possibly be another component -->\n    <div class=\"vzb-tooltip vzb-hidden vzb-tooltip-mobile\"></div>\n</div>\n";
 
 /***/ }),
 /* 7 */
