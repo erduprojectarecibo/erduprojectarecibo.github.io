@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+    <div id="dchart09"></div>
+</body>
+
+<style>
+
+    body {
+        height:100%;
+        width:100%;
+    }
+
+    #pchart04 {
+        width:90%;
+        height:100%;
+        margin-left:2.5%;
+    }
+
+
+    h2 {
+        margin-bottom:-12px;
+        text-align:center;
+        font-family: Helvetica, sans-serif
+    }
+
+    h3 {
+        text-align:center;
+        font-family: Helvetica, sans-serif;
+        margin-bottom:-3px;
+    }
+</style>
+
+<script>
+(function (H) {
+
+var pendingRenders = [];
+
+function isElementInViewport(el) {
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (
+            window.innerHeight ||
+            document.documentElement.clientHeight
+        ) &&
+        rect.right <= (
+            window.innerWidth ||
+            document.documentElement.clientWidth
+        )
+    );
+}
+
+H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+    var series = this,
+        renderTo = this.chart.container.parentNode;
+
+    // It is appeared, render it
+    if (isElementInViewport(renderTo) || !series.options.animation) {
+        proceed.call(series);
+
+        // It is not appeared, halt rendering until appear
+    } else {
+        pendingRenders.push({
+            element: renderTo,
+            appear: function () {
+                proceed.call(series);
+            }
+        });
+    }
+});
+
+function recalculate() {
+    pendingRenders.forEach(function (item) {
+        if (isElementInViewport(item.element)) {
+            item.appear();
+            H.erase(pendingRenders, item);
+        }
+    });
+}
+
+if (window.addEventListener) {
+    ['DOMContentLoaded', 'load', 'scroll', 'resize']
+    .forEach(function (eventType) {
+        addEventListener(eventType, recalculate, false);
+    });
+}
+
+}(Highcharts));
+
+
+
+Highcharts.setOptions({
+lang: {
+    thousandsSep: ','
+},
+chart: {
+
+    backgroundColor: '#FFF',
+},
+
+legend: {
+    itemStyle: {
+        color: '#000'
+    },
+    itemHiddenStyle: {
+        color: '#777'
+    },
+    itemHoverStyle: {
+        color: '#777'
+    },
+    symbolRadius: 0
+},
+
+title: {
+    style: {
+        color: '#22292F',
+        fill: '#22292F',
+        fontWeight: 'bold'
+    }
+},
+
+subtitle: {
+    style: {
+        color: '#8795A1',
+        fill: '#8795A1',
+        fontWeight: 'bold'
+    }
+},
+
+yAxis: {
+    title: {
+        style: {
+            color: '#B8C2CC'
+        }
+    },
+
+
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+
+xAxis: {
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+exporting: {
+        buttons: {
+            contextButton: {
+                x: -60,
+            }
+        }
+    },
+
+credits: {
+    enabled: false
+},
+
+tooltip: {
+    backgroundColor: "#FFF",
+    borderColor: '#000',
+    valueDecimals: 1,
+    style: {
+        opacity: 0.86
+    },
+    shared: true
+
+},
+ 
+plotOptions: {
+    series: {
+        lineWidth: 5,
+        animation: {
+            duration: 5000
+        }
+    },
+},
+
+});
+
+Highcharts.chart('dchart09', {
+
+chart: {
+    type: 'line',
+    zoomType: 'x',
+},
+
+title: {
+    text: 'Gráfica 9: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, Bahamas, Jamaica y Santa Lucía (1990-2017)',
+},
+
+xAxis: {
+    categories: ['1990', '1991', '1992', '1993', '1994', '1995',
+        '1996', '1997', '1998', '1999', '2000',
+        '2002', '2003', '2004', '2005', '2006',
+        '2007', '2008', '2009', '2010', '2011',
+        '2012', '2013', '2014', '2015', '2016', '2017'
+    ],
+},
+
+yAxis: {
+    title: {
+        text: 'Tasa Asesinatos por cada 100,000 habitantes',
+    },
+    min: 0,
+    max: 70,
+    gridLineWidth: 0,
+},
+
+plotOptions: {
+    series: {
+        label: {
+            enabled: false,
+            connectorAllowed: false,
+        },
+    }
+},
+
+tooltip: {
+    shared: true
+},
+
+series: [{
+    name: 'Tasa Bahamas',
+    data: [
+        17.6, 10.7, 15.4, 12.9, 18.8, 14.3, 18, 16, null, null, 24.8, 16.8, 15.8, 13.6, 15.8, 18.2, 22.8, 20.9, 24.5, 26.1, 34.6, 29.8, 31.5, 32.4, 37.7, 28.4, 30.9
+    ],
+    color: '#2a8e40',
+    animation: {
+        enabled: true,
+        duration: 6000,
+        easing: 'linear'
+    },
+}, {
+    name: 'Tasa Jamaica',
+    data: [
+        22.4, 23.2, 25.6, 26.4, 27.5, 30.7, 36.1, 40.1, 32.9, 32.4, 33.4, 38.8, 35.9, 53.9, 61, 48.5, 57.1, 58, 60, 51.4, 40, 38.7, 42.1, 35.1, 42.1, 47, 57
+    ],
+    animation: {
+        enabled: true,
+        duration: 8000,
+        easing: 'linear'
+    },
+}, {
+    name: 'Tasa Santa Lucía',
+    data: [
+        10.1, 7.1, 9.9, 5.6, 6.9, 10.9, 8.1, 8.6, 9.1, 10.3, 14.7, 26.3, 22.4, 22.8, 25, 26, 17.3, 23, 22.8, 25.5, 26.5, 22.3, 18.8, 19.3, 15.8, 16.9, 29.6
+    ],
+    color: "#FEDA35",
+    animation: {
+        enabled: true,
+        duration: 10000,
+        easing: 'linear'
+    },
+}, {
+    name: 'Tasa Puerto Rico',
+    data: [
+        17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+    ],
+    color: 'black',
+    animation: {
+        enabled: true,
+        duration: 10000,
+        easing: 'linear'
+    },
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+});
+
+</script>
+</html>
