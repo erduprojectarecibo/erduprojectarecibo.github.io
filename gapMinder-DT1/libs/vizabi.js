@@ -1029,10 +1029,10 @@ var warn = exports.warn = function warn(message) {
   message = Array.prototype.slice.call(arguments).map(function (m) {
     return m instanceof Object ? JSON.stringify(m, null, 4) : m;
   }).join(" ");
-  if (console && typeof console.warn === "function") {
+  // if (console && typeof console.warn === "function") {
 
-    console.warn(message);
-  }
+  //   console.warn(message);
+  // }
   // "return true" is needed to find out if a parent function is exited with warning
   // example:
   // myfunction = function() { if(brokenstuff) return utils.warn("broken stuff found") }
@@ -1770,9 +1770,9 @@ var getProp = exports.getProp = function getProp(object, props, defaultValue) {
   return object;
 };
 
-var px2num = exports.px2num = function px2num(pixels) {
-  return isString(pixels) && pixels.endsWith("px") ? parseFloat(pixels) : console.warn("Strange pixels value: " + pixels) || pixels;
-};
+// var px2num = exports.px2num = function px2num(pixels) {
+//   return isString(pixels) && pixels.endsWith("px") ? parseFloat(pixels) : /*console.warn("Strange pixels value: " + pixels)*/ || pixels;
+// };
 
 var replaceNumberSpacesToNonBreak = exports.replaceNumberSpacesToNonBreak = function replaceNumberSpacesToNonBreak(numString) {
   return numString ? numString.replace(/\d{1,3}(?: \d{3})+(?=\W)/g, function (match) {
@@ -3900,7 +3900,7 @@ var Hook = _dataconnected2.default.extend({
    * @returns {Array} domain
    */
   getScale: function getScale() {
-    if (this.scale == null) console.warn("scale is null");
+    // if (this.scale == null) console.warn("scale is null");
     return this.scale;
   },
 
@@ -9729,7 +9729,7 @@ var requireAll = function requireAll(_require, depth) {
       var required = _require(key);
       result[name] = required.default || required;
     } catch (err) {
-      console.warn("Import error", key, err);
+      // console.warn("Import error", key, err);
     }
 
     return result;
@@ -14877,7 +14877,7 @@ function genericLog() {
             _addSubdomain(start, eps);
             start = eps;
           } else {
-            console.warn("Something wrong while build subdomains: " + start + " " + end);
+            // console.warn("Something wrong while build subdomains: " + start + " " + end);
             start = end;
           }
         }
@@ -17551,7 +17551,7 @@ var ColorPicker = function () {
       }
 
       if (this._svg == null) {
-        console.warn("Color picker is missing SVG element. Was init sequence performed?");
+        // console.warn("Color picker is missing SVG element. Was init sequence performed?");
       }
 
       this._showColorPicker = arg == "toggle" ? !this._showColorPicker : arg;
@@ -17641,7 +17641,7 @@ var ColorPicker = function () {
       }
 
       if (this._svg == null) {
-        console.warn("Color picker is missing SVG element. Was init sequence performed?");
+        // console.warn("Color picker is missing SVG element. Was init sequence performed?");
       }
 
       this._svg.select("." + css.COLOR_DEFAULT).style("fill", this._colorDef);
@@ -17667,7 +17667,7 @@ var ColorPicker = function () {
       this._colorOld = arg;
 
       if (this._svg == null) {
-        console.warn("Color picker is missing SVG element. Was init sequence performed?");
+        // console.warn("Color picker is missing SVG element. Was init sequence performed?");
       }
 
       this._svg.select("rect." + css.COLOR_SAMPLE).style("fill", this._colorOld);
@@ -30788,19 +30788,19 @@ function collisionResolver() {
     // MAINN FUNCTION. RUN COLLISION RESOLVER ON A GROUP g
     function resolver(g) {
       if (selector == null) {
-        console.warn("D3 collision resolver stopped: missing a CSS slector");
+        // console.warn("D3 collision resolver stopped: missing a CSS slector");
         return;
       }
       if (height == null) {
-        console.warn("D3 collision resolver stopped: missing height of the canvas");
+        // console.warn("D3 collision resolver stopped: missing height of the canvas");
         return;
       }
       if (value == null) {
-        console.warn("D3 collision resolver stopped: missing pointer within data objects. Example: value = 'valueY' ");
+        // console.warn("D3 collision resolver stopped: missing pointer within data objects. Example: value = 'valueY' ");
         return;
       }
       if (KEY == null) {
-        console.warn("D3 collision resolver stopped: missing a key for data. Example: key = 'geo' ");
+        // console.warn("D3 collision resolver stopped: missing a key for data. Example: key = 'geo' ");
         return;
       }
       labelHeight = g.node().getBBox().height * 0.8;
