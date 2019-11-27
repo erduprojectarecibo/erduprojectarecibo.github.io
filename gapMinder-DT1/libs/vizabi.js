@@ -1770,9 +1770,9 @@ var getProp = exports.getProp = function getProp(object, props, defaultValue) {
   return object;
 };
 
-// var px2num = exports.px2num = function px2num(pixels) {
-//   return isString(pixels) && pixels.endsWith("px") ? parseFloat(pixels) : /*console.warn("Strange pixels value: " + pixels)*/ || pixels;
-// };
+var px2num = exports.px2num = function px2num(pixels) {
+  return isString(pixels) && pixels.endsWith("px");
+};
 
 var replaceNumberSpacesToNonBreak = exports.replaceNumberSpacesToNonBreak = function replaceNumberSpacesToNonBreak(numString) {
   return numString ? numString.replace(/\d{1,3}(?: \d{3})+(?=\W)/g, function (match) {
