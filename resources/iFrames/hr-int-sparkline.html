@@ -111,6 +111,160 @@ thead th {
 </table>
 
 <script>
+/**
+ * Highcharts plugin to defer initial series animation until the element has
+ * appeared.
+ *
+ * @todo
+ * - If the element is greater than the viewport (or a certain fraction of it),
+ *   show the series when it is partially visible.
+ */
+ (function (H) {
+
+var pendingRenders = [];
+
+function isElementInViewport(el) {
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (
+            window.innerHeight ||
+            document.documentElement.clientHeight
+        ) &&
+        rect.right <= (
+            window.innerWidth ||
+            document.documentElement.clientWidth
+        )
+    );
+}
+
+H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+    var series = this,
+        renderTo = this.chart.container.parentNode;
+
+    // It is appeared, render it
+    if (isElementInViewport(renderTo) || !series.options.animation) {
+        proceed.call(series);
+
+        // It is not appeared, halt rendering until appear
+    } else {
+        pendingRenders.push({
+            element: renderTo,
+            appear: function () {
+                proceed.call(series);
+            }
+        });
+    }
+});
+
+function recalculate() {
+    pendingRenders.forEach(function (item) {
+        if (isElementInViewport(item.element)) {
+            item.appear();
+            H.erase(pendingRenders, item);
+        }
+    });
+}
+
+if (window.addEventListener) {
+    ['DOMContentLoaded', 'load', 'scroll', 'resize']
+    .forEach(function (eventType) {
+        addEventListener(eventType, recalculate, false);
+    });
+}
+
+}(Highcharts));
+
+
+Highcharts.setOptions({
+lang: {
+    thousandsSep: ','
+},
+chart: {
+
+    backgroundColor: '#FFF',
+},
+
+legend: {
+    itemStyle: {
+        color: '#000'
+    },
+    itemHiddenStyle: {
+        color: '#777'
+    },
+    itemHoverStyle: {
+        color: '#777'
+    }
+},
+
+title: {
+    style: {
+        color: '#22292F',
+        fill: '#22292F',
+        fontWeight: 'bold'
+    }
+},
+
+subtitle: {
+    style: {
+        color: '#8795A1',
+        fill: '#8795A1',
+        fontWeight: 'bold'
+    }
+},
+
+yAxis: {
+    title: {
+        style: {
+            color: 'black'
+        }
+    },
+
+
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+xAxis: {
+    labels: {
+        style: {
+            color: '#606F7B',
+        }
+    }
+},
+
+credits: {
+    enabled: false
+},
+
+tooltip: {
+    backgroundColor: "#FFF",
+    borderColor: '#000',
+    valueDecimals: 0,
+    style: {
+        opacity: 0.86
+    },
+
+    shared: true
+
+},
+
+plotOptions: {
+    series: {
+        lineWidth: 5,
+        animation: {
+            duration: 6000
+        }
+    },
+},
+});
+
     /**
  * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
  * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
