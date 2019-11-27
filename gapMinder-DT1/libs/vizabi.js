@@ -1029,10 +1029,10 @@ var warn = exports.warn = function warn(message) {
   message = Array.prototype.slice.call(arguments).map(function (m) {
     return m instanceof Object ? JSON.stringify(m, null, 4) : m;
   }).join(" ");
-  // if (console && typeof console.warn === "function") {
+  if (console && typeof console.warn === "function") {
 
-  //   console.warn(message);
-  // }
+    // console.warn(message);
+  }
   // "return true" is needed to find out if a parent function is exited with warning
   // example:
   // myfunction = function() { if(brokenstuff) return utils.warn("broken stuff found") }
