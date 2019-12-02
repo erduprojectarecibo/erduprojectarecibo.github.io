@@ -3296,7 +3296,7 @@ $(document).ready(function () {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
-    Highcharts.chart('dchart08', {
+    var t08 = Highcharts.chart('dchart08', {
 
         chart: {
             type: 'line',
@@ -3401,7 +3401,7 @@ $(document).ready(function () {
 
 $('pdiv1').bind('click', function() {
     if ($('pdiv1'+$('pdiv1').attr('target')).attr('state') == 'open') {
-        $('dchart08').update({
+        t08.update({
             series: [{
             name: 'Tasa Brasil',
             data: [],
@@ -3441,7 +3441,7 @@ $('pdiv1').bind('click', function() {
         })
     }
     else {
-        $('dchart08').update({
+        t08.update({
         series: [{
             name: 'Tasa Brasil',
             data: [
