@@ -3400,7 +3400,7 @@ $(document).ready(function () {
     });
 
 $('pdiv1').bind('click', function() {
-    chart.redraw();
+    $('dchart08').highcharts().redraw();
   });
 });
 
