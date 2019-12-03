@@ -3401,92 +3401,10 @@ $(document).ready(function () {
 
 $('pdiv1').bind('click', function() {
     if ($('pdiv1'+$('pdiv1').attr('target')).attr('state') == 'open') {
-        t08.update({
-            series: [{
-            name: 'Tasa Brasil',
-            data: [],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Colombia',
-            data: [],
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Venezuela',
-            data: [],
-            color: '#FEDA35',
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Puerto Rico',
-            data: [],
-            color: 'black',
-            animation: {
-                enabled: true,
-                duration: 12000,
-                easing: 'linear'
-            },
-        }]
-        })
+        console.log('closing');
     }
     else {
-        t08.update({
-        series: [{
-            name: 'Tasa Brasil',
-            data: [
-                19.6, 18.5, 16.8, 17.8, 18.7, 20.9, 21.6, 22.2, 22.6, 22.8, 23.7, 25.3, 25.7, 24, 23.3, 23.9, 23.4, 23.8, 22.8, 22, 24.2, 26.5, 26.8, 28.6, 28.4, 29.7, 30.5
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Colombia',
-            data: [
-                71, 81.4, 79.3, 78.6, 73.5, 59.6, 61.4, 60, 58.8, 61.2, 65.7, 68.3, 55.8, 47.3, 41.8, 39.9, 38.8, 35.9, 34.8, 33.7, 34.8, 35.1, 32.6, 27.9, 26.5, 25.5, 24.9
-            ],
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Venezuela',
-            data: [
-                12.5, 12.3, 15.7, 20.2, 21.8, 20.2, 21.9, 18.3, 19.3, 24.9, 32.8, 37.8, 43.8, 36.9, 37.2, 45, 47.5, 51.8, 48.9, 45.1, 47.8, 53.8, null, 61.9, null, 56.3, null
-            ],
-            color: '#FEDA35',
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Puerto Rico',
-            data: [
-                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
-            ],
-            color: 'black',
-            animation: {
-                enabled: true,
-                duration: 12000,
-                easing: 'linear'
-            },
-        }]
-        })
+        console.log('opening');
     }
   });
 });
