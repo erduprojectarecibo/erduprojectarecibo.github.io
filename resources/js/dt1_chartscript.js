@@ -3414,7 +3414,9 @@ $('#pdiv1').bind('click', function() {
             },
         }, {
             name: 'Tasa Colombia',
-            data: [],
+            data: [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+            ],
             animation: {
                 enabled: true,
                 duration: 8000,
@@ -3422,7 +3424,9 @@ $('#pdiv1').bind('click', function() {
             },
         }, {
             name: 'Tasa Venezuela',
-            data: [],
+            data: [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+            ],
             color: '#FEDA35',
             animation: {
                 enabled: true,
@@ -3431,7 +3435,9 @@ $('#pdiv1').bind('click', function() {
             },
         }, {
             name: 'Tasa Puerto Rico',
-            data: [],
+            data: [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+            ],
             color: 'black',
             animation: {
                 enabled: true,
