@@ -3399,13 +3399,8 @@ $(document).ready(function () {
         }
     });
 
-$('pdiv1').bind('click', function() {
-    if ($('pdiv1').attr('state') == 'open') {
-        console.log('closing');
-    }
-    else {
-        console.log('opening');
-    }
+$('#pdiv1').bind('click', function() {
+           console.log('opening');
   });
 });
 
