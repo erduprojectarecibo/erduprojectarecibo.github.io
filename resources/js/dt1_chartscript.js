@@ -3400,57 +3400,8 @@ $(document).ready(function () {
     });
 
 $('#pdiv1').bind('click', function() {
-    if ($('#pdiv1').attr('state') == 'closed') {
-            console.log('opening');
-            t08.update({
-            series: [{
-            name: 'Tasa Brasil',
-            data: [],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Colombia',
-            data: [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            ],
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Venezuela',
-            data: [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            ],
-            color: '#FEDA35',
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Puerto Rico',
-            data: [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            ],
-            color: 'black',
-            animation: {
-                enabled: true,
-                duration: 12000,
-                easing: 'linear'
-            },
-        }]
-        });
-        console.log('opening done');
-    }
-    else{
-           console.log('closing');
-           t08.update({
+  console.log('opening');
+  	t08.update({
 			series: [{
             name: 'Tasa Brasil',
             data: [
@@ -3496,8 +3447,7 @@ $('#pdiv1').bind('click', function() {
             },
         }]
         });
-        console.log('closing done');
-    }
+  console.log('opening done');
   });
 });
 
