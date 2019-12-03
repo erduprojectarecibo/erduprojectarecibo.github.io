@@ -3400,7 +3400,12 @@ $(document).ready(function () {
     });
 
 $('#pdiv1').bind('click', function() {
+    if ($('pdiv1').attr('state') == 'closed') {
            console.log('opening');
+    }
+    else{
+           console.log('closing');
+    }
   });
 });
 
