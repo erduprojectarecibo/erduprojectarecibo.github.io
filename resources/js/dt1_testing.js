@@ -3455,45 +3455,24 @@ $('#pdiv1').bind('click', function() {
  	t08.update({
              series: [{
              name: 'Tasa Brasil',
-             data: [],
-             color: '#2a8e40',
-             animation: {
-                 enabled: true,
-                 duration: 6000,
-                 easing: 'linear'
-             },
+             data: [
+                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+             ]
          }, {
              name: 'Tasa Colombia',
              data: [
                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-             ],
-             animation: {
-                 enabled: true,
-                 duration: 8000,
-                 easing: 'linear'
-             },
+             ]
          }, {
              name: 'Tasa Venezuela',
              data: [
                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-             ],
-             color: '#FEDA35',
-             animation: {
-                 enabled: true,
-                 duration: 10000,
-                 easing: 'linear'
-             },
+             ]
          }, {
              name: 'Tasa Puerto Rico',
              data: [
                  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-             ],
-             color: 'black',
-             animation: {
-                 enabled: true,
-                 duration: 12000,
-                 easing: 'linear'
-             },
+             ]
          }]
          });  
  	console.log('closing done');
