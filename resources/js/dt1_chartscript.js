@@ -3296,7 +3296,7 @@ $(document).ready(function () {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
-    var t08 = Highcharts.chart('#dchart08', {
+    var t08 = Highcharts.chart('dchart08', {
 
         chart: {
             type: 'line',
