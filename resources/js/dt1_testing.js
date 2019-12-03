@@ -3418,7 +3418,7 @@ $('#pdiv1').bind('click', function() {
              t08.series[1].setData(tc, false);
              t08.series[2].setData(tv, false);
              t08.series[3].setData(tpr, false);
-             t08.highcharts().redraw();
+             t08.redraw();
        
    	console.log('opening done');
    }
@@ -3431,7 +3431,7 @@ $('#pdiv1').bind('click', function() {
              t08.series[1].setData(tg, false);
              t08.series[2].setData(tg, false);
              t08.series[3].setData(tg, false);
-             t08.highcharts().redraw();
+             t08.redraw();
        
  	console.log('closing done');
    }
