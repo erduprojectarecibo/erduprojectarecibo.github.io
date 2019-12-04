@@ -3424,9 +3424,7 @@ $('#pdiv1').bind('click', function() {
    }
    else{
  	console.log($('#pdiv1').attr('state'));
- 	  var tg = [
-                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-             ];
+ 	  var tg = [ ];
              t08.series[0].setData(tg, false);
              t08.series[1].setData(tg, false);
              t08.series[2].setData(tg, false);
