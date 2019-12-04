@@ -3405,8 +3405,6 @@ $('#pdiv1').bind('click', function() {
             }
        }, false);
        t08.redraw();
-       
-   	console.log('opening done');
    }
    else{
              t08.series[3].remove();
@@ -3414,8 +3412,6 @@ $('#pdiv1').bind('click', function() {
              t08.series[1].remove();
              t08.series[0].remove();
              t08.redraw();
-       
- 	console.log('closing done');
    }
   });
 });
@@ -3427,7 +3423,7 @@ $('#pdiv1').bind('click', function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
-    Highcharts.chart('dchart09', {
+    var t09 = Highcharts.chart('dchart09', {
 
         chart: {
             type: 'line',
@@ -3469,52 +3465,6 @@ $(document).ready(function () {
             shared: true
         },
 
-        series: [{
-            name: 'Tasa Bahamas',
-            data: [
-                17.6, 10.7, 15.4, 12.9, 18.8, 14.3, 18, 16, null, null, 24.8, 16.8, 15.8, 13.6, 15.8, 18.2, 22.8, 20.9, 24.5, 26.1, 34.6, 29.8, 31.5, 32.4, 37.7, 28.4, 30.9
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Jamaica',
-            data: [
-                22.4, 23.2, 25.6, 26.4, 27.5, 30.7, 36.1, 40.1, 32.9, 32.4, 33.4, 38.8, 35.9, 53.9, 61, 48.5, 57.1, 58, 60, 51.4, 40, 38.7, 42.1, 35.1, 42.1, 47, 57
-            ],
-            color: '#87cefa',
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Santa Lucía',
-            data: [
-                10.1, 7.1, 9.9, 5.6, 6.9, 10.9, 8.1, 8.6, 9.1, 10.3, 14.7, 26.3, 22.4, 22.8, 25, 26, 17.3, 23, 22.8, 25.5, 26.5, 22.3, 18.8, 19.3, 15.8, 16.9, 29.6
-            ],
-            color: "#FEDA35",
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Puerto Rico',
-            data: [
-                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
-            ],
-            color: 'black',
-            animation: {
-                enabled: true,
-                duration: 10000,
-                easing: 'linear'
-            },
-        }],
-
         responsive: {
             rules: [{
                 condition: {
@@ -3530,7 +3480,68 @@ $(document).ready(function () {
             }]
         }
     });
-})
+    
+$('#pdiv2').bind('click', function() {
+   if ($('#pdiv2').attr('state') == 'closed') {
+       t09.addSeries({
+            name: 'Tasa Bahamas',
+            data: [
+                17.6, 10.7, 15.4, 12.9, 18.8, 14.3, 18, 16, null, null, 24.8, 16.8, 15.8, 13.6, 15.8, 18.2, 22.8, 20.9, 24.5, 26.1, 34.6, 29.8, 31.5, 32.4, 37.7, 28.4, 30.9
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Jamaica',
+            data: [
+                22.4, 23.2, 25.6, 26.4, 27.5, 30.7, 36.1, 40.1, 32.9, 32.4, 33.4, 38.8, 35.9, 53.9, 61, 48.5, 57.1, 58, 60, 51.4, 40, 38.7, 42.1, 35.1, 42.1, 47, 57
+            ],
+            color: '#87cefa',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Santa Lucía',
+            data: [
+                10.1, 7.1, 9.9, 5.6, 6.9, 10.9, 8.1, 8.6, 9.1, 10.3, 14.7, 26.3, 22.4, 22.8, 25, 26, 17.3, 23, 22.8, 25.5, 26.5, 22.3, 18.8, 19.3, 15.8, 16.9, 29.6
+            ],
+            color: "#FEDA35",
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Puerto Rico',
+            data: [
+                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+            ],
+            color: 'black',
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.redraw();
+   }
+   else{
+             t09.series[3].remove();
+             t09.series[2].remove();
+             t09.series[1].remove();
+             t09.series[0].remove();
+             t09.redraw();
+   }
+  });
+});
 
 /* ********************************************************************************************************************************************** */
 
