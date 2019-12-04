@@ -3429,7 +3429,7 @@ $('#pdiv1').bind('click', function() {
              t08.series[1].setData(tg, false);
              t08.series[2].setData(tg, false);
              t08.series[3].setData(tg, false);
-             t08.redraw();
+             t08.redraw(true);
        
  	console.log('closing done');
    }
