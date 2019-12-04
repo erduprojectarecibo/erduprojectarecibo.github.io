@@ -3550,7 +3550,7 @@ $('#pdiv2').bind('click', function() {
 /* ********************************************************************************************************************************************** */
 
 $(document).ready(function () {
-    Highcharts.chart('dchart10', {
+    var t10 = Highcharts.chart('dchart10', {
 
         chart: {
             type: 'line',
@@ -3591,53 +3591,7 @@ $(document).ready(function () {
         tooltip: {
             shared: true
         },
-
-        series: [{
-            name: 'Tasa El Salvador',
-            data: [
-                null, null, null, null, 138.4, 142.2, 119.7, 114.8, 96.6, 66, 60.5, 47.7, 56.2, 64.9, 64.4, 64.8, 57.5, 52, 71.4, 64.7, 70.6, 41.7, 40.2, 62.4, 105.4, 83.1, 61.8
-            ],
-            color: '#2a8e40',
-            animation: {
-                enabled: true,
-                duration: 6000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Honduras',
-            data: [
-                10, 13.8, 18.2, 23.2, 30.3, 26.9, null, null, null, 40.3, 48.7, 52.8, 57.9, 50.5, 43.6, 41.3, 46.5, 56.6, 65.7, 76.1, 85.1, 84.3, 74.3, 66.9, 57.5, 56.5, 41.7
-            ],
-            color: '#87cefa',
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa México',
-            data: [
-                17, 17.4, 18.7, 17.7, 17.2, 16.6, 15.2, 13.9, 13.8, 12.2, 10.6, 9.7, 9.5, 8.7, 9.1, 9.5, 7.9, 12.3, 17.1, 22, 22.9, 21.5, 18.8, 16.1, 16.5, 19.3, 24.8
-            ],
-            color: "#FEDA35",
-            animation: {
-                enabled: true,
-                duration: 8000,
-                easing: 'linear'
-            },
-        }, {
-            name: 'Tasa Puerto Rico',
-            data: [
-                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
-            ],
-            color: 'black',
-            animation: {
-                enabled: true,
-                duration: 14000,
-                easing: 'linear'
-            },
-        }],
-
+        
         responsive: {
             rules: [{
                 condition: {
@@ -3653,4 +3607,65 @@ $(document).ready(function () {
             }]
         }
     });
+    
+$('#pdiv3').bind('click', function() {
+   if ($('#pdiv3').attr('state') == 'closed') {
+       t10.addSeries({
+            name: 'Tasa El Salvador',
+            data: [
+                null, null, null, null, 138.4, 142.2, 119.7, 114.8, 96.6, 66, 60.5, 47.7, 56.2, 64.9, 64.4, 64.8, 57.5, 52, 71.4, 64.7, 70.6, 41.7, 40.2, 62.4, 105.4, 83.1, 61.8
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa Honduras',
+            data: [
+                10, 13.8, 18.2, 23.2, 30.3, 26.9, null, null, null, 40.3, 48.7, 52.8, 57.9, 50.5, 43.6, 41.3, 46.5, 56.6, 65.7, 76.1, 85.1, 84.3, 74.3, 66.9, 57.5, 56.5, 41.7
+            ],
+            color: '#87cefa',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa México',
+            data: [
+                17, 17.4, 18.7, 17.7, 17.2, 16.6, 15.2, 13.9, 13.8, 12.2, 10.6, 9.7, 9.5, 8.7, 9.1, 9.5, 7.9, 12.3, 17.1, 22, 22.9, 21.5, 18.8, 16.1, 16.5, 19.3, 24.8
+            ],
+            color: "#FEDA35",
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa Puerto Rico',
+            data: [
+                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+            ],
+            color: 'black',
+            animation: {
+                enabled: true,
+                duration: 14000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.redraw();
+   }
+   else{
+             t10.series[3].remove();
+             t10.series[2].remove();
+             t10.series[1].remove();
+             t10.series[0].remove();
+             t10.redraw();
+   }
+  });
 })
