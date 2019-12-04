@@ -3400,7 +3400,7 @@ $(document).ready(function () {
     });
 
 $('#pdiv1').bind('click', function() {
-   if ($('#pdiv1').attr('state') == 'closed' and $('#pdiv1').attr('count') != '0') {
+   if ($('#pdiv1').attr('state') == 'closed' && $('#pdiv1').attr('count') != '0') {
        t08.addSeries({
             name: 'Tasa Brasil',
             data: [
@@ -3452,7 +3452,7 @@ $('#pdiv1').bind('click', function() {
        
    	console.log('opening done');
    }
-   else if($('#pdiv1').attr('state') == 'closed' and $('#pdiv1').attr('count') == '0'){      
+   else if($('#pdiv1').attr('state') == 'closed' && $('#pdiv1').attr('count') == '0'){      
    }
    else{
              t08.series[3].remove();
