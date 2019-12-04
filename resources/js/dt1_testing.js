@@ -3401,7 +3401,7 @@ $(document).ready(function () {
 
 $('#pdiv1').bind('click', function() {
    if ($('#pdiv1').attr('state') == 'closed') {
- 	console.log('opening');
+ 	console.log($('#pdiv1').attr('state'));
              var tb = [
                  19.6, 18.5, 16.8, 17.8, 18.7, 20.9, 21.6, 22.2, 22.6, 22.8, 23.7, 25.3, 25.7, 24, 23.3, 23.9, 23.4, 23.8, 22.8, 22, 24.2, 26.5, 26.8, 28.6, 28.4, 29.7, 30.5
              ];
@@ -3423,7 +3423,7 @@ $('#pdiv1').bind('click', function() {
    	console.log('opening done');
    }
    else{
- 	console.log('closing');
+ 	console.log($('#pdiv1').attr('state'));
  	  var tg = [
                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
              ];
