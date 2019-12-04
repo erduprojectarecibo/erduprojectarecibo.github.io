@@ -3401,10 +3401,6 @@ $(document).ready(function () {
 
 $('#pdiv1').bind('click', function() {
    if ($('#pdiv1').attr('state') == 'closed') {
-       t08.series[3].remove();
-       t08.series[2].remove();
-       t08.series[1].remove();
-       t08.series[0].remove();
        t08.addSeries({
             name: 'Tasa Brasil',
             data: [
@@ -3474,12 +3470,16 @@ $('#pdiv1').bind('click', function() {
    	console.log('opening done');
    }
    else{
- 	  var tg = [ ];
-             t08.series[0].setData(tg, false);
-             t08.series[1].setData(tg, false);
-             t08.series[2].setData(tg, false);
-             t08.series[3].setData(tg, false);
-             t08.redraw(false);
+//  	         var tg = [ ];
+//              t08.series[0].setData(tg, false);
+//              t08.series[1].setData(tg, false);
+//              t08.series[2].setData(tg, false);
+//              t08.series[3].setData(tg, false);
+             t08.series[3].remove();
+             t08.series[2].remove();
+             t08.series[1].remove();
+             t08.series[0].remove();
+             t08.redraw();
        
  	console.log('closing done');
    }
