@@ -3411,7 +3411,7 @@ $('#pdiv1').bind('click', function() {
              t08.series[2].remove();
              t08.series[1].remove();
              t08.series[0].remove();
-             t08.redraw();
+//              t08.redraw();
    }
   });
 });
@@ -3538,7 +3538,7 @@ $('#pdiv2').bind('click', function() {
              t09.series[2].remove();
              t09.series[1].remove();
              t09.series[0].remove();
-             t09.redraw();
+//              t09.redraw();
    }
   });
 });
@@ -3665,7 +3665,7 @@ $('#pdiv3').bind('click', function() {
              t10.series[2].remove();
              t10.series[1].remove();
              t10.series[0].remove();
-             t10.redraw();
+//              t10.redraw();
    }
   });
 })
