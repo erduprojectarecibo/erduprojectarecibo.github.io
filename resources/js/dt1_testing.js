@@ -3073,7 +3073,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 6: Comparación cronológica tasa de delitos tipo 1 de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 6: Comparación cronológica tasa de delitos tipo 1 de Florida, Nueva York y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
@@ -3189,7 +3189,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 7: Comparación cronológica tasa de asesinatos y homicidios de Nueva York, Florida y Puerto Rico (1965-2016)',
+            text: 'Gráfica 7: Comparación cronológica tasa de asesinatos y homicidios de Florida, Nueva York y Puerto Rico (1965-2016)',
         },
 
         xAxis: {
@@ -3304,7 +3304,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, Brasil, Colombia y Venezuela (1990-2017)',
+            text: 'Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de <br>Brasil, Colombia, Venezuela y Puerto Rico (1990-2017)',
         },
 
         xAxis: {
@@ -3397,7 +3397,7 @@ $('#pdiv1').bind('click', function() {
             data: [
                 17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
             ],
-            color: 'black',
+            color: 'red',
             animation: {
                 enabled: true,
                 duration: 12000,
@@ -3431,7 +3431,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 9: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, Bahamas, Jamaica y Santa Lucía (1990-2017)',
+            text: 'Gráfica 9: Comparación cronológica tasa de asesinatos y homicidios de <br>Bahamas, Jamaica, Santa Lucía y Puerto Rico (1990-2017)',
         },
 
         xAxis: {
@@ -3524,7 +3524,7 @@ $('#pdiv2').bind('click', function() {
             data: [
                 17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
             ],
-            color: 'black',
+            color: 'red',
             animation: {
                 enabled: true,
                 duration: 10000,
@@ -3558,7 +3558,7 @@ $(document).ready(function () {
         },
 
         title: {
-            text: 'Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de <br>Puerto Rico, El Salvador, Honduras y México (1990-2017)',
+            text: 'Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de <br>El Salvador, Honduras, México y Puerto Rico (1990-2017)',
         },
 
         xAxis: {
@@ -3651,7 +3651,7 @@ $('#pdiv3').bind('click', function() {
             data: [
                 17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
             ],
-            color: 'black',
+            color: 'red',
             animation: {
                 enabled: true,
                 duration: 14000,
