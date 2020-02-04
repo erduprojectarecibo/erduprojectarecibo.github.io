@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Segmentos Poblacionales por Nivel Educativo de Puerto Rico</h2>
+        <h2>Segmentos Poblacionales de Puerto Rico por Nivel Educativo</h2>
         <h3 id=year-subtitle>2010</h3>
     </div>
         <div id="psegchart02"></div>
@@ -382,12 +382,12 @@ var dataSequence2 = [
         },
 
         series: [{
-            name: 'Universitario o Inferior',
+            name: 'Nivel Universitario o Inferior',
             color: '#FFD13F',
             borderColor: '#FFD13F', 
             data: dataSequence[0].data.slice(),
         },{
-            name: 'Pos-grado o Superior',
+            name: 'Nivel Pos-grado o Profesional',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence2[0].data.slice(),
@@ -407,6 +407,17 @@ var dataSequence2 = [
             xAxis: [{
             categories: categories,
             reversed: false,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        },{ // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categoriesTotalArr1[input.value],
+            linkedTo: 0,
             labels: {
                 style: {
                     color: 'black',
