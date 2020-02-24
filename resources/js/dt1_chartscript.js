@@ -6,6 +6,7 @@
  * - If the element is greater than the viewport (or a certain fraction of it),
  *   show the series when it is partially visible.
  */
+
 (function (H) {
 
     var pendingRenders = [];
