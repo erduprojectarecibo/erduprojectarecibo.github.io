@@ -124,6 +124,7 @@ var CONFIG = {
      "11": "#7fb5ed",
      "New York": "#ffb600",
      "Puerto Rico": "#ff0000",
+     "Florida":"#2a8e40",
      "_default": "#2a8e40"
     },
     "paletteLabels": null,
