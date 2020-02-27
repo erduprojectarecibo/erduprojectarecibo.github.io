@@ -122,9 +122,9 @@ var CONFIG = {
      "9": "#f599f5",
      "10": "#f4f459",
      "11": "#7fb5ed",
-     "New York": "#5ce25c",
-     "Puerto Rico": "#e2c85c",
-     "_default": "#ffb600"
+     "New York": "#ffb600",
+     "Puerto Rico": "#ff0000",
+     "_default": "#2a8e40"
     },
     "paletteLabels": null,
     "scaleType": "ordinal",

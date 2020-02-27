@@ -3162,7 +3162,7 @@ $(document).ready(function () {
                     5071, 4560, 4132, 3911, 3589, 3279, 3100, 2914, 2807, 2715, 2633, 2546, 2500, 2402, 2392,
                     2316, 2352, 2304, 2323, 2215, 2100, 1987, 1922
                 ],
-                color: 'red',
+                color: 'gold',
                 animation: {
                     enabled: true,
                     duration: 10000,
@@ -3178,7 +3178,7 @@ $(document).ready(function () {
                     2150, 1993, 1836, 2386, 2138, 1832, 1702, 1633, 1662, 1828, 1797, 1673, 1693,
                     1699, 1619, 1528, 1341, 1258
                 ],
-                color: 'gold',
+                color: 'red',
                 animation: {
                     enabled: true,
                     duration: 12000,
@@ -3278,7 +3278,7 @@ $(document).ready(function () {
                     6.03, 5.08, 4.96, 5.02, 5.03, 4.75, 4.86, 4.61, 4.52, 4.78, 4.17, 4.29, 4.00, 4.48, 3.94, 3.49, 3.27, 3.12, 3.10,
                     3.20
                 ],
-                color: 'red',
+                color: 'gold',
                 animation: {
                     enabled: true,
                     duration: 10000,
@@ -3293,7 +3293,7 @@ $(document).ready(function () {
                     15.57, 18.38, 19.56, 20.24, 20.57, 20.72, 20.18, 19.66, 19.30, 21.67, 24.09, 27.33, 31.64, 27.62, 25.10, 19.80, 17.82,
                     20.55
                 ],
-                color: 'gold',
+                color: 'red',
                 animation: {
                     enabled: true,
                     duration: 12000,
