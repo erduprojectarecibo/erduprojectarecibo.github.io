@@ -768,7 +768,7 @@ $(document).ready(function () {
     function update_data2() {
         chart2.update({
             subtitle: {
-                text: 'Razón de Cambio Promedio: 66 delitos por año.',
+                text: 'Acenso a razón de 66 delitos tipo 1 por año.',
                 style: {
                     color: "black"
                 },
@@ -1264,7 +1264,7 @@ $(document).ready(function () {
     function update_data4() {
         chart3.update({
             subtitle: {
-                text: 'Razón de Cambio Promedio: -97 delitos por año.',
+                text: 'Decenso a razón de 97 delitos tipo 1 por año.',
                 style: {
                     color: "black"
                 },
