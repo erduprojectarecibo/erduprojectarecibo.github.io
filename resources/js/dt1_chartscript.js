@@ -263,7 +263,7 @@ $(document).ready(function () {
         },
 
         subtitle: {
-            text: 'Razón de Cambio Promedio en la tasa fue de 66 delitos por año.',
+            text: 'Acenso a razón de 66 delitos tipo 1 por año.',
             style: {
                 color: "transparent"
             },
@@ -726,7 +726,7 @@ $(document).ready(function () {
                 ],
                 color: '#2a8e40',
             }, {
-                name: 'Razón de Cambio Promedio',
+                name: 'Tendencia de la Razón de Cambio',
                 data: [{
                         'x': Date.UTC(1959, 0),
                         // Enero, 1, 1959
@@ -799,7 +799,7 @@ $(document).ready(function () {
         },
 
         subtitle: {
-            text: 'Razón de Cambio Promedio en la tasa fue de -97 delitos por año.',
+            text: 'Decenso a razón de 97 delitos tipo 1 por año.',
             style: {
                 color: "transparent"
             },
@@ -1223,7 +1223,7 @@ $(document).ready(function () {
                 ],
                 color: '#2a8e40',
             }, {
-                name: 'Razón de Cambio Promedio',
+                name: 'Tendencia de la razón de cambio',
                 data: [{
                         'x': Date.UTC(1991, 0),
                         // Enero, 1, 1991
