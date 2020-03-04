@@ -1223,7 +1223,7 @@ $(document).ready(function () {
                 ],
                 color: '#2a8e40',
             }, {
-                name: 'Tendencia de la razón de cambio',
+                name: 'Tendencia de la Razón de Cambio',
                 data: [{
                         'x': Date.UTC(1991, 0),
                         // Enero, 1, 1991
