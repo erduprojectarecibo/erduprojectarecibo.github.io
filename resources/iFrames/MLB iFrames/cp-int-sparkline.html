@@ -15,41 +15,46 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
-<body>
-
 <style>
-#result {
-    text-align: right;
-    color: gray;
-    min-height: 2em;
-}
-#table-sparkline {
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-th {
-    font-weight: bold;
-    text-align: center;
-}
-td, th {
-    padding: 5px;
-    border-bottom: 1px solid silver;
-    height: 20px;
-    text-align: center;
-}
+    html, body {
+        height:100%;
+        width:100%;
+    }
+    
+    #result {
+        text-align: right;
+        color: gray;
+    }
+    #table-sparkline {
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+    th {
+        font-weight: bold;
+        text-align: center;
+    }
+    td, th {
+        /* padding: 5px; */
+        border-bottom: 1px solid silver;
+        height: 20px;
+        text-align: center;
+    }
+    
+    thead th {
+        border-top: 2px solid gray;
+        border-bottom: 2px solid gray;
+        padding: 0px;
+    }
+    .highcharts-tooltip>span {
+        background: white;
+        border: 1px solid silver;
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px #888;
+        padding: 8px;
+    }
+    </style>
 
-thead th {
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-}
-.highcharts-tooltip>span {
-    background: white;
-    border: 1px solid silver;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px #888;
-    padding: 8px;
-}
-</style>
+<body>
 
 <div id="result"></div>
 <h2 style="text-align:center">Gráfica 3: Total Carreras Producidas por Temporada e Intervalos de Edad</h2>
@@ -62,11 +67,17 @@ thead th {
         </tr>
     </thead>
     <tbody id="tbody-sparkline">
-        <tr>
+        <!-- <tr>
             <th>Lou Gehrig</th>
             <td>199</td>
             <td><div id=chart12></div></td>
-            <!-- <td data-sparkline="null, null, 14, 7, 121, 231, 277, 254, 218, 276, 301, 255, null, 245, 244, 214, 270, 260, 200, 3, null, null, null, null, null, null, null, null, null, null"/> -->
+            <td data-sparkline="null, null, 14, 7, 121, 231, 277, 254, 218, 276, 301, 255, null, 245, 244, 214, 270, 260, 200, 3, null, null, null, null, null, null, null, null, null, null"/>
+        </tr> -->
+        <tr>
+            <th>Ty Cobb</th>
+            <td>169</td>
+            <td><div id=chart12></div></td>
+            <!-- <td data-sparkline="null, null, null, null, 74, 60, 123, 125, 157, 181, 186, null, 172, 206, 199, 170, 185, 126, 153, 105, 114, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Bernie Williams</th>
@@ -460,7 +471,7 @@ var chart12 = Highcharts.chart('chart12', {
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
                 width: 800,
-                height: 65,
+                height: 60,
                 zoomType: 'x',
                 style: {
                     overflow: 'visible'
@@ -520,7 +531,7 @@ var chart12 = Highcharts.chart('chart12', {
                 hideDelay: 0,
                 outside: true,
                 shared: true,
-                headerFormat: '<span> Lou Gehrig'  + '<br>Edad: {point.x}<br></span>',
+                headerFormat: '<span> Ty Cobb'  + '<br>Edad: {point.x}<br></span>',
                 pointFormat: '<b>Valor: {point.y}</b>'
             },
 
@@ -547,7 +558,7 @@ var chart12 = Highcharts.chart('chart12', {
             },
             series: [{
                 name: ' ',
-                data: [null, null, 14, 7, 121, 231, 277, 254, 218, 276, 301, 255, null, 245, 244, 214, 270, 260, 200, 3, null, null, null, null, null, null, null, null, null, null
+                data: [null, 33, 78, 211, 192, 214, 189, 266, 196, 133, 124, 240, null, 176, 203, 144, 161, 147, 213, 194, 185, 189, 187, 106, 192, 93, null, null, null, null
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
