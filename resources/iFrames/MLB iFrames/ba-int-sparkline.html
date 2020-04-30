@@ -15,46 +15,48 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
-<style>
-    html, body {
-        height:100%;
-        width:100%;
-    }
-    
-    #result {
-        text-align: right;
-        color: gray;
-    }
-    #table-sparkline {
-        margin: 0 auto;
-        border-collapse: collapse;
-    }
-    th {
-        font-weight: bold;
-        text-align: center;
-    }
-    td, th {
-        /* padding: 5px; */
-        border-bottom: 1px solid silver;
-        height: 20px;
-        text-align: center;
-    }
-    
-    thead th {
-        border-top: 2px solid gray;
-        border-bottom: 2px solid gray;
-        padding: 0px;
-    }
-    .highcharts-tooltip>span {
-        background: white;
-        border: 1px solid silver;
-        border-radius: 3px;
-        box-shadow: 1px 1px 2px #888;
-        padding: 8px;
-    }
-</style>
-
 <body>
+
+    <style>
+        #result {
+            text-align: right;
+            color: gray;
+            min-height: 2em;
+            
+        }
+
+        #table-sparkline {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width:90%;
+        }
+
+        th {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td, th {
+            width:10%;
+            padding: 5px;
+            border-bottom: 1px solid silver;
+            height: 20px;
+            text-align: center;
+        }
+
+        thead th {
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+
+        .highcharts-tooltip>span {
+            background: white;
+            border: 1px solid silver;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px #888;
+            padding: 8px;
+        }
+    </style>
 
     <div id="result"></div>
     <h2 style="text-align:center">Gráfica 1: Promedio de Bateo por Temporada e Intervalos de Edad</h2>
@@ -63,16 +65,17 @@
             <tr>
                 <th>Jugador</th>
                 <th>Promedio de Bateo<br>por Vida</th>
-                <th>Promedio de Bateo (AVG) por Intervalo de Edad<p
-                        style="position:relative; left:23%; text-align:right; display:inline-block">Valor Crítico<br>de Referencia</p>
+                <th>Promedio de Bateo (AVG) por Intervalo de Edad
+                    <!-- <p style="position:relative; left:23%; text-align:right; display:inline-block">Valor Crítico<br>de Referencia</p> -->
                 </th>
+                <th>Valor Crítico<br>de Referencia</th>
             </tr>
         </thead>
         <tbody id="tbody-sparkline">
             <tr>
                 <th>Ty Cobb</th>
                 <td>0.366</td>
-                <td>
+                <td colspan=2>
                     <div id=chart1></div>
                 </td>
                 <!-- <td data-order=2
@@ -81,7 +84,7 @@
             <tr>
                 <th>Roberto Clemente</th>
                 <td>0.317</td>
-                <td>
+                <td colspan=2>
                     <div id=chart2></div>
                 </td>
                 <!-- <td data-order=1 data-sparkline="null, null, 255, 311, 253, 289, 296, null, 314, 351, 312, 320, 339, 329, 317, 357, 291, 345, null, 352, 341, 312, null, null, null, null, null, null, null, null"/> -->
@@ -89,28 +92,28 @@
             <tr>
                 <th>Edgar Martínez</th>
                 <td>0.312</td>
-                <td><div id=chart3></div></td>
+                <td colspan=2><div id=chart3></div></td>
                 <!-- <td
                     data-sparkline="null, null, null, null, null, null, 372, null, 281, 240, 302, 307, 343, 237, 285, 356, 327, 330, null, 322, 337, 324, 306, 277, 294, 263, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Roberto Alomar</th>
                 <td>0.300</td>
-                <td><div id=chart4></div></td>
+                <td colspan=2><div id=chart4></div></td>
                 <!-- <td
                     data-sparkline="null, null, 266, 295, 287, 295, 310, 326, 306, 300, 328, null, 333, 282, 323, 310, 336, 266, 258, 263, null, null, null, null, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Bernie Williams</th>
                 <td>0.297</td>
-                <td><div id=chart5></div></td>
+                <td colspan=2><div id=chart5></div></td>
                 <!-- <td
                     data-sparkline="null, null, null, null, 238, 280, 268, 289, 307, 305, 328, null, 339, 342, 307, 307, 333, 263, 262, 249, 281, null, null, null, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Orlando Cepeda</th>
                 <td>0.297</td>
-                <td><div id=chart6></div></td>
+                <td colspan=2><div id=chart6></div></td>
                 <!-- <td
                     data-sparkline="null, 312, 317, 297, 311, 306, 316, 304, 176, 301, 325, null, 248, 257, 305, 276, 287, 289, 215, null, null, null, null, null, null, null, null, null, null" /> -->
             </tr>
@@ -118,35 +121,35 @@
             <tr>
                 <th>Iván Rodríguez</th>
                 <td>0.296</td>
-                <td><div id=chart7></div></td>
+                <td colspan=2><div id=chart7></div></td>
                 <!-- <td
                     data-sparkline="null, 264, 260, 273, 298, 303, 300, 313, 321, 332, 347, null, 308, 314, 297, 334, 276, 300 281, 276, 249, 266, 218 null, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Juan González</th>
                 <td>0.295</td>
-                <td><div id=chart8></div></td>
+                <td colspan=2><div id=chart8></div></td>
                 <!-- <td
                     data-sparkline="null, 150, 289, 264, 260, 310, 275, 295, 314, 296, 318, null, 326, 289, 325, 282, 294, 276, null, null, null, null, null, null, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Carlos Delgado</th>
                 <td>0.280</td>
-                <td><div id=chart9></div></td>
+                <td colspan=2><div id=chart9></div></td>
                 <!-- <td
                     data-sparkline="null, null, null, null, 215, 165, 270, 262, 292, 272, 344, null, 279, 277, 302, 269, 301, 265, 258, 271, 298, null, null, null, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Carlos Beltrán</th>
                 <td>0.279</td>
-                <td><div id=chart10></div></td>
+                <td colspan=2><div id=chart10></div></td>
                 <!-- <td
                     data-sparkline="null, null, null, 276, 293, 247, 306, 273, 307, 267, 266, null, 275, 276, 284, 325, 255, 300, 269, 296, 233, 276, 295, 231, null, null, null, null, null, null" /> -->
             </tr>
             <tr>
                 <th>Rubén Sierra</th>
                 <td>0.268</td>
-                <td><div id=chart11></div></td>
+                <td colspan=2><div id=chart11></div></td>
                 <!-- <td
                     data-sparkline="null, null, 264, 263, 254, 306, 280, 307, 278, 233, 268, null, 263, 247, 232, 216, 233, 291, 270, 270, 244, 229, 179, null, null, null, null, null, null, null" /> -->
             </tr>
@@ -486,7 +489,7 @@ plotOptions: {
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
                 width: 800,
-                height: 60,
+                height: 65,
                 zoomType: 'x',
                 style: {
                     overflow: 'visible'
@@ -577,7 +580,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 10000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -681,7 +688,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 13000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -783,7 +794,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 16000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -885,7 +900,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 19000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -987,7 +1006,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 22000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1090,7 +1113,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 25000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1192,7 +1219,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 28000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1294,7 +1325,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 31000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1396,7 +1431,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 34000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1498,7 +1537,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 37000,
+                    easing: 'linear'
+                },
             }],
         })
 
@@ -1600,7 +1643,11 @@ plotOptions: {
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
-                
+                animation: {
+                    enabled: true,
+                    duration: 40000,
+                    easing: 'linear'
+                },
             }],
         })
     </script>
