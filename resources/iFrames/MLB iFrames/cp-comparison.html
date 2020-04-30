@@ -45,7 +45,8 @@
 <div id=mlbchart03></div>
 <div id=select-area>
     <select id=select1>
-        <option value=0>Lou Gherig</option>
+        <!-- <option value=0>Lou Gherig</option> -->
+        <option value=0 selected='selected'>Ty Cobb</option>
         <option value=1>Bernie Williams</option>
         <option value=2>Roberto Alomar</option>
         <option value=3>Roberto Clemente</option>
@@ -58,7 +59,8 @@
         <option value=10>Rubén Sierra</option>
     </select>
     <select id=select2>
-        <option value=0>Lou Gherig</option>
+        <!-- <option value=0>Lou Gherig</option> -->
+        <option value=0>Ty Cobb</option>
         <option value=1 selected='selected'>Bernie Williams</option>
         <option value=2>Roberto Alomar</option>
         <option value=3>Roberto Clemente</option>
@@ -228,7 +230,8 @@ plotOptions: {
 $(document).ready(function () {
 
     var player_data = new Array();
-        /* Lou Gherig */ player_data[0]= new Array (null,null, null, 14, 7, 121, 231, 277, 254, 218, 276, 301, null, 255, 245, 244, 214, 270, 260, 200, 3, null, null, null, null, null, null, null, null, null, null),
+        // Lou Gherig player_data[0]= new Array (null,null, null, 14, 7, 121, 231, 277, 254, 218, 276, 301, null, 255, 245, 244, 214, 270, 260, 200, 3, null, null, null, null, null, null, null, null, null, null),
+        /* Ty Cobb */ player_data[0]= new Array (null, 33, 78, 211, 192, 214, 189, 266, 196, 133, 124, 240, null, 176, 203, 144, 161, 147, 213, 194, 185, 189, 187, 106, 192, 93, null, null, null, null),
         /* Bernie Williams */ player_data[1]= new Array(null,null, null, null, null, 74, 60, 123, 125, 157, 181, 186, null, 172, 206, 199, 170, 185, 126, 153, 105, 114, null, null, null, null, null, null, null, null, null),
         /* Roberto Alomar */ player_data[2]= new Array(null,null, null, 116, 131, 134, 148, 173, 185, 108, 124, 204, null, 110, 128, 234, 181, 193, 115, 110, 38, null, null, null, null, null, null, null, null, null, null),
         /* Roberto Clemente */ player_data[3]= new Array(null,null, null, 90, 119, 68, 113, 106, 167, 166, 159, 136, null, 170, 146, 195, 190, 113, 159, 111, 155, 118, null, null, null, null, null, null, null, null),
@@ -301,7 +304,7 @@ $(document).ready(function () {
         },
 
         series: [{
-            name: 'Lou Gherig',
+            name: 'Ty Cobb',
             data: player_data[0],
             color: '#2a8e40',
             animation: {
