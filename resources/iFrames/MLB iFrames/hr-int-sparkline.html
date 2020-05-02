@@ -26,6 +26,7 @@
 #table-sparkline {
     margin: 0 auto;
     border-collapse: collapse;
+    width: 80%;
 }
 th {
     font-weight: bold;
@@ -300,7 +301,7 @@ plotOptions: {
 //                 borderWidth: 0,
 //                 type: 'areaspline',
 //                 margin: [0, 0, 20, 0],
-//                 width: 800,
+//                 width: fixedWidth,
 //                 height: 90,
 //                 zoomType:'x',
 //                 style: {
@@ -454,13 +455,14 @@ plotOptions: {
 // }
 // doChunk();
 
+fixedWidth = 0.6*document.documentElement.clientWidth;
 var chart23 = Highcharts.chart('chart23', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -566,7 +568,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -672,7 +674,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -778,7 +780,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -884,7 +886,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -991,7 +993,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1097,7 +1099,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1203,7 +1205,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1309,7 +1311,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1415,7 +1417,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1521,7 +1523,7 @@ var chart23 = Highcharts.chart('chart23', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
