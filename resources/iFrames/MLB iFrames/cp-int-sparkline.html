@@ -26,6 +26,7 @@
 #table-sparkline {
     margin: 0 auto;
     border-collapse: collapse;
+    width: 80%;
 }
 th {
     font-weight: bold;
@@ -306,7 +307,7 @@ plotOptions: {
 //                 borderWidth: 0,
 //                 type: 'areaspline',
 //                 margin: [0, 0, 20, 0],
-//                 width: 800,
+//                 width: fixedWidth, , 
 //                 height: 90,
 //                 zoomType:'x',
 //                 style: {
@@ -459,13 +460,14 @@ plotOptions: {
 // }
 // doChunk();
 
+fixedWidth = 0.6*document.documentElement.clientWidth;
 var chart12 = Highcharts.chart('chart12', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -553,7 +555,7 @@ var chart12 = Highcharts.chart('chart12', {
             },
             series: [{
                 name: ' ',
-                data: [null, 33, 78, 211, 192, 214, 189, 266, 196, 133, 124, 240, null, 176, 203, 144, 161, 147, 213, 194, 185, 189, 187, 106, 192, 93, null, null, null, null
+                data: [33, 78, 211, 192, 214, 189, 266, 196, 133, 124, 240, null, 176, 203, 144, 161, 147, 213, 194, 185, 189, 187, 106, 192, 93, null, null, null, null
                 ],
                 pointStart: 1,
                 color: '#2a8e40',
@@ -571,7 +573,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -677,7 +679,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -783,7 +785,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -889,7 +891,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -995,7 +997,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1101,7 +1103,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1207,7 +1209,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1313,7 +1315,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1419,7 +1421,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
@@ -1525,7 +1527,7 @@ var chart12 = Highcharts.chart('chart12', {
                 borderWidth: 0,
                 type: 'areaspline',
                 margin: [0, 0, 20, 0],
-                width: 800,
+                width: fixedWidth,
                 height: 65,
                 zoomType: 'x',
                 style: {
