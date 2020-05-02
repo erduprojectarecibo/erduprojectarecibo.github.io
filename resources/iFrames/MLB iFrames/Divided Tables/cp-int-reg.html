@@ -72,37 +72,37 @@ thead th {
         <tr>
             <th>Ty Cobb</th>
             <td>169</td>
-            <td><div id=chart12></div></td>
+            <td><div id=chart19></div></td>
             <!-- <td data-sparkline="null, null, null, null, 74, 60, 123, 125, 157, 181, 186, null, 172, 206, 199, 170, 185, 126, 153, 105, 114, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Bernie Williams</th>
             <td>146</td>
-            <td><div id=chart13></div></td>
+            <td><div id=chart20></div></td>
             <!-- <td data-sparkline="null, null, null, null, 74, 60, 123, 125, 157, 181, 186, null, 172, 206, 199, 170, 185, 126, 153, 105, 114, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Carlos Beltrán</th>
             <td>137</td>
-            <td><div id=chart16></div></td>
+            <td><div id=chart21></div></td>
             <!-- <td data-sparkline="null, null, null, 19, 198, 86, 183, 190, 176, 187, 145, null, 202, 172, 201, 88, 41, 140, 148, 139, 80, 105, 137, 97, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Carlos Delgado</th>
             <td>134</td>
-            <td><div id=chart17></div></td>
+            <td><div id=chart22></div></td>
             <!-- <td data-sparkline="null, null, null, null, 32, 15, 135, 140, 171, 203, 211, null, 165, 178, 220, 141, 163, 165, 134, 173, 34, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Juan González</th>
             <td>126</td>
-            <td><div id=chart19></div></td>
+            <td><div id=chart23></div></td>
             <!-- <td data-sparkline="null, 12, 19, 153, 143, 168, 156, 115, 124, 189, 222, null, 203, 114, 202, 65, 95, 29, null, null, null, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Rubén Sierra</th>
             <td>105</td>
-            <td><div id=chart22></div></td>
+            <td><div id=chart24></div></td>
             <!-- <td data-sparkline="null, null, 89, 176, 145, 191, 150, 201, 153, 156, 140, null, 140, 121, 19, 14, 11, 99, 94, 67, 88, 39, 7, null, null, null, null, null, null, null"/> -->
         </tr>
     </tbody>
@@ -431,7 +431,7 @@ plotOptions: {
 // doChunk();
 
 fixedWidth = 0.6*document.documentElement.clientWidth;
-var chart12 = Highcharts.chart('chart12', {
+var chart19 = Highcharts.chart('chart19', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -537,7 +537,7 @@ var chart12 = Highcharts.chart('chart12', {
             }],
         })
 
-        var chart13 = Highcharts.chart('chart13', {
+        var chart20 = Highcharts.chart('chart20', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -643,219 +643,7 @@ var chart12 = Highcharts.chart('chart12', {
             }],
         })
 
-        var chart14 = Highcharts.chart('chart14', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 320,
-                min: 0,
-                plotLines: [{
-                    value: 130,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.2,
-                    label: {
-                        text:"130 CP",
-                        align:"right",
-                        x:-20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Roberto Alomar'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 116, 131, 134, 148, 173, 185, 108, 124, 204, null, 110, 128, 234, 181, 193, 115, 110, 38, null, null, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 16000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart15 = Highcharts.chart('chart15', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 320,
-                min: 0,
-                plotLines: [{
-                    value: 130,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.2,
-                    label: {
-                        text:"130 CP",
-                        align:"right",
-                        x:-20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Roberto Clemente'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 90, 119, 68, 113, 106, 167, 166, 159, 136, null, 170, 146, 195, 190, 113, 159, 111, 155, 118, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 19000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart16 = Highcharts.chart('chart16', {
+        var chart21 = Highcharts.chart('chart21', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -955,13 +743,13 @@ var chart12 = Highcharts.chart('chart12', {
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 22000,
+                    duration: 16000,
                     easing: 'linear'
                 },
             }],
         })
 
-        var chart17 = Highcharts.chart('chart17', {
+        var chart22 = Highcharts.chart('chart22', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -1061,119 +849,13 @@ var chart12 = Highcharts.chart('chart12', {
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 25000,
+                    duration: 19000,
                     easing: 'linear'
                 },
             }],
         })
 
-        var chart18 = Highcharts.chart('chart18', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 320,
-                min: 0,
-                plotLines: [{
-                    value: 130,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.2,
-                    label: {
-                        text:"130 CP",
-                        align:"right",
-                        x:-20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Orlando Cepeda'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 159, 170, 153, 201, 212, 180, 141, 97, 55, null, 177, 128, 140, 164, 61, 11, 117, 20, null, null, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 28000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart19 = Highcharts.chart('chart19', {
+        var chart23 = Highcharts.chart('chart23', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -1273,225 +955,13 @@ var chart12 = Highcharts.chart('chart12', {
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 31000,
+                    duration: 22000,
                     easing: 'linear'
                 },
             }],
         })
 
-        var chart20 = Highcharts.chart('chart20', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 320,
-                min: 0,
-                plotLines: [{
-                    value: 130,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.2,
-                    label: {
-                        text:"130 CP",
-                        align:"right",
-                        x:-20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Edgar Martinez'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, null, null, null, null, 11, 5, 38, 109, 133, null, 134, 89, 47, 143, 198, 184, 159, 148, 208, 173, 86, 146, 96, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 34000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart21 = Highcharts.chart('chart21', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 320,
-                min: 0,
-                plotLines: [{
-                    value: 130,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.2,
-                    label: {
-                        text:"130 CP",
-                        align:"right",
-                        x:-20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Iván Rodríguez'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, 48, 68, 112, 97, 101, 164, 164, 144, 172, 122, null, 110, 108, 159, 139, 107, 130, 102, 72, 92, 77, 21, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 37000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart22 = Highcharts.chart('chart22', {
+        var chart24 = Highcharts.chart('chart24', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -1591,7 +1061,7 @@ var chart12 = Highcharts.chart('chart12', {
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 40000,
+                    duration: 25000,
                     easing: 'linear'
                 },
             }],

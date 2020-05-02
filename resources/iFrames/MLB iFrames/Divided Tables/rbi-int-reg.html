@@ -66,37 +66,37 @@ thead th {
         <tr>
             <th>Hank Aaron</th>
             <td>100</td>
-            <td><div id=chart34></div></td>
+            <td><div id=chart43></div></td>
             <!-- <td data-sparkline="null, null, 69, 106, 92, 132, 95, 123, 126, 120, 128, null, 130, 95, 89, 127, 109, 86, 97, 118, 118, 77, 96, 69, 60, 35, null, null, null, null"/> -->
         </tr>        
         <tr>
             <th>Carlos Delgado</th>
             <td>95</td>
-            <td><div id=chart35></div></td>
+            <td><div id=chart44></div></td>
             <!-- <td data-sparkline="null, null, null, null, 24, 11, 92, 91, 115, 134, 137, null, 102, 108, 145, 99, 115, 114, 87, 115, 23, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Juan González</th>
             <td>88</td>
-            <td><div id=chart36></div></td>
+            <td><div id=chart45></div></td>
             <!-- <td data-sparkline="null, 7, 12, 102, 109, 118, 85, 82, 144, 131, 157, null 128, 67, 140, 35, 70, 17, null, null, null, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>  
             <th>Carlos Beltrán</th>
             <td>79</td>
-            <td><div id=chart38></div></td>
+            <td><div id=chart46></div></td>
             <!-- <td data-sparkline="null, null, null, 7, 108, 44, 101, 105, 100, 104, 78, null, 116, 112, 112, 48, 27, 84, 97, 84, 49, 67, 93, 51, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Bernie Williams</th>
             <td>79</td>
-            <td><div id=chart39></div></td>
+            <td><div id=chart47></div></td>
             <!-- <td data-sparkline="null, null, null, null, 34, 26, 68, 57, 82, 102, 100, null, 97, 115, 121, 94, 102, 64, 70, 64, 61, null, null, null, null, null, null, null, null, null"/> -->
         </tr>
         <tr>
             <th>Rubén Sierra</th>
             <td>66</td>
-            <td><div id=chart43></div></td>
+            <td><div id=chart48></div></td>
             <!-- <td data-sparkline="null, null, 55, 109, 91, 119, 96, 116, 87, 101, 92, null, 86, 72, 12, 11, 7, 67, 60, 43, 65, 29, 4, null, null, null, null, null, null, null"/> -->
         </tr>
     </tbody>
@@ -426,7 +426,7 @@ plotOptions: {
 // doChunk();
 
 fixedWidth = 0.6*document.documentElement.clientWidth;
-        var chart34 = Highcharts.chart('chart34', {
+        var chart43 = Highcharts.chart('chart43', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -532,7 +532,7 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
             }],
         })
 
-        var chart35 = Highcharts.chart('chart35', {
+        var chart44 = Highcharts.chart('chart44', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -638,7 +638,7 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
             }],
         })
 
-        var chart36 = Highcharts.chart('chart36', {
+        var chart45 = Highcharts.chart('chart45', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -744,113 +744,7 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
             }],
         })
 
-        var chart37 = Highcharts.chart('chart37', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 180,
-                min: 0,
-                plotLines: [{
-                    value: 100,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.5,
-                    label: {
-                        text: "100 RBI",
-                        align: "right",
-                        x: -20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Orlando Cepeda'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 96, 105, 96, 142, 114, 97, 97, 5, 73, null, 111, 73, 88, 111, 44, 9, 86, 18, null, null, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 19000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart38 = Highcharts.chart('chart38', {
+        var chart46 = Highcharts.chart('chart46', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -950,13 +844,13 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 22000,
+                    duration: 19000,
                     easing: 'linear'
                 },
             }],
         })
 
-        var chart39 = Highcharts.chart('chart39', {
+        var chart47 = Highcharts.chart('chart47', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -1056,331 +950,13 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 25000,
+                    duration: 22000,
                     easing: 'linear'
                 },
             }],
         })
 
-        var chart40 = Highcharts.chart('chart40', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 180,
-                min: 0,
-                plotLines: [{
-                    value: 100,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.5,
-                    label: {
-                        text: "100 RBI",
-                        align: "right",
-                        x: -20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Roberto Clemente'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 47, 60, 30, 50, 50, 94, 89, 74, 76, null, 87, 65, 119, 110, 57, 91, 60, 86, 60, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 28000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart41 = Highcharts.chart('chart41', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 180,
-                min: 0,
-                plotLines: [{
-                    value: 100,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.5,
-                    label: {
-                        text: "100 RBI",
-                        align: "right",
-                        x: -20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Edgar Martínez'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, null, null, null, null, 5, 5, 20, 49, 52, null, 73, 13, 51, 113, 103, 108, 102, 86, 145, 116, 59, 98, 63, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 31000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart42 = Highcharts.chart('chart42', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 180,
-                min: 0,
-                plotLines: [{
-                    value: 100,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.5,
-                    label: {
-                        text: "100 RBI",
-                        align: "right",
-                        x: -20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Roberto Alomar'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, null, 41, 56, 60, 69, 76, 93, 38, 66, 94, null, 60, 56, 120, 89, 100, 53, 39, 24, null, null, null, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 34000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart43 = Highcharts.chart('chart43', {
+        var chart48 = Highcharts.chart('chart48', {
             chart: {
                 backgroundColor: null,
                 borderWidth: 0,
@@ -1480,113 +1056,7 @@ fixedWidth = 0.6*document.documentElement.clientWidth;
                 color: '#2a8e40',
                 animation: {
                     enabled: true,
-                    duration: 37000,
-                    easing: 'linear'
-                },
-            }],
-        })
-
-        var chart44 = Highcharts.chart('chart44', {
-            chart: {
-                backgroundColor: null,
-                borderWidth: 0,
-                type: 'areaspline',
-                margin: [0, 0, 20, 0],
-                width: fixedWidth,
-                height: 65,
-                zoomType: 'x',
-                style: {
-                    overflow: 'visible'
-                },
-            },
-            title: {
-                text: ' '
-            },
-            credits: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            xAxis: {
-                categories: [' ', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', ' ',
-                    '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42',
-                    '43', '44', '45', '46'
-                ],
-                labels: {
-                    formatter: function () {
-                        if (this.value == '28' || this.value == '29') {
-                            return this.value;
-                        }
-                    }
-                }
-            },
-            yAxis: {
-                endOnTick: false,
-                startOnTick: false,
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    text: null
-                },
-                tickPositions: [0],
-                max: 180,
-                min: 0,
-                plotLines: [{
-                    value: 100,
-                    color: '#2a8e40',
-                    dashStyle: 'shortdash',
-                    width: 1.5,
-                    label: {
-                        text: "100 RBI",
-                        align: "right",
-                        x: -20
-                    }
-                }]
-
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                hideDelay: 0,
-                outside: true,
-                shared: true,
-                headerFormat: '<span> Iván Rodríguez'  + '<br>Edad: {point.x}<br></span>',
-                pointFormat: '<b>Valor: {point.y}</b>'
-            },
-
-            plotOptions: {
-                series: {
-                    showInLegend: false,
-                    lineWidth: 1.2,
-                    shadow: false,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    marker: {
-                        radius: 1,
-                        states: {
-                            hover: {
-                                radius: 2
-                            }
-                        }
-                    },
-                    fillOpacity: 0.25
-                },
-            },
-            series: [{
-                name: ' ',
-                data: [null, 27, 37, 66, 57, 67, 86, 77, 91, 113, 83, null, 65, 60, 85, 86, 50, 69, 63, 35, 47, 49, 9, null, null, null, null, null, null, null
-                ],
-                pointStart: 1,
-                color: '#2a8e40',
-                animation: {
-                    enabled: true,
-                    duration: 40000,
+                    duration: 25000,
                     easing: 'linear'
                 },
             }],
