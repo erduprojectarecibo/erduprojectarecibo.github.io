@@ -16,7 +16,7 @@
         <div id="psegchart01"></div>
         <div id="play-controls">
             <button id="play-pause-button" class="fa fa-play" title="play"> &#9654; </button>
-            <input id="play-range" type="range" value="0" min="0" max="8" />
+            <input id="play-range" type="range" value="0" min="0" max="9" />
         </div>
 </body>
 
@@ -248,21 +248,22 @@ var categories = [" ",'<b>Preescolar</b><br>Edades 0-4 años',
 ];
 
 var categoriesTotalArr1 = [
-    ["<strong>2,210,703</strong>","366,422","588,854","413,161","289,729","224,346","242,613","85,578","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>2,210,703</strong>","366,277","588,854","413,161","289,729","224,346","242,613","85,578","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>2,349,565</strong>","354,402","648,736","418,525","262,919","238,017","304,759","122,207","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>2,712,033</strong>","318,106","672,814","525,202","339,290","273,970","405,574","177,077","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,196,520</strong>","340,652","668,622","609,564","465,898","359,936","499,279","252,569","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,522,037</strong>","302,173","656,046","613,944","524,849","462,479","621,662","340,884","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,808,610</strong>","295,406","610,962","614,627","534,332","439,647","889,613","629,338","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,725,789</strong>","224,756","508,575","545,109","492,332","483,528","929,491","541,998","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,474,182</strong>","172,207","415,401","493,178","433,782","439,647","889,613","629,338","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,195,153</strong>","126,621","347,939","423,637","394,749","392,503","848,489","661,215","<b>Total por</b> <br><b>Grupo</b>"]
+    ["<strong>3,722,133</strong>","223,247","504,909","549,044","482,756","487,539","928,917","545,721","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,474,182</strong>","172,896","420,686","498,074","421,169","448,443","885,949","626,965","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,195,153</strong>","125,796","348,516","432,811","381,445","396,979","848,390","661,216","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388383","844481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
 ]
 
 var dataSequence = [
             {
             name:'1950',
-            data: [null,366422,588854,413161,null,null,null,null,null]
+            data: [null,366277,588854,413161,null,null,null,null,null]
             },{
             name:'1960',
             data: [null,354402,648736,418525,null,null,null,null,null]
@@ -280,14 +281,17 @@ var dataSequence = [
             data: [null,295406,610962,614627,null,null,null,null,null]
             }, {
             name:'2010',
-            data: [null,224756,508575,545109,null,null,null,null,null]
+            data: [null,223247,504909,549044,null,null,null,null,null]
             }, {
             name:'2015',
-            data: [null,172207,415401,493178,null,null,null,null,null]
+            data: [null,172896,420686,498074,null,null,null,null,null]
             },{
             name:'2018',
-            data: [null,126621,347939,423637,null,null,null,null,null]
-            }         
+            data: [null,125796,348516,432811,null,null,null,null,null]
+            },{
+            name:'2019',
+            data: [null,117482,340425,418101,null,null,null,null,null]
+            } 
 ]
 
 var dataSequence2 = [
@@ -311,14 +315,17 @@ var dataSequence2 = [
             data: [null,null,null,null,534332,439647,889613,629338,null]
             }, {
             name:'2010',
-            data: [null,null,null,null,492332,483528,929491,541998,null]
+            data: [null,null,null,null,482756,487539,928917,629338,null]
             }, {
             name:'2015',
-            data: [null,null,null,null,433782,439647,889613,661215,null]
+            data: [null,null,null,null,421169,448443,885949,626965,null]
             },{
             name:'2018',
-            data: [null,null,null,null,394749,392503,848489,661215,null]
-            }         
+            data: [null,null,null,null,381445,396979,848390,661216,null]
+            },{
+            name:'2019',
+            data: [null,null,null,null,405166,388383,844481,679656,null]
+            }       
 ]
 
    var chart = Highcharts.chart('psegchart01', {
@@ -425,7 +432,7 @@ var dataSequence2 = [
         }],
         }) // Increment dataset (updates xAxis Total)
         document.getElementById('year-subtitle').innerHTML= dataSequence[input.value].name
-        if (input.value >= 12) { // Auto-pause
+        if (input.value >= 9) { // Auto-pause
             pause($('#play-pause-button')[0]);
         }
     }

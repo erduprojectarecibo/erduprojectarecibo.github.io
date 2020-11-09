@@ -10,10 +10,10 @@
 </head>
 <body>
     <div id=text>
-        <h2>Segmentos Poblacionales de Puerto Rico por Nivel Educativo</h2>
-        <h3 id=year-subtitle>2010</h3>
+        <h2>Cambios en Segmentos Poblacionales de Puerto Rico</h2>
+        <h3 id=year-subtitle>1950</h3>
     </div>
-        <div id="psegchart02"></div>
+        <div id="psegchart03"></div>
         <div id="play-controls">
             <button id="play-pause-button" class="fa fa-play" title="play"> &#9654; </button>
             <input id="play-range" type="range" value="0" min="0" max="9" />
@@ -27,7 +27,7 @@
         width:100%;
     }
 
-    #psegchart02 {
+    #psegchart03 {
         width:95%;
         height:500px;
         margin-left:2.5%;
@@ -180,7 +180,6 @@ subtitle: {
     }
 },
 
-
 yAxis: {
     title: {
         style: {
@@ -209,14 +208,6 @@ credits: {
     enabled: false
 },
 
-exporting: {
-    buttons: {
-        contextButton: {
-            x: -60,
-        }
-    }
-},
-
 tooltip: {
     backgroundColor: "#FFF",
     borderColor: '#000',
@@ -239,99 +230,50 @@ plotOptions: {
 
 });
 
-var categories = [" ",'<b>Preescolar</b><br>Edades 0-4 años', 
+var categories = ['<b>Preescolar</b><br>Edades 0-4 años', 
     '<b>Escuela Elemental e Intermedia</b><br>Edades 5-14 años', 
     '<b>Escuela Superior y Universidad</b><br>Edades 15-24 años', 
     '<b>Adulto Jóven y Universitario</b><br>Edades 25-34 años', 
     '<b>Adulto Profesional y Universitario</b><br>Edades 35-44 años', 
     '<b>Profesional</b><br>Edades 45-64 años', 
-    '<b>Persona Mayor o Retirada</b><br>Edades 65 años o más', " "
+    '<b>Persona Mayor o Retirada</b><br>Edades 65 años o más'
 ];
-
-var categoriesTotalArr1 = [
-    
-    ["<strong>3,722,133</strong>","223,247","504,909","549,044","482,756","487,539","928,917","545,721","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,710,524</strong>","216,792","493,252","553,131","471,617","482,098","924,728","565,072","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,667,084</strong>","209,354","479,184","546,409","456,664","476,239","917,200","582,034","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,615,086</strong>","199,347","460,567","537,754","439,708","473,876","904,171","599,663","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,548,357</strong>","184,288","442,505","520,927","430,490","458,226","894,910","617,011","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,474,182</strong>","172,896","420,686","498,074","421,169","448,443","885,949","626,965","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,411,307</strong>","159,753","396,740","482,617","413,129","440,352","872,831","645,885","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,337,177</strong>","146,699","378,259","468,544","396,657","427,844","860,419","658,755","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,195,153</strong>","125,796","348,516","432,811","381,445","396,979","848,390","661,216","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388383","844481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
-
-]
 
 var dataSequence = [
             {
+            name:'1950',
+            data: [85837,110349,1090,39424,37297,46450,21888],
+            },{
+            name:'1960',
+            data: [-11875,59638,4960,-27109,13550,62485,37213]
+            },{
+            name:'1970',
+            data: [-36296,24078,106677,76371,35953,100815,54870] 
+            },{
+            name:'1980',
+            data: [22546,-4192,84362,126608,85966,93705,75492]
+            },{
+            name:'1990',
+            data: [-38479,-12576,4380,58951,102543,122383,88315]
+            }, {
+            name:'2000',
+            data: [-6767,-45084,683,9483,53184,190821,84253]
+            }, {
             name:'2010',
-            data: [null,223247,504909,549044,null,null,null,null,null]
-            },{
-            name:'2011',
-            data: [null,216792,493252,553131,null,null,null,null,null]
-            },{
-            name:'2012',
-            data: [null,209354,479184,546409,null,null,null,null,null] 
-            },{
-            name:'2013',
-            data: [null,199347,460567,537754,null,null,null,null,null]
-            },{
-            name:'2014',
-            data: [null,184288,442505,520927,null,null,null,null,null]
-            },{
+            data: [-72159,-106053,-65583,-51576,-28124,116434,120584]
+            }, {
             name:'2015',
-            data: [null,172896,420686,498074,null,null,null,null,null]
-            },{
-            name:'2016',
-            data: [null,159753,396740,482617,null,null,null,null,null],
-            },{
-            name:'2017',
-            data: [null,146699,378259,468544,null,null,null,null,null]
+            data: [-48372,-86750,-57684,-49128,-46507,-40751,81241]
             },{
             name:'2018',
-            data: [null,125796,348516,432811,null,null,null,null,null]
+            data: [-49079,-69643,-58549,-52183,-44053,-39776,34254]
             },{
             name:'2019',
-            data: [null,117482,340425,418101,null,null,null,null,null]
-            }           
+            data: [-8314,-8091,-14710,23721,-8596,-3909,18440]
+            }          
 ]
 
-var dataSequence2 = [
-            {
-            name:'2010',
-            data: [null,null,null,null,482756,487539,928917,629338,null]
-            },{
-            name:'2011',
-            data: [null,null,null,null,471617,482098,924728,565072,null]
-            },{
-            name:'2012',
-            data: [null,null,null,null,456664,476239,917200,582034,null] 
-            },{
-            name:'2013',
-            data: [null,null,null,null,439708,473876,904171,599663,null]
-            },{
-            name:'2014',
-            data: [null,null,null,null,430490,458226,894910,617011,null]
-            },{
-            name:'2015',
-            data: [null,null,null,null,421169,448443,885949,626965,null]
-            },{
-            name:'2016',
-            data: [null,null,null,null,413129,440352,872831,645885,null]
-            },{
-            name:'2017',
-            data: [null,null,null,null,396657,427844,860419,658755,null]
-            },{
-            name:'2018',
-            data: [null,null,null,null,381445,396979,848390,661216,null]
-            },{
-            name:'2019',
-            data: [null,null,null,null,405166,388383,844481,679656,null]
-            }           
-]
-
-   var chart = Highcharts.chart('psegchart02', {
+   var chart = Highcharts.chart('psegchart03', {
         chart: {
             type: 'bar',
         },
@@ -348,21 +290,10 @@ var dataSequence2 = [
                     step: 1
                 }
             }
-        },{ // Mirror axis in the right side
-            opposite: true,
-            reversed: false,
-            categories: categoriesTotalArr1[0],
-            linkedTo: 0,
-            labels: {
-                style: {
-                    color: 'black',
-                    step: 1
-                }
-            }
         }],
         yAxis: {
-             max: 950000, // This prevents the data to shift right while in motion
-             min: 0,
+             max: 200000, // This prevents the data to shift right while in motion
+             min: -150000,
             title: {
                 text: null
             },
@@ -390,15 +321,10 @@ var dataSequence2 = [
         },
 
         series: [{
-            name: 'Nivel Universitario o Inferior',
-            color: '#FFD13F',
-            borderColor: '#FFD13F', 
-            data: dataSequence[0].data.slice(),
-        },{
-            name: 'Nivel Pos-grado o Profesional',
+            name: 'Segmentos Poblacionales',
             color: '#008445',
             borderColor: '#008445', 
-            data: dataSequence2[0].data.slice(),
+            data: dataSequence[0].data.slice(),
         }],
     });
 
@@ -410,22 +336,10 @@ var dataSequence2 = [
             input.value = parseInt(input.value) + increment;
         }
         chart.series[0].setData(dataSequence[input.value].data); // Increment dataset (updates chart)
-        chart.series[1].setData(dataSequence2[input.value].data); // Increment dataset (updates chart)
         chart.update({
             xAxis: [{
             categories: categories,
             reversed: false,
-            labels: {
-                style: {
-                    color: 'black',
-                    step: 1
-                }
-            }
-        },{ // Mirror axis in the right side
-            opposite: true,
-            reversed: false,
-            categories: categoriesTotalArr1[input.value],
-            linkedTo: 0,
             labels: {
                 style: {
                     color: 'black',

@@ -11,9 +11,9 @@
 <body>
     <div id=text>
         <h2>Segmentos Poblacionales de Puerto Rico por Nivel Educativo</h2>
-        <h3 id=year-subtitle>2010</h3>
+        <h3 id=year-subtitle>1950</h3>
     </div>
-        <div id="psegchart02"></div>
+        <div id="psegchart01"></div>
         <div id="play-controls">
             <button id="play-pause-button" class="fa fa-play" title="play"> &#9654; </button>
             <input id="play-range" type="range" value="0" min="0" max="9" />
@@ -27,7 +27,7 @@
         width:100%;
     }
 
-    #psegchart02 {
+    #psegchart01 {
         width:95%;
         height:500px;
         margin-left:2.5%;
@@ -180,7 +180,6 @@ subtitle: {
     }
 },
 
-
 yAxis: {
     title: {
         style: {
@@ -205,16 +204,16 @@ xAxis: {
     }
 },
 
-credits: {
-    enabled: false
-},
-
 exporting: {
     buttons: {
         contextButton: {
             x: -60,
         }
     }
+},
+
+credits: {
+    enabled: false
 },
 
 tooltip: {
@@ -239,99 +238,92 @@ plotOptions: {
 
 });
 
-var categories = [" ",'<b>Preescolar</b><br>Edades 0-4 años', 
-    '<b>Escuela Elemental e Intermedia</b><br>Edades 5-14 años', 
-    '<b>Escuela Superior y Universidad</b><br>Edades 15-24 años', 
-    '<b>Adulto Jóven y Universitario</b><br>Edades 25-34 años', 
-    '<b>Adulto Profesional y Universitario</b><br>Edades 35-44 años', 
-    '<b>Profesional</b><br>Edades 45-64 años', 
-    '<b>Persona Mayor o Retirada</b><br>Edades 65 años o más', " "
+var categories = [" ",'<b>Nivel Universitario o Inferior</b><br>Edades 0-24 años', 
+    '<b>Nivel Pos-grado o Superior</b><br>Edades 25-65+', " "
 ];
 
 var categoriesTotalArr1 = [
-    
-    ["<strong>3,722,133</strong>","223,247","504,909","549,044","482,756","487,539","928,917","545,721","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,710,524</strong>","216,792","493,252","553,131","471,617","482,098","924,728","565,072","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,667,084</strong>","209,354","479,184","546,409","456,664","476,239","917,200","582,034","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,615,086</strong>","199,347","460,567","537,754","439,708","473,876","904,171","599,663","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,548,357</strong>","184,288","442,505","520,927","430,490","458,226","894,910","617,011","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,474,182</strong>","172,896","420,686","498,074","421,169","448,443","885,949","626,965","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,411,307</strong>","159,753","396,740","482,617","413,129","440,352","872,831","645,885","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,337,177</strong>","146,699","378,259","468,544","396,657","427,844","860,419","658,755","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,195,153</strong>","125,796","348,516","432,811","381,445","396,979","848,390","661,216","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388383","844481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
-
+    ["<strong>2,210,703</strong>","1,368,940","841,763","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>2,349,565</strong>","1,421,663","927,902","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>2,712,033</strong>","1,516,122","1,195,911","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,196,520</strong>","1,618,838","1,577,682","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,522,037</strong>","1,572,163","1,949,874","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,808,610</strong>","1,520,995","2,492,930","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,722,133</strong>","1,277,200","2,444,933","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,474,182</strong>","1,091,656","2,382,526","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,195,153</strong>","907,123","2,288,030","<b>Total por</b> <br><b>Grupo</b>"],
+    ["<strong>3,193,694</strong>","876,008","2,317,686","<b>Total por</b> <br><b>Grupo</b>"]
 ]
 
 var dataSequence = [
             {
+            name:'1950',
+            data: [null,1368940,null,null]
+            },{
+            name:'1960',
+            data: [null,1421663,null,null]
+            },{
+            name:'1970',
+            data: [null,1516122,null,null] 
+            },{
+            name:'1980',
+            data: [null,1618838,null,null]
+            },{
+            name:'1990',
+            data: [null,1572163,null,null]
+            }, {
+            name:'2000',
+            data: [null,1520995,null,null]
+            }, {
             name:'2010',
-            data: [null,223247,504909,549044,null,null,null,null,null]
-            },{
-            name:'2011',
-            data: [null,216792,493252,553131,null,null,null,null,null]
-            },{
-            name:'2012',
-            data: [null,209354,479184,546409,null,null,null,null,null] 
-            },{
-            name:'2013',
-            data: [null,199347,460567,537754,null,null,null,null,null]
-            },{
-            name:'2014',
-            data: [null,184288,442505,520927,null,null,null,null,null]
-            },{
+            data: [null,1277200,null,null]
+            }, {
             name:'2015',
-            data: [null,172896,420686,498074,null,null,null,null,null]
-            },{
-            name:'2016',
-            data: [null,159753,396740,482617,null,null,null,null,null],
-            },{
-            name:'2017',
-            data: [null,146699,378259,468544,null,null,null,null,null]
+            data: [null,1091656,null,null]
             },{
             name:'2018',
-            data: [null,125796,348516,432811,null,null,null,null,null]
+            data: [null,907123,null,null]
             },{
             name:'2019',
-            data: [null,117482,340425,418101,null,null,null,null,null]
-            }           
+            data: [null,876008,null,null]
+            }         
 ]
 
 var dataSequence2 = [
             {
+            name:'1950',
+            data: [null,null,841763,null]
+            },{
+            name:'1960',
+            data: [null,null,927902,null]
+            },{
+            name:'1970',
+            data: [null,null,1195911,null] 
+            },{
+            name:'1980',
+            data: [null,null,1577682,null]
+            },{
+            name:'1990',
+            data: [null,null,1949874,null]
+            }, {
+            name:'2000',
+            data: [null,null,2492930,null]
+            }, {
             name:'2010',
-            data: [null,null,null,null,482756,487539,928917,629338,null]
-            },{
-            name:'2011',
-            data: [null,null,null,null,471617,482098,924728,565072,null]
-            },{
-            name:'2012',
-            data: [null,null,null,null,456664,476239,917200,582034,null] 
-            },{
-            name:'2013',
-            data: [null,null,null,null,439708,473876,904171,599663,null]
-            },{
-            name:'2014',
-            data: [null,null,null,null,430490,458226,894910,617011,null]
-            },{
+            data: [null,null,2444933,null]
+            }, {
             name:'2015',
-            data: [null,null,null,null,421169,448443,885949,626965,null]
-            },{
-            name:'2016',
-            data: [null,null,null,null,413129,440352,872831,645885,null]
-            },{
-            name:'2017',
-            data: [null,null,null,null,396657,427844,860419,658755,null]
+            data: [null,null,2382526,null]
             },{
             name:'2018',
-            data: [null,null,null,null,381445,396979,848390,661216,null]
+            data: [null,null,2288030,null]
             },{
             name:'2019',
-            data: [null,null,null,null,405166,388383,844481,679656,null]
-            }           
+            data: [null,null,2317686,null]
+            }        
 ]
 
-   var chart = Highcharts.chart('psegchart02', {
+   var chart = Highcharts.chart('psegchart01', {
         chart: {
             type: 'bar',
         },
@@ -361,7 +353,7 @@ var dataSequence2 = [
             }
         }],
         yAxis: {
-             max: 950000, // This prevents the data to shift right while in motion
+             max: 2600000, // This prevents the data to shift right while in motion
              min: 0,
             title: {
                 text: null
