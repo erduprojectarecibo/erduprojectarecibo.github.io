@@ -611,6 +611,104 @@ $(document).ready(function () {
 
 /* ********************************************************************************************************************************************** */
 
+// Pirámide Poblacional de Puerto Rico (2019) Duplicado
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+
+    Highcharts.chart('pchart08', {
+        legend: {
+            layout: 'horizontal',
+            align: 'left',
+            verticalAlign: 'bottom',
+            x: 100
+        },
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: ' ',
+
+        },
+        xAxis: [{
+            categories: categories,
+            reversed: false,
+            offset: 10,
+            labels: {
+                align: 'center',
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            },
+            lineWidth: 0
+        }, { // Mirror axis in the right side
+            categories: ['<strong>3,193,694</strong>','117,482','157,661','182,764','201,616','216,485','219,925','185,241','189,502','198,881','204,152','211,903','219,296','209,130','189,933','176,557','131,326','90,644','91,196',' ','Total por <br>Grupo'],
+            opposite: true,
+            reversed: false,
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: 'black',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+            max: 200000, // This prevents the data to shift right while in motion
+            min: -200000,
+            title: {
+                text: null
+            },
+            labels: {
+                style: {
+                    color: 'black'
+                },
+                formatter: function () {
+                    return Math.abs(this.value / 10000) + '%';
+                }
+            }
+        },
+
+        exporting: {
+            enabled: false
+        },
+
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
+
+            }
+        },
+
+        tooltip: {
+            // This controls the hovering box when mouse is over data
+            formatter: function () {
+                return '<b>' + this.series.name + ' || Edades ' + this.point.category + '</b><br/>' +
+                    '<b>Población: ' + Highcharts.numberFormat(Math.abs(this.y), 0) + '</b>';
+            },
+            shared: false
+        },
+
+        series: [{
+            name: 'Masculino',
+            color: '#008445',
+            borderColor: '#008445',
+            data: [null, -60020, -79847, -92917, -103020, -109920, -109775, -89738, -89257, -94166, -96796, -98923, -100375, -95717, -85684, -79286, -130280,null, null],
+            showInLegend: false
+        }, {
+            name: 'Femenino',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: [null, 57462, 77814, 89847, 98596, 106565, 110150, 95503, 100245, 104715, 107356, 112980, 118921, 113413, 104249, 97271, 182886,null, null]
+        }],
+    });
+});
+
+/* ********************************************************************************************************************************************** */
+
 // Pirámide Poblacional de Puerto Rico (2019)
 
 /* ********************************************************************************************************************************************** */
