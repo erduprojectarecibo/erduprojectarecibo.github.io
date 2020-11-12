@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Comportamiento por año Segmentos Educacionales de la Población de Puerto Rico</h2>
+        <h2>Comportamiento por año de los Segmentos Educacionales por Grupos de Edad de la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>2010</h3>
     </div>
         <div id="psegchart02"></div>
@@ -259,7 +259,7 @@ var categoriesTotalArr1 = [
     ["<strong>3,411,307</strong>","159,753","396,740","482,617","413,129","440,352","872,831","645,885","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,337,177</strong>","146,699","378,259","468,544","396,657","427,844","860,419","658,755","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,195,153</strong>","125,796","348,516","432,811","381,445","396,979","848,390","661,216","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388383","844481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
+    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388,383","844,481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
 
 ]
 
@@ -385,7 +385,7 @@ var dataSequence2 = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + Highcharts.numberFormat(this.y, 0) + '</b>';
             },
         },
 
@@ -395,7 +395,7 @@ var dataSequence2 = [
             borderColor: '#FFD13F', 
             data: dataSequence[0].data.slice(),
         },{
-            name: 'Nivel Pos-grado o Profesional',
+            name: 'Nivel Posgrado o Profesional',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence2[0].data.slice(),

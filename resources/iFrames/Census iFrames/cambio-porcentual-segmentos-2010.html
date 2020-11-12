@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Cambios Porcentuales por año en los Segmentos Educacionales de la Población de Puerto Rico</h2>
+        <h2>Cambios Porcentuales por año en los Segmentos Educacionales por Grupos de Edad de la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>2010</h3>
     </div>
         <div id="psegchart03"></div>
@@ -292,8 +292,8 @@ var dataSequence = [
             }
         }],
         yAxis: {
-             max: 200000, // This prevents the data to shift right while in motion
-             min: -150000,
+             max: 100, // This prevents the data to shift right while in motion
+             min: -100,
             title: {
                 text: null
             },
@@ -301,6 +301,9 @@ var dataSequence = [
                 style: {
                     color: 'black'
                 },
+                formatter: function() {
+                    return this.value+"%";
+                }
             }
         },
 
@@ -308,7 +311,6 @@ var dataSequence = [
             // Spacing between data bars
             series: {
                 stacking: 'normal',
-
             }
         },
 
@@ -316,12 +318,12 @@ var dataSequence = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + this.y + '%</b>';
             },
         },
 
         series: [{
-            name: 'Segmentos Poblacionales',
+            name: 'Segmentos Educacionales',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence[0].data.slice(),

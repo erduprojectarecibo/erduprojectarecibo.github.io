@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Cambios por año en los Segmentos Educacionales de la Población de Puerto Rico</h2>
+        <h2>Cambios por año en dos Segmentos Educacionales por Grupos de Edad de la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>2010</h3>
     </div>
         <div id="psegchart03"></div>
@@ -222,9 +222,7 @@ tooltip: {
 plotOptions: {
     series: {
         lineWidth: 5,
-        animation: {
-            duration: 5000
-        }
+        
     },
 },
 
@@ -316,12 +314,12 @@ var dataSequence = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + Highcharts.numberFormat(this.y, 0) + '</b>';
             },
         },
 
         series: [{
-            name: 'Segmentos Poblacionales',
+            name: 'Segmentos Educacionales',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence[0].data.slice(),

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Cambios Porcentuales en Segmentos Educacionales en la Población de Puerto Rico</h2>
+        <h2>Cambios Porcentuales en los Segmentos Educacionales por Grupos de Edad en la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>1950</h3>
     </div>
         <div id="psegchart03"></div>
@@ -222,9 +222,7 @@ tooltip: {
 plotOptions: {
     series: {
         lineWidth: 5,
-        animation: {
-            duration: 5000
-        }
+        
     },
 },
 
@@ -301,6 +299,9 @@ var dataSequence = [
                 style: {
                     color: 'black'
                 },
+                formatter: function() {
+                    return this.value+"%";
+                }
             }
         },
 
@@ -316,12 +317,12 @@ var dataSequence = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + this.y + '%</b>';
             },
         },
 
         series: [{
-            name: 'Segmentos Poblacionales',
+            name: 'Segmentos Educacionales',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence[0].data.slice(),

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Comportamiento Segmentos Educacionales de la Población de Puerto Rico</h2>
+        <h2>Comportamiento de los Segmentos Educacionales por Grupos de Edad de la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>1950</h3>
     </div>
         <div id="psegchart01"></div>
@@ -102,6 +102,8 @@ function isElementInViewport(el) {
         )
     );
 }
+
+//
 
 H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
     var series = this,
@@ -257,7 +259,7 @@ var categoriesTotalArr1 = [
     ["<strong>3,722,133</strong>","223,247","504,909","549,044","482,756","487,539","928,917","545,721","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,474,182</strong>","172,896","420,686","498,074","421,169","448,443","885,949","626,965","<b>Total por</b> <br><b>Grupo</b>"],
     ["<strong>3,195,153</strong>","125,796","348,516","432,811","381,445","396,979","848,390","661,216","<b>Total por</b> <br><b>Grupo</b>"],
-    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388383","844481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
+    ["<strong>3,193,694</strong>","117,482","340,425","418,101","405,166","388,383","844,481","679,656","<b>Total por</b> <br><b>Grupo</b>"]
 ]
 
 var dataSequence = [
@@ -382,7 +384,7 @@ var dataSequence2 = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + Highcharts.numberFormat(this.y, 0) + '</b>';
             },
         },
 
@@ -392,7 +394,7 @@ var dataSequence2 = [
             borderColor: '#FFD13F', 
             data: dataSequence[0].data.slice(),
         },{
-            name: 'Nivel Pos-grado o Profesional',
+            name: 'Nivel Posgrado o Profesional',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence2[0].data.slice(),

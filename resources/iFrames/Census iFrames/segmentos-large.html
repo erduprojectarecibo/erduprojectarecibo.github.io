@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Comportamiento Segmentos Educacionales Agrupados de la Población de Puerto Rico</h2>
+        <h2>Comportamiento por año de dos Segmentos Educacionales por Grupos de Edad de la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>1950</h3>
     </div>
         <div id="psegchart01"></div>
@@ -377,7 +377,7 @@ var dataSequence2 = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + Highcharts.numberFormat(this.y, 0) + '</b>';
             },
         },
 
@@ -387,7 +387,7 @@ var dataSequence2 = [
             borderColor: '#FFD13F', 
             data: dataSequence[0].data.slice(),
         },{
-            name: 'Nivel Pos-grado o Profesional',
+            name: 'Nivel Posgrado o Profesional',
             color: '#008445',
             borderColor: '#008445', 
             data: dataSequence2[0].data.slice(),

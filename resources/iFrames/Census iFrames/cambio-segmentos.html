@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id=text>
-        <h2>Cambios en Segmentos Educacionales en la Población de Puerto Rico</h2>
+        <h2>Cambios en los Segmentos Educacionales por Grupos de Edad en la Población de Puerto Rico</h2>
         <h3 id=year-subtitle>1950</h3>
     </div>
         <div id="psegchart03"></div>
@@ -316,7 +316,7 @@ var dataSequence = [
             // This controls the hovering box when mouse is over data
             formatter: function () {
                 return '<b>' + this.x + '</b><br/>' +
-                    '<b>Población: ' + this.y + '</b>';
+                    '<b>Población: ' + Highcharts.numberFormat(this.y, 0) + '</b>';
             },
         },
 
