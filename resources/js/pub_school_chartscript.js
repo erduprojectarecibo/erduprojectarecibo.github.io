@@ -298,17 +298,17 @@ $(document).ready(function () {
             shared: true,
             formatter: function () {
                 if (this.y < 0) {
-                    return 'Cambio Total Negativo en la Matrícula: ' + this.y
+                    return 'Cambio Negativo en la Matrícula Total: ' + this.y
                 } else if (this.x == '1965' || this.x == '2021') {
                     return 'N/A'
                 } else {
-                    return 'Cambio Total Positivo en la Matrícula: ' + this.y
+                    return 'Cambio Positivo en la Matrícula Total: ' + this.y
                 }
             },
         },
 
         series: [{
-            name: 'Cambio Total Positivo en la Matrícula',
+            name: 'Cambio Positivo en la Matrícula Total',
             data: [null, 19672, 3732, 13758, 3729, 14528, 10633, 13828, 1350, -7714, -7714, -8563, 16411, 16411, -4269, -4269,
                 8539, -12625, -6869, -9002, -6009, -7425, -6652, -11144, -10468, -6491, -2342, -5358, -5574, -9565, 5725, -8759,
                 -1704, -3295, -843, -294, -8548, -7675, -11586, -9268, -12158, -19352, -17573, -22930, -10242, -19658, -20995,
@@ -321,7 +321,7 @@ $(document).ready(function () {
                 easing: 'linear'
             },
         }, {
-            name: 'Cambio Total Negativo en la Matrícula',
+            name: 'Cambio Negativo en la Matrícula Total',
             color: 'red',
             type: 'area',
         }],
