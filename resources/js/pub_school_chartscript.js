@@ -383,8 +383,8 @@ $(document).ready(function () {
                     return this.value + "%";
                 },
             },
-            min: -8,
-            max: 8,
+            min: -13,
+            max: 13,
         },
 
         legend: {
