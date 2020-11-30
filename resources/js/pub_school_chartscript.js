@@ -184,8 +184,9 @@ $(document).ready(function () {
                 text: 'Total de Estudiantes Matriculados',
                 style: {}
             },
-            min: 200000,
+            min: 0,
             max: 800000,
+            tickInterval: 100000
         },
 
         plotOptions: {
