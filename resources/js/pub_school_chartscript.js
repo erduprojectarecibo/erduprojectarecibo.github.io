@@ -298,11 +298,11 @@ $(document).ready(function () {
             shared: true,
             formatter: function () {
                 if (this.y < 0) {
-                    return 'Cambio Negativo en la Matrícula Total: ' + this.y
+                    return this.category + '<br>' + 'Cambio Negativo en la Matrícula Total: ' + this.y
                 } else if (this.x == '1965' || this.x == '2021') {
                     return 'N/A'
                 } else {
-                    return 'Cambio Positivo en la Matrícula Total: ' + this.y
+                    return this.category + '<br>' + 'Cambio Positivo en la Matrícula Total: ' + this.y
                 }
             },
         },
@@ -383,8 +383,9 @@ $(document).ready(function () {
                     return this.value + "%";
                 },
             },
-            min: -13,
-            max: 13,
+            min: -15,
+            max: 15,
+            tickInterval: 5
         },
 
         legend: {
@@ -408,11 +409,11 @@ $(document).ready(function () {
             shared: true,
             formatter: function () {
                 if (this.y < 0) {
-                    return 'Cambio Porcentual Negativo en la Matrícula: ' + this.y + ' %'
+                    return this.category + '<br>' + 'Cambio Porcentual Negativo en la Matrícula: ' + this.y + ' %'
                 } else if (this.x == '1965' || this.x == '2021') {
                     return 'N/A'
                 } else {
-                    return 'Cambio Porcentual Positivo en la Matrícula: ' + this.y + ' %'
+                    return this.category + '<br>' + 'Cambio Porcentual Positivo en la Matrícula: ' + this.y + ' %'
                 }
             },
         },
