@@ -295,7 +295,7 @@ $(document).ready(function () {
         },
 
         tooltip: {
-            shared: true,
+            shared: false,
             formatter: function () {
                 if (this.y < 0) {
                     return this.x + ' <br>' + 'Cambio Negativo en la Matrícula Total: ' + this.y
@@ -406,7 +406,7 @@ $(document).ready(function () {
         },
 
         tooltip: {
-            shared: true,
+            shared: false,
             formatter: function () {
                 if (this.y < 0) {
                     return this.x + ' <br>' + 'Cambio Porcentual Negativo en la Matrícula: ' + this.y + ' %'
