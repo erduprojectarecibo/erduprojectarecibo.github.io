@@ -493,7 +493,7 @@
                 ],
                 color: '#2a8e40',
             }, {
-                name: ' ',
+                name: 'Tendencia de la Razón de Cambio',
                 data: [{
                         'x': Date.UTC(1959, 0),
                         // Enero, 1, 1959
