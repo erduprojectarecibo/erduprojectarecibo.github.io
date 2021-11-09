@@ -1303,12 +1303,12 @@
                 }, {
                     name: 'Tendencia de la Razón de Cambio',
                     data: [{
-                            'x': Date.UTC(1991, 0),
+                            'x': Date.UTC(1959, 0),
                             // Enero, 1, 1991
                             'y': null
                         },
                         {
-                            'x': Date.UTC(1992, 0),
+                            'x': Date.UTC(1960, 0),
                             // Enero, 1, 1992
                             'y': 7.2,
                                 dataLabels: {
@@ -1839,13 +1839,13 @@
     
             xAxis: [{
     
-                categories: ['Luis Muñoz Marín', 'Roberto Sánchez Vilella', 'Luis Ferré Aguayo',
-                    'Rafael Hernández Colón',
-                    'Carlos Romero Barceló', 'Carlos Romero Barceló', 'Rafael Hernández Colón',
-                    'Rafael Hernández Colón',
-                    'Pedro Rosselló González', 'Pedro Rosselló González', 'Sila Calderón Serra',
-                    'Aníbal Acevedo Vilá',
-                    'Luís Fortuño Burset', 'Alejandro García Padilla', 'Ricardo Rosselló / Wanda Vázquez'
+                categories: ['L. Muñoz Marín', 'R. Sánchez Vilella', 'L. Ferré Aguayo',
+                    'R. Hernández Colón',
+                    'C. Romero Barceló', 'C. Romero Barceló', 'R. Hernández Colón',
+                    'R. Hernández Colón',
+                    'P. Rosselló González', 'P. Rosselló González', 'S. Calderón Serra',
+                    'A. Acevedo Vilá',
+                    'L. Fortuño Burset', 'A. García Padilla', 'R. Rosselló / W. Vázquez'
                 ],
                 crosshair: true
             }],
