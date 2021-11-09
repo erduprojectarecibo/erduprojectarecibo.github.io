@@ -1305,7 +1305,7 @@
                     },
                 ],
                 color: '#2a8e40',
-            }, {
+                }, {
                 name: 'Tendencia General',
                 data: [{
                             'x': Date.UTC(1960, 0),
@@ -1321,15 +1321,15 @@
                             'y': 16.1
                         },
                     ],
-                    color: '#FEDA35',
-                    animation: {
-                        enabled: true,
-                        duration: 10000,
-                        easing: 'linear'
-                    },
-                    dataLabels: {
-                        enabled: true,
+                color: '#FEDA35',
+                animation: {
+                    enabled: true,
+                    duration: 10000,
+                    easing: 'linear'
                 },
+                dataLabels: {
+                    enabled: true,
+                }
             }],
     
             responsive: {
