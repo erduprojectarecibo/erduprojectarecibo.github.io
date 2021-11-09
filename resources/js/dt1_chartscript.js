@@ -1771,7 +1771,7 @@
             },
             dataLabels: {
                 enabled: true,
-            },
+            }
             }],
     
             responsive: {
