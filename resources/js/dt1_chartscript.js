@@ -974,11 +974,6 @@
                     animation: {
                         duration: 6000
                     },
-                    events: {
-                        afterAnimate: function () {
-                            update_data6();
-                        }
-                    },
                 },
             },
     
@@ -1339,6 +1334,11 @@
                         enabled: true,
                         duration: 10000,
                         easing: 'linear'
+                    },
+                    events: {
+                        afterAnimate: function () {
+                            update_data6();
+                        }
                     },
                 }],
     
