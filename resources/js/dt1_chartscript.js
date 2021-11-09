@@ -1304,8 +1304,8 @@
                         'y': null
                     },
                 ],
-                color: '#2a8e40', 7.2 24 16.1
-                }, {{
+                color: '#2a8e40',
+                }, {
                     name: 'Tendencia de la Razón de Cambio',
                     data: [{
                             'x': Date.UTC(1991, 0),
@@ -1339,11 +1339,6 @@
                         enabled: true,
                         duration: 10000,
                         easing: 'linear'
-                    },
-                    events: {
-                        afterAnimate: function () {
-                            update_data4();
-                        }
                     },
                 }],
     
@@ -1427,11 +1422,6 @@
                     },
                     animation: {
                         duration: 6000
-                    },
-                    events: {
-                        afterAnimate: function () {
-                            update_data8();
-                        }
                     },
                 },
             },
@@ -1783,7 +1773,12 @@
             },
             dataLabels: {
                 enabled: true,
-            }
+            },
+            events: {
+                afterAnimate: function () {
+                    update_data8();
+                }
+            },
             }],
     
             responsive: {
