@@ -1304,15 +1304,20 @@
                         'y': null
                     },
                 ],
-                color: '#2a8e40',
-                }, {
-                name: 'Tendencia General',
-                data: [{
-                            'x': Date.UTC(1960, 0),
-                            // Enero, 1, 1960
+                color: '#2a8e40', 7.2 24 16.1
+                }, {{
+                    name: 'Tendencia de la Razón de Cambio',
+                    data: [{
+                            'x': Date.UTC(1991, 0),
+                            // Enero, 1, 1991
+                            'y': null
+                        },
+                        {
+                            'x': Date.UTC(1992, 0),
+                            // Enero, 1, 1992
                             'y': 7.2,
                             dataLabels: {
-                                y: 24
+                                y=24
                             }
                         },
                         {
@@ -1320,17 +1325,27 @@
                             // Enero, 1, 2020
                             'y': 16.1
                         },
+                        {
+                            'x': Date.UTC(2021, 0),
+                            // Enero, 1, 2021
+                            'y': null
+                        },
                     ],
-                color: '#FEDA35',
-                animation: {
-                    enabled: true,
-                    duration: 10000,
-                    easing: 'linear'
-                },
-                dataLabels: {
-                    enabled: true,
-                }
-            }],
+                    color: '#FEDA35',
+                    dataLabels: {
+                        enabled: true,
+                    },
+                    animation: {
+                        enabled: true,
+                        duration: 10000,
+                        easing: 'linear'
+                    },
+                    events: {
+                        afterAnimate: function () {
+                            update_data4();
+                        }
+                    },
+                }],
     
             responsive: {
                 rules: [{
