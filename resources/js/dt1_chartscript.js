@@ -1311,8 +1311,8 @@
                             'x': Date.UTC(1992, 0),
                             // Enero, 1, 1992
                             'y': 7.2,
-                            dataLabels: {
-                                y:24
+                                dataLabels: {
+                                    y: 24
                             }
                         },
                         {
