@@ -1306,10 +1306,8 @@
                 ],
                 color: '#2a8e40',
             }, {
-                name: ' ',
+                name: 'Tendencia General',
                 data: [{
-                    name: 'Tendencia General',
-                    data: [{
                             'x': Date.UTC(1960, 0),
                             // Enero, 1, 1960
                             'y': 7.2,
@@ -1331,8 +1329,7 @@
                     },
                     dataLabels: {
                         enabled: true,
-                    },
-                }],
+                },
             }],
     
             responsive: {
@@ -1748,7 +1745,7 @@
                 ],
                 color: '#2a8e40',
             }, {
-                name: ' ',
+                name: 'Tendencia General',
                 data: [{
                     'x': Date.UTC(1960, 0),
                     // Enero, 1, 1960
