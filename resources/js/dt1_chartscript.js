@@ -2200,3 +2200,383 @@
         });
     })
 
+/* ********************************************************************************************************************************************** */
+
+// Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de Puerto Rico, Brasil, Colombia y Venezuela (1990-2017)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    var t08 = Highcharts.chart('dchart08', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 8: Comparación cronológica tasa de asesinatos y homicidios de <br>Brasil, Colombia, Venezuela y Puerto Rico (1990-2017)',
+        },
+
+        xAxis: {
+            categories: ['1990', '1991', '1992', '1993', '1994', '1995',
+                '1996', '1997', '1998', '1999', '2000',
+                '2002', '2003', '2004', '2005', '2006',
+                '2007', '2008', '2009', '2010', '2011',
+                '2012', '2013', '2014', '2015', '2016', '2017'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
+            },
+            min: 0,
+            max: 100,
+            gridLineWidth: 0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+
+$('#pdiv1').bind('click', function() {
+   if ($('#pdiv1').attr('state') == 'closed') {
+       t08.addSeries({
+            name: 'Tasa Brasil',
+            data: [
+                19.6, 18.5, 16.8, 17.8, 18.7, 20.9, 21.6, 22.2, 22.6, 22.8, 23.7, 25.3, 25.7, 24, 23.3, 23.9, 23.4, 23.8, 22.8, 22, 24.2, 26.5, 26.8, 28.6, 28.4, 29.7, 30.5
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            }
+       }, false);
+       t08.addSeries({
+            name: 'Tasa Colombia',
+            data: [
+                71, 81.4, 79.3, 78.6, 73.5, 59.6, 61.4, 60, 58.8, 61.2, 65.7, 68.3, 55.8, 47.3, 41.8, 39.9, 38.8, 35.9, 34.8, 33.7, 34.8, 35.1, 32.6, 27.9, 26.5, 25.5, 24.9
+            ],
+            color: '#87cefa',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            }
+       }, false);
+       t08.addSeries({
+            name: 'Tasa Venezuela',
+            data: [
+                12.5, 12.3, 15.7, 20.2, 21.8, 20.2, 21.9, 18.3, 19.3, 24.9, 32.8, 37.8, 43.8, 36.9, 37.2, 45, 47.5, 51.8, 48.9, 45.1, 47.8, 53.8, null, 61.9, null, 56.3, null
+            ],
+            color: '#FEDA35',
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            }
+       }, false);
+       t08.addSeries({
+            name: 'Tasa Puerto Rico',
+            data: [
+                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+            ],
+            color: 'red',
+            animation: {
+                enabled: true,
+                duration: 12000,
+                easing: 'linear'
+            }
+       }, false);
+       t08.redraw();
+   }
+   else{
+             t08.series[3].remove();
+             t08.series[2].remove();
+             t08.series[1].remove();
+             t08.series[0].remove();
+//              t08.redraw();
+   }
+  });
+});
+
+/* ********************************************************************************************************************************************** */
+
+// Gráfica 9: Comparación cronológica tasa de asesinatos y homicidios de Puerto Rico, Bahamas, Jamaica y Santa Lucía (1990-2017)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    var t09 = Highcharts.chart('dchart09', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 9: Comparación cronológica tasa de asesinatos y homicidios de <br>Bahamas, Jamaica, Santa Lucía y Puerto Rico (1990-2017)',
+        },
+
+        xAxis: {
+            categories: ['1990', '1991', '1992', '1993', '1994', '1995',
+                '1996', '1997', '1998', '1999', '2000',
+                '2002', '2003', '2004', '2005', '2006',
+                '2007', '2008', '2009', '2010', '2011',
+                '2012', '2013', '2014', '2015', '2016', '2017'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
+            },
+            min: 0,
+            max: 70,
+            gridLineWidth: 0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+    
+$('#pdiv2').bind('click', function() {
+   if ($('#pdiv2').attr('state') == 'closed') {
+       t09.addSeries({
+            name: 'Tasa Bahamas',
+            data: [
+                17.6, 10.7, 15.4, 12.9, 18.8, 14.3, 18, 16, null, null, 24.8, 16.8, 15.8, 13.6, 15.8, 18.2, 22.8, 20.9, 24.5, 26.1, 34.6, 29.8, 31.5, 32.4, 37.7, 28.4, 30.9
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Jamaica',
+            data: [
+                22.4, 23.2, 25.6, 26.4, 27.5, 30.7, 36.1, 40.1, 32.9, 32.4, 33.4, 38.8, 35.9, 53.9, 61, 48.5, 57.1, 58, 60, 51.4, 40, 38.7, 42.1, 35.1, 42.1, 47, 57
+            ],
+            color: '#87cefa',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Santa Lucía',
+            data: [
+                10.1, 7.1, 9.9, 5.6, 6.9, 10.9, 8.1, 8.6, 9.1, 10.3, 14.7, 26.3, 22.4, 22.8, 25, 26, 17.3, 23, 22.8, 25.5, 26.5, 22.3, 18.8, 19.3, 15.8, 16.9, 29.6
+            ],
+            color: "#FEDA35",
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.addSeries({
+            name: 'Tasa Puerto Rico',
+            data: [
+                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+            ],
+            color: 'red',
+            animation: {
+                enabled: true,
+                duration: 10000,
+                easing: 'linear'
+            },
+       }, false);
+       t09.redraw();
+   }
+   else{
+             t09.series[3].remove();
+             t09.series[2].remove();
+             t09.series[1].remove();
+             t09.series[0].remove();
+//              t09.redraw();
+   }
+  });
+});
+
+/* ********************************************************************************************************************************************** */
+
+// Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de Puerto Rico, El Salvador, Honduras y México (1990-2017)
+
+/* ********************************************************************************************************************************************** */
+
+$(document).ready(function () {
+    var t10 = Highcharts.chart('dchart10', {
+
+        chart: {
+            type: 'line',
+            zoomType: 'x',
+        },
+
+        title: {
+            text: 'Gráfica 10: Comparación cronológica tasa de asesinatos y homicidios de <br>El Salvador, Honduras, México y Puerto Rico (1990-2017)',
+        },
+
+        xAxis: {
+            categories: ['1990', '1991', '1992', '1993', '1994', '1995',
+                '1996', '1997', '1998', '1999', '2000',
+                '2002', '2003', '2004', '2005', '2006',
+                '2007', '2008', '2009', '2010', '2011',
+                '2012', '2013', '2014', '2015', '2016', '2017'
+            ],
+        },
+
+        yAxis: {
+            title: {
+                text: 'Tasa Asesinatos por cada 100,000 habitantes',
+            },
+            min: 0,
+            max: 150,
+            gridLineWidth: 0,
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    enabled: false,
+                    connectorAllowed: false,
+                },
+            }
+        },
+
+        tooltip: {
+            shared: true
+        },
+        
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    });
+    
+$('#pdiv3').bind('click', function() {
+   if ($('#pdiv3').attr('state') == 'closed') {
+       t10.addSeries({
+            name: 'Tasa El Salvador',
+            data: [
+                null, null, null, null, 138.4, 142.2, 119.7, 114.8, 96.6, 66, 60.5, 47.7, 56.2, 64.9, 64.4, 64.8, 57.5, 52, 71.4, 64.7, 70.6, 41.7, 40.2, 62.4, 105.4, 83.1, 61.8
+            ],
+            color: '#2a8e40',
+            animation: {
+                enabled: true,
+                duration: 6000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa Honduras',
+            data: [
+                10, 13.8, 18.2, 23.2, 30.3, 26.9, null, null, null, 40.3, 48.7, 52.8, 57.9, 50.5, 43.6, 41.3, 46.5, 56.6, 65.7, 76.1, 85.1, 84.3, 74.3, 66.9, 57.5, 56.5, 41.7
+            ],
+            color: '#87cefa',
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa México',
+            data: [
+                17, 17.4, 18.7, 17.7, 17.2, 16.6, 15.2, 13.9, 13.8, 12.2, 10.6, 9.7, 9.5, 8.7, 9.1, 9.5, 7.9, 12.3, 17.1, 22, 22.9, 21.5, 18.8, 16.1, 16.5, 19.3, 24.8
+            ],
+            color: "#FEDA35",
+            animation: {
+                enabled: true,
+                duration: 8000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.addSeries({
+            name: 'Tasa Puerto Rico',
+            data: [
+                17.0, 23.0, 24.2, 26.5, 27.4, 23.6, 23.6, 19.5, 17.4, 15.6, 18.4, 20.2, 20.6, 20.7, 20.2, 19.7, 19.3, 21.7, 24.1, 27.3, 31.6, 27.6, 25.1, 19.8, 17.8, 20.5, 21.4
+            ],
+            color: 'red',
+            animation: {
+                enabled: true,
+                duration: 14000,
+                easing: 'linear'
+            },
+        }, false);
+       t10.redraw();
+   }
+   else{
+             t10.series[3].remove();
+             t10.series[2].remove();
+             t10.series[1].remove();
+             t10.series[0].remove();
+//              t10.redraw();
+   }
+  });
+})
