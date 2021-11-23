@@ -253,9 +253,9 @@ var CONFIG = {
    "delayThresholdX2": 90,
    "delayThresholdX4": 45,
    "dim": "Year",
-   "end": "2016",
+   "end": "2020",
    "endOrigin": null,
-   "endSelected": "2016",
+   "endSelected": "2020",
    "format": {
     "data": null,
     "ui": null
@@ -272,7 +272,7 @@ var CONFIG = {
    "startSelected": "1965",
    "step": 1,
    "unit": "year",
-   "value": "2016"
+   "value": "2020"
   }
  },
  "ui": {
